@@ -1,0 +1,70 @@
+{
+	"groups": [
+		{
+			"order": 1,
+			"name": "Main",
+			"items": [
+				{
+					"order": 1,
+					"name": "MERCHANT_NAME",
+					"type": "text",
+					"description": "",
+					"length": 10
+				},
+				{
+					"order": 2,
+					"name": "CONFIG_VERSION",
+					"type": "text",
+					"description": "Version number",
+					"length": 5
+				}
+			]
+		},
+		{
+			"order": 2,
+			"name": "FxChoice",			
+			"items": [
+				{
+					"order": 1,
+					"name": "FXCHOICE_SERVER_PORT",
+					"type": "number",
+					"description": "The port used to listen the request from Wincor",
+					"length": 8
+				},
+				{
+					"order": 2,
+					"name": "FXCHOICE_RESPONSE_RETRY",
+					"type": "number",
+					"description": "",
+					"length": 2
+				},
+				{
+					"order": 3,
+					"name": "TERMINAL_MODE",
+					"type": "boolean",
+					"description": ""
+				}
+			]
+		},
+		{
+			"order": 3,
+			"name": "Request/Response Formats",			
+			"items": [
+				{
+					"order": 1,
+					"name": "REQUEST_DATA_FORMAT",
+					"type": "select",
+					"description": "For FxChoice Socket Implementation",
+					"options": ["xml", "json"]
+				},
+				{
+					"order": 2,
+					"name": "RESPONSE_DATA_FORMAT",
+					"type": "select",
+					"description": "For FxChoice Socket Implementation",
+					"options": ["xml", "json"]
+				}
+			]
+		}
+	]
+}
