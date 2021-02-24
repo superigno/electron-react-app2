@@ -15,12 +15,12 @@
  */ 
 
 .wrapper {
-  padding: 20px 30px 20px 30px;
+  padding: 40px 30px 20px 30px;
  /* flex: 1 100%;*/
 }
 
 .content {
-  padding: 20px 30px 20px 30px;
+  padding: 40px 30px 20px 30px;
 }
 
 .group-name {
@@ -30,7 +30,7 @@
 
 .button {
   padding: 20px 0px 50px 0px;
-  text-align: right;
+  text-align: center;
 }
 
 .footer {

@@ -46,7 +46,7 @@ export const SelectItem = (props: SelectProps) => {
 
 }
 
-/** When filtering is enabled, this highlights the text */
+/** When filtering is enabled, this highlights the text while typing */
 const highlightText = (text: string, query: string) => {
     let lastIndex = 0;
     const words = query

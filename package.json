@@ -71,6 +71,8 @@
     "@electron-forge/plugin-webpack": "6.0.0-beta.54",
     "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
     "@types/file-saver": "^2.0.1",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/xml2js": "^0.4.8",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "css-loader": "^4.3.0",
@@ -94,11 +96,14 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "classnames": "^2.2.6",
+    "d-forest": "^1.4.2",
     "electron-log": "^4.3.1",
     "electron-squirrel-startup": "^1.0.0",
     "file-saver": "^2.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "xml2js": "^0.4.23",
     "xmlbuilder": "^15.1.1"
   }
 }

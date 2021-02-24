@@ -50,7 +50,7 @@ export const Item = (props: ItemProps) => {
     return <div>
 
         <ControlGroup>
-            <div style={{ width: '50%' }}>
+            <div style={{ width: '70%' }}>
                 <Label className={Classes.INLINE} style={{ paddingRight: '20px' }}>
                     <span>{name}</span>
                     { tooltipContent && 
