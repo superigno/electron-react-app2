@@ -16,10 +16,6 @@ export const NavigationBar = (props: NavBarProps) => {
         props.onImport(filePath);
     }
 
-    const handleOnImportClick = () => {
-        inputFile.current.click();
-    }
-
     return <Navbar style={{ background: Colors.BLUE2 }}>
         <div style={{ color: Colors.WHITE }}>
             <NavbarGroup align={Alignment.LEFT}>
@@ -31,7 +27,7 @@ export const NavigationBar = (props: NavBarProps) => {
                     <Icon color={Colors.WHITE} icon="document" style={{ paddingRight: '15px' }} />Create New
                 </Button>
                 <NavbarDivider />
-                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE }} onClick={handleOnImportClick} >
+                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE }} onClick={() => inputFile.current.click()} >
                     <Icon color={Colors.WHITE} icon="folder-open" style={{ paddingRight: '15px' }} />Import Existing
                     <input type='file' id='file' ref={inputFile} style={{ display: 'none' }} onChange={handleOnFileImport} />
                 </Button>

@@ -9,16 +9,14 @@
 					"name": "MERCHANT_NAME",
 					"type": "text",
 					"description": "",
-					"length": 10,
-					"value": ""
+					"length": 10
 				},
 				{
 					"order": 2,
 					"name": "CONFIG_VERSION",
 					"type": "text",
 					"description": "Version number",
-					"length": 5,
-					"value": ""
+					"length": 5
 				}
 			]
 		},

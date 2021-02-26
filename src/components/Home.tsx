@@ -8,15 +8,36 @@ import xml2js from 'xml2js';
 import { ipcRenderer } from 'electron';
 import { ItemGroupType } from './ItemGroup';
 import { ItemType } from './Item';
+import df from 'd-forest';
+
+type ImportItemType = {
+    $: {
+        name: string,
+        value: string
+    }    
+}
+
+type ImportConfigType = {
+    configuration: {
+        item: ImportItemType[]
+    }   
+}
 
 export const Home = () => {
 
     const configSchema: ConfigType = JSON.parse(fs.readFileSync(Path.join('resources\\schema.json'), 'utf8'));
-    //Sort by order number
-    configSchema.groups.sort((a: ItemGroupType, b: ItemGroupType) => (a.order > b.order) ? 1 : -1)
     
+    //Sort by order number and add default value attribute if not present
+    configSchema.groups.sort((a: ItemGroupType, b: ItemGroupType) => (a.order > b.order) ? 1 : -1).forEach(group => 
+        group.items.forEach(item => 
+            item.value = item.value ? item.value : ""
+        )
+    )
+
+    console.log("Config Schema: ", configSchema);
+
     const [schema, setSchema] = React.useState(configSchema);
-    
+
     const handleOnCreateNew = () => {
         console.log('Create New');
         setSchema(configSchema);
@@ -25,35 +46,41 @@ export const Home = () => {
 
     const handleOnFileImport = (filePath: string) => {
 
+        const filetype = Path.extname(filePath).toLowerCase();
+
+        if (filetype != '.xml') {
+            console.error('File type is invalid', filetype);
+            return;
+        }
+
         const parser = new xml2js.Parser();
         fs.readFile(filePath, function (err, data) {
             parser.parseStringPromise(data)
-            .then(function (result) {
-                
-                console.log("Contents: ", result);
+                .then( (result: ImportConfigType) => {
 
-                //Need to recreate object for react to recognize change and rerender component
-                const groupsArray = configSchema.groups.map((group: ItemGroupType) => {
-                    const items = group.items.map((item: ItemType) => {
-                        return { ...item, value: item.value ? item.value : '' };
-                    })
-                    return { ...group, items: items };
+                    const groupsArray = configSchema.groups.map(group => {
+                        const items = group.items.filter((item: ItemType) => {
+                           const match = df(result.configuration.item).findLeaf((leaf: any) => leaf.name === item.name);
+                            if (match) {
+                                item.value = match.value;
+                                return true
+                            } else {
+                                return false;
+                            }
+                        });
+                        return { ...group, items: items };
+                    }).filter((group: ItemGroupType) => {
+                        return group.items.length > 0;
+                    });
+
+                    const filteredSchema = { groups: groupsArray };
+                    setSchema(filteredSchema);
+
+                }).catch(function (err) {
+                    console.error("Invalid file format", err);
                 });
-        
-                const recreatedSchema = { groups: groupsArray };
-
-
-                console.log('Test:', recreatedSchema);                
-                console.log('Orig:', configSchema);
-
-
-                setSchema(recreatedSchema);
-
-            }).catch(function (err) {
-                console.error("Error: ", err);
-            });
         });
-    }    
+    }
 
     return <>
 

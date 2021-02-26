@@ -24,10 +24,7 @@ export const Configuration = (props: ConfigurationProps) => {
             item.value = itemValue;
             return { ...current };
         })
-
-        console.log('On Change ID:', itemName);
-        console.log('On Change Value:', itemValue);
-        console.log('Schema:', schema);
+        
     }
 
     React.useEffect(() => {
