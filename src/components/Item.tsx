@@ -3,47 +3,51 @@ import { Classes, ControlGroup, InputGroup, Label, Tooltip, Icon, NumericInput, 
 import { SelectItem, OptionType } from './SelectItem';
 
 type ItemProps = {
-    name: string,
-    value?: string,
-    type?: string,
-    description: string,
-    length?: number,
-    options?: string[]
+    item: ItemType,
     onChange: (value: string) => void;
+}
+
+export type ItemType = {
+    order: number,
+    name: string,
+    type: string,
+    description: string,
+    length: number,
+    value: string,
+    options: string[]
 }
 
 export const Item = (props: ItemProps) => {
 
-    const {name, value, description, type, length, options, onChange} = props;
-    const tooltipContent = description ? <span>{description}</span> : "";
-    const typeLower: string = type ? type.toLowerCase() : 'text';
+    const tooltipContent = props.item.description ? <span>{props.item.description}</span> : "";
+    const typeLower: string = props.item.type ? props.item.type.toLowerCase() : 'text';
 
     const handleOnChange = (value: string) => {
-        onChange(value);
+        props.onChange(value);
     }
 
-    let inputElement = <InputGroup value={value} size={length} onChange={(e) => handleOnChange(e.target.value)}/>;
+    let inputElement = <InputGroup value={props.item.value} size={length} onChange={(e) => handleOnChange(e.target.value)}/>;
 
     if (typeLower === 'number') {
 
-        inputElement = <NumericInput value={value} large={false} size={length} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
+        inputElement = <NumericInput value={props.item.value} large={false} size={length} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
 
     } else if (typeLower === 'boolean') {
 
-        inputElement = <Switch value={value} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
+        inputElement = <Switch value={props.item.value} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
 
     } else if (typeLower === 'select') {
 
-        if (options) {
-            const optionsList: OptionType[] = options.map((value, index) => ({ value, id: index + 1 }));
-            inputElement = <SelectItem value={value} options={optionsList} onSelect={(id, value) => handleOnChange(value)}/>;
+        if (props.item.options) {
+            const optionsList: OptionType[] = props.item.options.map((value, index) => ({ value, id: index + 1 }));
+            inputElement = <SelectItem value={props.item.value} options={optionsList} onSelect={(id, value) => handleOnChange(value)}/>;
         } else {
             console.error(`\'options\' property for ${name} is undefined`);
         }       
 
     } else if (typeLower === 'largetext') {
 
-        inputElement = <TextArea value={value} growVertically={true} onChange={(e) => handleOnChange(e.target.value)} />
+        inputElement = <TextArea value={props.item.value} growVertically={true} onChange={(e) => handleOnChange(e.target.value)} />
 
     }    
     
@@ -52,7 +56,7 @@ export const Item = (props: ItemProps) => {
         <ControlGroup>
             <div style={{ width: '70%' }}>
                 <Label className={Classes.INLINE} style={{ paddingRight: '20px' }}>
-                    <span>{name}</span>
+                    <span>{props.item.name}</span>
                     { tooltipContent && 
                     <Tooltip content={tooltipContent} minimal={true} >
                         <Icon icon="issue" iconSize={13} style={{ verticalAlign: 'top' }} />

@@ -1,77 +1,38 @@
 import React from 'react';
 import { Intent, Button } from '@blueprintjs/core';
-import { ItemGroup } from './ItemGroup';
+import { ItemGroup, ItemGroupType } from './ItemGroup';
+import { ItemType } from './Item';
 import { GenerateButton } from './GenerateButton';
 import df from 'd-forest';
 
-type FormItemType = {
-    name: string,
-    value: string,
-    description?: string
-}
-
 type ConfigurationProps = {
-    schema: any
+    schema: ConfigType
 }
 
-export type FormItemGroupType = {
-    groupName: string,
-    items: FormItemType[]
+export type ConfigType = {
+    groups: ItemGroupType[]
 }
 
 export const Configuration = (props: ConfigurationProps) => {
 
-    const [formObjects, setFormObjects] = React.useState([]);
     const [schema, setSchema] = React.useState(props.schema);
-    //const schema = props.schema;
-
-    //Sort by order number
-    schema.groups.sort((a: any, b: any) => (a.order > b.order) ? 1 : -1)
-    
-    console.log('Schema: ', schema);
 
     const handleOnChange = (itemName: string, itemValue: string) => {
 
-        setFormObjects(current => {
-            const item = df(current).findLeaf((leaf: any) => leaf.name === itemName);
+        setSchema((current: ConfigType) => {
+            const item = df(current).findLeaf((leaf: ItemType) => leaf.name === itemName);
             item.value = itemValue;
-            return current;
-        });
+            return { ...current };
+        })
 
         console.log('On Change ID:', itemName);
         console.log('On Change Value:', itemValue);
-        console.log('Form Objects:', formObjects);
+        console.log('Schema:', schema);
     }
 
-    //Initialize form objects
     React.useEffect(() => {
-
-        console.log('Use Effect');
-        
-        const itemsGroup: FormItemGroupType[] = [];
-        schema.groups.map((group: any) => {
-
-            console.log("Here");
-            const items: FormItemGroupType = { groupName: "", items: [] };
-
-            items.groupName = group.name;
-
-            group.items.map((i: any) =>
-                items.items.push({
-                    name: i.name,
-                    value: i.value ? i.value : "",
-                    description: i.description
-                })
-            )
-
-            itemsGroup.push(items);
-
-        });
-
-        setFormObjects(itemsGroup);
-        console.log('Items: ', itemsGroup);
-
-    }, []);
+        setSchema(props.schema);
+    }, [props.schema]);
 
 
     return <div className="wrapper">
@@ -84,14 +45,14 @@ export const Configuration = (props: ConfigurationProps) => {
 
         <div className="content">
             {
-                schema.groups.map((group: any) =>
-                    <ItemGroup key={group.name} groupName={group.name} items={group.items} onChange={handleOnChange} />
+                schema.groups.map((group: ItemGroupType) =>
+                    <ItemGroup key={group.name} group={group} onChange={handleOnChange} />
                 )
             }
         </div>
 
         <div className="button">
-            <GenerateButton intent={Intent.PRIMARY} object={formObjects} text="Generate Configuration File" />
+            <GenerateButton intent={Intent.PRIMARY} object={schema} text="Generate Configuration File" />
         </div>
 
     </div>

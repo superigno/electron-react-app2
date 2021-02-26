@@ -1,29 +1,30 @@
 import React from 'react';
 import { Button } from '@blueprintjs/core';
-import {FormItemGroupType} from './Configuration';
+import {ConfigType} from './Configuration';
 import XMLBuilder from 'xmlbuilder';
 import FileSaver from 'file-saver';
+import { ItemGroupType } from './ItemGroup';
+import { ItemType } from './Item';
 
 type ButtonProps = {
     intent: any,
-    object: FormItemGroupType[],
+    object: ConfigType,
     text: string
 }
 
 export const GenerateButton = (props: ButtonProps) => {
-    const {intent, object: formValues, text} = props;
-
+    
     const handleOnSubmit = (e: any) => {
         e.preventDefault();
 
         const root = XMLBuilder.create('configuration');
         root.raw(''); //spacer
         
-        formValues.map((obj: FormItemGroupType) => {
+        props.object.groups.map((group: ItemGroupType) => {
 
-            root.com(obj.groupName);
+            root.com(group.name);
 
-            obj.items.map(i => {
+            group.items.map((i: ItemType) => {
                 let item = root.ele('item');
                 i.description ? item.commentBefore(i.description) : '';
                 item.att('name', i.name);
@@ -42,5 +43,5 @@ export const GenerateButton = (props: ButtonProps) => {
     };
 
 
-    return <Button intent={intent} onClick={handleOnSubmit} text={text} />;
+    return <Button intent={props.intent} onClick={handleOnSubmit} text={props.text} />;
 }

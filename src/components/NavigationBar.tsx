@@ -32,7 +32,7 @@ export const NavigationBar = (props: NavBarProps) => {
                 </Button>
                 <NavbarDivider />
                 <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE }} onClick={handleOnImportClick} >
-                    <Icon color={Colors.WHITE} icon="folder-open" style={{ paddingRight: '15px' }} />Import
+                    <Icon color={Colors.WHITE} icon="folder-open" style={{ paddingRight: '15px' }} />Import Existing
                     <input type='file' id='file' ref={inputFile} style={{ display: 'none' }} onChange={handleOnFileImport} />
                 </Button>
 

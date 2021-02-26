@@ -10,14 +10,15 @@
 					"type": "text",
 					"description": "",
 					"length": 10,
-					"value": "DFS-HK"
+					"value": ""
 				},
 				{
 					"order": 2,
 					"name": "CONFIG_VERSION",
 					"type": "text",
 					"description": "Version number",
-					"length": 5
+					"length": 5,
+					"value": ""
 				}
 			]
 		},
@@ -30,20 +31,23 @@
 					"name": "FXCHOICE_SERVER_PORT",
 					"type": "number",
 					"description": "The port used to listen to the request from Wincor",
-					"length": 8
+					"length": 8,
+					"value": ""
 				},
 				{
 					"order": 2,
 					"name": "FXCHOICE_RESPONSE_RETRY",
 					"type": "number",
 					"description": "",
-					"length": 2
+					"length": 2,
+					"value": ""
 				},
 				{
 					"order": 3,
 					"name": "TERMINAL_MODE",
 					"type": "boolean",
-					"description": ""
+					"description": "",
+					"value": ""
 				}
 			]
 		},
@@ -56,14 +60,70 @@
 					"name": "REQUEST_DATA_FORMAT",
 					"type": "select",
 					"description": "The request data format for FxChoice Socket Implementation",
-					"options": ["xml", "json"]
+					"options": ["xml", "json"],
+					"value": "xml"
 				},
 				{
 					"order": 2,
 					"name": "RESPONSE_DATA_FORMAT",
 					"type": "select",
 					"description": "The response data format for FxChoice Socket Implementation",
-					"options": ["xml", "json"]
+					"options": ["xml", "json"],
+					"value": "xml"
+				}
+			]
+		},
+		{
+			"order": 4,
+			"name": "Timeouts",			
+			"items": [
+				{
+					"order": 1,
+					"name": "TIMEOUT",
+					"type": "number",
+					"description": "Timeout in seconds (default is 150s or 2 1/2 minutes)",
+					"length": 3,
+					"value": 150
+				},
+				{
+					"order": 2,
+					"name": "DCC_TIMEOUT",
+					"type": "number",
+					"description": "Timeout in seconds (default is 62s or 1 minute 2s | 60 CCredit DCC Timeout)",
+					"length": 3,
+					"value": 62
+				},
+				{
+					"order": 3,
+					"name": "WINCOR_TIMEOUT",
+					"type": "number",
+					"description": "Timeout in seconds (default is 240s or 4 minutes)",
+					"length": 3,
+					"value": 240
+				},
+				{
+					"order": 4,
+					"name": "YN_TIMEOUT",
+					"type": "number",
+					"description": "Timeout in seconds (default is 60s or 1 minute)",
+					"length": 3,
+					"value": 60
+				},
+				{
+					"order": 5,
+					"name": "YN_TIMEOUT_BUFFER",
+					"type": "number",
+					"description": "Timeout in seconds (default is 10s - buffer used while waiting for YNTIMEOUT to expire)",
+					"length": 3,
+					"value": 10
+				},
+				{
+					"order": 6,
+					"name": "TXN_COMPLETION_TIME",
+					"type": "number",
+					"description": "",
+					"length": 3,
+					"value": 200
 				}
 			]
 		}
