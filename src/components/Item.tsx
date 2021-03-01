@@ -12,7 +12,7 @@ export type ItemType = {
     name: string,
     type: string,
     description: string,
-    length: number,
+    size: number,
     value: string,
     options: string[]
 }
@@ -26,15 +26,17 @@ export const Item = (props: ItemProps) => {
         props.onChange(value);
     }
 
-    let inputElement = <InputGroup value={props.item.value} size={length} onChange={(e) => handleOnChange(e.target.value)}/>;
+    let inputElement = <InputGroup value={props.item.value} size={props.item.size} onChange={(e) => handleOnChange(e.target.value)}/>;
 
     if (typeLower === 'number') {
 
-        inputElement = <NumericInput value={props.item.value} large={false} size={length} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
+        inputElement = <NumericInput value={props.item.value} large={false} size={props.item.size ? props.item.size : 1} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
 
     } else if (typeLower === 'boolean') {
 
-        inputElement = <Switch value={props.item.value} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
+        const isChecked = props.item.value && props.item.value == 'true' ? true : false;
+
+        inputElement = <Switch checked={isChecked} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
 
     } else if (typeLower === 'select') {
 

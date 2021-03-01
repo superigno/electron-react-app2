@@ -40,8 +40,9 @@ export const Home = () => {
 
     const handleOnCreateNew = () => {
         console.log('Create New');
-        setSchema(configSchema);
-        ipcRenderer.send('reload');
+        //Send deep copy of schema for react to recognize change and rerender components
+        const configSchemaCopy = JSON.parse(JSON.stringify(configSchema));
+        setSchema(configSchemaCopy);
     }
 
     const handleOnFileImport = (filePath: string) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, NavbarGroup, NavbarHeading, NavbarDivider, Button, Classes, Alignment, Intent, Colors, Icon } from '@blueprintjs/core';
+import { Navbar, NavbarGroup, NavbarHeading, NavbarDivider, Button, Classes, Alignment, Intent, Colors, Icon, Alert } from '@blueprintjs/core';
 
 type NavBarProps = {
     onCreateNew: () => void,
@@ -9,11 +9,24 @@ type NavBarProps = {
 export const NavigationBar = (props: NavBarProps) => {
 
     const inputFile = React.useRef(null)
+    const [isAlertOpen, setAlertOpen] = React.useState(false);
+
+    const handleAlertOpen = () => (
+        setAlertOpen(true)
+    );
+    const handleAlertCancel = () => (
+        setAlertOpen(false)
+    );
 
     const handleOnFileImport = (e: any) => {
         console.log('File:', e.target.files[0].path);
         const filePath = e.target.files[0].path;
         props.onImport(filePath);
+    }
+
+    const handleOnCreateNew = () => {
+        setAlertOpen(false);
+        props.onCreateNew();
     }
 
     return <Navbar style={{ background: Colors.BLUE2 }}>
@@ -23,7 +36,7 @@ export const NavigationBar = (props: NavBarProps) => {
             </NavbarGroup>
             <NavbarGroup align={Alignment.RIGHT} >
 
-                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE }} onClick={props.onCreateNew}>
+                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE }} onClick={handleAlertOpen}>
                     <Icon color={Colors.WHITE} icon="document" style={{ paddingRight: '15px' }} />Create New
                 </Button>
                 <NavbarDivider />
@@ -33,6 +46,20 @@ export const NavigationBar = (props: NavBarProps) => {
                 </Button>
 
             </NavbarGroup>
+
+            <Alert
+                        cancelButtonText="Cancel"
+                        confirmButtonText="Okay"
+                        icon="document"
+                        intent={Intent.PRIMARY}
+                        isOpen={isAlertOpen}
+                        onCancel={handleAlertCancel}
+                        onConfirm={handleOnCreateNew}
+                    >
+                        <p>This will clear all changes made. Proceed?</p>
+
+                    </Alert>
+
         </div>
     </Navbar>
 }

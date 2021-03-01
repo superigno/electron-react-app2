@@ -9,14 +9,14 @@
 					"name": "MERCHANT_NAME",
 					"type": "text",
 					"description": "",
-					"length": 10
+					"size": 10
 				},
 				{
 					"order": 2,
 					"name": "CONFIG_VERSION",
 					"type": "text",
 					"description": "Version number",
-					"length": 5
+					"size": 5
 				}
 			]
 		},
@@ -29,7 +29,7 @@
 					"name": "FXCHOICE_SERVER_PORT",
 					"type": "number",
 					"description": "The port used to listen to the request from Wincor",
-					"length": 8,
+					"size": 2,
 					"value": ""
 				},
 				{
@@ -37,7 +37,7 @@
 					"name": "FXCHOICE_RESPONSE_RETRY",
 					"type": "number",
 					"description": "",
-					"length": 2,
+					"size": 1,
 					"value": ""
 				},
 				{
@@ -80,7 +80,7 @@
 					"name": "TIMEOUT",
 					"type": "number",
 					"description": "Timeout in seconds (default is 150s or 2 1/2 minutes)",
-					"length": 3,
+					"size": 1,
 					"value": 150
 				},
 				{
@@ -88,7 +88,7 @@
 					"name": "DCC_TIMEOUT",
 					"type": "number",
 					"description": "Timeout in seconds (default is 62s or 1 minute 2s | 60 CCredit DCC Timeout)",
-					"length": 3,
+					"size": 1,
 					"value": 62
 				},
 				{
@@ -96,7 +96,7 @@
 					"name": "WINCOR_TIMEOUT",
 					"type": "number",
 					"description": "Timeout in seconds (default is 240s or 4 minutes)",
-					"length": 3,
+					"size": 1,
 					"value": 240
 				},
 				{
@@ -104,7 +104,7 @@
 					"name": "YN_TIMEOUT",
 					"type": "number",
 					"description": "Timeout in seconds (default is 60s or 1 minute)",
-					"length": 3,
+					"size": 1,
 					"value": 60
 				},
 				{
@@ -112,7 +112,7 @@
 					"name": "YN_TIMEOUT_BUFFER",
 					"type": "number",
 					"description": "Timeout in seconds (default is 10s - buffer used while waiting for YNTIMEOUT to expire)",
-					"length": 3,
+					"size": 1,
 					"value": 10
 				},
 				{
@@ -120,7 +120,7 @@
 					"name": "TXN_COMPLETION_TIME",
 					"type": "number",
 					"description": "",
-					"length": 3,
+					"size": 1,
 					"value": 200
 				}
 			]
