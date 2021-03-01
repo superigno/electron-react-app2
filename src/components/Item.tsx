@@ -53,10 +53,9 @@ export const Item = (props: ItemProps) => {
 
     }    
     
-    return <div>
+    return <div className="item" style={{ paddingRight: '50px'}}>
 
-        <ControlGroup>
-            <div style={{ width: '70%' }}>
+            <div className="item">
                 <Label className={Classes.INLINE} style={{ paddingRight: '20px' }}>
                     <span>{props.item.name}</span>
                     { tooltipContent && 
@@ -67,11 +66,9 @@ export const Item = (props: ItemProps) => {
                 </Label>
             </div>
 
-            <div>
+            <div className="item">
                 {inputElement}
             </div>
 
-        </ControlGroup>
-
-    </div>
+        </div>
 }

@@ -23,14 +23,22 @@
   padding: 40px 30px 20px 30px;
 }
 
+.item-group {
+  padding: 10px 0px 10px 0px;
+  /*border-bottom: 1px solid #BFCCD6*/
+}
+
 .group-name {
-  margin: 20px 0 20px;
   position: relative;
+}
+
+.item {
+  display: inline-block
 }
 
 .button {
   padding: 20px 0px 50px 0px;
-  text-align: center;
+  text-align: right;
 }
 
 .footer {

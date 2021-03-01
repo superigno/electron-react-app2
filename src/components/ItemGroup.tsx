@@ -18,13 +18,13 @@ export const ItemGroup = (props: ItemGroupProps) => {
     //Sort by order number
     props.group.items.sort((a: any, b: any) => (a.order > b.order) ? 1 : -1)
 
-    return <div>
+    return <div className="item-group">
 
         <div>
-            <u><h6 className="bp3-heading group-name">{props.group.name}</h6></u>
+            <h6 className="bp3-heading group-name">{props.group.name}</h6>
         </div>
 
-        <ControlGroup fill={false} vertical={true}>
+        <div>
             {
                 props.group.items.map((i: any) =>
 
@@ -34,7 +34,7 @@ export const ItemGroup = (props: ItemGroupProps) => {
                     />
                 )
             }
-        </ControlGroup>
+        </div>
 
     </div>
 
