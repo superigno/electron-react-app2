@@ -54,7 +54,22 @@
   padding: 5px;
 }
 
+.overlay {
+  background-color: white;
+  width: 30%;
+  left: 0;
+  right: 0;
+  padding: 30px 30px 30px 30px;
+  text-align: center;
+  margin: 10% auto;
+}
 
+.config-type {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  padding-top: 25px;
+}
 
 
 
