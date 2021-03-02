@@ -1608,6 +1608,1858 @@
 					"value": "COM7"
 				}
 			]
+		},
+		{
+			"order": 30,
+			"name": "Signpad",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "SIGNATURE_IMAGE_UPLOAD_URL",
+					"type": "text",
+					"value": "https://usw4.pure-commerce.com/dfsnetreport",
+					"description": "CHECK to delete"
+				},
+				{
+					"order": 2,
+					"name": "SIGNATURE_IMAGE_UPLOAD_SERVLET",
+					"type": "text",
+					"description": "CHECK to delete",
+					"value": "/servlet/upload"
+				},
+				{
+					"order": 3,
+					"name": "SIGNPAD_ON_DEMAND_CONNECTION",
+					"type": "boolean",
+					"description": "Open/create connection as requested and closes after process is completed",
+					"value": true
+				},
+				{
+					"order": 4,
+					"name": "SIGNPAD_ON_DEMAND_AVAILABILITY",
+					"type": "boolean",
+					"description": "Flag to indicate if checking of signpad connection availability is needed or not before a certain process",
+					"value": false
+				},
+				{
+					"order": 5,
+					"name": "SIGNPAD_SOCKET_ADB_FORWARD",
+					"type": "boolean",
+					"description": "Flag to direct all socket connection of signpad to localhost instead of specific IP",
+					"value": true
+				},
+				{
+					"order": 6,
+					"name": "SIGNPAD_BAUD_RATE",
+					"type": "number",
+					"description": "19200/9600...",
+					"value": 9600
+				},
+				{
+					"order": 7,
+					"name": "SIGNPAD_DATA_BIT",
+					"type": "number",
+					"description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
+					"value": 8
+				},
+				{
+					"order": 8,
+					"name": "SIGNPAD_STOP_BIT",
+					"type": "number",
+					"description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
+					"value": 1
+				},
+				{
+					"order": 9,
+					"name": "SIGNPAD_PARITY_BIT",
+					"type": "number",
+					"description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
+					"value": 0
+				}
+			]
+		},
+		{
+			"order": 31,
+			"name": "Signpad Socket Connection",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "SIGNPAD_IP",
+					"type": "text",
+					"value": "localhost",
+					"description": "IP address of the signpad"
+				},
+				{
+					"order": 2,
+					"name": "SIGNPAD_PORT",
+					"type": "number",
+					"description": "Port number to connect",
+					"value": 9999
+				},
+				{
+					"order": 3,
+					"name": "SIGNPAD_ACK_TIMEOUT",
+					"type": "number",
+					"description": "in seconds, how long it expects to receive ACK after sending the request",
+					"value": 3
+				},
+				{
+					"order": 4,
+					"name": "SIGNPAD_INIT_RETRY_COUNT",
+					"type": "number",
+					"description": "Retry count for signpad initialization",
+					"value": 3
+				},
+				{
+					"order": 5,
+					"name": "SIGNPAD_INIT_DELAY",
+					"type": "number",
+					"description": "In seconds, how long a process can be done with the terminal",
+					"value": 2
+				},
+				{
+					"order": 6,
+					"name": "SIGNPAD_ON_DEMAND_TIMEOUT",
+					"type": "number",
+					"description": "In seconds, how long an on-demand form can be done with the terminal",
+					"value": 3
+				},
+				{
+					"order": 7,
+					"name": "SIGNPAD_SIGN_FINISH_TIMEOUT",
+					"type": "number",
+					"value": 4
+				},
+				{
+					"order": 8,
+					"name": "SIGNPAD_SIGN_TOTAL_TIMEOUT",
+					"type": "number",
+					"value": 45
+				},
+				{
+					"order": 9,
+					"name": "SIGNPAD_COMMAND_SEND_TIMEOUT",
+					"type": "number",
+					"value": 10
+				},
+				{
+					"order": 10,
+					"name": "SIGNPAD_DCC_SELECT_TIMEOUT",
+					"type": "number",
+					"value": 45
+				},
+				{
+					"order": 11,
+					"name": "SIGNPAD_GET_LAST_RESPONSE_TIMEOUT",
+					"type": "number",
+					"value": 5
+				},
+				{
+					"order": 12,
+					"name": "SIGNPAD_RESO_WIDTH",
+					"type": "number",
+					"value": 4096
+				},
+				{
+					"order": 13,
+					"name": "SIGNPAD_RESO_HEIGHT",
+					"type": "number",
+					"value": 4096
+				}
+			]
+		},
+		{
+			"order": 32,
+			"name": "Device Health Check (Pinpad/Signpad)",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "SHOULD_RESTART_SIGNPAD_FAILURE",
+					"type": "boolean",
+					"value": false,
+					"description": "Enable/disable perform recovery | always false for now "
+				},
+				{
+					"order": 2,
+					"name": "TERMINAL_HEALTH_CHECK_ENABLED",
+					"type": "boolean",
+					"description": "Enable/disable terminal health checking | always false for now",
+					"value": false
+				},
+				{
+					"order": 3,
+					"name": "SERIAL_HEALTH_CHECK_ENABLED",
+					"type": "boolean",
+					"description": "Enable/disable device health checking",
+					"value": true
+				},
+				{
+					"order": 4,
+					"name": "TERMINAL_HEALTH_CHECK_FREQUENCY",
+					"type": "number",
+					"description": "How frequent to check the terminal (in seconds)",
+					"value": 120
+				},
+				{
+					"order": 5,
+					"name": "SIGNPAD_HEALTH_CHECK_FREQUENCY",
+					"type": "number",
+					"description": "How frequent to check the signpad (in seconds)",
+					"value": 120
+				},
+				{
+					"order": 6,
+					"name": "ECR_HEALTH_CHECK_FREQUENCY",
+					"type": "number",
+					"description": "How frequent to check the signpad (in seconds)",
+					"value": 300
+				},
+				{
+					"order": 7,
+					"name": "RESTART_WAITING_TIME",
+					"type": "number",
+					"description": "Delay in seconds before triggering a windows restart",
+					"value": 1
+				},
+				{
+					"order": 8,
+					"name": "RESTART_INTERVAL_TIME",
+					"type": "number",
+					"description": "Delay in minutes before triggering a windows restart",
+					"value": 30
+				}
+			]
+		},
+		{
+			"order": 33,
+			"name": "Signature Related Items",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "ELECTRONIC_SIGNATURE",
+					"type": "boolean",
+					"value": false,
+					"description": "TRUE for Electronic Signature, False for Manual Signature"
+				},
+				{
+					"order": 2,
+					"name": "ELECTRONIC_SIGNATURE_CAPTURED_NOTE",
+					"type": "text",
+					"description": "Electronic Signature Receipt Captured Note",
+					"value": "*** Electronic Signature Captured. ***"
+				},
+				{
+					"order": 3,
+					"name": "HAS_SIGNATURE_HEADER",
+					"type": "boolean",
+					"description": "TRUE for adding Signature Header, False for no Signature Header",
+					"value": false
+				},
+				{
+					"order": 4,
+					"name": "SIGNATURE_HEADER",
+					"type": "text",
+					"value": "AU DFS\nHONGKONG INTERNATIONAL AIRPORT"
+				},
+				{
+					"order": 5,
+					"name": "MANUAL_SIGNATURE_SPACE",
+					"type": "text",
+					"description": "Manual Signature Space",
+					"value": "\n\nX--------------------------\nSIGNATURE"
+				},
+				{
+					"order": 6,
+					"name": "SIGNATURE_MATCH_QUESTION",
+					"type": "text",
+					"description": "Manual Signature Space",
+					"value": "Does Signature match?"
+				},
+				{
+					"order": 7,
+					"name": "SIGNATURE_FLAG_MANUAL",
+					"type": "text",
+					"value": "SIGN: ________________________"
+				},
+				{
+					"order": 8,
+					"name": "SIGNATURE_FLAG_ELECTRONIC",
+					"type": "text",
+					"value": "Customer signed electronically"
+				},
+				{
+					"order": 9,
+					"name": "SIGNATURE_FLAG_WAIVED",
+					"type": "text",
+					"value": "No signature required"
+				},
+				{
+					"order": 10,
+					"name": "RECEIPT_DATA_REQUEST_TYPE_SCHEME",
+					"type": "text",
+					"value": "CardPayment:TRUE,PaymentReversal:TRUE,PaymentRefund:TRUE,CardPreAuthorisation:FALSE,LoyaltySwipe:TRUE"
+				},
+				{
+					"order": 11,
+					"name": "SIGNATURE_INCLUDED_IN_PRIVATE_DATA",
+					"type": "boolean",
+					"value": true,
+					"description": "True to include base64 signatureimage in the private data | else false"
+				},
+				{
+					"order": 12,
+					"name": "SIGNATURE_DATA_TERMINAL_CARD_SCHEME",
+					"type": "text",
+					"value": "TYROTTA:TRUE,DPAPOSA8:TRUE,EPAY:TRUE,INGENICO_ICT250:TRUE,PAX_A920:TRUE,INGENICO_MOVE5000:TRUE"
+				},
+				{
+					"order": 13,
+					"name": "SIGNATURE_DATA_REQUEST_TYPE_SCHEME",
+					"type": "text",
+					"value": "CardPayment:TRUE,PaymentReversal:TRUE,PaymentRefund:TRUE,CardPreAuthorisation:TRUE,LoyaltySwipe:TRUE"
+				},
+				{
+					"order": 14,
+					"name": "SIGNATURE_RESIZE_ENABLED",
+					"type": "boolean",
+					"value": true,
+					"description": "True Signature resize/scale Enabled | else false"
+				},
+				{
+					"order": 15,
+					"name": "SIGNATURE_RESIZE_PERCENTAGE",
+					"type": "number",
+					"value": 0.2,
+					"description": "Signature resize/scall percentage | 0.5 = 50%, 0.6 = 60%, 0.7 = 70%, 0.8 = 80%, 0.9 = 90%"
+				},
+				{
+					"order": 16,
+					"name": "SIGNATURE_IMAGE_PATH",
+					"type": "text",
+					"value": "C:\\fxchoice\\signpad\\images\\"
+				},
+				{
+					"order": 17,
+					"name": "SIGNATURE_LOCAL_COPY_ENABLED",
+					"type": "boolean",
+					"value": false
+				},
+				{
+					"order": 18,
+					"name": "SIGNATURE_CAPTURE_ENABLED",
+					"type": "boolean",
+					"value": true,
+					"description": "Signature capture Enabled"
+				},
+				{
+					"order": 19,
+					"name": "WAIVE_SIGNATURE_ENABLED",
+					"type": "boolean",
+					"value": true,
+					"description": "Skip signature for amount less than the configured value (Visa EPS/Mastercard QPS)"
+				},
+				{
+					"order": 20,
+					"name": "MAGSTRIPE_WAIVE_ENABLED",
+					"type": "boolean",
+					"value": true,
+					"description": "Skip signature waive for magstripe"
+				},
+				{
+					"order": 21,
+					"name": "CARDSCHEME_WAIVE_LIST",
+					"type": "text",
+					"value": "MASTER:500:FALSE,MC:500:FALSE,VI:500:FALSE,MASTERCARD:500:FALSE,VISA:500:FALSE,AMEX:500:FALSE,CUP:500:FALSE,JCB:500:FALSE",
+					"description": "Format CardScheme:Maximum amount to skip:Apply to DCC transaction?"
+				},
+				{
+					"order": 22,
+					"name": "CARDSCHEME_MAPPING",
+					"type": "text",
+					"value": "0:OTHERS,1:VISA,2:MASTERCARD,3:AMEX,4:DINERS,5:JCB,6:DISCOVER,7:CUP DEBIT,8:CUP CREDIT,9:DEBIT"
+				},
+				{
+					"order": 23,
+					"name": "RESPONSECODE_INCLUDED_IN_OPI_RESPONSE",
+					"type": "boolean",
+					"value": true,
+					"description": "True to include terminal response code in the response data | else false"
+				}
+			]
+		},
+		{
+			"order": 34,
+			"name": "DCC Enabled",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "DCC_ENABLED",
+					"type": "boolean",
+					"value": true
+				}
+			]
+		},
+		{
+			"order": 35,
+			"name": "Currency",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "ENABLE_MULTI_CURRENCY",
+					"type": "boolean",
+					"value": false,
+					"description": "Show other foreign currencies aside from the home currency. If disabled, the two currencies (base + home) will be displayed"
+				},
+				{
+					"order": 2,
+					"name": "MULTI_CURRENCY_LIST",
+					"type": "text",
+					"value": "BASE:1,USD:2,HOME:3",
+					"description": "The list and order of currencies for display. Format -> Currency:Display Order"
+				},
+				{
+					"order": 3,
+					"name": "SIGNATURE_CAPTURE_ENABLED",
+					"type": "boolean",
+					"value": true,
+					"description": "Signaure capture Enabled"
+				},
+				{
+					"order": 4,
+					"name": "DCC_CONTACTLESS_AMOUNT_LIMIT",
+					"type": "number",
+					"value": 100,
+					"description": "DCC Amount limit for contactless card before requiring signature"
+				},
+				{
+					"order": 5,
+					"name": "integratedReceipt",
+					"type": "boolean",
+					"value": true
+				},
+				{
+					"order": 6,
+					"name": "integratedReceiptWidth",
+					"type": "number",
+					"value": 36,
+					"description": "Integer between 28 and 500"
+				},
+				{
+					"order": 7,
+					"name": "SHOW_CARDBRAND_IN_SIGNPAD",
+					"type": "number",
+					"value": 1,
+					"description": "Show the card schemes in the signpad DCC offer screen. 0-Don't show, 1-Show only with CoBrand, 2-Show including Visa/MC"
+				},
+				{
+					"order": 8,
+					"name": "ENABLE_DEFAULT_FOR_UNSUPPORTED_CURRENCY",
+					"type": "boolean",
+					"value": false,
+					"description": "If the card currency is not supported, should we display a default DCC currency? TRUE - Yes, FALSE - No"
+				},
+				{
+					"order": 9,
+					"name": "DEFAULT_UNSUPPORTED_CURRENCY_CODE",
+					"type": "text",
+					"value": "USD",
+					"description": "Which currency to use as DCC for unsupported currency"
+				},
+				{
+					"order": 10,
+					"name": "APPLY_DEFAULT_TO_UNSUPPORTED_CURRENCY_ONLY",
+					"type": "boolean",
+					"value": false,
+					"description": "Should we restrict showing of default to unsupported currency list. TRUE - Yes, FALSE-No include other scenarios (no rates etc)"
+				}
+			]
+		},
+		{
+			"order": 36,
+			"name": "Transaction Logs Items",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "HAS_TXLG",
+					"type": "boolean",
+					"value": true,
+					"description": "TRUE for enabling TXLG , False for no TXLG"
+				},
+				{
+					"order": 2,
+					"name": "CURRENT_TRANSACTION_FILE",
+					"type": "text",
+					"value": "current.txt",
+					"description": "The file name to save information of current transaction"
+				},
+				{
+					"order": 3,
+					"name": "LAST_TRANSACTION_FILE",
+					"type": "text",
+					"value": "last.txt",
+					"description": "The file name to save information of last transaction"
+				},
+				{
+					"order": 4,
+					"name": "LAST_TRANSACTION_RECEIPT",
+					"type": "text",
+					"value": "PrintReceipt.xml",
+					"description": "The file name to save information of last transaction"
+				}
+			]
+		},
+		{
+			"order": 37,
+			"name": "GUI Items",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "OPERATOR_SCREEN_DEVICE",
+					"type": "number",
+					"value": 0,
+					"description": "The sequence number of the screen which operator use"
+				},
+				{
+					"order": 2,
+					"name": "FXCHOICE_SCREEN_DEVICE",
+					"type": "number",
+					"value": 1
+				},
+				{
+					"order": 3,
+					"name": "FXDISPLAY_TIMEOUT",
+					"type": "number",
+					"value": 60,
+					"description": "Seconds, how long for a customer to choose use DCC or not"
+				},
+				{
+					"order": 4,
+					"name": "SIGNATURE_VERIFY_TIMEOUT",
+					"type": "number",
+					"value": 50,
+					"description": "Seconds, how long for a customer to sign on the receipt"
+				},
+				{
+					"order": 5,
+					"name": "FX_BUTTON_FLASHING",
+					"type": "boolean",
+					"value": true
+				},
+				{
+					"order": 6,
+					"name": "PURE_MEDIA_CLASS_NAME",
+					"type": "text",
+					"value": "com.pc.puremedia.client.media.MediaPlayer"
+				},
+				{
+					"order": 7,
+					"name": "CURRENCY_SELECTION_I18N_COUNTRY",
+					"type": "text",
+					"value": "CNY,KRW,JPY,USD,AUD"
+				},
+				{
+					"order": 8,
+					"name": "CURRENCY_SELECTION_I18N_DEFAULT",
+					"type": "text",
+					"value": "MessagesBundle"
+				},
+				{
+					"order": 9,
+					"name": "CURRENCY_SELECTION_DISCLAMER",
+					"type": "text",
+					"value": "This rate is based on the Pure Commerce wholesale rate plus 2.75% international conversion margin."
+				},
+				{
+					"order": 10,
+					"name": "CURRENCY_SELECTION_OPERATOR_TITLE",
+					"type": "text",
+					"value": "Information on Dynamic Currency Conversion (DCC):"
+				},
+				{
+					"order": 11,
+					"name": "CURRENCY_SELECTION_OPERATOR_TEXT_1STHALF",
+					"type": "text",
+					"value": "This customer is using a Visa or MasterCard from overseas and can pay in their home currency.| We provide an optional service that lets customers pay in their home currency, the service is called Dynamic Currency Conversion (DCC).|| By pressing the home currency button marked with their flag the cardholder can pay in their home currency and lock in the rate &amp; amount shown on the touchscreen.|| Otherwise - the cardholder can press AUD and have the transaction converted at an unknown rate to be later determined by their card issuer.| Here are some of the customer benefits to paying in their home currency with DCC:|| 1. Instant knowledge of the transaction amount in their home currency at the time of sale. No need to wait for a credit card statement or check internet banking| 2. Exchange rates are updated every hour to provide the most accurate rate.| 3. More choice - cardholders can make an informed choice of currency conversion for the purchase. || The rate for this transaction is:|"
+				},
+				{
+					"order": 12,
+					"name": "CURRENCY_SELECTION_OPERATOR_TEXT_2NDHALF",
+					"type": "text",
+					"value": " "
+				}
+			]
+		},
+		{
+			"order": 38,
+			"name": "Notification Display",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "DISPLAY_STATUS_POPUP",
+					"type": "boolean",
+					"value": false,
+					"description": "TRUE to display Status notification to Operator Screen, else False"
+				},
+				{
+					"order": 2,
+					"name": "DISPLAY_SIGNATURE_APPROVAL_POPUP",
+					"type": "boolean",
+					"value": false,
+					"description": "TRUE to display Status notification to Operator Screen, else False"
+				},
+				{
+					"order": 3,
+					"name": "DISPLAY_OPERATOR_DCC_CANCEL",
+					"type": "boolean",
+					"value": false,
+					"description": "True to display DCC OPERATOR SCREEN, else False"
+				},
+				{
+					"order": 4,
+					"name": "DCC_PINPAD_DISPLAY",
+					"type": "boolean",
+					"value": true,
+					"description": "True to display in PINPAD instead of customer screen, Else False - display in Customer Screen"
+				}
+			]
+		},
+		{
+			"order": 39,
+			"name": "Response Codes",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "APPROVED_RESPONSE_CODE",
+					"type": "text",
+					"value": "00"
+				},
+				{
+					"order": 2,
+					"name": "DECLINED_RESPONSE_CODE",
+					"type": "text",
+					"value": "ND"
+				},
+				{
+					"order": 3,
+					"name": "VOICE_REFERRAL_RESPONSE_CODE",
+					"type": "text",
+					"value": "01"
+				},
+				{
+					"order": 4,
+					"name": "DESTINATION_ERROR_RESPONSE_CODE",
+					"type": "text",
+					"value": "ND"
+				},
+				{
+					"order": 5,
+					"name": "NETWORK_REQUEST_ERROR_RESPONSE_CODE",
+					"type": "text",
+					"value": "00"
+				},
+				{
+					"order": 6,
+					"name": "TIMEOUT_ERROR_RESPONSE_CODE",
+					"type": "text",
+					"value": "TO"
+				},
+				{
+					"order": 7,
+					"name": "TRANSACTION_NOT_AVAILABLE_RESPONSE_CODE",
+					"type": "text",
+					"value": "NA"
+				},
+				{
+					"order": 8,
+					"name": "REVERSED_RESPONSE_CODE",
+					"type": "text",
+					"value": "66"
+				},
+				{
+					"order": 9,
+					"name": "CANCELLED_RESPONSE_CODE",
+					"type": "text",
+					"value": "77"
+				},
+				{
+					"order": 10,
+					"name": "SYSTEM_ERROR_RESPONSE_CODE",
+					"type": "text",
+					"value": "88"
+				},
+				{
+					"order": 11,
+					"name": "DEFAULT_BAD_RESPONSE_CODE",
+					"type": "text",
+					"value": "99"
+				}
+			]
+		},
+		{
+			"order": 40,
+			"name": "Length",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "CASHIER_ID_LENGTH",
+					"type": "number",
+					"value": 6
+				},
+				{
+					"order": 2,
+					"name": "HFMCODE_LENGTH",
+					"type": "number",
+					"value": 4
+				}
+			]
+		},
+		{
+			"order": 41,
+			"name": "Register Data Format Settings",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "REGISTER_DECIMAL_PLACES",
+					"type": "number",
+					"value": 100
+				}
+			]
+		},
+		{
+			"order": 42,
+			"name": "Device Request/Response Items",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 1,
+					"name": "DEVICE_REQ_ACTIVE",
+					"type": "boolean",
+					"value": true,
+					"description": "True to Enable DeviceRequest to communicate to POS else False -Disabled"
+				},
+				{
+					"order": 2,
+					"name": "DEVICE_PORT",
+					"type": "number",
+					"value": 20007
+				},
+				{
+					"order": 3,
+					"name": "DEVICE_IP",
+					"type": "text",
+					"value": "127.0.0.1"
+				},
+				{
+					"order": 4,
+					"name": "DEVICE_CONN_TIMEOUT",
+					"type": "number",
+					"value": 30000,
+					"description": "In milliseconds"
+				},
+				{
+					"order": 5,
+					"name": "DEVICE_CONNECTION_RETRY",
+					"type": "number",
+					"value": 3
+				},
+				{
+					"order": 6,
+					"name": "DEVICE_PAYMENT_TYPES",
+					"type": "text",
+					"value": "ALIPAY:true:false:false,WECHAT:true:false:false,CREDITCARD:true:false:false,CUP:true:false:false,UPLAN:true:false:false",
+					"description": "Payment Type:<True to include else false>:<Erase true or false>:<PaperCut true or false>"
+				},
+				{
+					"order": 7,
+					"name": "DEVICE_BARCODE_ENTRY_VALUE",
+					"type": "text",
+					"value": "CashierKeyboard",
+					"description": "InDeviceTarget value to acquire the barcode. Values can be CashierKeyboard, BarcodeScanner, etc. refer to Wincor Specs v1.3"
+				},
+				{
+					"order": 8,
+					"name": "DEVICE_CARD_ENTRY_VALUE",
+					"type": "text",
+					"value": "CashierKeyboard"
+				},
+				{
+					"order": 9,
+					"name": "DEVICE_REQ_SIGNATURE_VERIFICATION_SCREEN",
+					"type": "boolean",
+					"value": false,
+					"description": "TRUE for POS Signature Verification, False to disable"
+				},
+				{
+					"order": 10,
+					"name": "DEVICE_REQ_BARCODE_TRIGGER_SCREEN",
+					"type": "boolean",
+					"value": false,
+					"description": "TRUE for POS Barcode trigger request, False to disable"
+				},
+				{
+					"order": 11,
+					"name": "DEVICE_REQ_SEND_MERCHANT_RECEIPT",
+					"type": "boolean",
+					"value": false,
+					"description": "TRUE for POS Sending Merchant receipt, False to disable"
+				},
+				{
+					"order": 12,
+					"name": "DEVICE_REQ_SEND_CUSTOMER_RECEIPT",
+					"type": "boolean",
+					"value": false,
+					"description": "TRUE for POS Sending Customer receipt, False to disable"
+				},
+				{
+					"order": 13,
+					"name": "DEVICE_REQ_CARDNUMBER_TRIGGER_SCREEN",
+					"type": "boolean",
+					"value": true,
+					"description": "TRUE for POS CardNumber trigger request, False to disable"
+				},
+				{
+					"order": 14,
+					"name": "DEVICE_REQ_CARDNUMBER_ALLOWED_ALL_REQUEST_TYPE",
+					"type": "boolean",
+					"value": false,
+					"description": "TRUE for to allow card number trigger for all request type, False to for card payment only"
+				},
+				{
+					"order": 15,
+					"name": "EPAY_DIGITALPAY_SIMULATOR_MODE",
+					"type": "boolean",
+					"value": false,
+					"description": "EPay simulator mode: set to FALSE if need to connect to TEST or PROD host, otherwise TRUE"
+				}
+			]
+		},
+		{
+			"order": 43,
+			"name": "EPAY related configurations",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "TERMINAL_ID",
+					"type": "text",
+					"value": "49010204"
+				},
+				{
+					"order": 2,
+					"name": "CHARS_PER_LINE",
+					"type": "number",
+					"value": 30
+				},
+				{
+					"order": 3,
+					"name": "EPAY_USERNAME",
+					"type": "text",
+					"value": "UPLive_49010204"
+				},
+				{
+					"order": 4,
+					"name": "EPAY_PASSWORD",
+					"type": "text",
+					"value": "OqHSqTA3VCVy4Z0iV3FefgbuyJG1rZ8E7gbezzEP7Wk"
+				},
+				{
+					"order": 5,
+					"name": "EPAY_PRIMARY_URL",
+					"type": "text",
+					"value": "https://precision.epayworldwide.com/up-interface"
+				},
+				{
+					"order": 6,
+					"name": "EPAY_SECONDARY_URL",
+					"type": "text",
+					"value": "https://backup.precision.epayworldwide.com/up-interface"
+				},
+				{
+					"order": 7,
+					"name": "EPAY_READ_TIMEOUT",
+					"type": "number",
+					"value": 90000,
+					"description": "In milliseconds"
+				},
+				{
+					"order": 8,
+					"name": "EPAY_CONN_TIMEOUT",
+					"type": "number",
+					"value": 10000,
+					"description": "In milliseconds"
+				},
+				{
+					"order": 9,
+					"name": "EPAY_AUTO_CANCEL",
+					"type": "boolean",
+					"value": false
+				},
+				{
+					"order": 10,
+					"name": "EPAY_CAPTURE_RESEND_LIMIT",
+					"type": "number",
+					"value": 130
+				},
+				{
+					"order": 11,
+					"name": "USE_CUSTOM_RECEIPT",
+					"type": "boolean",
+					"value": true
+				}
+			]
+		},
+		{
+			"order": 44,
+			"name": "EPAY related Test configurations",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "TERMINAL_ID_TEST",
+					"type": "text",
+					"value": "93881902"
+				},
+				{
+					"order": 2,
+					"name": "EPAY_USERNAME_TEST",
+					"type": "text",
+					"value": "UPTestDFS"
+				},
+				{
+					"order": 3,
+					"name": "EPAY_PASSWORD_TEST",
+					"type": "text",
+					"value": "Eye1gThddq4BDavIV4v2Ug=="
+				},
+				{
+					"order": 4,
+					"name": "EPAY_PENDING_RESULT_CODES",
+					"type": "text",
+					"value": "9998,9988"
+				}
+			]
+		},
+		{
+			"order": 45,
+			"name": "ALIPAY related EPay data",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "ALIPAY_EPAY_EAN",
+					"type": "text",
+					"value": "9337694039712"
+				},
+				{
+					"order": 2,
+					"name": "ALIPAY_EPAY_RETAILER_ACC",
+					"type": "text",
+					"value": "930513"
+				},
+				{
+					"order": 3,
+					"name": "ALIPAY_EPAY_STORE_ID",
+					"type": "text",
+					"value": "EPALI1726240"
+				}
+			]
+		},
+		{
+			"order": 46,
+			"name": "ALIPAY related EPay Test data",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "ALIPAY_EPAY_EAN_TEST",
+					"type": "text",
+					"value": "9337694039712"
+				},
+				{
+					"order": 2,
+					"name": "ALIPAY_EPAY_RETAILER_ACC_TEST",
+					"type": "text",
+					"value": "999013"
+				},
+				{
+					"order": 3,
+					"name": "ALIPAY_EPAY_STORE_ID_TEST",
+					"type": "text",
+					"value": "EPTST0000002"
+				}
+			]
+		},
+		{
+			"order": 47,
+			"name": "WECHAT related EPay data",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "WECHAT_EPAY_EAN",
+					"type": "text",
+					"value": "9337694039711"
+				},
+				{
+					"order": 2,
+					"name": "WECHAT_EPAY_RETAILER_ACC",
+					"type": "text",
+					"value": "930513"
+				},
+				{
+					"order": 3,
+					"name": "WECHAT_EPAY_STORE_ID",
+					"type": "text",
+					"value": "EPALI1726240"
+				}
+			]
+		},
+		{
+			"order": 48,
+			"name": "WECHAT related EPay Test data",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "WECHAT_EPAY_EAN_TEST",
+					"type": "text",
+					"value": "9337694039711"
+				},
+				{
+					"order": 2,
+					"name": "WECHAT_EPAY_RETAILER_ACC_TEST",
+					"type": "text",
+					"value": "999012"
+				},
+				{
+					"order": 3,
+					"name": "WECHAT_EPAY_STORE_ID_TEST",
+					"type": "text",
+					"value": "EPTST0000001"
+				}
+			]
+		},
+		{
+			"order": 49,
+			"name": "Get Workstation ID from Merchant Ref (for Alipay, Wechat, UQ)",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "MERCHANT_REF_WORKSTATION_ID_INDEX_START",
+					"type": "number",
+					"value": 0
+				},
+				{
+					"order": 2,
+					"name": "MERCHANT_REF_WORKSTATION_ID_INDEX",
+					"type": "number",
+					"value": 8
+				}
+			]
+		},
+		{
+			"order": 50,
+			"name": "MPOS Configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "MPOS_MERCHANT_TERMINAL_RELOAD_INTERVAL",
+					"type": "number",
+					"value": 5
+				},
+				{
+					"order": 2,
+					"name": "MPOS_THREAD_COUNT",
+					"type": "number",
+					"value": 10
+				},
+				{
+					"order": 3,
+					"name": "HAS_MULTIPLE_TERMINALS",
+					"type": "boolean",
+					"value": true
+				},
+				{
+					"order": 4,
+					"name": "TERMINAL_CONNECTION_TYPE",
+					"type": "select",
+					"value": "VIRTUAL",
+					"options": ["VIRTUAL", "ACTUAL"],
+					"description": "VIRTUAL (applies to direct connection to WECHAT, ALIPAY or EPAY host) or ACTUAL (connection via physical terminal)"
+				}
+			]
+		},
+		{
+			"order": 51,
+			"name": "EFTSOLUTIONS configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "EFTSOLUTIONS_SIMULATOR_MODE",
+					"type": "boolean",
+					"value": false
+				},
+				{
+					"order": 2,
+					"name": "EFTSOLUTIONS_PRIMARY_URL",
+					"type": "text",
+					"value": "http://testpri.eftsolutions.com:9966"
+				},
+				{
+					"order": 3,
+					"name": "EFTSOLUTIONS_SECONDARY_URL",
+					"type": "text",
+					"value": "http://testsec.eftsolutions.com:9966"
+				},
+				{
+					"order": 4,
+					"name": "EFTSOLUTIONS_MID",
+					"type": "text",
+					"value": "344888800000001"
+				},
+				{
+					"order": 5,
+					"name": "EFTSOLUTIONS_TID",
+					"type": "text",
+					"value": "28000069"
+				},
+				{
+					"order": 6,
+					"name": "EFTSOLUTIONS_SETTLEMENT_TIME",
+					"type": "text",
+					"value": "23:00",
+					"description": "24-hour format"
+				},
+				{
+					"order": 7,
+					"name": "EFTSOLUTIONS_READ_TIMEOUT",
+					"type": "number",
+					"value": 90000,
+					"description": "In milliseconds"
+				},
+				{
+					"order": 8,
+					"name": "EFTSOLUTIONS_CONN_TIMEOUT",
+					"type": "number",
+					"value": 10000,
+					"description": "In milliseconds"
+				},
+				{
+					"order": 9,
+					"name": "EFTSOLUTIONS_FAILOVER_ENABLED",
+					"type": "boolean",
+					"value": true
+				},
+				{
+					"order": 10,
+					"name": "EFTSOLUTIONS_SETTLEMENT_RETRY",
+					"type": "number",
+					"value": 3,
+					"description": "EFT Solutions settlement attempts"
+				},
+				{
+					"order": 11,
+					"name": "EFTSOLUTIONS_SETTLEMENT_ENABLED",
+					"type": "boolean",
+					"value": false,
+					"description": "Flag to perform EFT Solutions settlement"
+				},
+				{
+					"order": 12,
+					"name": "EFTSOLUTIONS_REVERSAL_RETRY_TIMES",
+					"type": "number",
+					"value": 3
+				},
+				{
+					"order": 13,
+					"name": "EFTSOLUTIONS_REVERSAL_RETRY_TIME_INTERVAL",
+					"type": "number",
+					"value": 10,
+					"description": "In seconds"
+				},
+				{
+					"order": 14,
+					"name": "EFTSOLUTIONS_ENABLE_REVERSAL",
+					"type": "boolean",
+					"value": true
+				}
+			]
+		},
+		{
+			"order": 52,
+			"name": "OCEANPAYMENT configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "OCEANPAYMENT_SIMULATOR_MODE",
+					"type": "boolean",
+					"value": false
+				},
+				{
+					"order": 2,
+					"name": "OCEANPAYMENT_AUTO_QUERY",
+					"type": "boolean",
+					"value": true
+				},
+				{
+					"order": 3,
+					"name": "OCEANPAYMENT_AUTO_QUERY_TRY_TIMES",
+					"type": "number",
+					"value": 3
+				},
+				{
+					"order": 4,
+					"name": "OCEANPAYMENT_REFUND_TYPE",
+					"type": "select",
+					"options": ["1", "2"],
+					"value": "1",
+					"description": "1:FULL 2:PARTIAL"
+				},
+				{
+					"order": 5,
+					"name": "OCEANPAYMENT_SALE_URL",
+					"type": "text",
+					"value": "https://secure.oceanpayment.com/gateway/directservice/test"
+				},
+				{
+					"order": 6,
+					"name": "OCEANPAYMENT_VOID_URL",
+					"type": "text",
+					"value": "https://secure.oceanpayment.com/gateway/service/auth"
+				},
+				{
+					"order": 7,
+					"name": "OCEANPAYMENT_QUERY_URL",
+					"type": "text",
+					"value": "https://query.oceanpayment.com/service/check/test"
+				},
+				{
+					"order": 8,
+					"name": "OCEANPAYMENT_REFUND_URL",
+					"type": "text",
+					"value": "https://query.oceanpayment.com/service/applyRefund"
+				},
+				{
+					"order": 9,
+					"name": "OCEANPAYMENT_REFUND_CHECK_URL",
+					"type": "text",
+					"value": "https://query.oceanpayment.com/service/queryRefund"
+				},
+				{
+					"order": 10,
+					"name": "OCEANPAYMENT_READ_TIMEOUT",
+					"type": "number",
+					"value": 60000,
+					"description": "In milliseconds"
+				},
+				{
+					"order": 11,
+					"name": "OCEANPAYMENT_CONN_TIMEOUT",
+					"type": "number",
+					"value": 10000,
+					"description": "In milliseconds"
+				},
+				{
+					"order": 12,
+					"name": "OCEANPAYMENT_FAILOVER_ENABLED",
+					"type": "boolean",
+					"value": false
+				},
+				{
+					"order": 13,
+					"name": "BILLING_IP",
+					"type": "text",
+					"value": "172.16.21.151"
+				},
+				{
+					"order": 14,
+					"name": "OCEANPAYMENT_MID",
+					"type": "text",
+					"value": "140105"
+				},
+				{
+					"order": 15,
+					"name": "OCEANPAYMENT_TID",
+					"type": "text",
+					"value": "14010508"
+				},
+				{
+					"order": 16,
+					"name": "OCEANPAYMENT_SECURE_CODE",
+					"type": "text",
+					"value": "9Gi42d7OyXNAKqHE4qLmFw=="
+				},
+				{
+					"order": 17,
+					"name": "OCEANPAYMENT_WECHAT_METHOD",
+					"type": "text",
+					"value": "WeChatPay"
+				},
+				{
+					"order": 18,
+					"name": "OCEANPAYMENT_WECHAT_METHOD_ADDITIONAL",
+					"type": "text",
+					"value": "HK_WX"
+				},
+				{
+					"order": 19,
+					"name": "OCEANPAYMENT_ALIPAY_METHOD",
+					"type": "text",
+					"value": "Alipay"
+				}
+			]
+		},
+		{
+			"order": 53,
+			"name": "UPLAN configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "UPLAN_SIMULATOR_MODE",
+					"type": "boolean",
+					"value": false
+				},
+				{
+					"order": 2,
+					"name": "UPLAN_ACQUIRER_CODE",
+					"type": "text",
+					"value": "ACQCODE"
+				},
+				{
+					"order": 3,
+					"name": "UPLAN_MERCHANT_CODE",
+					"type": "text",
+					"value": "MERCHCODE"
+				},
+				{
+					"order": 4,
+					"name": "UPLAN_TERMINAL_ID",
+					"type": "text",
+					"value": "TERMINALID"
+				},
+				{
+					"order": 5,
+					"name": "UPLAN_ACQUIRER_CODE_TEST",
+					"type": "text",
+					"value": "ACQCODE"
+				},
+				{
+					"order": 6,
+					"name": "UPLAN_MERCHANT_CODE_TEST",
+					"type": "text",
+					"value": "MERCHCODE"
+				},
+				{
+					"order": 7,
+					"name": "UPLAN_TERMINAL_ID_TEST",
+					"type": "text",
+					"value": "TERMINALID"
+				},
+				{
+					"order": 8,
+					"name": "UPLAN_READ_TIMEOUT",
+					"type": "number",
+					"value": 60,
+					"description": "In seconds"
+				},
+				{
+					"order": 9,
+					"name": "UPLAN_CONN_TIMEOUT",
+					"type": "number",
+					"value": 10,
+					"description": "In seconds"
+				},
+				{
+					"order": 10,
+					"name": "UPLAN_PRIMARY_URL",
+					"type": "text",
+					"value": "https://hkm1.pure-commerce.com/agent/uplan"
+				},
+				{
+					"order": 11,
+					"name": "UPLAN_SECONDARY_URL",
+					"type": "text",
+					"value": "https://hkm2.pure-commerce.com/agent/uplan"
+				},
+				{
+					"order": 12,
+					"name": "UPLAN_URL_TEST",
+					"type": "text",
+					"value": "https://dev2.pure-commerce.com/agent/uplan"
+				},
+				{
+					"order": 13,
+					"name": "UPLAN_SERVICE_ENTRY_MODE",
+					"type": "text",
+					"value": "SERVICE ENTRY MODE"
+				},
+				{
+					"order": 14,
+					"name": "UPLAN_TERMINAL_PARTNER",
+					"type": "text",
+					"value": "INGENICO_MOVE5000"
+				}
+			]
+		},
+		{
+			"order": 54,
+			"name": "SWIFTPASS configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "SWIFTPASS_SIMULATOR_MODE",
+					"type": "boolean",
+					"value": false
+				},
+				{
+					"order": 2,
+					"name": "SWIFTPASS_VERSION",
+					"type": "text",
+					"value": "2.0"
+				},
+				{
+					"order": 3,
+					"name": "SWIFTPASS_READ_TIMEOUT",
+					"type": "number",
+					"value": 60,
+					"description": "In seconds"
+				},
+				{
+					"order": 4,
+					"name": "SWIFTPASS_CONN_TIMEOUT",
+					"type": "number",
+					"value": 10,
+					"description": "In seconds"
+				},
+				{
+					"order": 5,
+					"name": "SWIFTPASS_PRIMARY_URL",
+					"type": "text",
+					"value": "https://hkm1.pure-commerce.com/agent/swift"
+				},
+				{
+					"order": 6,
+					"name": "SWIFTPASS_SECONDARY_URL",
+					"type": "text",
+					"value": "https://hkm2.pure-commerce.com/agent/swift"
+				},
+				{
+					"order": 7,
+					"name": "SWIFTPASS_URL_TEST",
+					"type": "text",
+					"value": "https://dev2.pure-commerce.com/agent/swift"
+				},
+				{
+					"order": 8,
+					"name": "SWIFTPASS_MERCHANT_SIGNATURE_KEY",
+					"type": "text",
+					"value": "SIGNATUREKEY"
+				},
+				{
+					"order": 9,
+					"name": "SWIFTPASS_MERCHANT_ID",
+					"type": "text",
+					"value": "127530000126"
+				},
+				{
+					"order": 10,
+					"name": "SWIFTPASS_TERMINAL_ID",
+					"type": "text",
+					"value": "20002210"
+				},
+				{
+					"order": 11,
+					"name": "SWIFTPASS_MERCHANT_ID_TEST",
+					"type": "text",
+					"value": "127530000126"
+				},
+				{
+					"order": 12,
+					"name": "SWIFTPASS_TERMINAL_ID_TEST",
+					"type": "text",
+					"value": "20002210"
+				},
+				{
+					"order": 13,
+					"name": "SWIFTPASS_MERCHANT_GOODS_DESCRIPTION",
+					"type": "text",
+					"value": "Testing0720"
+				},
+				{
+					"order": 14,
+					"name": "SWIFTPASS_NONCE_STRING",
+					"type": "text",
+					"value": "1010101010"
+				},
+				{
+					"order": 15,
+					"name": "SWIFTPASS_QUERY_TIMES",
+					"type": "number",
+					"value": 6
+				},
+				{
+					"order": 16,
+					"name": "SWIFTPASS_QUERY_TIME_INTERVAL",
+					"type": "number",
+					"value": 20,
+					"description": "In seconds"
+				}
+			]
+		},
+		{
+			"order": 55,
+			"name": "MACAUPASS configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "MACAUPASS_SIMULATOR_MODE",
+					"type": "boolean",
+					"value": false
+				},
+				{
+					"order": 2,
+					"name": "MACAUPASS_READ_TIMEOUT",
+					"type": "number",
+					"value": 180,
+					"description": "In seconds"
+				},
+				{
+					"order": 3,
+					"name": "MACAUPASS_CONN_TIMEOUT",
+					"type": "number",
+					"value": 10,
+					"description": "In seconds"
+				},
+				{
+					"order": 4,
+					"name": "MACAUPASS_PRIMARY_URL",
+					"type": "text",
+					"value": "https://hkm1.pure-commerce.com/agent/mpay"
+				},
+				{
+					"order": 5,
+					"name": "MACAUPASS_SECONDARY_URL",
+					"type": "text",
+					"value": "https://hkm2.pure-commerce.com/agent/mpay"
+				},
+				{
+					"order": 6,
+					"name": "MACAUPASS_URL_TEST",
+					"type": "text",
+					"value": "https://dev2.pure-commerce.com/agent/mpay"
+				},
+				{
+					"order": 7,
+					"name": "MACAUPASS_RETRY_TIMES",
+					"type": "number",
+					"value": 20
+				},
+				{
+					"order": 8,
+					"name": "MACAUPASS_RETRY_TIME_INTERVAL",
+					"type": "number",
+					"value": 5,
+					"description": "In seconds"
+				},
+				{
+					"order": 9,
+					"name": "MACAUPASS_RECEIPT_FLAG",
+					"type": "text",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"order": 56,
+			"name": "OCEANPAYMENT_CLIENT configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "OCEANPAYMENT_CLIENT_SIMULATOR_MODE",
+					"type": "boolean",
+					"value": true
+				},
+				{
+					"order": 2,
+					"name": "OCEANPAYMENT_CLIENT_READ_TIMEOUT",
+					"type": "number",
+					"value": 180,
+					"description": "In seconds"
+				},
+				{
+					"order": 3,
+					"name": "OCEANPAYMENT_CLIENT_CONN_TIMEOUT",
+					"type": "number",
+					"value": 10,
+					"description": "In seconds"
+				},
+				{
+					"order": 4,
+					"name": "OCEANPAYMENT_CLIENT_PRIMARY_URL",
+					"type": "text",
+					"value": "https://hkm1.pure-commerce.com/agent/oceanpay"
+				},
+				{
+					"order": 5,
+					"name": "OCEANPAYMENT_CLIENT_SECONDARY_URL",
+					"type": "text",
+					"value": "https://hkm2.pure-commerce.com/agent/oceanpay"
+				},
+				{
+					"order": 6,
+					"name": "OCEANPAYMENT_CLIENT_URL_TEST",
+					"type": "text",
+					"value": "https://dev2.pure-commerce.com/agent/ocean"
+				},
+				{
+					"order": 7,
+					"name": "OCEANPAYMENT_CLIENT_RETRY_TIMES",
+					"type": "number",
+					"value": 20
+				},
+				{
+					"order": 8,
+					"name": "OCEANPAYMENT_CLIENT_RETRY_TIME_INTERVAL",
+					"type": "number",
+					"value": 5,
+					"description": "In seconds"
+				},
+				{
+					"order": 9,
+					"name": "OCEANPAYMENT_CLIENT_RECEIPT_FLAG",
+					"type": "text",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"order": 57,
+			"name": "FISERV configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "FISERV_SIMULATOR_MODE",
+					"type": "boolean",
+					"value": true
+				},
+				{
+					"order": 2,
+					"name": "FISERV_READ_TIMEOUT",
+					"type": "number",
+					"value": 180,
+					"description": "In seconds"
+				},
+				{
+					"order": 3,
+					"name": "FISERV_CONN_TIMEOUT",
+					"type": "number",
+					"value": 10,
+					"description": "In seconds"
+				},
+				{
+					"order": 4,
+					"name": "FISERV_PRIMARY_URL",
+					"type": "text",
+					"value": "https://hkm1.pure-commerce.com/agent/cupqr"
+				},
+				{
+					"order": 5,
+					"name": "FISERV_SECONDARY_URL",
+					"type": "text",
+					"value": "https://hkm2.pure-commerce.com/agent/cupqr"
+				},
+				{
+					"order": 6,
+					"name": "FISERV_URL_TEST",
+					"type": "text",
+					"value": "https://dev2.pure-commerce.com/agent/cupqr"
+				},
+				{
+					"order": 7,
+					"name": "FISERV_RETRY_TIMES",
+					"type": "number",
+					"value": 20
+				},
+				{
+					"order": 8,
+					"name": "FISERV_RETRY_TIME_INTERVAL",
+					"type": "number",
+					"value": 5,
+					"description": "In seconds"
+				},
+				{
+					"order": 9,
+					"name": "FISERV_RECEIPT_FLAG",
+					"type": "text",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"order": 57,
+			"name": "PSP Terminal Socket configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "PSP_TERMINAL_IP",
+					"type": "text",
+					"value": "localhost"
+				},
+				{
+					"order": 2,
+					"name": "PSP_TERMINAL_PORT",
+					"type": "number",
+					"value": 8081
+				},
+				{
+					"order": 3,
+					"name": "PSP_TERMINAL_RETRY_COUNT",
+					"type": "number",
+					"value": 5
+				},
+				{
+					"order": 4,
+					"name": "PSP_TERMINAL_PROCESS_TIMEOUT",
+					"type": "number",
+					"value": 180,
+					"description": "In seconds"
+				},
+				{
+					"order": 5,
+					"name": "PSP_TERMINAL_ON_DEMAND_TIMEOUT",
+					"type": "number",
+					"value": 1,
+					"description": "In seconds"
+				},
+				{
+					"order": 6,
+					"name": "PSP_TERMINAL_REQUEST_TOKEN",
+					"type": "boolean",
+					"value": true
+				},
+				{
+					"order": 7,
+					"name": "PSP_TERMINAL_ON_DEMAND_AVAILABILITY_FLAG",
+					"type": "boolean",
+					"value": false,
+					"description": "True to check connection before sending request; else False"
+				},
+				{
+					"order": 8,
+					"name": "PSP_TERMINAL_SIMULATOR_MODE",
+					"type": "boolean",
+					"value": false
+				}
+			]
+		},
+		{
+			"order": 58,
+			"name": "MCP DCC HOST",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "DCC_HOST_READ_TIMEOUT",
+					"type": "number",
+					"value": 60,
+					"description": "In seconds"
+				},
+				{
+					"order": 2,
+					"name": "DCC_HOST_CONN_TIMEOUT",
+					"type": "number",
+					"value": 50,
+					"description": "In seconds"
+				},
+				{
+					"order": 3,
+					"name": "DCC_HOST_PRIMARY_URL",
+					"type": "text",
+					"value": "https://dev1.pure-commerce.com/mcppax/gateway"
+				},
+				{
+					"order": 4,
+					"name": "DCC_HOST_SECONDARY_URL",
+					"type": "text",
+					"value": "https://dev1.pure-commerce.com/mcppax/gateway"
+				},
+				{
+					"order": 5,
+					"name": "DCC_HOST_URL_TEST",
+					"type": "text",
+					"value": "https://dev1.pure-commerce.com/mcppax/gateway"
+				},
+				{
+					"order": 6,
+					"name": "DCC_HOST_HOSTNAME",
+					"type": "text",
+					"value": "PAXMTest01"
+				},
+				{
+					"order": 7,
+					"name": "DCC_HOST_USERNAME",
+					"type": "text",
+					"value": "mcpPaxTest"
+				},
+				{
+					"order": 8,
+					"name": "DCC_HOST_PASSWORD",
+					"type": "text",
+					"value": "MG86!stm2"
+				},
+				{
+					"order": 9,
+					"name": "DCC_HOST_MID",
+					"type": "text",
+					"value": "9180924250"
+				},
+				{
+					"order": 10,
+					"name": "DCC_HOST_HOSTNAME_TEST",
+					"type": "text",
+					"value": "PAXMTest01"
+				},
+				{
+					"order": 11,
+					"name": "DCC_HOST_USERNAME_TEST",
+					"type": "text",
+					"value": "mcpPaxTest"
+				},
+				{
+					"order": 12,
+					"name": "DCC_HOST_PASSWORD_TEST",
+					"type": "text",
+					"value": "MG86!stm2"
+				},
+				{
+					"order": 13,
+					"name": "DCC_HOST_MID_TEST",
+					"type": "text",
+					"value": "9180924250"
+				}
+			]
 		}
 		
 	]
