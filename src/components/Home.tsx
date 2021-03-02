@@ -86,7 +86,7 @@ export const Home = () => {
     return <>
 
         <NavigationBar onCreateNew={handleOnCreateNew} onImport={handleOnFileImport} />
-        <Configuration schema={schema} />
+        <Configuration type={"Operations"} schema={schema} />
         <Footer />
 
     </>

@@ -43,5 +43,5 @@ export const GenerateButton = (props: ButtonProps) => {
     };
 
 
-    return <Button intent={props.intent} onClick={handleOnSubmit} text={props.text} />;
+    return <Button intent={props.intent} onClick={handleOnSubmit} text={props.text} icon={"th-derived"} large={true} />;
 }

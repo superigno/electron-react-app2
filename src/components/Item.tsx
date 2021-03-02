@@ -26,7 +26,7 @@ export const Item = (props: ItemProps) => {
         props.onChange(value);
     }
 
-    let inputElement = <InputGroup value={props.item.value} size={props.item.size} onChange={(e) => handleOnChange(e.target.value)}/>;
+    let inputElement = <InputGroup value={props.item.value} size={props.item.size ? props.item.size : props.item.value ? props.item.value.length : 10} onChange={(e) => handleOnChange(e.target.value)}/>;
 
     if (typeLower === 'number') {
 
@@ -49,7 +49,7 @@ export const Item = (props: ItemProps) => {
 
     } else if (typeLower === 'largetext') {
 
-        inputElement = <TextArea value={props.item.value} growVertically={true} onChange={(e) => handleOnChange(e.target.value)} />
+        inputElement = <TextArea value={props.item.value} growVertically={true} cols={props.item.size ? props.item.size : 40} onChange={(e) => handleOnChange(e.target.value)} />
 
     }    
     
@@ -66,7 +66,7 @@ export const Item = (props: ItemProps) => {
                 </Label>
             </div>
 
-            <div className="item">
+            <div style={{paddingBottom: '30px'}}>
                 {inputElement}
             </div>
 

@@ -56,7 +56,7 @@ export const NavigationBar = (props: NavBarProps) => {
                         onCancel={handleAlertCancel}
                         onConfirm={handleOnCreateNew}
                     >
-                        <p>This will clear all changes made. Proceed?</p>
+                        <p>This will reset all changes made. Proceed?</p>
 
                     </Alert>
 

@@ -6,11 +6,12 @@ import { GenerateButton } from './GenerateButton';
 import df from 'd-forest';
 
 type ConfigurationProps = {
-    schema: ConfigType
+    schema: ConfigType,
+    type: string //Tech or Operations
 }
 
 export type ConfigType = {
-    groups: ItemGroupType[]
+    groups: ItemGroupType[]    
 }
 
 export const Configuration = (props: ConfigurationProps) => {
@@ -42,14 +43,16 @@ export const Configuration = (props: ConfigurationProps) => {
 
         <div className="content">
             {
-                schema.groups.map((group: ItemGroupType) =>
+                schema.groups.filter((group: ItemGroupType) => {
+                    return true;//group.type.toLowerCase() === props.type.toLowerCase();
+                }).map((group: ItemGroupType) =>
                     <ItemGroup key={group.name} group={group} onChange={handleOnChange} />
                 )
             }
         </div>
 
         <div className="button">
-            <GenerateButton intent={Intent.PRIMARY} object={schema} text="Generate Configuration File" />
+            <GenerateButton intent={Intent.PRIMARY} object={schema} text="Generate" />
         </div>
 
     </div>

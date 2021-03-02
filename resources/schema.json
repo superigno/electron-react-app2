@@ -10,14 +10,16 @@
 					"name": "MERCHANT_NAME",
 					"type": "text",
 					"description": "",
-					"size": 10
+					"size": 10,
+					"value": "Tech"
 				},
 				{
 					"order": 2,
 					"name": "CONFIG_VERSION",
 					"type": "text",
 					"description": "Version number",
-					"size": 5
+					"size": 5,
+					"value": "C47"
 				}
 			]
 		},
@@ -32,7 +34,7 @@
 					"type": "number",
 					"description": "The port used to listen to the request from Wincor",
 					"size": 2,
-					"value": ""
+					"value": 20002
 				},
 				{
 					"order": 2,
@@ -40,14 +42,14 @@
 					"type": "number",
 					"description": "",
 					"size": 1,
-					"value": ""
+					"value": 3
 				},
 				{
 					"order": 3,
 					"name": "TERMINAL_MODE",
 					"type": "boolean",
 					"description": "",
-					"value": ""
+					"value": false
 				}
 			]
 		},
@@ -287,20 +289,23 @@
 					"order": 1,
 					"name": "TERMINAL_NAME",
 					"type": "largetext",
-					"value": "PAX_S60,MACAUPASS"
+					"value": "PAX_S60,MACAUPASS",
+					"size": 40
 				},
 				{
 					"order": 2,
 					"name": "TERMINAL_CARD_SCHEME",
 					"type": "largetext",
-					"value": "0:CREDITCARD,1:CREDITCARD,2:CREDITCARD,3:CREDITCARD,4:CREDITCARD,5:CREDITCARD,6:CREDITCARD,7:CUP,8:CUP,B:ALIPAY,C:WECHAT,D:UQ,E:BOCPAY,F:MPAY,G:OTHER"
+					"value": "0:CREDITCARD,1:CREDITCARD,2:CREDITCARD,3:CREDITCARD,4:CREDITCARD,5:CREDITCARD,6:CREDITCARD,7:CUP,8:CUP,B:ALIPAY,C:WECHAT,D:UQ,E:BOCPAY,F:MPAY,G:OTHER",
+					"size": 40
 				},
 				{
 					"order": 3,
 					"name": "TERMINAL_PAYMENT_SCHEME",
 					"type": "largetext",
 					"description": "Mapping for Payment Service via (TerminalConstant) Terminal Impl",
-					"value": "CREDITCARD:PAX_S60,VISA:INGENICO_ICT250,MASTERCARD:INGENICO_ICT250,AMEX:INGENICO_ICT250,DINERS:INGENICO_ICT250,JCB:INGENICO_ICT250,DISCOVER:INGENICO_ICT250,CUP DEBIT:INGENICO_ICT250,CUP CREDIT:INGENICO_ICT250,DEBIT:INGENICO_ICT250,BOCPAY:SWIFTPASS,MPAY:MACAUPASS,ALIPAY:MACAUPASS,WECHAT:OCEANPAYMENT_CLIENT,UPLAN:UPLAN,UQ:FISERV,OTHER:PAX_S60"
+					"value": "CREDITCARD:PAX_S60,VISA:INGENICO_ICT250,MASTERCARD:INGENICO_ICT250,AMEX:INGENICO_ICT250,DINERS:INGENICO_ICT250,JCB:INGENICO_ICT250,DISCOVER:INGENICO_ICT250,CUP DEBIT:INGENICO_ICT250,CUP CREDIT:INGENICO_ICT250,DEBIT:INGENICO_ICT250,BOCPAY:SWIFTPASS,MPAY:MACAUPASS,ALIPAY:MACAUPASS,WECHAT:OCEANPAYMENT_CLIENT,UPLAN:UPLAN,UQ:FISERV,OTHER:PAX_S60",
+					"size": 40
 				},
 				{
 					"order": 4,

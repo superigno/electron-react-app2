@@ -10,13 +10,16 @@ type ItemGroupProps = {
 export type ItemGroupType = {
     order: number,
     name: string,
+    type: string,
     items: ItemType[]
 }
 
 export const ItemGroup = (props: ItemGroupProps) => {
 
+    let items = props.group.items;
+
     //Sort by order number
-    props.group.items.sort((a: any, b: any) => (a.order > b.order) ? 1 : -1)
+    items.sort((a: any, b: any) => (a.order > b.order) ? 1 : -1)
 
     return <div className="item-group">
 
@@ -26,8 +29,7 @@ export const ItemGroup = (props: ItemGroupProps) => {
 
         <div>
             {
-                props.group.items.map((i: any) =>
-
+                items.map((i: any) =>
                     <Item key={i.name}
                           item={i}                        
                           onChange={(val) => props.onChange(i.name, val)}
