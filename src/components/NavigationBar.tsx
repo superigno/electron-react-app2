@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navbar, NavbarGroup, NavbarHeading, NavbarDivider, Button, Classes, Alignment, Intent, Colors, Icon, Alert, Overlay } from '@blueprintjs/core';
-import classNames from "classnames";
+import { ConfigTypes } from './Configuration';
 
 type NavBarProps = {
-    onCreateNew: () => void,
+    onCreateNew: (configType: string) => void,
     onImport: (filePath: string) => void
 }
 
@@ -11,7 +11,8 @@ export const NavigationBar = (props: NavBarProps) => {
 
     const inputFile = React.useRef(null)
     const [isAlertOpen, setAlertOpen] = React.useState(false);
-    const [isOverlayOpen, setOverlayOpen] = React.useState(false);
+    const [isOverlayOpen, setOverlayOpen] = React.useState(true);
+    const [configType, setConfigType] = React.useState("");
 
     const handleOverlayOpen = () => (
         setOverlayOpen(true)
@@ -20,12 +21,27 @@ export const NavigationBar = (props: NavBarProps) => {
         setOverlayOpen(false)
     );
 
-    const handleAlertOpen = () => (
-        setAlertOpen(true)
-    );
-    const handleAlertCancel = () => (
-        setAlertOpen(false)
-    );
+    const handleAlertOpenAll = () => {
+        if (configType) {
+            setAlertOpen(true);
+        } else {
+            setOverlayOpen(false);
+            props.onCreateNew(ConfigTypes.ALL);
+        }
+        setConfigType(ConfigTypes.ALL);
+    };
+    const handleAlertOpenOperations = () => {
+        if (configType) {
+            setAlertOpen(true);
+        } else {
+            setOverlayOpen(false);
+            props.onCreateNew(ConfigTypes.OPERATIONS);
+        }
+        setConfigType(ConfigTypes.OPERATIONS);
+    };
+    const handleAlertCancel = () => {
+        setAlertOpen(false);
+    };
 
     const handleOnFileImport = (e: any) => {
         console.log('File:', e.target.files[0].path);
@@ -36,7 +52,7 @@ export const NavigationBar = (props: NavBarProps) => {
     const handleOnCreateNew = () => {
         setAlertOpen(false);
         setOverlayOpen(false);
-        props.onCreateNew();
+        props.onCreateNew(configType);
     }
 
     return <Navbar style={{ background: Colors.BLUE2 }}>
@@ -64,7 +80,7 @@ export const NavigationBar = (props: NavBarProps) => {
                     <h3>Select Configuration Type</h3>
 
                     <div className={'config-type'}>
-                        <Button className={Classes.MINIMAL} style={{ textAlign: 'center' }} onClick={handleAlertOpen}>
+                        <Button className={Classes.MINIMAL} style={{ textAlign: 'center' }} onClick={handleAlertOpenAll}>
                             <div style={{ paddingBottom: '10px' }}>
                                 <Icon icon={'document'} iconSize={50} color={Colors.GRAY3} />
                             </div>
@@ -74,7 +90,7 @@ export const NavigationBar = (props: NavBarProps) => {
                     </div>
 
                     <div className={'config-type'}>
-                        <Button className={Classes.MINIMAL} style={{ textAlign: 'center' }} onClick={handleAlertOpen}>
+                        <Button className={Classes.MINIMAL} style={{ textAlign: 'center' }} onClick={handleAlertOpenOperations}>
                             <div style={{ paddingBottom: '10px' }}>
                                 <Icon icon={'document'} iconSize={50} color={Colors.GRAY3} />
                             </div>
@@ -84,7 +100,7 @@ export const NavigationBar = (props: NavBarProps) => {
                     </div>
 
                     <div style={{ paddingTop: '30px' }}>
-                        <Button intent={Intent.DANGER} onClick={handleOverlayCancel} text="Close" />
+                        <Button intent={Intent.NONE} onClick={handleOverlayCancel} text="Close" />
                     </div>
                 </div>
             </Overlay>

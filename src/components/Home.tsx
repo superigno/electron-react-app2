@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { Configuration, ConfigType } from './Configuration';
+import { Configuration, ConfigType, ConfigTypes } from './Configuration';
 import { NavigationBar } from './NavigationBar';
 import { Footer } from './Footer';
 import fs from 'fs';
 import Path from 'path';
 import xml2js from 'xml2js';
-import { ipcRenderer } from 'electron';
 import { ItemGroupType } from './ItemGroup';
 import { ItemType } from './Item';
 import df from 'd-forest';
@@ -37,12 +36,14 @@ export const Home = () => {
     console.log("Config Schema: ", configSchema);
 
     const [schema, setSchema] = React.useState(configSchema);
+    const [configType, setConfigType] = React.useState("");
 
-    const handleOnCreateNew = () => {
-        console.log('Create New');
+    const handleOnCreateNew = (configType: string) => {
+        console.log('Create New:', configType);
         //Send deep copy of schema for react to recognize change and rerender components
         const configSchemaCopy = JSON.parse(JSON.stringify(configSchema));
         setSchema(configSchemaCopy);
+        setConfigType(configType)
     }
 
     const handleOnFileImport = (filePath: string) => {
@@ -76,6 +77,7 @@ export const Home = () => {
 
                     const filteredSchema = { groups: groupsArray };
                     setSchema(filteredSchema);
+                    setConfigType(ConfigTypes.ALL)
 
                 }).catch(function (err) {
                     console.error("Invalid file format", err);
@@ -86,7 +88,7 @@ export const Home = () => {
     return <>
 
         <NavigationBar onCreateNew={handleOnCreateNew} onImport={handleOnFileImport} />
-        <Configuration type={"Operations"} schema={schema} />
+        <Configuration type={configType} schema={schema} />
         <Footer />
 
     </>
