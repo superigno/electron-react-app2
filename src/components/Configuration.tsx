@@ -15,8 +15,8 @@ export type ConfigType = {
 }
 
 export const ConfigTypes = {
-    ALL: "All",
-    OPERATIONS: "Operations"
+    ALL: "ALL",
+    OPERATIONS: "OPERATIONS"
 }
 
 export const Configuration = (props: ConfigurationProps) => {
@@ -53,7 +53,7 @@ export const Configuration = (props: ConfigurationProps) => {
         <div className="content">
             {
                 schema.groups.filter((group: ItemGroupType) => {
-                    return group.type.toLowerCase() === (configType === ConfigTypes.ALL ? group.type.toLowerCase() : configType.toLowerCase());
+                    return group.type.toUpperCase() === (configType === ConfigTypes.ALL ? group.type.toUpperCase() : configType);
                 }).map((group: ItemGroupType) =>
                     <ItemGroup key={group.name} group={group} onChange={handleOnChange} />
                 )
@@ -61,7 +61,7 @@ export const Configuration = (props: ConfigurationProps) => {
         </div>
 
         <div className="button">
-            <GenerateButton intent={Intent.PRIMARY} object={schema} text="Generate" />
+            <GenerateButton type={configType} intent={Intent.PRIMARY} object={schema} text="Generate" />
         </div>
 
     </div>

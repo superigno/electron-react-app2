@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@blueprintjs/core';
-import {ConfigType} from './Configuration';
+import {ConfigType, ConfigTypes} from './Configuration';
 import XMLBuilder from 'xmlbuilder';
 import FileSaver from 'file-saver';
 import { ItemGroupType } from './ItemGroup';
@@ -9,6 +9,7 @@ import { ItemType } from './Item';
 type ButtonProps = {
     intent: any,
     object: ConfigType,
+    type: string,
     text: string
 }
 
@@ -20,7 +21,9 @@ export const GenerateButton = (props: ButtonProps) => {
         const root = XMLBuilder.create('configuration');
         root.raw(''); //spacer
         
-        props.object.groups.map((group: ItemGroupType) => {
+        props.object.groups.filter(group => {
+            return group.type.toUpperCase() === (props.type === ConfigTypes.ALL ? group.type.toUpperCase() : props.type);
+        }).map((group: ItemGroupType) => {
 
             root.com(group.name);
 
