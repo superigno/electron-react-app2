@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { Classes, ControlGroup, InputGroup, Label, Tooltip, Icon, NumericInput, Switch, TextArea } from '@blueprintjs/core';
+import { Classes, InputGroup, Label, Tooltip, Icon, NumericInput, Switch, TextArea } from '@blueprintjs/core';
 import { SelectItem, OptionType } from './SelectItem';
+import { MultiSelectItem } from './MultiSelectItem';
 
 type ItemProps = {
     item: ItemType,
-    onChange: (value: string) => void;
+    onChange: (value: string | string[]) => void;
 }
 
 export type ItemType = {
@@ -13,7 +14,7 @@ export type ItemType = {
     type: string,
     description: string,
     size: number,
-    value: string,
+    value: string | string[],
     options: string[]
 }
 
@@ -22,19 +23,19 @@ export const Item = (props: ItemProps) => {
     const tooltipContent = props.item.description ? <span>{props.item.description}</span> : "";
     const typeLower: string = props.item.type ? props.item.type.toLowerCase() : 'text';
 
-    const handleOnChange = (value: string) => {
+    const handleOnChange = (value: string | string[]) => {
         props.onChange(value);
     }
 
-    let inputElement = <InputGroup value={props.item.value} size={props.item.size ? props.item.size : props.item.value ? props.item.value.length : 10} onChange={(e) => handleOnChange(e.target.value)}/>;
+    let inputElement = <InputGroup value={(props.item.value as string)} size={props.item.size ? props.item.size : props.item.value ? props.item.value.length : 10} onChange={(e) => handleOnChange(e.target.value)}/>;
 
     if (typeLower === 'number') {
 
-        inputElement = <NumericInput value={props.item.value} large={false} size={props.item.size ? props.item.size : 1} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
+        inputElement = <NumericInput value={(props.item.value as string)} large={false} size={props.item.size ? props.item.size : 1} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
 
     } else if (typeLower === 'boolean') {
 
-        const isChecked = props.item.value && props.item.value == 'true' ? true : false;
+        const isChecked = props.item.value && (props.item.value as string) == 'true' ? true : false;
 
         inputElement = <Switch checked={isChecked} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
 
@@ -42,16 +43,18 @@ export const Item = (props: ItemProps) => {
 
         if (props.item.options) {
             const optionsList: OptionType[] = props.item.options.map((value, index) => ({ value, id: index + 1 }));
-            inputElement = <SelectItem value={props.item.value} options={optionsList} onSelect={(id, value) => handleOnChange(value)}/>;
+            inputElement = <SelectItem value={(props.item.value as string)} options={optionsList} onSelect={(id, value) => handleOnChange(value)}/>;
         } else {
             console.error(`\'options\' property for ${name} is undefined`);
         }       
 
     } else if (typeLower === 'largetext') {
 
-        inputElement = <TextArea value={props.item.value} growVertically={true} cols={props.item.size ? props.item.size : 40} onChange={(e) => handleOnChange(e.target.value)} />
+        inputElement = <TextArea value={(props.item.value as string)} growVertically={true} cols={props.item.size ? props.item.size : 40} onChange={(e) => handleOnChange(e.target.value)} />
 
-    }    
+    }  else if (typeLower === 'multiselect') {
+        inputElement = <MultiSelectItem values={(props.item.value as string[])} options={props.item.options} onSelect={handleOnChange} />
+    }
     
     return <div className="item" style={{ paddingRight: '50px'}}>
 

@@ -4,7 +4,7 @@ import { Item, ItemType } from './Item';
 
 type ItemGroupProps = {
     group: ItemGroupType,
-    onChange: (id: string, value: string) => void;
+    onChange: (id: string, value: string | string[]) => void;
 }
 
 export type ItemGroupType = {

@@ -24,7 +24,7 @@ export const Configuration = (props: ConfigurationProps) => {
     const [schema, setSchema] = React.useState(props.schema);
     const [configType, setConfigType] = React.useState(props.type);
 
-    const handleOnChange = (itemName: string, itemValue: string) => {
+    const handleOnChange = (itemName: string, itemValue: string | string[]) => {
 
         setSchema((current: ConfigType) => {
             const item = df(current).findLeaf((leaf: ItemType) => leaf.name === itemName);
@@ -44,11 +44,11 @@ export const Configuration = (props: ConfigurationProps) => {
 
         <h3 className="bp3-heading">Global FxChoice Configuration Manager</h3>
 
-        {/*
+        
         <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
-        */}
+        
 
         <div className="content">
             {

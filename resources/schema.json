@@ -288,9 +288,10 @@
 				{
 					"order": 1,
 					"name": "TERMINAL_NAME",
-					"type": "largetext",
-					"value": "PAX_S60,MACAUPASS",
-					"size": 40
+					"type": "multiselect",
+					"value": ["PAX_S60","MACAUPASS"],
+					"size": 40,
+					"options": ["PAX_S60", "MACAUPASS", "SWIFTPASS", "FISERV"]
 				},
 				{
 					"order": 2,
