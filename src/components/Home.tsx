@@ -13,35 +13,49 @@ type ImportItemType = {
     $: {
         name: string,
         value: string
-    }    
+    }
 }
 
 type ImportConfigType = {
     configuration: {
         item: ImportItemType[]
-    }   
+    }
 }
 
 export const Home = () => {
 
-    const configSchema: ConfigType = JSON.parse(fs.readFileSync(Path.join('resources\\schema.json'), 'utf8'));
-    
-    //Sort by order number and add default value attribute if not present
-    configSchema.groups.sort((a: ItemGroupType, b: ItemGroupType) => (a.order > b.order) ? 1 : -1).forEach(group => 
-        group.items.forEach(item => 
-            item.value = item.value ? item.value : ""
-        )
-    )
-
-    console.log("Config Schema: ", configSchema);
-
-    const [schema, setSchema] = React.useState(configSchema);
+    const [schema, setSchema] = React.useState({} as ConfigType);
     const [configType, setConfigType] = React.useState("");
+    const completeSchema = React.useRef({} as ConfigType);
+
+
+    React.useEffect(() => {
+        console.log('here');
+
+        fs.readFile(Path.join('resources\\schema.json'), 'utf8', (err, data) => {
+
+            const configSchema: ConfigType = JSON.parse(data);
+
+            //Sort by order number and add default value attribute if not present
+            configSchema.groups.sort((a: ItemGroupType, b: ItemGroupType) => (a.order > b.order) ? 1 : -1).forEach(group =>
+                group.items.forEach(item =>
+                    item.value = item.value ? item.value : ""
+                )
+            )
+
+            console.log("Config Schema: ", configSchema);
+            
+            completeSchema.current = configSchema;
+            setSchema(configSchema);
+
+        });    
+
+    }, [])
 
     const handleOnCreateNew = (configType: string) => {
         console.log('Create New:', configType);
         //Send deep copy of schema for react to recognize change and rerender components
-        const configSchemaCopy = JSON.parse(JSON.stringify(configSchema));
+        const configSchemaCopy = JSON.parse(JSON.stringify(completeSchema.current));
         setSchema(configSchemaCopy);
         setConfigType(configType)
     }
@@ -58,11 +72,11 @@ export const Home = () => {
         const parser = new xml2js.Parser();
         fs.readFile(filePath, function (err, data) {
             parser.parseStringPromise(data)
-                .then( (result: ImportConfigType) => {
+                .then((result: ImportConfigType) => {
 
-                    const groupsArray = configSchema.groups.map(group => {
+                    const groupsArray = completeSchema.current.groups.map(group => {
                         const items = group.items.filter((item: ItemType) => {
-                           const match = df(result.configuration.item).findLeaf((leaf: any) => leaf.name === item.name);
+                            const match = df(result.configuration.item).findLeaf((leaf: any) => leaf.name === item.name);
                             if (match) {
                                 item.value = match.value;
                                 return true

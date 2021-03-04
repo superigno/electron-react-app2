@@ -32,6 +32,7 @@ export const Configuration = (props: ConfigurationProps) => {
             return { ...current };
         })
         
+        
     }
 
     React.useEffect(() => {
@@ -51,7 +52,7 @@ export const Configuration = (props: ConfigurationProps) => {
         
 
         <div className="content">
-            {
+            { schema && schema.groups &&
                 schema.groups.filter((group: ItemGroupType) => {
                     return group.type.toUpperCase() === (configType === ConfigTypes.ALL ? group.type.toUpperCase() : configType);
                 }).map((group: ItemGroupType) =>
