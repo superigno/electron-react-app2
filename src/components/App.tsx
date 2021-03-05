@@ -4,5 +4,6 @@ import "normalize.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
 import "./../index.css";
 import {Home} from './Home';
+import { Configuration } from './Configuration';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+ReactDOM.render(<Configuration />, document.getElementById('root'));

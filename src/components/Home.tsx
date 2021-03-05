@@ -102,7 +102,7 @@ export const Home = () => {
     return <>
 
         <NavigationBar onCreateNew={handleOnCreateNew} onImport={handleOnFileImport} />
-        <Configuration type={configType} schema={schema} />
+        <Configuration  />
         <Footer />
 
     </>

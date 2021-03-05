@@ -27,33 +27,33 @@ export const Item = (props: ItemProps) => {
         props.onChange(value);
     }
 
-    let inputElement = <InputGroup value={(props.item.value as string)} size={props.item.size ? props.item.size : props.item.value ? props.item.value.length : 10} onChange={(e) => handleOnChange(e.target.value)}/>;
+    let inputElement = <InputGroup key={props.item.name} value={props.item.value as string} size={props.item.size ? props.item.size : props.item.value ? props.item.value.length : 10} onChange={(e) => handleOnChange(e.target.value)}/>;
 
     if (typeLower === 'number') {
 
-        inputElement = <NumericInput value={(props.item.value as string)} large={false} size={props.item.size ? props.item.size : 1} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
+        inputElement = <NumericInput key={props.item.name} value={props.item.value as string} large={false} size={props.item.size ? props.item.size : 1} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
 
     } else if (typeLower === 'boolean') {
 
         const isChecked = props.item.value && (props.item.value as string) == 'true' ? true : false;
 
-        inputElement = <Switch checked={isChecked} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
+        inputElement = <Switch key={props.item.name} checked={isChecked} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
 
     } else if (typeLower === 'select') {
 
         if (props.item.options) {
             const optionsList: OptionType[] = props.item.options.map((value, index) => ({ value, id: index + 1 }));
-            inputElement = <SelectItem value={(props.item.value as string)} options={optionsList} onSelect={(id, value) => handleOnChange(value)}/>;
+            inputElement = <SelectItem key={props.item.name} value={(props.item.value as string)} options={optionsList} onSelect={(id, value) => handleOnChange(value)}/>;
         } else {
             console.error(`\'options\' property for ${name} is undefined`);
         }       
 
     } else if (typeLower === 'largetext') {
 
-        inputElement = <TextArea value={(props.item.value as string)} growVertically={true} cols={props.item.size ? props.item.size : 40} onChange={(e) => handleOnChange(e.target.value)} />
+        inputElement = <TextArea key={props.item.name} value={(props.item.value as string)} growVertically={true} cols={props.item.size ? props.item.size : 40} onChange={(e) => handleOnChange(e.target.value)} />
 
     }  else if (typeLower === 'multiselect') {
-        inputElement = <MultiSelectItem values={(props.item.value as string[])} options={props.item.options} onSelect={handleOnChange} />
+        inputElement = <MultiSelectItem key={props.item.name} values={(props.item.value as string[])} options={props.item.options} onSelect={handleOnChange} />
     }
     
     return <div className="item" style={{ paddingRight: '50px'}}>
