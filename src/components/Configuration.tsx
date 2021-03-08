@@ -1,5 +1,5 @@
 import React from 'react';
-import { Intent, Button } from '@blueprintjs/core';
+import { Intent, Button, InputGroup, Label, Spinner } from '@blueprintjs/core';
 import { ItemGroup, ItemGroupType } from './ItemGroup';
 import { ItemType } from './Item';
 import { GenerateButton } from './GenerateButton';
@@ -8,9 +8,11 @@ import { NavigationBar } from './NavigationBar';
 import fs from 'fs';
 import Path from 'path';
 import xml2js from 'xml2js';
+import { Footer } from './Footer';
+import { Content } from './Content';
 
 export type ConfigType = {
-    groups: ItemGroupType[]    
+    groups: ItemGroupType[]
 }
 
 export const ConfigTypes = {
@@ -30,7 +32,7 @@ type ImportConfigType = {
 }
 
 const getDefaultSchema = () => {
-    return new Promise<ConfigType>( (resolve, reject) => {
+    return new Promise<ConfigType>((resolve, reject) => {
         fs.readFile(Path.join('resources\\schema.json'), 'utf8', (err, data) => {
             if (err) {
                 reject(err);
@@ -42,42 +44,43 @@ const getDefaultSchema = () => {
                         item.value = item.value ? item.value : ""
                     )
                 )
-                console.log("Default config schema: ", configSchema);       
+                console.log("Default config schema: ", configSchema);
                 resolve(configSchema);
             }
         });
-    }); 
+    });
 }
 
 export const Configuration = () => {
 
     const [schema, setSchema] = React.useState({} as ConfigType);
     const [configType, setConfigType] = React.useState("");
-    const defaultSchema = React.useRef({} as ConfigType);
+    const [flag, setFlag] = React.useState(false);
+
 
     const handleOnChange = (itemName: string, itemValue: string | string[]) => {
-        setSchema((current: ConfigType) => {
-            const item = df(current).findLeaf((leaf: ItemType) => leaf.name === itemName);
-            item.value = itemValue;
-            return { ...current };
-        })
+         setSchema((current: ConfigType) => {
+             const item = df(current).findLeaf((leaf: ItemType) => leaf.name === itemName);
+             item.value = itemValue;
+             return { ...current };
+         })
     }
 
     React.useEffect(() => {
+        setFlag(true);
         getDefaultSchema()
-        .then(s => {
-            defaultSchema.current = s;
-            setSchema(s);
-        }).catch(e => console.log('Error occurred:', e));
+            .then(s => {
+                setSchema(s);
+            }).catch(e => console.log('Error occurred:', e));
     }, [])
-
 
     const handleOnCreateNew = (configType: string) => {
         console.log('Create New:', configType);
-        //Send deep copy of schema for react to recognize change and rerender components
-        const configSchemaCopy = JSON.parse(JSON.stringify(defaultSchema.current));
-        setSchema(configSchemaCopy);
+        setFlag(true);
         setConfigType(configType)
+        setTimeout(() => {
+            setFlag(false);
+        }, 2000);        
     }
 
     const handleOnFileImport = (filePath: string) => {
@@ -94,7 +97,7 @@ export const Configuration = () => {
             parser.parseStringPromise(data)
                 .then((result: ImportConfigType) => {
 
-                    const groupsArray = defaultSchema.current.groups.map(group => {
+                    const groupsArray = schema.groups.map(group => {
                         const items = group.items.filter((item: ItemType) => {
                             const match = df(result.configuration.item).findLeaf((leaf: any) => leaf.name === item.name);
                             if (match) {
@@ -119,6 +122,7 @@ export const Configuration = () => {
         });
     }
 
+
     return <>
 
         <NavigationBar onCreateNew={handleOnCreateNew} onImport={handleOnFileImport} />
@@ -126,19 +130,17 @@ export const Configuration = () => {
         <div className="wrapper">
 
             <h3 className="bp3-heading">Global FxChoice Configuration Manager</h3>
-            
+
             <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>            
+            </div>
 
             <div className="content">
-                { schema && schema.groups &&
-                    schema.groups.filter((group: ItemGroupType) => {
-                        return group.type.toUpperCase() === (configType === ConfigTypes.ALL ? group.type.toUpperCase() : configType);
-                    }).map((group: ItemGroupType) =>
-                        <ItemGroup key={group.name} group={group} onChange={handleOnChange} />
-                    )
-                }
+
+                { flag &&<Spinner /> }
+
+                { !flag && <Content schema={schema} configType={configType} onChange={handleOnChange}/> }
+
             </div>
 
             <div className="button">
@@ -146,7 +148,9 @@ export const Configuration = () => {
             </div>
 
         </div>
-        
+
+        <Footer />
+
     </>
 
 };
