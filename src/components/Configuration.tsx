@@ -56,31 +56,43 @@ export const Configuration = () => {
     const [schema, setSchema] = React.useState({} as ConfigType);
     const [configType, setConfigType] = React.useState("");
     const [flag, setFlag] = React.useState(false);
+    const [formVars, setFormVars] = React.useState({} as any);
 
 
     const handleOnChange = (itemName: string, itemValue: string | string[]) => {
-         setSchema((current: ConfigType) => {
-             const item = df(current).findLeaf((leaf: ItemType) => leaf.name === itemName);
-             item.value = itemValue;
-             return { ...current };
-         })
+        formVars[itemName] = itemValue;
     }
 
     React.useEffect(() => {
         setFlag(true);
         getDefaultSchema()
             .then(s => {
+                initializeFormVariables(s);
                 setSchema(s);
             }).catch(e => console.log('Error occurred:', e));
     }, [])
+
+    const initializeFormVariables = (schema: ConfigType) => {
+        console.log('Initialize form variables');
+        let vars = {} as any;
+        schema.groups.map(group => {
+            group.items.map((item: ItemType) => {
+                let key: string = item.name;
+                vars[key] = item.value;
+            });
+        });
+        setFormVars(vars);
+        console.log("Form vars:", vars);
+    }
 
     const handleOnCreateNew = (configType: string) => {
         console.log('Create New:', configType);
         setFlag(true);
         setConfigType(configType)
+        initializeFormVariables(schema);
         setTimeout(() => {
             setFlag(false);
-        }, 2000);        
+        }, 2000);
     }
 
     const handleOnFileImport = (filePath: string) => {
@@ -101,7 +113,11 @@ export const Configuration = () => {
                         const items = group.items.filter((item: ItemType) => {
                             const match = df(result.configuration.item).findLeaf((leaf: any) => leaf.name === item.name);
                             if (match) {
-                                item.value = match.value;
+                                if (item.type == "multiselect") {
+                                    item.value = match.value.split(",");
+                                } else {
+                                    item.value = match.value;
+                                }                                
                                 return true
                             } else {
                                 return false;
@@ -113,8 +129,16 @@ export const Configuration = () => {
                     });
 
                     const filteredSchema = { groups: groupsArray };
+
+                    console.log('filteredSchema:',filteredSchema);
+                    
+                    setFlag(true);
+                    initializeFormVariables(filteredSchema);
                     setSchema(filteredSchema);
                     setConfigType(ConfigTypes.ALL)
+                    setTimeout(() => {
+                        setFlag(false);
+                    }, 2000);
 
                 }).catch(function (err) {
                     console.error("Invalid file format", err);
@@ -137,9 +161,9 @@ export const Configuration = () => {
 
             <div className="content">
 
-                { flag &&<Spinner /> }
+                {flag && <Spinner />}
 
-                { !flag && <Content schema={schema} configType={configType} onChange={handleOnChange}/> }
+                {!flag && <Content schema={schema} configType={configType} onChange={handleOnChange} />}
 
             </div>
 

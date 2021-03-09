@@ -27,17 +27,17 @@ export const Item = (props: ItemProps) => {
         props.onChange(value);
     }
 
-    let inputElement = <InputGroup key={props.item.name} value={props.item.value as string} size={props.item.size ? props.item.size : props.item.value ? props.item.value.length : 10} onChange={(e) => handleOnChange(e.target.value)}/>;
+    let inputElement = <InputGroup key={props.item.name} defaultValue={props.item.value as string} size={props.item.size ? props.item.size : props.item.value ? props.item.value.length : 10} onChange={(e) => handleOnChange(e.target.value)}/>;
 
     if (typeLower === 'number') {
 
-        inputElement = <NumericInput key={props.item.name} value={props.item.value as string} large={false} size={props.item.size ? props.item.size : 1} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
+        inputElement = <NumericInput key={props.item.name} defaultValue={props.item.value as string} large={false} size={props.item.size ? props.item.size : 1} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
 
     } else if (typeLower === 'boolean') {
 
         const isChecked = props.item.value && (props.item.value as string) == 'true' ? true : false;
 
-        inputElement = <Switch key={props.item.name} checked={isChecked} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
+        inputElement = <Switch key={props.item.name} defaultChecked={isChecked} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
 
     } else if (typeLower === 'select') {
 
@@ -50,7 +50,7 @@ export const Item = (props: ItemProps) => {
 
     } else if (typeLower === 'largetext') {
 
-        inputElement = <TextArea key={props.item.name} value={(props.item.value as string)} growVertically={true} cols={props.item.size ? props.item.size : 40} onChange={(e) => handleOnChange(e.target.value)} />
+        inputElement = <TextArea key={props.item.name} defaultValue={(props.item.value as string)} growVertically={true} cols={props.item.size ? props.item.size : 40} onChange={(e) => handleOnChange(e.target.value)} />
 
     }  else if (typeLower === 'multiselect') {
         inputElement = <MultiSelectItem key={props.item.name} values={(props.item.value as string[])} options={props.item.options} onSelect={handleOnChange} />
