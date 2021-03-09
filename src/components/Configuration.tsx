@@ -168,7 +168,7 @@ export const Configuration = () => {
             </div>
 
             <div className="button">
-                <GenerateButton type={configType} intent={Intent.PRIMARY} object={schema} text="Generate" />
+                <GenerateButton type={configType} intent={Intent.PRIMARY} object={formVars} schema={schema} text="Generate" />
             </div>
 
         </div>

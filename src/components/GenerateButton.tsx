@@ -8,7 +8,8 @@ import { ItemType } from './Item';
 
 type ButtonProps = {
     intent: any,
-    object: ConfigType,
+    schema: ConfigType,
+    object: any,
     type: string,
     text: string
 }
@@ -20,8 +21,8 @@ export const GenerateButton = (props: ButtonProps) => {
 
         const root = XMLBuilder.create('configuration');
         root.raw(''); //spacer
-        
-        props.object.groups.filter(group => {
+
+        props.schema.groups.filter(group => {
             return group.type.toUpperCase() === (props.type === ConfigTypes.ALL ? group.type.toUpperCase() : props.type);
         }).map((group: ItemGroupType) => {
 
@@ -29,9 +30,10 @@ export const GenerateButton = (props: ButtonProps) => {
 
             group.items.map((i: ItemType) => {
                 let item = root.ele('item');
+                let objectValue = props.object[i.name];
                 i.description ? item.commentBefore(i.description) : '';
                 item.att('name', i.name);
-                item.att('value', i.value);
+                item.att('value', objectValue);
             });
 
             root.raw(''); //spacer
