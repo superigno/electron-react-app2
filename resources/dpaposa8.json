@@ -1,0 +1,94 @@
+{
+    "order": 22,
+    "name": "DPAPOSA8 Terminal Serial Comm Port settings",
+    "type": "Operations",
+    "items": [
+        {
+            "order": 1,
+            "name": "DPAPOSA8_COM_PORT",
+            "type": "text",
+            "description": "Serial COMM PORT name",
+            "value": "COM30",
+            "basic": true
+        },
+        {
+            "order": 3,
+            "name": "DPAPOSA8_BAUD_RATE",
+            "type": "number",
+            "description": "19200/9600...",
+            "value": 9600
+        },
+        {
+            "order": 4,
+            "name": "DPAPOSA8_DATA_BIT",
+            "type": "number",
+            "description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
+            "value": 8
+        },
+        {
+            "order": 5,
+            "name": "DPAPOSA8_STOP_BIT",
+            "type": "number",
+            "description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
+            "value": 1
+        },
+        {
+            "order": 6,
+            "name": "DPAPOSA8_PARITY_BIT",
+            "type": "number",
+            "description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
+            "value": 0
+        },
+        {
+            "order": 7,
+            "name": "DPAPOSA8_ACK_TIMEOUT",
+            "type": "number",
+            "description": "In seconds, the timeout setting between PC & terminal",
+            "value": 3
+        },
+        {
+            "order": 8,
+            "name": "DPAPOSA8_TXN_TIMEOUT",
+            "type": "number",
+            "description": "In seconds, the timeout setting between PC & terminal",
+            "value": 3
+        },
+        {
+            "order": 9,
+            "name": "DPAPOSA8_PROCESS_TIMEOUT",
+            "type": "number",
+            "description": "In seconds, how long a process can be done with the terminal",
+            "value": 100
+        },
+        {
+            "order": 10,
+            "name": "DPAPOSA8_ON_DEMAND_TIMEOUT",
+            "type": "number",
+            "description": "In seconds, how long an on-demand form can be done with the terminal",
+            "value": 60
+        },
+        {
+            "order": 11,
+            "name": "DPAPOSA8_REFUND_ENABLED",
+            "type": "select",
+            "description": "TRUE:REFUND - Enabled Refund w Refund Func, TRUE:VOID, Enabled Refund w VOID Func, Else FALSE, Disabled Refund",
+            "options": ["TRUE:REFUND", "TRUE:VOID", "FALSE"],
+            "value": "TRUE:REFUND"
+        },
+        {
+            "order": 12,
+            "name": "DPAPOSA8_VOID_ENABLED",
+            "type": "select",
+            "description": "TRUE:VOID - Enabled Void w Void Func, TRUE:REFUND, Enabled Void w Refund Func, Else FALSE, Disabled Void",
+            "options": ["TRUE:VOID", "TRUE:REFUND", "FALSE"],
+            "value": "TRUE:REFUND"
+        },
+        {
+            "order": 2,
+            "name": "DPAPOSA8_SIMULATOR_MODE",
+            "type": "boolean",
+            "value": false,
+            "basic": true
+        }
+    ]
+}
