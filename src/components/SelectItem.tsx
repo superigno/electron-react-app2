@@ -20,6 +20,11 @@ export const SelectItem = (props: SelectProps) => {
 
     const [value, setValue] = React.useState(props.value);
 
+    //Make value controlled
+    React.useEffect(()=> {
+        setValue(props.value);
+    }, [props.value]);
+
     const handleValueChange = (item: OptionType) => {
         setValue(item.value);
         props.onSelect(item.id, item.value);

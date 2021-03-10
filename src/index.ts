@@ -46,6 +46,7 @@ app.on('ready', () => {
 
   createWindow();
   
+  /*
   if (isDev) {
     const devTools = require('electron-devtools-installer');
     const installExtension = devTools.default;
@@ -54,6 +55,7 @@ app.on('ready', () => {
       .then((name: any) => console.log(`Added Extension:  ${name}`))
       .catch((error: any) => console.log(`An error occurred: , ${error}`));
   }
+  */
 
 });
 

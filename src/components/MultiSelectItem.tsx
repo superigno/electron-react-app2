@@ -13,6 +13,11 @@ const ItemMultiSelect = MultiSelect.ofType<string>();
 export const MultiSelectItem = (props: SelectProps) => {
 
     const [selectedItems, setSelectedItems] = React.useState(props.values);
+
+    //Make values controlled
+    React.useEffect(()=> {
+        setSelectedItems(props.values);
+    }, [props.values]);
     
     const renderTag = (item: string) => item;
 
@@ -103,7 +108,10 @@ export const MultiSelectItem = (props: SelectProps) => {
         return itemA.toLowerCase() === itemB.toLowerCase();
     }
 
-    const handleClear = () => setSelectedItems([]);
+    const handleClear = () => {
+        setSelectedItems([])
+        props.onSelect([]);
+    };
 
 
     const clearButton = props.options.length > 0 ? <Button icon="cross" minimal={true} onClick={handleClear} /> : undefined;
