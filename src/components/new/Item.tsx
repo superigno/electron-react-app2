@@ -28,7 +28,7 @@ export const Item = (props: ItemProps) => {
         props.onChange(value);
     }
 
-    let inputElement = <InputGroup key={props.item.name} defaultValue={props.item.value as string} size={props.item.size ? props.item.size : props.item.value ? 10 : 10} onChange={(e) => handleOnChange(e.target.value)} />;
+    let inputElement = <InputGroup key={props.item.name} defaultValue={props.item.value as string} size={props.item.size ? props.item.size : props.item.value ? props.item.value.toLocaleString().length + 2 : 10} onChange={(e) => handleOnChange(e.target.value)} />;
 
     if (typeLower === 'number') {
 

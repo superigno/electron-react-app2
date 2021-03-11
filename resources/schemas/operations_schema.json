@@ -188,40 +188,46 @@
 					"order": 1,
 					"name": "SERVER_URL_PRIMARY",
 					"type": "text",
-					"value": "https://tyro1.pure-commerce.com/"
+					"value": "https://tyro1.pure-commerce.com/",
+					"size": 40
 				},
 				{
 					"order": 2,
 					"name": "SERVER_URL_SECONDARY",
 					"type": "text",
-					"value": "https://tyro2.pure-commerce.com/"
+					"value": "https://tyro2.pure-commerce.com/",
+					"size": 40
 				},
 				{
 					"order": 3,
 					"name": "SERVER_URL_TEST",
 					"type": "text",
-					"value": "https://uatajp1.pure-commerce.com/"
+					"value": "https://uatajp1.pure-commerce.com/",
+					"size": 40
 				},
 				{
 					"order": 4,
 					"name": "CONTROLLER_SERVER_URL_PRIMARY",
 					"type": "text",
 					"description": "The servlet to get command from server | use for signature upload",
-					"value": "https://tyro1.pure-commerce.com/dfsposcontroller"
+					"value": "https://tyro1.pure-commerce.com/dfsposcontroller",
+					"size": 50
 				},
 				{
 					"order": 5,
 					"name": "CONTROLLER_SERVER_URL_SECONDARY",
 					"type": "text",
 					"description": "The servlet to get command from server | use for signature upload",
-					"value": "https://tyro2.pure-commerce.com/dfsposcontroller"
+					"value": "https://tyro2.pure-commerce.com/dfsposcontroller",
+					"size": 50
 				},
 				{
 					"order": 6,
 					"name": "CONTROLLER_SERVER_URL_TEST",
 					"type": "text",
 					"description": "The servlet to get command from server | use for test signature upload",
-					"value": "https://uatajp1.pure-commerce.com/poscontroller"
+					"value": "https://uatajp1.pure-commerce.com/poscontroller",
+					"size": 50
 				}
 			]
 		},
@@ -244,7 +250,8 @@
 					"name": "REGISTER_BAUD_RATE",
 					"type": "number",
 					"description": "19200/9600...",
-					"value": 115200
+					"value": 115200,
+					"size": 4
 				},
 				{
 					"order": 4,
@@ -359,7 +366,8 @@
 					"name": "SIGNPAD_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name Tablet 7 Signpad12",
-					"value": "COM7"
+					"value": "COM7",
+					"size": 5
 				}
 			]
 		},
@@ -454,19 +462,22 @@
 					"order": 3,
 					"name": "DCC_HOST_PRIMARY_URL",
 					"type": "text",
-					"value": "https://dev1.pure-commerce.com/mcppax/gateway"
+					"value": "https://dev1.pure-commerce.com/mcppax/gateway",
+					"size": 50
 				},
 				{
 					"order": 4,
 					"name": "DCC_HOST_SECONDARY_URL",
 					"type": "text",
-					"value": "https://dev1.pure-commerce.com/mcppax/gateway"
+					"value": "https://dev1.pure-commerce.com/mcppax/gateway",
+					"size": 50
 				},
 				{
 					"order": 5,
 					"name": "DCC_HOST_URL_TEST",
 					"type": "text",
-					"value": "https://dev1.pure-commerce.com/mcppax/gateway"
+					"value": "https://dev1.pure-commerce.com/mcppax/gateway",
+					"size": 50
 				},
 				{
 					"order": 6,

@@ -3,14 +3,13 @@ import { Footer } from '../Footer';
 import { MultiSelectItem } from '../MultiSelectItem';
 import { SelectItem } from '../SelectItem';
 import { ItemGroup, ItemGroupType } from './ItemGroup';
-import { Icon, Switch, Tooltip } from '@blueprintjs/core';
+import { Icon, Switch, TextArea, Tooltip } from '@blueprintjs/core';
 import TerminalFactory from './TerminalFactory';
 import operations_schema from '../../../resources/schemas/operations_schema.json';
+import AppConstants from '../constants/AppConstants';
 
-const terminalList = ["FISERV", "SWIFTPASS", "MACAUPASS", "PSP_TERMINAL", "INGENICO_MOVE5000", "DPAPOSA8", "REGISTER", "INGENICO_ICT250", "TYROTTA", "EPAY", 
-                      "EFTSOLUTIONS", "OCEANPAYMENT", "UPLAN", "OCEANPAYMENT_CLIENT", "PAX_S60", "PAX_A920"];
-
-const paymentTypeList = ["CREDITCARD", "VISA", "MASTERCARD", "ALIPAY", "WECHAT", "MPAY", "UQ", "BOCPAY"];
+const TERMINAL_LIST = Object.values(AppConstants.TERMINALS);
+const PAYMENT_TYPE_LIST = Object.values(AppConstants.PAYMENT_TYPES);
 
 const isTerminalHidden = (terminal: string, activeTerminals: string[]) => {
     return activeTerminals.indexOf(terminal) == -1;
@@ -30,8 +29,8 @@ export const Configuration = () => {
     /** Load terminal schemas */
     React.useEffect(() => {
         setTerminalSchema((current: any) => {
-            terminalList.map((terminal) => {
-                current[terminal] = TerminalFactory.getSchema(terminal); //getTerminalSchema(terminal);
+            TERMINAL_LIST.map((terminal) => {
+                current[terminal] = TerminalFactory.getSchema(terminal);
             })
             return {...current};
         })
@@ -41,7 +40,7 @@ export const Configuration = () => {
     /** Hide respective terminals when selected terminals change */
     React.useEffect(() => {
         setTerminalHidden((current: any) => {
-            terminalList.map((terminal) => {
+            TERMINAL_LIST.map((terminal) => {
                 current[terminal] = isTerminalHidden(terminal, terminals);
             })
             return {...current};
@@ -117,7 +116,6 @@ export const Configuration = () => {
                     </div>
                 </div>
 
-
                 {
                     operations_schema.groups.filter(group => {
                         return group.name.toUpperCase() == 'VERSION' || group.name.toUpperCase() == 'MODES'; //Filtering just to display these two sections at the very top
@@ -139,7 +137,7 @@ export const Configuration = () => {
                             </div>
 
                             <div className="item2">
-                                <MultiSelectItem values={terminals} options={terminalList} onSelect={handleTerminalChange} />
+                                <MultiSelectItem values={terminals} options={TERMINAL_LIST} onSelect={handleTerminalChange} />
                             </div>
                         </div>
 
@@ -149,9 +147,21 @@ export const Configuration = () => {
                             </div>
 
                             <div className="item2">
-                                <MultiSelectItem values={paymentTypes} options={paymentTypeList} onSelect={handlePaymentTypeChange} />
+                                <MultiSelectItem values={paymentTypes} options={PAYMENT_TYPE_LIST} onSelect={handlePaymentTypeChange} />
                             </div>
                         </div>
+
+                        { !isBasic &&
+                        <div className="contentRow">
+                            <div className="label">
+                                Terminal Card Scheme
+                            </div>
+
+                            <div className="item2">
+                                <TextArea growVertically={true} cols={50} onChange={(e) => handleGenericOnChange(null, e.target.value)} />
+                            </div>
+                        </div>
+                        }
 
                         {
                             paymentTypeTerminalMapping.map((m: { paymentType: string, terminal: string }) => {
@@ -174,7 +184,7 @@ export const Configuration = () => {
                 </div>
 
                 {
-                    terminalList.map((terminal: string) => {
+                    TERMINAL_LIST.map((terminal: string) => {
                         return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} basic={isBasic} group={terminalSchema[terminal]} onChange={handleGenericOnChange} />
                     })
                 }

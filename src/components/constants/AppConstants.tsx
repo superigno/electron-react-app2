@@ -19,4 +19,15 @@ export default class AppConstants {
         DPAPOSA8: 'DPAPOSA8'
     }
 
+    static PAYMENT_TYPES = {
+        CREDITCARD: 'CREDITCARD',
+        VISA: 'VISA',
+        MASTERCARD: 'MASTERCARD',
+        ALIPAY: 'ALIPAY',
+        WECHAT: 'WECHAT',
+        MPAY: 'MPAY',
+        UQ: 'UQ',
+        BOCPAY: 'BOCPAY'
+    }
+
 }
