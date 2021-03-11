@@ -33,7 +33,7 @@ type ImportConfigType = {
 
 const getDefaultSchema = () => {
     return new Promise<ConfigType>((resolve, reject) => {
-        fs.readFile(Path.join('resources\\schema.json'), 'utf8', (err, data) => {
+        fs.readFile(Path.join('resources\\schemas\\schema.json'), 'utf8', (err, data) => {
             if (err) {
                 reject(err);
             } else {

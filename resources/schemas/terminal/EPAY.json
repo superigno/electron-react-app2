@@ -1,0 +1,184 @@
+{
+    "order": 43,
+    "name": "EPAY related configurations",
+    "id": "EPAY",
+    "type": "Operations",
+    "items": [
+        {
+            "order": 0,
+            "name": "EPAY_MODE",
+            "type": "select",
+            "description": "TEST or LIVE, connect to live/test EPAY/ALIPAY/WECHAT Host",
+            "options": [
+                "TEST",
+                "LIVE"
+            ],
+            "value": "TEST",
+            "basic": true
+        },
+        {
+            "order": 1,
+            "name": "TERMINAL_ID",
+            "type": "text",
+            "value": "49010204"
+        },
+        {
+            "order": 2,
+            "name": "CHARS_PER_LINE",
+            "type": "number",
+            "value": 30
+        },
+        {
+            "order": 3,
+            "name": "EPAY_USERNAME",
+            "type": "text",
+            "value": "UPLive_49010204"
+        },
+        {
+            "order": 4,
+            "name": "EPAY_PASSWORD",
+            "type": "text",
+            "value": "OqHSqTA3VCVy4Z0iV3FefgbuyJG1rZ8E7gbezzEP7Wk"
+        },
+        {
+            "order": 5,
+            "name": "EPAY_PRIMARY_URL",
+            "type": "text",
+            "value": "https://precision.epayworldwide.com/up-interface"
+        },
+        {
+            "order": 6,
+            "name": "EPAY_SECONDARY_URL",
+            "type": "text",
+            "value": "https://backup.precision.epayworldwide.com/up-interface"
+        },
+        {
+            "order": 7,
+            "name": "EPAY_READ_TIMEOUT",
+            "type": "number",
+            "value": 90000,
+            "description": "In milliseconds"
+        },
+        {
+            "order": 8,
+            "name": "EPAY_CONN_TIMEOUT",
+            "type": "number",
+            "value": 10000,
+            "description": "In milliseconds"
+        },
+        {
+            "order": 9,
+            "name": "EPAY_AUTO_CANCEL",
+            "type": "boolean",
+            "value": false
+        },
+        {
+            "order": 10,
+            "name": "EPAY_CAPTURE_RESEND_LIMIT",
+            "type": "number",
+            "value": 130
+        },
+        {
+            "order": 11,
+            "name": "USE_CUSTOM_RECEIPT",
+            "type": "boolean",
+            "value": true
+        },
+        {
+            "order": 1,
+            "name": "TERMINAL_ID_TEST",
+            "type": "text",
+            "value": "93881902"
+        },
+        {
+            "order": 2,
+            "name": "EPAY_USERNAME_TEST",
+            "type": "text",
+            "value": "UPTestDFS"
+        },
+        {
+            "order": 3,
+            "name": "EPAY_PASSWORD_TEST",
+            "type": "text",
+            "value": "Eye1gThddq4BDavIV4v2Ug=="
+        },
+        {
+            "order": 4,
+            "name": "EPAY_PENDING_RESULT_CODES",
+            "type": "text",
+            "value": "9998,9988"
+        },
+        {
+            "order": 1,
+            "name": "ALIPAY_EPAY_EAN",
+            "type": "text",
+            "value": "9337694039712"
+        },
+        {
+            "order": 2,
+            "name": "ALIPAY_EPAY_RETAILER_ACC",
+            "type": "text",
+            "value": "930513"
+        },
+        {
+            "order": 3,
+            "name": "ALIPAY_EPAY_STORE_ID",
+            "type": "text",
+            "value": "EPALI1726240"
+        },
+        {
+            "order": 1,
+            "name": "ALIPAY_EPAY_EAN_TEST",
+            "type": "text",
+            "value": "9337694039712"
+        },
+        {
+            "order": 2,
+            "name": "ALIPAY_EPAY_RETAILER_ACC_TEST",
+            "type": "text",
+            "value": "999013"
+        },
+        {
+            "order": 3,
+            "name": "ALIPAY_EPAY_STORE_ID_TEST",
+            "type": "text",
+            "value": "EPTST0000002"
+        },
+        {
+            "order": 1,
+            "name": "WECHAT_EPAY_EAN",
+            "type": "text",
+            "value": "9337694039711"
+        },
+        {
+            "order": 2,
+            "name": "WECHAT_EPAY_RETAILER_ACC",
+            "type": "text",
+            "value": "930513"
+        },
+        {
+            "order": 3,
+            "name": "WECHAT_EPAY_STORE_ID",
+            "type": "text",
+            "value": "EPALI1726240"
+        },
+        {
+            "order": 1,
+            "name": "WECHAT_EPAY_EAN_TEST",
+            "type": "text",
+            "value": "9337694039711"
+        },
+        {
+            "order": 2,
+            "name": "WECHAT_EPAY_RETAILER_ACC_TEST",
+            "type": "text",
+            "value": "999012"
+        },
+        {
+            "order": 3,
+            "name": "WECHAT_EPAY_STORE_ID_TEST",
+            "type": "text",
+            "value": "EPTST0000001"
+        }
+    ]
+}

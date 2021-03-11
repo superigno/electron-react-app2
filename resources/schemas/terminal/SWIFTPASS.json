@@ -1,0 +1,120 @@
+{
+    "order": 54,
+    "name": "SWIFTPASS configuration",
+    "id": "SWIFTPASS",
+    "type": "Operations",
+    "items": [
+        {
+            "order": 0,
+            "name": "SWIFTPASS_MODE",
+            "type": "select",
+            "description": "TEST or LIVE, connect to live/test SWIFTPASS Host",
+            "options": [
+                "TEST",
+                "LIVE"
+            ],
+            "value": "TEST",
+            "basic": true
+        },
+        {
+            "order": 1,
+            "name": "SWIFTPASS_SIMULATOR_MODE",
+            "type": "boolean",
+            "value": false,
+            "basic": true
+        },
+        {
+            "order": 2,
+            "name": "SWIFTPASS_VERSION",
+            "type": "text",
+            "value": "2.0"
+        },
+        {
+            "order": 3,
+            "name": "SWIFTPASS_READ_TIMEOUT",
+            "type": "number",
+            "value": 60,
+            "description": "In seconds"
+        },
+        {
+            "order": 4,
+            "name": "SWIFTPASS_CONN_TIMEOUT",
+            "type": "number",
+            "value": 10,
+            "description": "In seconds"
+        },
+        {
+            "order": 5,
+            "name": "SWIFTPASS_PRIMARY_URL",
+            "type": "text",
+            "value": "https://hkm1.pure-commerce.com/agent/swift"
+        },
+        {
+            "order": 6,
+            "name": "SWIFTPASS_SECONDARY_URL",
+            "type": "text",
+            "value": "https://hkm2.pure-commerce.com/agent/swift"
+        },
+        {
+            "order": 7,
+            "name": "SWIFTPASS_URL_TEST",
+            "type": "text",
+            "value": "https://dev2.pure-commerce.com/agent/swift"
+        },
+        {
+            "order": 8,
+            "name": "SWIFTPASS_MERCHANT_SIGNATURE_KEY",
+            "type": "text",
+            "value": "SIGNATUREKEY"
+        },
+        {
+            "order": 9,
+            "name": "SWIFTPASS_MERCHANT_ID",
+            "type": "text",
+            "value": "127530000126"
+        },
+        {
+            "order": 10,
+            "name": "SWIFTPASS_TERMINAL_ID",
+            "type": "text",
+            "value": "20002210"
+        },
+        {
+            "order": 11,
+            "name": "SWIFTPASS_MERCHANT_ID_TEST",
+            "type": "text",
+            "value": "127530000126"
+        },
+        {
+            "order": 12,
+            "name": "SWIFTPASS_TERMINAL_ID_TEST",
+            "type": "text",
+            "value": "20002210"
+        },
+        {
+            "order": 13,
+            "name": "SWIFTPASS_MERCHANT_GOODS_DESCRIPTION",
+            "type": "text",
+            "value": "Testing0720"
+        },
+        {
+            "order": 14,
+            "name": "SWIFTPASS_NONCE_STRING",
+            "type": "text",
+            "value": "1010101010"
+        },
+        {
+            "order": 15,
+            "name": "SWIFTPASS_QUERY_TIMES",
+            "type": "number",
+            "value": 6
+        },
+        {
+            "order": 16,
+            "name": "SWIFTPASS_QUERY_TIME_INTERVAL",
+            "type": "number",
+            "value": 20,
+            "description": "In seconds"
+        }
+    ]
+}

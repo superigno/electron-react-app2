@@ -1,0 +1,130 @@
+{
+    "order": 52,
+    "name": "OCEANPAYMENT configuration",
+    "id": "OCEANPAYMENT",
+    "type": "Operations",
+    "items": [
+        {
+            "order": 1,
+            "name": "OCEANPAYMENT_SIMULATOR_MODE",
+            "type": "boolean",
+            "value": false,
+            "basic": true
+        },
+        {
+            "order": 2,
+            "name": "OCEANPAYMENT_AUTO_QUERY",
+            "type": "boolean",
+            "value": true
+        },
+        {
+            "order": 3,
+            "name": "OCEANPAYMENT_AUTO_QUERY_TRY_TIMES",
+            "type": "number",
+            "value": 3
+        },
+        {
+            "order": 4,
+            "name": "OCEANPAYMENT_REFUND_TYPE",
+            "type": "select",
+            "options": [
+                "1",
+                "2"
+            ],
+            "value": "1",
+            "description": "1:FULL 2:PARTIAL"
+        },
+        {
+            "order": 5,
+            "name": "OCEANPAYMENT_SALE_URL",
+            "type": "text",
+            "value": "https://secure.oceanpayment.com/gateway/directservice/test"
+        },
+        {
+            "order": 6,
+            "name": "OCEANPAYMENT_VOID_URL",
+            "type": "text",
+            "value": "https://secure.oceanpayment.com/gateway/service/auth"
+        },
+        {
+            "order": 7,
+            "name": "OCEANPAYMENT_QUERY_URL",
+            "type": "text",
+            "value": "https://query.oceanpayment.com/service/check/test"
+        },
+        {
+            "order": 8,
+            "name": "OCEANPAYMENT_REFUND_URL",
+            "type": "text",
+            "value": "https://query.oceanpayment.com/service/applyRefund"
+        },
+        {
+            "order": 9,
+            "name": "OCEANPAYMENT_REFUND_CHECK_URL",
+            "type": "text",
+            "value": "https://query.oceanpayment.com/service/queryRefund"
+        },
+        {
+            "order": 10,
+            "name": "OCEANPAYMENT_READ_TIMEOUT",
+            "type": "number",
+            "value": 60000,
+            "description": "In milliseconds"
+        },
+        {
+            "order": 11,
+            "name": "OCEANPAYMENT_CONN_TIMEOUT",
+            "type": "number",
+            "value": 10000,
+            "description": "In milliseconds"
+        },
+        {
+            "order": 12,
+            "name": "OCEANPAYMENT_FAILOVER_ENABLED",
+            "type": "boolean",
+            "value": false
+        },
+        {
+            "order": 13,
+            "name": "BILLING_IP",
+            "type": "text",
+            "value": "172.16.21.151"
+        },
+        {
+            "order": 14,
+            "name": "OCEANPAYMENT_MID",
+            "type": "text",
+            "value": "140105"
+        },
+        {
+            "order": 15,
+            "name": "OCEANPAYMENT_TID",
+            "type": "text",
+            "value": "14010508"
+        },
+        {
+            "order": 16,
+            "name": "OCEANPAYMENT_SECURE_CODE",
+            "type": "text",
+            "value": "9Gi42d7OyXNAKqHE4qLmFw=="
+        },
+        {
+            "order": 17,
+            "name": "OCEANPAYMENT_WECHAT_METHOD",
+            "type": "text",
+            "value": "WeChatPay"
+        },
+        {
+            "order": 18,
+            "name": "OCEANPAYMENT_WECHAT_METHOD_ADDITIONAL",
+            "type": "text",
+            "value": "HK_WX"
+        },
+        {
+            "order": 19,
+            "name": "OCEANPAYMENT_ALIPAY_METHOD",
+            "type": "text",
+            "value": "Alipay"
+        }
+    ]
+}

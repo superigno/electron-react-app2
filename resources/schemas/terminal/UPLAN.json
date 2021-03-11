@@ -1,0 +1,107 @@
+{
+    "order": 53,
+    "name": "UPLAN configuration",
+    "id": "UPLAN",
+    "type": "Operations",
+    "items": [
+        {
+            "order": 0,
+            "name": "UPLAN_MODE",
+            "type": "select",
+            "description": "TEST or LIVE, connect to live/test UPLAN Host",
+            "options": [
+                "TEST",
+                "LIVE"
+            ],
+            "value": "TEST",
+            "basic": true
+        },
+        {
+            "order": 1,
+            "name": "UPLAN_SIMULATOR_MODE",
+            "type": "boolean",
+            "value": false,
+            "basic": true
+        },
+        {
+            "order": 2,
+            "name": "UPLAN_ACQUIRER_CODE",
+            "type": "text",
+            "value": "ACQCODE"
+        },
+        {
+            "order": 3,
+            "name": "UPLAN_MERCHANT_CODE",
+            "type": "text",
+            "value": "MERCHCODE"
+        },
+        {
+            "order": 4,
+            "name": "UPLAN_TERMINAL_ID",
+            "type": "text",
+            "value": "TERMINALID"
+        },
+        {
+            "order": 5,
+            "name": "UPLAN_ACQUIRER_CODE_TEST",
+            "type": "text",
+            "value": "ACQCODE"
+        },
+        {
+            "order": 6,
+            "name": "UPLAN_MERCHANT_CODE_TEST",
+            "type": "text",
+            "value": "MERCHCODE"
+        },
+        {
+            "order": 7,
+            "name": "UPLAN_TERMINAL_ID_TEST",
+            "type": "text",
+            "value": "TERMINALID"
+        },
+        {
+            "order": 8,
+            "name": "UPLAN_READ_TIMEOUT",
+            "type": "number",
+            "value": 60,
+            "description": "In seconds"
+        },
+        {
+            "order": 9,
+            "name": "UPLAN_CONN_TIMEOUT",
+            "type": "number",
+            "value": 10,
+            "description": "In seconds"
+        },
+        {
+            "order": 10,
+            "name": "UPLAN_PRIMARY_URL",
+            "type": "text",
+            "value": "https://hkm1.pure-commerce.com/agent/uplan"
+        },
+        {
+            "order": 11,
+            "name": "UPLAN_SECONDARY_URL",
+            "type": "text",
+            "value": "https://hkm2.pure-commerce.com/agent/uplan"
+        },
+        {
+            "order": 12,
+            "name": "UPLAN_URL_TEST",
+            "type": "text",
+            "value": "https://dev2.pure-commerce.com/agent/uplan"
+        },
+        {
+            "order": 13,
+            "name": "UPLAN_SERVICE_ENTRY_MODE",
+            "type": "text",
+            "value": "SERVICE ENTRY MODE"
+        },
+        {
+            "order": 14,
+            "name": "UPLAN_TERMINAL_PARTNER",
+            "type": "text",
+            "value": "INGENICO_MOVE5000"
+        }
+    ]
+}

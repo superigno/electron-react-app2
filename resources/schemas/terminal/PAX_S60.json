@@ -1,0 +1,79 @@
+{
+    "order": 23,
+    "name": "PAX S60 Terminal Serial Comm Port settings",
+    "id": "PAX_S60",
+    "type": "Operations",
+    "items": [
+        {
+            "order": 1,
+            "name": "PAX_S60_COM_PORT",
+            "type": "text",
+            "description": "Serial COMM PORT name",
+            "value": "COM10",
+            "basic": true
+        },
+        {
+            "order": 3,
+            "name": "PAX_S60_BAUD_RATE",
+            "type": "number",
+            "description": "19200/9600...",
+            "value": 115200
+        },
+        {
+            "order": 4,
+            "name": "PAX_S60_DATA_BIT",
+            "type": "number",
+            "description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
+            "value": 8
+        },
+        {
+            "order": 5,
+            "name": "PAX_S60_STOP_BIT",
+            "type": "number",
+            "description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
+            "value": 1
+        },
+        {
+            "order": 6,
+            "name": "PAX_S60_PARITY_BIT",
+            "type": "number",
+            "description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
+            "value": 0
+        },
+        {
+            "order": 7,
+            "name": "PAX_S60_ACK_TIMEOUT",
+            "type": "number",
+            "description": "In seconds, the timeout setting between PC & terminal",
+            "value": 3
+        },
+        {
+            "order": 8,
+            "name": "PAX_S60_TXN_TIMEOUT",
+            "type": "number",
+            "description": "In seconds, the timeout setting between PC & terminal",
+            "value": 3
+        },
+        {
+            "order": 9,
+            "name": "PAX_S60_PROCESS_TIMEOUT",
+            "type": "number",
+            "description": "In seconds, how long a process can be done with the terminal",
+            "value": 100
+        },
+        {
+            "order": 10,
+            "name": "PAX_S60_ON_DEMAND_TIMEOUT",
+            "type": "number",
+            "description": "In seconds, how long an on-demand form can be done with the terminal",
+            "value": 60
+        },
+        {
+            "order": 2,
+            "name": "PAX_S60_SIMULATOR_MODE",
+            "type": "boolean",
+            "value": false,
+            "basic": true
+        }
+    ]
+}

@@ -88,7 +88,7 @@
 
 .item2 {
   display: inline-block;
-  vertical-align: middle;  
+  /*vertical-align: middle; has issues with Switch element*/
 }
 
 .basic {

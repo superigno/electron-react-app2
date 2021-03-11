@@ -2,8 +2,8 @@
 	"groups": [
 		{
 			"order": 1,
-			"name": "Main",
-			"type": "Tech",
+			"name": "Version",
+			"type": "Operations",
 			"items": [
 				{
 					"order": 1,
@@ -307,7 +307,14 @@
 					"description": "Mapping for Payment Service via (TerminalConstant) Terminal Impl",
 					"value": "CREDITCARD:PAX_S60,VISA:INGENICO_ICT250,MASTERCARD:INGENICO_ICT250,AMEX:INGENICO_ICT250,DINERS:INGENICO_ICT250,JCB:INGENICO_ICT250,DISCOVER:INGENICO_ICT250,CUP DEBIT:INGENICO_ICT250,CUP CREDIT:INGENICO_ICT250,DEBIT:INGENICO_ICT250,BOCPAY:SWIFTPASS,MPAY:MACAUPASS,ALIPAY:MACAUPASS,WECHAT:OCEANPAYMENT_CLIENT,UPLAN:UPLAN,UQ:FISERV,OTHER:PAX_S60",
 					"size": 40
-				},
+				}
+			]
+		},
+		{
+			"order": 7,
+			"name": "Terminals Tech",
+			"type": "Tech",
+			"items": [
 				{
 					"order": 4,
 					"name": "DEFAULT_TERMINAL_NAME",
@@ -2542,14 +2549,7 @@
 					"name": "USE_CUSTOM_RECEIPT",
 					"type": "boolean",
 					"value": true
-				}
-			]
-		},
-		{
-			"order": 44,
-			"name": "EPAY related Test configurations",
-			"type": "Operations",
-			"items": [
+				},
 				{
 					"order": 1,
 					"name": "TERMINAL_ID_TEST",
@@ -2573,14 +2573,7 @@
 					"name": "EPAY_PENDING_RESULT_CODES",
 					"type": "text",
 					"value": "9998,9988"
-				}
-			]
-		},
-		{
-			"order": 45,
-			"name": "ALIPAY related EPay data",
-			"type": "Operations",
-			"items": [
+				},
 				{
 					"order": 1,
 					"name": "ALIPAY_EPAY_EAN",
@@ -2598,14 +2591,7 @@
 					"name": "ALIPAY_EPAY_STORE_ID",
 					"type": "text",
 					"value": "EPALI1726240"
-				}
-			]
-		},
-		{
-			"order": 46,
-			"name": "ALIPAY related EPay Test data",
-			"type": "Operations",
-			"items": [
+				},
 				{
 					"order": 1,
 					"name": "ALIPAY_EPAY_EAN_TEST",
@@ -2623,14 +2609,7 @@
 					"name": "ALIPAY_EPAY_STORE_ID_TEST",
 					"type": "text",
 					"value": "EPTST0000002"
-				}
-			]
-		},
-		{
-			"order": 47,
-			"name": "WECHAT related EPay data",
-			"type": "Operations",
-			"items": [
+				},
 				{
 					"order": 1,
 					"name": "WECHAT_EPAY_EAN",
@@ -2648,14 +2627,7 @@
 					"name": "WECHAT_EPAY_STORE_ID",
 					"type": "text",
 					"value": "EPALI1726240"
-				}
-			]
-		},
-		{
-			"order": 48,
-			"name": "WECHAT related EPay Test data",
-			"type": "Operations",
-			"items": [
+				},
 				{
 					"order": 1,
 					"name": "WECHAT_EPAY_EAN_TEST",

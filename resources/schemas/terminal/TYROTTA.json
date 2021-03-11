@@ -1,0 +1,73 @@
+{
+    "order": 27,
+    "name": "Tyro Settings",
+    "id": "TYROTTA",
+    "type": "Operations",
+    "items": [
+        {
+            "order": 1,
+            "name": "TYROTTA_HEADLESS_MODE",
+            "type": "boolean",
+            "description": "True for TTA headless, False for TTA UI based",
+            "value": false
+        },
+        {
+            "order": 3,
+            "name": "TYROTTA_PROCESS_TIMEOUT",
+            "type": "number",
+            "description": "Seconds, timeout value(seconds) in communication with TTA",
+            "value": 147
+        },
+        {
+            "order": 4,
+            "name": "TYROTTA_ON_DEMAND_TIMEOUT",
+            "type": "number",
+            "description": "Seconds, timeout value(seconds) in communication with TTA Headless first response",
+            "value": 30
+        },
+        {
+            "order": 5,
+            "name": "TYROTTA_SURCHARGE_ENABLED",
+            "type": "boolean",
+            "description": "True to enable TTA Surcharge, else False",
+            "value": false
+        },
+        {
+            "order": 2,
+            "name": "TYROTTA_SIMULATOR_MODE",
+            "type": "boolean",
+            "value": false,
+            "basic": true
+        },
+        {
+            "order": 7,
+            "name": "TYRO_APPROVED_RESULT_VALUE",
+            "type": "text",
+            "value": "Success"
+        },
+        {
+            "order": 8,
+            "name": "TYRO_DECLINED_RESULT_VALUE",
+            "type": "text",
+            "value": "Failure"
+        },
+        {
+            "order": 9,
+            "name": "TYRO_CANCELLED_RESULT_VALUE",
+            "type": "text",
+            "value": "Aborted"
+        },
+        {
+            "order": 10,
+            "name": "TYRO_TIMEOUT_ERROR_RESULT_VALUE",
+            "type": "text",
+            "value": "TimedOut"
+        },
+        {
+            "order": 11,
+            "name": "TYRO_TRANSACTION_NOT_AVAILABLE_RESPONSE_CODE",
+            "type": "text",
+            "value": "DeviceUnavailable"
+        }
+    ]
+}

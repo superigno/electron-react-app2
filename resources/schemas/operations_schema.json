@@ -1,0 +1,522 @@
+{
+	"groups": [
+		{
+            "order": 1,
+            "name": "Version",
+            "type": "Operations",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "MERCHANT_NAME",
+                    "type": "text",
+                    "description": "",
+                    "size": 10,
+                    "value": "Tech"
+                },
+                {
+                    "order": 2,
+                    "name": "CONFIG_VERSION",
+                    "type": "text",
+                    "description": "Version number",
+                    "size": 5,
+                    "value": "C47"
+                }
+            ]
+        },
+		{
+			"order": 6,
+			"name": "Modes",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "PACKAGE_VERSION",
+					"type": "select",
+					"description": "Package type: LIVE or TEST",
+					"options": [
+						"TEST",
+						"LIVE"
+					],
+					"value": "TEST"
+				},
+				{
+					"order": 2,
+					"name": "DEMO_MODE",
+					"type": "boolean",
+					"description": "TRUE or FALSE, TRUE = DEMO MODE, no rate update and no resend",
+					"value": false
+				},
+				{
+					"order": 3,
+					"name": "SERVER_MODE",
+					"type": "select",
+					"description": "TEST or LIVE, send transaction data to live/test server",
+					"options": [
+						"TEST",
+						"LIVE"
+					],
+					"value": "TEST"
+				},
+				{
+					"order": 4,
+					"name": "CONTROLLER_SERVER_MODE",
+					"type": "select",
+					"description": "TEST or LIVE, connect to live/test PosController",
+					"options": [
+						"TEST",
+						"LIVE"
+					],
+					"value": "TEST"
+				},
+				{
+					"order": 8,
+					"name": "BIN_MODE",
+					"type": "select",
+					"description": "TEST or LIVE, Test for development and LIVE to use encrypted bin file",
+					"options": [
+						"TEST",
+						"LIVE"
+					],
+					"value": "TEST"
+				}												
+			]
+		},
+		{
+			"order": 7,
+			"name": "Terminals",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "TERMINAL_NAME",
+					"type": "multiselect",
+					"value": [
+						"PAX_S60",
+						"MACAUPASS"
+					],
+					"size": 40,
+					"options": [
+						"PAX_S60",
+						"MACAUPASS",
+						"SWIFTPASS",
+						"FISERV"
+					]
+				},
+				{
+					"order": 2,
+					"name": "TERMINAL_CARD_SCHEME",
+					"type": "largetext",
+					"value": "0:CREDITCARD,1:CREDITCARD,2:CREDITCARD,3:CREDITCARD,4:CREDITCARD,5:CREDITCARD,6:CREDITCARD,7:CUP,8:CUP,B:ALIPAY,C:WECHAT,D:UQ,E:BOCPAY,F:MPAY,G:OTHER",
+					"size": 40
+				},
+				{
+					"order": 3,
+					"name": "TERMINAL_PAYMENT_SCHEME",
+					"type": "largetext",
+					"description": "Mapping for Payment Service via (TerminalConstant) Terminal Impl",
+					"value": "CREDITCARD:PAX_S60,VISA:INGENICO_ICT250,MASTERCARD:INGENICO_ICT250,AMEX:INGENICO_ICT250,DINERS:INGENICO_ICT250,JCB:INGENICO_ICT250,DISCOVER:INGENICO_ICT250,CUP DEBIT:INGENICO_ICT250,CUP CREDIT:INGENICO_ICT250,DEBIT:INGENICO_ICT250,BOCPAY:SWIFTPASS,MPAY:MACAUPASS,ALIPAY:MACAUPASS,WECHAT:OCEANPAYMENT_CLIENT,UPLAN:UPLAN,UQ:FISERV,OTHER:PAX_S60",
+					"size": 40
+				}
+			]
+		},
+		{
+			"order": 8,
+			"name": "Default Values",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "DEFAULT_CURRENCY",
+					"type": "select",
+					"description": "Default currency for request from Wincor",
+					"options": [
+						"HKD",
+						"USD",
+						"AUD",
+						"SGD",
+						"TODO:"
+					],
+					"value": "HKD"
+				},
+				{
+					"order": 2,
+					"name": "DEFAULT_CURRENCY_NUMBER",
+					"type": "number",
+					"description": "Default currency number for request from Wincor",
+					"size": 1,
+					"value": 344
+				},
+				{
+					"order": 3,
+					"name": "DEFAULT_MINOR_UNIT",
+					"type": "number",
+					"size": 1,
+					"value": 2
+				},
+				{
+					"order": 4,
+					"name": "DEFAULT_EXPONENT_VALUE",
+					"type": "number",
+					"size": 1,
+					"value": 4
+				},
+				{
+					"order": 5,
+					"name": "DEFAULT_LOCALE",
+					"type": "select",
+					"options": [
+						"CANADA",
+						"CHINA",
+						"FRANCE",
+						"GERMANY",
+						"ITALY",
+						"JAPAN",
+						"KOREA",
+						"UK",
+						"US"
+					],
+					"value": "US"
+				}
+			]
+		},
+		{
+			"order": 17,
+			"name": "PC Server Details",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "SERVER_URL_PRIMARY",
+					"type": "text",
+					"value": "https://tyro1.pure-commerce.com/"
+				},
+				{
+					"order": 2,
+					"name": "SERVER_URL_SECONDARY",
+					"type": "text",
+					"value": "https://tyro2.pure-commerce.com/"
+				},
+				{
+					"order": 3,
+					"name": "SERVER_URL_TEST",
+					"type": "text",
+					"value": "https://uatajp1.pure-commerce.com/"
+				},
+				{
+					"order": 4,
+					"name": "CONTROLLER_SERVER_URL_PRIMARY",
+					"type": "text",
+					"description": "The servlet to get command from server | use for signature upload",
+					"value": "https://tyro1.pure-commerce.com/dfsposcontroller"
+				},
+				{
+					"order": 5,
+					"name": "CONTROLLER_SERVER_URL_SECONDARY",
+					"type": "text",
+					"description": "The servlet to get command from server | use for signature upload",
+					"value": "https://tyro2.pure-commerce.com/dfsposcontroller"
+				},
+				{
+					"order": 6,
+					"name": "CONTROLLER_SERVER_URL_TEST",
+					"type": "text",
+					"description": "The servlet to get command from server | use for test signature upload",
+					"value": "https://uatajp1.pure-commerce.com/poscontroller"
+				}
+			]
+		},
+		{
+			"order": 25,
+			"name": "Register Terminal Serial Comm Port settings",
+			"id": "REGISTER",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "REGISTER_COM_PORT",
+					"type": "text",
+					"description": "Serial COMM PORT name",
+					"value": "COM98",
+					"basic": true
+				},
+				{
+					"order": 3,
+					"name": "REGISTER_BAUD_RATE",
+					"type": "number",
+					"description": "19200/9600...",
+					"value": 115200
+				},
+				{
+					"order": 4,
+					"name": "REGISTER_DATA_BIT",
+					"type": "number",
+					"description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
+					"value": 8
+				},
+				{
+					"order": 5,
+					"name": "REGISTER_STOP_BIT",
+					"type": "number",
+					"description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
+					"value": 1
+				},
+				{
+					"order": 6,
+					"name": "REGISTER_PARITY_BIT",
+					"type": "number",
+					"description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
+					"value": 0
+				},
+				{
+					"order": 7,
+					"name": "REGISTER_ACK_TIMEOUT",
+					"type": "number",
+					"description": "In seconds, the timeout setting between PC & terminal",
+					"value": 5
+				},
+				{
+					"order": 8,
+					"name": "REGISTER_ANSWER_TIMEOUT",
+					"type": "number",
+					"description": "In seconds, how long it expects to receive the ANSWER frame and sending the question",
+					"value": 250
+				},
+				{
+					"order": 9,
+					"name": "REGISTER_RESEND_TIMES",
+					"type": "number",
+					"description": "Times fxChoice try to send frame2 to register",
+					"value": 5
+				},
+				{
+					"order": 10,
+					"name": "REGISTER_RECEIPT_WIDTH",
+					"type": "number",
+					"description": "How many character in a line of the receipt",
+					"value": 40
+				}
+			]
+		},
+		{
+			"order": 28,
+			"name": "Enable/Disable Void",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "ENABLE_VOID",
+					"type": "boolean",
+					"description": "Not used at the moment",
+					"value": true
+				},
+				{
+					"order": 2,
+					"name": "ENABLE_REFUND",
+					"type": "boolean",
+					"description": "Not used at the moment",
+					"value": true
+				},
+				{
+					"order": 3,
+					"name": "ENABLE_FAILED_VOID",
+					"type": "boolean",
+					"description": "If ECR does not respond we void the transaction of this is true",
+					"value": true
+				}
+			]
+		},
+		{
+			"order": 29,
+			"name": "Signature Upload Server Details",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "DISPLAY_DEVICE_NAME",
+					"type": "select",
+					"description": "DUMMY, SIGNPAD_SP1000, TABLET_ALLDOCUBE",
+					"options": [
+						"DUMMY",
+						"SIGNPAD_SP1000",
+						"TABLET_ALLDOCUBE"
+					],
+					"value": "DUMMY"
+				},
+				{
+					"order": 2,
+					"name": "SIGNPAD_ATTACHED",
+					"type": "select",
+					"description": "socket:socket, usb:usb-driver sp1000, legacy:com/rs232 sp1000",
+					"options": [
+						"socket",
+						"usb",
+						"legacy"
+					],
+					"value": "legacy"
+				},
+				{
+					"order": 3,
+					"name": "SIGNPAD_COM_PORT",
+					"type": "text",
+					"description": "Serial COMM PORT name Tablet 7 Signpad12",
+					"value": "COM7"
+				}
+			]
+		},
+		{
+			"order": 34,
+			"name": "DCC Enabled",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "DCC_ENABLED",
+					"type": "boolean",
+					"value": true
+				}
+			]
+		},
+		{
+			"order": 49,
+			"name": "Get Workstation ID from Merchant Ref (for Alipay, Wechat, UQ)",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "MERCHANT_REF_WORKSTATION_ID_INDEX_START",
+					"type": "number",
+					"value": 0
+				},
+				{
+					"order": 2,
+					"name": "MERCHANT_REF_WORKSTATION_ID_INDEX",
+					"type": "number",
+					"value": 8
+				}
+			]
+		},
+		{
+			"order": 50,
+			"name": "MPOS Configuration",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "MPOS_MERCHANT_TERMINAL_RELOAD_INTERVAL",
+					"type": "number",
+					"value": 5
+				},
+				{
+					"order": 2,
+					"name": "MPOS_THREAD_COUNT",
+					"type": "number",
+					"value": 10
+				},
+				{
+					"order": 3,
+					"name": "HAS_MULTIPLE_TERMINALS",
+					"type": "boolean",
+					"value": true
+				},
+				{
+					"order": 4,
+					"name": "TERMINAL_CONNECTION_TYPE",
+					"type": "select",
+					"value": "VIRTUAL",
+					"options": [
+						"VIRTUAL",
+						"ACTUAL"
+					],
+					"description": "VIRTUAL (applies to direct connection to WECHAT, ALIPAY or EPAY host) or ACTUAL (connection via physical terminal)"
+				}
+			]
+		},
+		{
+			"order": 58,
+			"name": "MCP DCC HOST",
+			"type": "Operations",
+			"items": [
+				{
+					"order": 1,
+					"name": "DCC_HOST_READ_TIMEOUT",
+					"type": "number",
+					"value": 60,
+					"description": "In seconds"
+				},
+				{
+					"order": 2,
+					"name": "DCC_HOST_CONN_TIMEOUT",
+					"type": "number",
+					"value": 50,
+					"description": "In seconds"
+				},
+				{
+					"order": 3,
+					"name": "DCC_HOST_PRIMARY_URL",
+					"type": "text",
+					"value": "https://dev1.pure-commerce.com/mcppax/gateway"
+				},
+				{
+					"order": 4,
+					"name": "DCC_HOST_SECONDARY_URL",
+					"type": "text",
+					"value": "https://dev1.pure-commerce.com/mcppax/gateway"
+				},
+				{
+					"order": 5,
+					"name": "DCC_HOST_URL_TEST",
+					"type": "text",
+					"value": "https://dev1.pure-commerce.com/mcppax/gateway"
+				},
+				{
+					"order": 6,
+					"name": "DCC_HOST_HOSTNAME",
+					"type": "text",
+					"value": "PAXMTest01"
+				},
+				{
+					"order": 7,
+					"name": "DCC_HOST_USERNAME",
+					"type": "text",
+					"value": "mcpPaxTest"
+				},
+				{
+					"order": 8,
+					"name": "DCC_HOST_PASSWORD",
+					"type": "text",
+					"value": "MG86!stm2"
+				},
+				{
+					"order": 9,
+					"name": "DCC_HOST_MID",
+					"type": "text",
+					"value": "9180924250"
+				},
+				{
+					"order": 10,
+					"name": "DCC_HOST_HOSTNAME_TEST",
+					"type": "text",
+					"value": "PAXMTest01"
+				},
+				{
+					"order": 11,
+					"name": "DCC_HOST_USERNAME_TEST",
+					"type": "text",
+					"value": "mcpPaxTest"
+				},
+				{
+					"order": 12,
+					"name": "DCC_HOST_PASSWORD_TEST",
+					"type": "text",
+					"value": "MG86!stm2"
+				},
+				{
+					"order": 13,
+					"name": "DCC_HOST_MID_TEST",
+					"type": "text",
+					"value": "9180924250"
+				}
+			]
+		}
+	]
+}

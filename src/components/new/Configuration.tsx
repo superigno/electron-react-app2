@@ -3,56 +3,16 @@ import { Footer } from '../Footer';
 import { MultiSelectItem } from '../MultiSelectItem';
 import { SelectItem } from '../SelectItem';
 import { ItemGroup, ItemGroupType } from './ItemGroup';
-import schema from '../../../resources/schema.json';
+import schema from '../../../resources/schemas/schema.json';
 import { Icon, Switch, Tooltip } from '@blueprintjs/core';
+import FileSaver from 'file-saver';
+import TerminalFactory from './TerminalFactory';
+import operations_schema from '../../../resources/schemas/operations_schema.json';
 
 const terminalList = ["FISERV", "SWIFTPASS", "MACAUPASS", "PSP_TERMINAL", "INGENICO_MOVE5000", "DPAPOSA8", "REGISTER", "INGENICO_ICT250", "TYROTTA", "EPAY", 
                       "EFTSOLUTIONS", "OCEANPAYMENT", "UPLAN", "OCEANPAYMENT_CLIENT", "PAX_S60", "PAX_A920"];
+
 const paymentTypeList = ["CREDITCARD", "VISA", "MASTERCARD", "ALIPAY", "WECHAT", "MPAY", "UQ", "BOCPAY"];
-
-type t = {
-    schema: ItemGroupType,
-    hidden: boolean
-}
-
-
-type TerminalSchemaType = {
-    INGENICO_MOVE5000: ItemGroupType,
-    FISERV: ItemGroupType,
-    SWIFTPASS: ItemGroupType,
-    MACAUPASS: ItemGroupType,
-    PSP_TERMINAL: ItemGroupType,
-    PAX_S60: ItemGroupType,
-    PAX_A920: ItemGroupType,
-    REGISTER: ItemGroupType,
-    INGENICO_ICT250: ItemGroupType,
-    TYROTTA: ItemGroupType,
-    EPAY: ItemGroupType,
-    EFTSOLUTIONS: ItemGroupType,
-    OCEANPAYMENT: ItemGroupType,
-    UPLAN: ItemGroupType,
-    OCEANPAYMENT_CLIENT: ItemGroupType,
-    DPAPOSA8: ItemGroupType
-}
-
-type TerminalHiddenType = {
-    INGENICO_MOVE5000: boolean,
-    FISERV: boolean,
-    SWIFTPASS: boolean,
-    MACAUPASS: boolean,
-    PSP_TERMINAL: boolean,
-    PAX_S60: boolean,
-    PAX_A920: boolean,
-    REGISTER: boolean,
-    INGENICO_ICT250: boolean,
-    TYROTTA: boolean,
-    EPAY: boolean,
-    EFTSOLUTIONS: boolean,
-    OCEANPAYMENT: boolean,
-    UPLAN: boolean,
-    OCEANPAYMENT_CLIENT: boolean,
-    DPAPOSA8: boolean
-}
 
 const getTerminalSchema = (terminal: string) => {
     const s = schema.groups.filter((group) => {
@@ -73,17 +33,18 @@ export const Configuration = () => {
 
     const [terminals, setTerminals] = React.useState(["FISERV", "SWIFTPASS"]);
     const [paymentTypes, setPaymentTypes] = React.useState(["CREDITCARD", "VISA", "MASTERCARD", "ALIPAY"]);
+
     const [paymentTypeTerminalMapping, setPaymentTypeTerminalMapping] = React.useState([{ paymentType: "", terminal: "" }]);
     const [isBasic, setIsBasic] = React.useState(true);
 
-    const [terminalSchema, setTerminalSchema] = React.useState({} as TerminalSchemaType);
-    const [terminalHidden, setTerminalHidden] = React.useState({} as TerminalHiddenType);
+    const [terminalSchema, setTerminalSchema] = React.useState({} as any);
+    const [terminalHidden, setTerminalHidden] = React.useState({} as any);
 
     /** Load terminal schemas */
     React.useEffect(() => {
-        setTerminalSchema(current => {
-            terminalList.map((terminal: keyof TerminalSchemaType) => {
-                current[terminal] = getTerminalSchema(terminal);
+        setTerminalSchema((current: any) => {
+            terminalList.map((terminal) => {
+                current[terminal] = TerminalFactory.getSchema(terminal); //getTerminalSchema(terminal);
             })
             return {...current};
         })
@@ -92,8 +53,8 @@ export const Configuration = () => {
 
     /** Hide respective terminals when selected terminals change */
     React.useEffect(() => {
-        setTerminalHidden(current => {
-            terminalList.map((terminal: keyof TerminalHiddenType) => {
+        setTerminalHidden((current: any) => {
+            terminalList.map((terminal) => {
                 current[terminal] = isTerminalHidden(terminal, terminals);
             })
             return {...current};
@@ -218,8 +179,14 @@ export const Configuration = () => {
                 </div>
 
                 {
-                    terminalList.map((terminal: keyof TerminalSchemaType) => {
+                    terminalList.map((terminal: string) => {
                         return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} basic={isBasic} group={terminalSchema[terminal]} onChange={handleGenericOnChange} />
+                    })
+                }
+
+                {
+                    operations_schema.groups.map(group => {
+                        return <ItemGroup key={group.name} group={group} onChange={handleGenericOnChange} />
                     })
                 }
 

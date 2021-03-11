@@ -26,7 +26,7 @@ export const ItemGroup = (props: ItemGroupProps) => {
     }
 
     return <>
-        {!props.hidden && props.group &&
+        {!props.hidden && props.group && items &&
             <div className="item-group">
 
                 <div>

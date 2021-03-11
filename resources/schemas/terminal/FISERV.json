@@ -1,0 +1,78 @@
+{
+    "order": 57,
+    "name": "FISERV configuration",
+    "id": "FISERV",
+    "type": "Operations",
+    "items": [
+        {
+            "order": 0,
+            "name": "FISERV_MODE",
+            "type": "select",
+            "description": "TEST or LIVE, connect to live/test FISERV Host",
+            "options": [
+                "TEST",
+                "LIVE"
+            ],
+            "value": "TEST",
+            "basic": true
+        },
+        {
+            "order": 1,
+            "name": "FISERV_SIMULATOR_MODE",
+            "type": "boolean",
+            "value": true,
+            "basic": true
+        },
+        {
+            "order": 2,
+            "name": "FISERV_READ_TIMEOUT",
+            "type": "number",
+            "value": 180,
+            "description": "In seconds"
+        },
+        {
+            "order": 3,
+            "name": "FISERV_CONN_TIMEOUT",
+            "type": "number",
+            "value": 10,
+            "description": "In seconds"
+        },
+        {
+            "order": 4,
+            "name": "FISERV_PRIMARY_URL",
+            "type": "text",
+            "value": "https://hkm1.pure-commerce.com/agent/cupqr"
+        },
+        {
+            "order": 5,
+            "name": "FISERV_SECONDARY_URL",
+            "type": "text",
+            "value": "https://hkm2.pure-commerce.com/agent/cupqr"
+        },
+        {
+            "order": 6,
+            "name": "FISERV_URL_TEST",
+            "type": "text",
+            "value": "https://dev2.pure-commerce.com/agent/cupqr"
+        },
+        {
+            "order": 7,
+            "name": "FISERV_RETRY_TIMES",
+            "type": "number",
+            "value": 20
+        },
+        {
+            "order": 8,
+            "name": "FISERV_RETRY_TIME_INTERVAL",
+            "type": "number",
+            "value": 5,
+            "description": "In seconds"
+        },
+        {
+            "order": 9,
+            "name": "FISERV_RECEIPT_FLAG",
+            "type": "text",
+            "value": "1"
+        }
+    ]
+}

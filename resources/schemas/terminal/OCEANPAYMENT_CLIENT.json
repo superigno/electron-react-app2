@@ -1,0 +1,78 @@
+{
+    "order": 56,
+    "name": "OCEANPAYMENT_CLIENT configuration",
+    "id": "OCEANPAYMENT_CLIENT",
+    "type": "Operations",
+    "items": [
+        {
+            "order": 0,
+            "name": "OCEANPAYMENT_CLIENT_MODE",
+            "type": "select",
+            "description": "TEST or LIVE, connect to live/test OCEANPAYMENT_CLIENT Host",
+            "options": [
+                "TEST",
+                "LIVE"
+            ],
+            "value": "TEST",
+            "basic": true
+        },
+        {
+            "order": 1,
+            "name": "OCEANPAYMENT_CLIENT_SIMULATOR_MODE",
+            "type": "boolean",
+            "value": true,
+            "basic": true
+        },
+        {
+            "order": 2,
+            "name": "OCEANPAYMENT_CLIENT_READ_TIMEOUT",
+            "type": "number",
+            "value": 180,
+            "description": "In seconds"
+        },
+        {
+            "order": 3,
+            "name": "OCEANPAYMENT_CLIENT_CONN_TIMEOUT",
+            "type": "number",
+            "value": 10,
+            "description": "In seconds"
+        },
+        {
+            "order": 4,
+            "name": "OCEANPAYMENT_CLIENT_PRIMARY_URL",
+            "type": "text",
+            "value": "https://hkm1.pure-commerce.com/agent/oceanpay"
+        },
+        {
+            "order": 5,
+            "name": "OCEANPAYMENT_CLIENT_SECONDARY_URL",
+            "type": "text",
+            "value": "https://hkm2.pure-commerce.com/agent/oceanpay"
+        },
+        {
+            "order": 6,
+            "name": "OCEANPAYMENT_CLIENT_URL_TEST",
+            "type": "text",
+            "value": "https://dev2.pure-commerce.com/agent/ocean"
+        },
+        {
+            "order": 7,
+            "name": "OCEANPAYMENT_CLIENT_RETRY_TIMES",
+            "type": "number",
+            "value": 20
+        },
+        {
+            "order": 8,
+            "name": "OCEANPAYMENT_CLIENT_RETRY_TIME_INTERVAL",
+            "type": "number",
+            "value": 5,
+            "description": "In seconds"
+        },
+        {
+            "order": 9,
+            "name": "OCEANPAYMENT_CLIENT_RECEIPT_FLAG",
+            "type": "text",
+            "value": "1"
+        }
+    ]
+}

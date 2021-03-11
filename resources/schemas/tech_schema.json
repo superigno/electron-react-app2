@@ -1,0 +1,1605 @@
+{
+    "groups": [
+        {
+            "order": 2,
+            "name": "FxChoice",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "FXCHOICE_SERVER_PORT",
+                    "type": "number",
+                    "description": "The port used to listen to the request from Wincor",
+                    "size": 2,
+                    "value": 20002
+                },
+                {
+                    "order": 2,
+                    "name": "FXCHOICE_RESPONSE_RETRY",
+                    "type": "number",
+                    "description": "",
+                    "size": 1,
+                    "value": 3
+                },
+                {
+                    "order": 3,
+                    "name": "TERMINAL_MODE",
+                    "type": "boolean",
+                    "description": "",
+                    "value": false
+                }
+            ]
+        },
+        {
+            "order": 3,
+            "name": "Request/Response Formats",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "REQUEST_DATA_FORMAT",
+                    "type": "select",
+                    "description": "The request data format for FxChoice Socket Implementation",
+                    "options": [
+                        "xml",
+                        "json"
+                    ],
+                    "value": "xml"
+                },
+                {
+                    "order": 2,
+                    "name": "RESPONSE_DATA_FORMAT",
+                    "type": "select",
+                    "description": "The response data format for FxChoice Socket Implementation",
+                    "options": [
+                        "xml",
+                        "json"
+                    ],
+                    "value": "xml"
+                }
+            ]
+        },
+        {
+            "order": 4,
+            "name": "Timeouts",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "TIMEOUT",
+                    "type": "number",
+                    "description": "Timeout in seconds (default is 150s or 2 1/2 minutes)",
+                    "size": 1,
+                    "value": 150
+                },
+                {
+                    "order": 2,
+                    "name": "DCC_TIMEOUT",
+                    "type": "number",
+                    "description": "Timeout in seconds (default is 62s or 1 minute 2s | 60 CCredit DCC Timeout)",
+                    "size": 1,
+                    "value": 62
+                },
+                {
+                    "order": 3,
+                    "name": "WINCOR_TIMEOUT",
+                    "type": "number",
+                    "description": "Timeout in seconds (default is 240s or 4 minutes)",
+                    "size": 1,
+                    "value": 240
+                },
+                {
+                    "order": 4,
+                    "name": "YN_TIMEOUT",
+                    "type": "number",
+                    "description": "Timeout in seconds (default is 60s or 1 minute)",
+                    "size": 1,
+                    "value": 60
+                },
+                {
+                    "order": 5,
+                    "name": "YN_TIMEOUT_BUFFER",
+                    "type": "number",
+                    "description": "Timeout in seconds (default is 10s - buffer used while waiting for YNTIMEOUT to expire)",
+                    "size": 1,
+                    "value": 10
+                },
+                {
+                    "order": 6,
+                    "name": "TXN_COMPLETION_TIME",
+                    "type": "number",
+                    "description": "",
+                    "size": 1,
+                    "value": 200
+                }
+            ]
+        },
+        {
+            "order": 5,
+            "name": "Timers",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "CONTROLLER_TIMER",
+                    "type": "number",
+                    "description": "In minutes, how often to ping pos controller",
+                    "size": 1,
+                    "value": 5
+                },
+                {
+                    "order": 2,
+                    "name": "FILE_SYNCH_TIMER",
+                    "type": "number",
+                    "description": "In seconds, how often to synchronize files with pos controller",
+                    "size": 3,
+                    "value": 300000
+                },
+                {
+                    "order": 3,
+                    "name": "SIGNPAD_SWEEPER_DURATION",
+                    "type": "number",
+                    "description": "In months, how long will the log files be kept",
+                    "size": 1,
+                    "value": 1
+                },
+                {
+                    "order": 4,
+                    "name": "LOG_SWEEPER_TIMER",
+                    "type": "number",
+                    "description": "In days, how often to check the log files",
+                    "size": 1,
+                    "value": 30
+                },
+                {
+                    "order": 5,
+                    "name": "LOG_SWEEPER_DURATION",
+                    "type": "number",
+                    "description": "In months, how long will the log files be kept",
+                    "size": 1,
+                    "value": 3
+                },
+                {
+                    "order": 6,
+                    "name": "LOG_SWEEPER_POOL_SIZE",
+                    "type": "number",
+                    "description": "",
+                    "size": 1,
+                    "value": 4
+                }
+            ]
+        },
+        {
+			"order": 7,
+			"name": "Terminals Tech",
+			"type": "Tech",
+			"items": [
+				{
+					"order": 4,
+					"name": "DEFAULT_TERMINAL_NAME",
+					"type": "text",
+					"description": "Mapping for Payment Service via (TerminalConstant) Terminal ImplDefault Mapping for Payment Service via (TerminalConstant) Terminal Impl",
+					"value": "TYROTTA"
+				},
+				{
+					"order": 5,
+					"name": "MPOS_TERMINAL_NAME",
+					"type": "text",
+					"description": "Make this terminal multithreaded",
+					"value": "EPAY"
+				}
+			]
+		},
+        {
+            "order": 9,
+            "name": "Default Values (Tech)",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "DEFAULT_CURRENCY_RATE",
+                    "type": "number",
+                    "value": "1.0000",
+                    "size": 2
+                },
+                {
+                    "order": 2,
+                    "name": "DEFAULT_CARDTYPE",
+                    "type": "text",
+                    "value": "XXXX"
+                },
+                {
+                    "order": 3,
+                    "name": "DEFAULT_CARDNUMBER",
+                    "type": "text",
+                    "value": "111111******1111"
+                },
+                {
+                    "order": 4,
+                    "name": "DEFAULT_CARDEXPIRY",
+                    "type": "text",
+                    "value": "1111"
+                },
+                {
+                    "order": 5,
+                    "name": "DEFAULT_AUTH_CODE",
+                    "type": "text",
+                    "value": "111111"
+                },
+                {
+                    "order": 6,
+                    "name": "DEFAULT_INVOICE_NUMBER",
+                    "type": "text",
+                    "value": "111111"
+                },
+                {
+                    "order": 7,
+                    "name": "DEFAULT_RRN",
+                    "type": "text",
+                    "value": "111111"
+                },
+                {
+                    "order": 8,
+                    "name": "REFUND_RATE_VALIDATION_MARGIN",
+                    "type": "number",
+                    "value": "0.5",
+                    "description": "0.5 means bigger or small than 50% of input rate is not valid"
+                },
+                {
+                    "order": 9,
+                    "name": "SUSPENDED_CURRENCY_LIST",
+                    "type": "text",
+                    "description": "format: JPY,USD,EUR..."
+                },
+                {
+                    "order": 10,
+                    "name": "MINIMUM_DCC_AMOUNT",
+                    "type": "number",
+                    "description": "in cents, e.g. 500 means 5 dollar",
+                    "value": "000"
+                },
+                {
+                    "order": 11,
+                    "name": "MINIMUM_TOTAL_AMOUNT",
+                    "type": "number",
+                    "description": "minimum amount that will be accepted",
+                    "value": "0.01"
+                },
+                {
+                    "order": 12,
+                    "name": "CARD_TYPE_MAPPING_FILE",
+                    "type": "text",
+                    "value": "CardTypeMapping.properties"
+                },
+                {
+                    "order": 13,
+                    "name": "CARDTYPE_DCC_SUPPORTED",
+                    "type": "text",
+                    "value": "MASTERCARD,VISA"
+                },
+                {
+                    "order": 14,
+                    "name": "CURRENCY_DCC_SUPPORTED",
+                    "type": "largetext",
+                    "value": "AED,AFN,ALL,AMD,ANG,ARS,AOA,AUD,AWG,AZN,BAM,BBD,BDT,BGN,BHD,BMD,BND,BOB,BRL,BSD,BTN,BWP,BZD,CAD,CDF,CLP,CNY,COP,CRC,CUP,CVE,CZK,DJF,DKK,DOP,DZD,EGP,ERN,ETB,FJD,GBP,GEL,GIP,GMD,GTQ,GYD,HKD,HNL,HRK,HTG,HUF,IQD,ILS,INR,JMD,JOD,JPY,KES,KGS,KHR,KRW,KWD,KYD,KZT,LAK,LBP,LKR,LSL,LYD,MAD,MDL,MKD,MMK,MNT,MOP,MRO,MUR,MVR,MWK,MXN,MYR,MZN,NAD,NGN,NIO,NOK,NPR,NZD,OMR,PAB,PEN,PGK,PHP,PKR,PLN,PYG,QAR,RON,RUB,SAR,SBD,SCR,SGD,SYP,SZL,THB,TJS,TND,TOP,TRY,TTD,TWD,TZS,UAH,UGX,USD,UYU,UZS,VUV,WST,XAF,XCD,XOF,XPF,YER,ZAR,ZMW,EUR,SEK"
+                }
+            ]
+        },
+        {
+            "order": 10,
+            "name": "Register",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "CASH_REGISTER_NAME",
+                    "type": "select",
+                    "options": [
+                        "WINCOR_OPI_STANDARD",
+                        "WINCOR_OPI_SIMPLIFIED",
+                        "WINCOR_OPI_MPOS",
+                        "WINCOR_FXCHOICE_SERIAL",
+                        "WINCOR_FXCHOICE_SOCKET"
+                    ],
+                    "value": "WINCOR_FXCHOICE_SOCKET"
+                }
+            ]
+        },
+        {
+            "order": 11,
+            "name": "Card Type DCC Split",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "CARD_TYPE_DCC_SPLIT",
+                    "type": "boolean",
+                    "description": "TRUE for using different card type output for MasterCard and Visa DCC trnx, FALSE for displaying common output for MasterCard and Visa DCC trnx",
+                    "value": false
+                }
+            ]
+        },
+        {
+            "order": 12,
+            "name": "Rate",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "RATE_FILE_NAME",
+                    "type": "text",
+                    "value": "ForexRatesHKD.txt"
+                },
+                {
+                    "order": 2,
+                    "name": "RATE_FORMAT",
+                    "type": "select",
+                    "options": [
+                        "TC-BC",
+                        "BC-TC"
+                    ],
+                    "description": "TC-BC=division BC-TC=multiply",
+                    "value": "TC-BC"
+                }
+            ]
+        },
+        {
+            "order": 13,
+            "name": "BIN",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "BIN_RANGE_LENGTH",
+                    "type": "number",
+                    "value": 6
+                },
+                {
+                    "order": 2,
+                    "name": "BIN_FILE",
+                    "type": "text",
+                    "value": "bin.txt"
+                },
+                {
+                    "order": 3,
+                    "name": "BIN_CUP_FILE",
+                    "type": "text",
+                    "value": "cupcobrand.txt"
+                }
+            ]
+        },
+        {
+            "order": 14,
+            "name": "VATOFF",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "VATOFF_RANGE_LENGTH",
+                    "type": "number",
+                    "value": 12
+                },
+                {
+                    "order": 2,
+                    "name": "VATOFF_FILE",
+                    "type": "text",
+                    "value": "VATOff.enc.txt"
+                },
+                {
+                    "order": 3,
+                    "name": "VATOFF_FLAG",
+                    "type": "boolean",
+                    "value": false
+                }
+            ]
+        },
+        {
+            "order": 15,
+            "name": "PAX Error Table",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "PAX_ERROR_TABLE",
+                    "type": "text",
+                    "value": "PAXErrorTable.txt"
+                }
+            ]
+        },
+        {
+            "order": 16,
+            "name": "Directories / Files",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "APPLICATION_ROOT_PATH",
+                    "type": "text",
+                    "value": "",
+                    "description": "Application's root path"
+                },
+                {
+                    "order": 2,
+                    "name": "FXCHOICE_PATH",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\",
+                    "description": "The base directory of FxChoice"
+                },
+                {
+                    "order": 3,
+                    "name": "FILE_SYNCH_PATH",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\files\\",
+                    "description": "The directory to save the file synchronized with the server"
+                },
+                {
+                    "order": 4,
+                    "name": "LOG_PATH",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\logs\\transactions\\",
+                    "description": "Log files directory"
+                },
+                {
+                    "order": 5,
+                    "name": "REPORT_PATH",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\logs\\reports\\",
+                    "description": "Report files directory"
+                },
+                {
+                    "order": 6,
+                    "name": "RESEND_PATH",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\logs\\resends\\",
+                    "description": "Resend files directory"
+                },
+                {
+                    "order": 7,
+                    "name": "SIGNATURE_RESEND_PATH",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\logs\\signatures\\",
+                    "description": "Signature files Directory"
+                },
+                {
+                    "order": 8,
+                    "name": "UPGRADE_PATH",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\upgrades\\",
+                    "description": "Upgrade files directory"
+                },
+                {
+                    "order": 9,
+                    "name": "SIGNPAD_MONITOR_PATH",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\signpad\\monitor",
+                    "description": "Signpad monitor files directory"
+                },
+                {
+                    "order": 10,
+                    "name": "SIGNPAD_PLATFORM_TOOLS_PATH",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\signpad\\platform-tools",
+                    "description": "Signpad log files directory"
+                },
+                {
+                    "order": 11,
+                    "name": "FXCHOICESERVICE_MONITOR_DIR",
+                    "type": "text",
+                    "value": "c:\\fxchoiceservicemanager\\monitor\\restart_fxchoice.bat"
+                },
+                {
+                    "order": 12,
+                    "name": "FXCHOICESERVICE_RESTART_FILE",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\config\\restart_fxchoice.bat"
+                },
+                {
+                    "order": 13,
+                    "name": "FILE_SYNCH_LIST",
+                    "type": "largetext",
+                    "value": "TerminalOPIResponseMapping.properties,CardTypeMapping.properties,PAXErrorTable.txt,Currency.xml,ForexRatesHKD.txt,ForexRatesMYR.txt,ForexRatesMOP.txt,bin.txt,cupcobrand.txt,ResponseMapping-MACAUPASS.properties,ResponseMapping-EFTSolutions.properties,TextLocale.properties,VATOff.enc.txt",
+                    "description": "The file list which needs to be synchronized with the server"
+                },
+                {
+                    "order": 14,
+                    "name": "RESEND_FREQUENCY",
+                    "type": "number",
+                    "value": "5",
+                    "size": 1
+                },
+                {
+                    "order": 15,
+                    "name": "DAILY_REPORT",
+                    "type": "text",
+                    "value": "DailyReport.xml",
+                    "description": "Daily Summary of Transaction"
+                },
+                {
+                    "order": 16,
+                    "name": "SHIFT_REPORT",
+                    "type": "text",
+                    "value": "ShiftReport.xml",
+                    "description": "Per Shift Summary of transaction"
+                },
+                {
+                    "order": 17,
+                    "name": "SHIFT_TRXN_REPORT",
+                    "type": "text",
+                    "value": "ShiftTrnxReport.txt",
+                    "description": "Shift Transaction Details"
+                }
+            ]
+        },
+        {
+            "order": 18,
+            "name": "Servlets / Controller",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "SERVER_CONNECTOR_IMPL",
+                    "type": "text"
+                },
+                {
+                    "order": 2,
+                    "name": "SERVER_SERVLET_NAME",
+                    "type": "text",
+                    "value": "gateway/trx"
+                },
+                {
+                    "order": 3,
+                    "name": "PING_SERVLET_NAME",
+                    "type": "text",
+                    "value": "gateway/servlet/PingServlet"
+                },
+                {
+                    "order": 4,
+                    "name": "TRX_SERVLET_NAME",
+                    "type": "text",
+                    "value": "gateway/servlet/TransactionServlet"
+                },
+                {
+                    "order": 5,
+                    "name": "TEST_SERVER_SERVLET_NAME",
+                    "type": "text",
+                    "value": "gateway/trx"
+                },
+                {
+                    "order": 6,
+                    "name": "TEST_PING_SERVLET_NAME",
+                    "type": "text",
+                    "value": "gateway/servlet/PingServlet"
+                },
+                {
+                    "order": 7,
+                    "name": "TEST_TRX_SERVLET_NAME",
+                    "type": "text",
+                    "value": "gateway/servlet/TransactionServlet"
+                },
+                {
+                    "order": 8,
+                    "name": "CONTROLLER_REQUEST_SERVLET",
+                    "type": "text",
+                    "value": "/request/ping",
+                    "description": "The servlet to get command from server"
+                },
+                {
+                    "order": 9,
+                    "name": "CONTROLLER_FILE_DEPOSIT_SERVLET",
+                    "type": "text",
+                    "value": "/file/deposit",
+                    "description": "The servlet to deposit files to server"
+                },
+                {
+                    "order": 10,
+                    "name": "CONTROLLER_FILE_DOWNLOAD_SERVLET",
+                    "type": "text",
+                    "value": "/file/download",
+                    "description": "The servlet to get files to server"
+                },
+                {
+                    "order": 11,
+                    "name": "CONTROLLER_SHOW_MERCHANT_ID",
+                    "type": "boolean",
+                    "value": false
+                },
+                {
+                    "order": 12,
+                    "name": "CONTROLLER_SHOW_TERMINAL_ID",
+                    "type": "boolean",
+                    "value": false
+                },
+                {
+                    "order": 13,
+                    "name": "CONTROLLER_SHOW_IP",
+                    "type": "boolean",
+                    "value": true
+                },
+                {
+                    "order": 14,
+                    "name": "CONTROLLER_SHOW_HOSTNAME",
+                    "type": "boolean",
+                    "value": true
+                },
+                {
+                    "order": 15,
+                    "name": "FLAG_ENABLE_POSCONTROLLER",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "TRUE or FALSE, TRUE = Enable POS Controller else Disabled"
+                },
+                {
+                    "order": 16,
+                    "name": "FLAG_ENABLE_TRX_RESEND",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "TRUE or FALSE, TRUE = Enable transaction and signature resend else Disabled"
+                },
+                {
+                    "order": 17,
+                    "name": "FLAG_SHUTDOWN_APPLICATION",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "Triggers auto exit upon POS shutdown request"
+                },
+                {
+                    "order": 18,
+                    "name": "PROXY_SETTING",
+                    "type": "number",
+                    "value": 0
+                },
+                {
+                    "order": 19,
+                    "name": "PROXY_HOST",
+                    "type": "text"
+                },
+                {
+                    "order": 20,
+                    "name": "PROXY_PORT",
+                    "type": "number"
+                },
+                {
+                    "order": 21,
+                    "name": "TRUST_STORE",
+                    "type": "text",
+                    "value": "c:\\fxchoice\\config\\cacerts"
+                },
+                {
+                    "order": 22,
+                    "name": "TRUST_STOREPWD",
+                    "type": "text",
+                    "value": "changeit"
+                }
+            ]
+        },
+        {
+            "order": 19,
+            "name": "Terminal Serial Standard settings",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "TERMINAL_RESEND_TIMES",
+                    "type": "number",
+                    "description": "Times FxChoice will try to send request to terminal",
+                    "value": 3
+                },
+                {
+                    "order": 2,
+                    "name": "TERMINAL_TRANSACTION_DELAY",
+                    "type": "number",
+                    "description": "In milliseconds, how long to delay before sending succeeding RESPONSE to terminal",
+                    "value": 200
+                },
+                {
+                    "order": 3,
+                    "name": "TERMINAL_TRANSACTION_RESP_DELAY",
+                    "type": "number",
+                    "description": "In milliseconds, how long to delay after receiving RESPONSE from terminal",
+                    "value": 1000
+                },
+                {
+                    "order": 4,
+                    "name": "TERMINAL_HC_DELAY",
+                    "type": "number",
+                    "description": "In milliseconds, the delay after a health check is done",
+                    "value": 50
+                },
+                {
+                    "order": 5,
+                    "name": "TERMINAL_SPECIAL_TIMEOUTS",
+                    "type": "text",
+                    "description": "Configuration of special timeouts of requests, the unit here is in seconds",
+                    "value": "3:Ack"
+                },
+                {
+                    "order": 6,
+                    "name": "TERMINAL_DYNAMIC_TIMEOUT",
+                    "type": "boolean",
+                    "description": "Configuration for having dynamic timeouts, which carries over the excess timeout to sales",
+                    "value": false
+                },
+                {
+                    "order": 7,
+                    "name": "TERMINAL_MARKUP",
+                    "type": "number",
+                    "description": "Markup to be passed to the terminal and printed on receipt",
+                    "value": 3.95
+                }
+            ]
+        },
+        {
+            "order": 20,
+            "name": "EPS Configuration",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "TERMINAL_EPS_MERCHANT_REF_LEN",
+                    "type": "select",
+                    "description": "12 or 16 Merchant Ref length to be accepted",
+                    "options": [
+                        "12",
+                        "16"
+                    ],
+                    "value": "16"
+                },
+                {
+                    "order": 2,
+                    "name": "TERMINAL_EPS_SPEC",
+                    "type": "select",
+                    "description": "EPS Specs V402 or V13",
+                    "options": [
+                        "V402",
+                        "V13"
+                    ],
+                    "value": "V402"
+                },
+                {
+                    "order": 3,
+                    "name": "TERMINAL_EPS_ENABLE_CHIPCARD",
+                    "type": "boolean",
+                    "description": "TRUE to always use CHIP in EPS request, else FALSE to use card type mapping to determine CHIP",
+                    "value": false
+                },
+                {
+                    "order": 4,
+                    "name": "TERMINAL_HOST_URL",
+                    "type": "text",
+                    "description": "Epay host",
+                    "value": "https://serv003.au.epayworldwide.com:30075/"
+                },
+                {
+                    "order": 5,
+                    "name": "TERMINAL_PROCESSOR",
+                    "type": "text",
+                    "description": "Terminal processor mapping for schemes",
+                    "value": "B:Epay"
+                }
+            ]
+        },
+        {
+            "order": 30,
+            "name": "Signpad",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "SIGNATURE_IMAGE_UPLOAD_URL",
+                    "type": "text",
+                    "value": "https://usw4.pure-commerce.com/dfsnetreport",
+                    "description": "CHECK to delete"
+                },
+                {
+                    "order": 2,
+                    "name": "SIGNATURE_IMAGE_UPLOAD_SERVLET",
+                    "type": "text",
+                    "description": "CHECK to delete",
+                    "value": "/servlet/upload"
+                },
+                {
+                    "order": 3,
+                    "name": "SIGNPAD_ON_DEMAND_CONNECTION",
+                    "type": "boolean",
+                    "description": "Open/create connection as requested and closes after process is completed",
+                    "value": true
+                },
+                {
+                    "order": 4,
+                    "name": "SIGNPAD_ON_DEMAND_AVAILABILITY",
+                    "type": "boolean",
+                    "description": "Flag to indicate if checking of signpad connection availability is needed or not before a certain process",
+                    "value": false
+                },
+                {
+                    "order": 5,
+                    "name": "SIGNPAD_SOCKET_ADB_FORWARD",
+                    "type": "boolean",
+                    "description": "Flag to direct all socket connection of signpad to localhost instead of specific IP",
+                    "value": true
+                },
+                {
+                    "order": 6,
+                    "name": "SIGNPAD_BAUD_RATE",
+                    "type": "number",
+                    "description": "19200/9600...",
+                    "value": 9600
+                },
+                {
+                    "order": 7,
+                    "name": "SIGNPAD_DATA_BIT",
+                    "type": "number",
+                    "description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
+                    "value": 8
+                },
+                {
+                    "order": 8,
+                    "name": "SIGNPAD_STOP_BIT",
+                    "type": "number",
+                    "description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
+                    "value": 1
+                },
+                {
+                    "order": 9,
+                    "name": "SIGNPAD_PARITY_BIT",
+                    "type": "number",
+                    "description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "order": 31,
+            "name": "Signpad Socket Connection",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "SIGNPAD_IP",
+                    "type": "text",
+                    "value": "localhost",
+                    "description": "IP address of the signpad"
+                },
+                {
+                    "order": 2,
+                    "name": "SIGNPAD_PORT",
+                    "type": "number",
+                    "description": "Port number to connect",
+                    "value": 9999
+                },
+                {
+                    "order": 3,
+                    "name": "SIGNPAD_ACK_TIMEOUT",
+                    "type": "number",
+                    "description": "in seconds, how long it expects to receive ACK after sending the request",
+                    "value": 3
+                },
+                {
+                    "order": 4,
+                    "name": "SIGNPAD_INIT_RETRY_COUNT",
+                    "type": "number",
+                    "description": "Retry count for signpad initialization",
+                    "value": 3
+                },
+                {
+                    "order": 5,
+                    "name": "SIGNPAD_INIT_DELAY",
+                    "type": "number",
+                    "description": "In seconds, how long a process can be done with the terminal",
+                    "value": 2
+                },
+                {
+                    "order": 6,
+                    "name": "SIGNPAD_ON_DEMAND_TIMEOUT",
+                    "type": "number",
+                    "description": "In seconds, how long an on-demand form can be done with the terminal",
+                    "value": 3
+                },
+                {
+                    "order": 7,
+                    "name": "SIGNPAD_SIGN_FINISH_TIMEOUT",
+                    "type": "number",
+                    "value": 4
+                },
+                {
+                    "order": 8,
+                    "name": "SIGNPAD_SIGN_TOTAL_TIMEOUT",
+                    "type": "number",
+                    "value": 45
+                },
+                {
+                    "order": 9,
+                    "name": "SIGNPAD_COMMAND_SEND_TIMEOUT",
+                    "type": "number",
+                    "value": 10
+                },
+                {
+                    "order": 10,
+                    "name": "SIGNPAD_DCC_SELECT_TIMEOUT",
+                    "type": "number",
+                    "value": 45
+                },
+                {
+                    "order": 11,
+                    "name": "SIGNPAD_GET_LAST_RESPONSE_TIMEOUT",
+                    "type": "number",
+                    "value": 5
+                },
+                {
+                    "order": 12,
+                    "name": "SIGNPAD_RESO_WIDTH",
+                    "type": "number",
+                    "value": 4096
+                },
+                {
+                    "order": 13,
+                    "name": "SIGNPAD_RESO_HEIGHT",
+                    "type": "number",
+                    "value": 4096
+                }
+            ]
+        },
+        {
+            "order": 32,
+            "name": "Device Health Check (Pinpad/Signpad)",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "SHOULD_RESTART_SIGNPAD_FAILURE",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "Enable/disable perform recovery | always false for now "
+                },
+                {
+                    "order": 2,
+                    "name": "TERMINAL_HEALTH_CHECK_ENABLED",
+                    "type": "boolean",
+                    "description": "Enable/disable terminal health checking | always false for now",
+                    "value": false
+                },
+                {
+                    "order": 3,
+                    "name": "SERIAL_HEALTH_CHECK_ENABLED",
+                    "type": "boolean",
+                    "description": "Enable/disable device health checking",
+                    "value": true
+                },
+                {
+                    "order": 4,
+                    "name": "TERMINAL_HEALTH_CHECK_FREQUENCY",
+                    "type": "number",
+                    "description": "How frequent to check the terminal (in seconds)",
+                    "value": 120
+                },
+                {
+                    "order": 5,
+                    "name": "SIGNPAD_HEALTH_CHECK_FREQUENCY",
+                    "type": "number",
+                    "description": "How frequent to check the signpad (in seconds)",
+                    "value": 120
+                },
+                {
+                    "order": 6,
+                    "name": "ECR_HEALTH_CHECK_FREQUENCY",
+                    "type": "number",
+                    "description": "How frequent to check the signpad (in seconds)",
+                    "value": 300
+                },
+                {
+                    "order": 7,
+                    "name": "RESTART_WAITING_TIME",
+                    "type": "number",
+                    "description": "Delay in seconds before triggering a windows restart",
+                    "value": 1
+                },
+                {
+                    "order": 8,
+                    "name": "RESTART_INTERVAL_TIME",
+                    "type": "number",
+                    "description": "Delay in minutes before triggering a windows restart",
+                    "value": 30
+                }
+            ]
+        },
+        {
+            "order": 33,
+            "name": "Signature Related Items",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "ELECTRONIC_SIGNATURE",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "TRUE for Electronic Signature, False for Manual Signature"
+                },
+                {
+                    "order": 2,
+                    "name": "ELECTRONIC_SIGNATURE_CAPTURED_NOTE",
+                    "type": "text",
+                    "description": "Electronic Signature Receipt Captured Note",
+                    "value": "*** Electronic Signature Captured. ***"
+                },
+                {
+                    "order": 3,
+                    "name": "HAS_SIGNATURE_HEADER",
+                    "type": "boolean",
+                    "description": "TRUE for adding Signature Header, False for no Signature Header",
+                    "value": false
+                },
+                {
+                    "order": 4,
+                    "name": "SIGNATURE_HEADER",
+                    "type": "text",
+                    "value": "AU DFS\nHONGKONG INTERNATIONAL AIRPORT"
+                },
+                {
+                    "order": 5,
+                    "name": "MANUAL_SIGNATURE_SPACE",
+                    "type": "text",
+                    "description": "Manual Signature Space",
+                    "value": "\n\nX--------------------------\nSIGNATURE"
+                },
+                {
+                    "order": 6,
+                    "name": "SIGNATURE_MATCH_QUESTION",
+                    "type": "text",
+                    "description": "Manual Signature Space",
+                    "value": "Does Signature match?"
+                },
+                {
+                    "order": 7,
+                    "name": "SIGNATURE_FLAG_MANUAL",
+                    "type": "text",
+                    "value": "SIGN: ________________________"
+                },
+                {
+                    "order": 8,
+                    "name": "SIGNATURE_FLAG_ELECTRONIC",
+                    "type": "text",
+                    "value": "Customer signed electronically"
+                },
+                {
+                    "order": 9,
+                    "name": "SIGNATURE_FLAG_WAIVED",
+                    "type": "text",
+                    "value": "No signature required"
+                },
+                {
+                    "order": 10,
+                    "name": "RECEIPT_DATA_REQUEST_TYPE_SCHEME",
+                    "type": "text",
+                    "value": "CardPayment:TRUE,PaymentReversal:TRUE,PaymentRefund:TRUE,CardPreAuthorisation:FALSE,LoyaltySwipe:TRUE"
+                },
+                {
+                    "order": 11,
+                    "name": "SIGNATURE_INCLUDED_IN_PRIVATE_DATA",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "True to include base64 signatureimage in the private data | else false"
+                },
+                {
+                    "order": 12,
+                    "name": "SIGNATURE_DATA_TERMINAL_CARD_SCHEME",
+                    "type": "text",
+                    "value": "TYROTTA:TRUE,DPAPOSA8:TRUE,EPAY:TRUE,INGENICO_ICT250:TRUE,PAX_A920:TRUE,INGENICO_MOVE5000:TRUE"
+                },
+                {
+                    "order": 13,
+                    "name": "SIGNATURE_DATA_REQUEST_TYPE_SCHEME",
+                    "type": "text",
+                    "value": "CardPayment:TRUE,PaymentReversal:TRUE,PaymentRefund:TRUE,CardPreAuthorisation:TRUE,LoyaltySwipe:TRUE"
+                },
+                {
+                    "order": 14,
+                    "name": "SIGNATURE_RESIZE_ENABLED",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "True Signature resize/scale Enabled | else false"
+                },
+                {
+                    "order": 15,
+                    "name": "SIGNATURE_RESIZE_PERCENTAGE",
+                    "type": "number",
+                    "value": 0.2,
+                    "description": "Signature resize/scall percentage | 0.5 = 50%, 0.6 = 60%, 0.7 = 70%, 0.8 = 80%, 0.9 = 90%"
+                },
+                {
+                    "order": 16,
+                    "name": "SIGNATURE_IMAGE_PATH",
+                    "type": "text",
+                    "value": "C:\\fxchoice\\signpad\\images\\"
+                },
+                {
+                    "order": 17,
+                    "name": "SIGNATURE_LOCAL_COPY_ENABLED",
+                    "type": "boolean",
+                    "value": false
+                },
+                {
+                    "order": 18,
+                    "name": "SIGNATURE_CAPTURE_ENABLED",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "Signature capture Enabled"
+                },
+                {
+                    "order": 19,
+                    "name": "WAIVE_SIGNATURE_ENABLED",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "Skip signature for amount less than the configured value (Visa EPS/Mastercard QPS)"
+                },
+                {
+                    "order": 20,
+                    "name": "MAGSTRIPE_WAIVE_ENABLED",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "Skip signature waive for magstripe"
+                },
+                {
+                    "order": 21,
+                    "name": "CARDSCHEME_WAIVE_LIST",
+                    "type": "text",
+                    "value": "MASTER:500:FALSE,MC:500:FALSE,VI:500:FALSE,MASTERCARD:500:FALSE,VISA:500:FALSE,AMEX:500:FALSE,CUP:500:FALSE,JCB:500:FALSE",
+                    "description": "Format CardScheme:Maximum amount to skip:Apply to DCC transaction?"
+                },
+                {
+                    "order": 22,
+                    "name": "CARDSCHEME_MAPPING",
+                    "type": "text",
+                    "value": "0:OTHERS,1:VISA,2:MASTERCARD,3:AMEX,4:DINERS,5:JCB,6:DISCOVER,7:CUP DEBIT,8:CUP CREDIT,9:DEBIT"
+                },
+                {
+                    "order": 23,
+                    "name": "RESPONSECODE_INCLUDED_IN_OPI_RESPONSE",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "True to include terminal response code in the response data | else false"
+                }
+            ]
+        },
+        {
+            "order": 35,
+            "name": "Currency",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "ENABLE_MULTI_CURRENCY",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "Show other foreign currencies aside from the home currency. If disabled, the two currencies (base + home) will be displayed"
+                },
+                {
+                    "order": 2,
+                    "name": "MULTI_CURRENCY_LIST",
+                    "type": "text",
+                    "value": "BASE:1,USD:2,HOME:3",
+                    "description": "The list and order of currencies for display. Format -> Currency:Display Order"
+                },
+                {
+                    "order": 3,
+                    "name": "SIGNATURE_CAPTURE_ENABLED",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "Signaure capture Enabled"
+                },
+                {
+                    "order": 4,
+                    "name": "DCC_CONTACTLESS_AMOUNT_LIMIT",
+                    "type": "number",
+                    "value": 100,
+                    "description": "DCC Amount limit for contactless card before requiring signature"
+                },
+                {
+                    "order": 5,
+                    "name": "integratedReceipt",
+                    "type": "boolean",
+                    "value": true
+                },
+                {
+                    "order": 6,
+                    "name": "integratedReceiptWidth",
+                    "type": "number",
+                    "value": 36,
+                    "description": "Integer between 28 and 500"
+                },
+                {
+                    "order": 7,
+                    "name": "SHOW_CARDBRAND_IN_SIGNPAD",
+                    "type": "number",
+                    "value": 1,
+                    "description": "Show the card schemes in the signpad DCC offer screen. 0-Don't show, 1-Show only with CoBrand, 2-Show including Visa/MC"
+                },
+                {
+                    "order": 8,
+                    "name": "ENABLE_DEFAULT_FOR_UNSUPPORTED_CURRENCY",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "If the card currency is not supported, should we display a default DCC currency? TRUE - Yes, FALSE - No"
+                },
+                {
+                    "order": 9,
+                    "name": "DEFAULT_UNSUPPORTED_CURRENCY_CODE",
+                    "type": "text",
+                    "value": "USD",
+                    "description": "Which currency to use as DCC for unsupported currency"
+                },
+                {
+                    "order": 10,
+                    "name": "APPLY_DEFAULT_TO_UNSUPPORTED_CURRENCY_ONLY",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "Should we restrict showing of default to unsupported currency list. TRUE - Yes, FALSE-No include other scenarios (no rates etc)"
+                }
+            ]
+        },
+        {
+            "order": 36,
+            "name": "Transaction Logs Items",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "HAS_TXLG",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "TRUE for enabling TXLG , False for no TXLG"
+                },
+                {
+                    "order": 2,
+                    "name": "CURRENT_TRANSACTION_FILE",
+                    "type": "text",
+                    "value": "current.txt",
+                    "description": "The file name to save information of current transaction"
+                },
+                {
+                    "order": 3,
+                    "name": "LAST_TRANSACTION_FILE",
+                    "type": "text",
+                    "value": "last.txt",
+                    "description": "The file name to save information of last transaction"
+                },
+                {
+                    "order": 4,
+                    "name": "LAST_TRANSACTION_RECEIPT",
+                    "type": "text",
+                    "value": "PrintReceipt.xml",
+                    "description": "The file name to save information of last transaction"
+                }
+            ]
+        },
+        {
+            "order": 37,
+            "name": "GUI Items",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "OPERATOR_SCREEN_DEVICE",
+                    "type": "number",
+                    "value": 0,
+                    "description": "The sequence number of the screen which operator use"
+                },
+                {
+                    "order": 2,
+                    "name": "FXCHOICE_SCREEN_DEVICE",
+                    "type": "number",
+                    "value": 1
+                },
+                {
+                    "order": 3,
+                    "name": "FXDISPLAY_TIMEOUT",
+                    "type": "number",
+                    "value": 60,
+                    "description": "Seconds, how long for a customer to choose use DCC or not"
+                },
+                {
+                    "order": 4,
+                    "name": "SIGNATURE_VERIFY_TIMEOUT",
+                    "type": "number",
+                    "value": 50,
+                    "description": "Seconds, how long for a customer to sign on the receipt"
+                },
+                {
+                    "order": 5,
+                    "name": "FX_BUTTON_FLASHING",
+                    "type": "boolean",
+                    "value": true
+                },
+                {
+                    "order": 6,
+                    "name": "PURE_MEDIA_CLASS_NAME",
+                    "type": "text",
+                    "value": "com.pc.puremedia.client.media.MediaPlayer"
+                },
+                {
+                    "order": 7,
+                    "name": "CURRENCY_SELECTION_I18N_COUNTRY",
+                    "type": "text",
+                    "value": "CNY,KRW,JPY,USD,AUD"
+                },
+                {
+                    "order": 8,
+                    "name": "CURRENCY_SELECTION_I18N_DEFAULT",
+                    "type": "text",
+                    "value": "MessagesBundle"
+                },
+                {
+                    "order": 9,
+                    "name": "CURRENCY_SELECTION_DISCLAMER",
+                    "type": "text",
+                    "value": "This rate is based on the Pure Commerce wholesale rate plus 2.75% international conversion margin."
+                },
+                {
+                    "order": 10,
+                    "name": "CURRENCY_SELECTION_OPERATOR_TITLE",
+                    "type": "text",
+                    "value": "Information on Dynamic Currency Conversion (DCC):"
+                },
+                {
+                    "order": 11,
+                    "name": "CURRENCY_SELECTION_OPERATOR_TEXT_1STHALF",
+                    "type": "text",
+                    "value": "This customer is using a Visa or MasterCard from overseas and can pay in their home currency.| We provide an optional service that lets customers pay in their home currency, the service is called Dynamic Currency Conversion (DCC).|| By pressing the home currency button marked with their flag the cardholder can pay in their home currency and lock in the rate &amp; amount shown on the touchscreen.|| Otherwise - the cardholder can press AUD and have the transaction converted at an unknown rate to be later determined by their card issuer.| Here are some of the customer benefits to paying in their home currency with DCC:|| 1. Instant knowledge of the transaction amount in their home currency at the time of sale. No need to wait for a credit card statement or check internet banking| 2. Exchange rates are updated every hour to provide the most accurate rate.| 3. More choice - cardholders can make an informed choice of currency conversion for the purchase. || The rate for this transaction is:|"
+                },
+                {
+                    "order": 12,
+                    "name": "CURRENCY_SELECTION_OPERATOR_TEXT_2NDHALF",
+                    "type": "text",
+                    "value": " "
+                }
+            ]
+        },
+        {
+            "order": 38,
+            "name": "Notification Display",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "DISPLAY_STATUS_POPUP",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "TRUE to display Status notification to Operator Screen, else False"
+                },
+                {
+                    "order": 2,
+                    "name": "DISPLAY_SIGNATURE_APPROVAL_POPUP",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "TRUE to display Status notification to Operator Screen, else False"
+                },
+                {
+                    "order": 3,
+                    "name": "DISPLAY_OPERATOR_DCC_CANCEL",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "True to display DCC OPERATOR SCREEN, else False"
+                },
+                {
+                    "order": 4,
+                    "name": "DCC_PINPAD_DISPLAY",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "True to display in PINPAD instead of customer screen, Else False - display in Customer Screen"
+                }
+            ]
+        },
+        {
+            "order": 39,
+            "name": "Response Codes",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "APPROVED_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "00"
+                },
+                {
+                    "order": 2,
+                    "name": "DECLINED_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "ND"
+                },
+                {
+                    "order": 3,
+                    "name": "VOICE_REFERRAL_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "01"
+                },
+                {
+                    "order": 4,
+                    "name": "DESTINATION_ERROR_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "ND"
+                },
+                {
+                    "order": 5,
+                    "name": "NETWORK_REQUEST_ERROR_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "00"
+                },
+                {
+                    "order": 6,
+                    "name": "TIMEOUT_ERROR_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "TO"
+                },
+                {
+                    "order": 7,
+                    "name": "TRANSACTION_NOT_AVAILABLE_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "NA"
+                },
+                {
+                    "order": 8,
+                    "name": "REVERSED_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "66"
+                },
+                {
+                    "order": 9,
+                    "name": "CANCELLED_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "77"
+                },
+                {
+                    "order": 10,
+                    "name": "SYSTEM_ERROR_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "88"
+                },
+                {
+                    "order": 11,
+                    "name": "DEFAULT_BAD_RESPONSE_CODE",
+                    "type": "text",
+                    "value": "99"
+                }
+            ]
+        },
+        {
+            "order": 40,
+            "name": "Length",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "CASHIER_ID_LENGTH",
+                    "type": "number",
+                    "value": 6
+                },
+                {
+                    "order": 2,
+                    "name": "HFMCODE_LENGTH",
+                    "type": "number",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "order": 41,
+            "name": "Register Data Format Settings",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "REGISTER_DECIMAL_PLACES",
+                    "type": "number",
+                    "value": 100
+                }
+            ]
+        },
+        {
+            "order": 42,
+            "name": "Device Request/Response Items",
+            "type": "Tech",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "DEVICE_REQ_ACTIVE",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "True to Enable DeviceRequest to communicate to POS else False -Disabled"
+                },
+                {
+                    "order": 2,
+                    "name": "DEVICE_PORT",
+                    "type": "number",
+                    "value": 20007
+                },
+                {
+                    "order": 3,
+                    "name": "DEVICE_IP",
+                    "type": "text",
+                    "value": "127.0.0.1"
+                },
+                {
+                    "order": 4,
+                    "name": "DEVICE_CONN_TIMEOUT",
+                    "type": "number",
+                    "value": 30000,
+                    "description": "In milliseconds"
+                },
+                {
+                    "order": 5,
+                    "name": "DEVICE_CONNECTION_RETRY",
+                    "type": "number",
+                    "value": 3
+                },
+                {
+                    "order": 6,
+                    "name": "DEVICE_PAYMENT_TYPES",
+                    "type": "text",
+                    "value": "ALIPAY:true:false:false,WECHAT:true:false:false,CREDITCARD:true:false:false,CUP:true:false:false,UPLAN:true:false:false",
+                    "description": "Payment Type:<True to include else false>:<Erase true or false>:<PaperCut true or false>"
+                },
+                {
+                    "order": 7,
+                    "name": "DEVICE_BARCODE_ENTRY_VALUE",
+                    "type": "text",
+                    "value": "CashierKeyboard",
+                    "description": "InDeviceTarget value to acquire the barcode. Values can be CashierKeyboard, BarcodeScanner, etc. refer to Wincor Specs v1.3"
+                },
+                {
+                    "order": 8,
+                    "name": "DEVICE_CARD_ENTRY_VALUE",
+                    "type": "text",
+                    "value": "CashierKeyboard"
+                },
+                {
+                    "order": 9,
+                    "name": "DEVICE_REQ_SIGNATURE_VERIFICATION_SCREEN",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "TRUE for POS Signature Verification, False to disable"
+                },
+                {
+                    "order": 10,
+                    "name": "DEVICE_REQ_BARCODE_TRIGGER_SCREEN",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "TRUE for POS Barcode trigger request, False to disable"
+                },
+                {
+                    "order": 11,
+                    "name": "DEVICE_REQ_SEND_MERCHANT_RECEIPT",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "TRUE for POS Sending Merchant receipt, False to disable"
+                },
+                {
+                    "order": 12,
+                    "name": "DEVICE_REQ_SEND_CUSTOMER_RECEIPT",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "TRUE for POS Sending Customer receipt, False to disable"
+                },
+                {
+                    "order": 13,
+                    "name": "DEVICE_REQ_CARDNUMBER_TRIGGER_SCREEN",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "TRUE for POS CardNumber trigger request, False to disable"
+                },
+                {
+                    "order": 14,
+                    "name": "DEVICE_REQ_CARDNUMBER_ALLOWED_ALL_REQUEST_TYPE",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "TRUE for to allow card number trigger for all request type, False to for card payment only"
+                },
+                {
+                    "order": 15,
+                    "name": "EPAY_DIGITALPAY_SIMULATOR_MODE",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "EPay simulator mode: set to FALSE if need to connect to TEST or PROD host, otherwise TRUE"
+                }
+            ]
+        }
+    ]
+}
