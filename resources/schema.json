@@ -989,6 +989,7 @@
 		},
 		{
 			"order": 21,
+			"id": "INGENICO_MOVE5000",
 			"name": "Ingenico Terminal Serial Comm Port settings",
 			"type": "Operations",
 			"items": [
@@ -997,13 +998,15 @@
 					"name": "INGENICO_MOVE5000_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM13"
+					"value": "COM13",
+					"basic": true
 				},
 				{
 					"order": 2,
 					"name": "INGENICO_MOVE5000_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"basic": true
 				},
 				{
 					"order": 3,
@@ -1066,6 +1069,7 @@
 		{
 			"order": 22,
 			"name": "DPAPOSA8 Terminal Serial Comm Port settings",
+			"id": "DPAPOSA8",
 			"type": "Operations",
 			"items": [
 				{
@@ -1073,7 +1077,8 @@
 					"name": "DPAPOSA8_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM30"
+					"value": "COM30",
+					"basic": true
 				},
 				{
 					"order": 3,
@@ -1148,16 +1153,18 @@
 					"value": "TRUE:REFUND"
 				},
 				{
-					"order": 13,
+					"order": 2,
 					"name": "DPAPOSA8_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"basic": true
 				}
 			]
 		},
 		{
 			"order": 23,
 			"name": "PAX S60 Terminal Serial Comm Port settings",
+			"id": "PAX_S60",
 			"type": "Operations",
 			"items": [
 				{
@@ -1165,7 +1172,8 @@
 					"name": "PAX_S60_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM10"
+					"value": "COM10",
+					"basic": true
 				},
 				{
 					"order": 3,
@@ -1224,16 +1232,18 @@
 					"value": 60
 				},
 				{
-					"order": 13,
+					"order": 2,
 					"name": "PAX_S60_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"basic": true
 				}
 			]
 		},
 		{
 			"order": 24,
 			"name": "PAX A920 Terminal Serial Comm Port settings",
+			"id": "PAX_A920",
 			"type": "Operations",
 			"items": [
 				{
@@ -1241,7 +1251,8 @@
 					"name": "PAX_A920_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM38"
+					"value": "COM38",
+					"basic": true
 				},
 				{
 					"order": 3,
@@ -1300,7 +1311,7 @@
 					"value": 3
 				},
 				{
-					"order": 13,
+					"order": 2,
 					"name": "PAX_A920_SIMULATOR_MODE",
 					"type": "boolean",
 					"value": false
@@ -1310,6 +1321,7 @@
 		{
 			"order": 25,
 			"name": "Register Terminal Serial Comm Port settings",
+			"id": "REGISTER",
 			"type": "Operations",
 			"items": [
 				{
@@ -1317,7 +1329,8 @@
 					"name": "REGISTER_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM98"
+					"value": "COM98",
+					"basic": true
 				},
 				{
 					"order": 3,
@@ -1380,6 +1393,7 @@
 		{
 			"order": 26,
 			"name": "Ingenico ICT250 Terminal Serial Comm Port settings",
+			"id": "INGENICO_ICT250",
 			"type": "Operations",
 			"items": [
 				{
@@ -1387,7 +1401,8 @@
 					"name": "INGENICO_ICT250_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM34"
+					"value": "COM34",
+					"basic": true
 				},
 				{
 					"order": 3,
@@ -1466,10 +1481,11 @@
 					"description": "Default base amount, depends on the terminal configuration"
 				},
 				{
-					"order": 14,
+					"order": 2,
 					"name": "INGENICO_ICT250_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"basic": true
 				},
 				{
 					"order": 15,
@@ -1489,6 +1505,7 @@
 		{
 			"order": 27,
 			"name": "Tyro Settings",
+			"id": "TYROTTA",
 			"type": "Operations",
 			"items": [
 				{
@@ -1520,10 +1537,11 @@
 					"value": false
 				},
 				{
-					"order": 6,
+					"order": 2,
 					"name": "TYROTTA_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"basic": true
 				},
 				{
 					"order": 7,
@@ -1567,21 +1585,21 @@
 					"name": "ENABLE_VOID",
 					"type": "boolean",
 					"description": "Not used at the moment",
-					"size": true
+					"value": true
 				},
 				{
 					"order": 2,
 					"name": "ENABLE_REFUND",
 					"type": "boolean",
 					"description": "Not used at the moment",
-					"size": true
+					"value": true
 				},
 				{
 					"order": 3,
 					"name": "ENABLE_FAILED_VOID",
 					"type": "boolean",
 					"description": "If ECR does not respond we void the transaction of this is true",
-					"size": true
+					"value": true
 				}
 			]
 		},
@@ -2454,6 +2472,7 @@
 		{
 			"order": 43,
 			"name": "EPAY related configurations",
+			"id": "EPAY",
 			"type": "Operations",
 			"items": [
 				{
@@ -2712,13 +2731,15 @@
 		{
 			"order": 51,
 			"name": "EFTSOLUTIONS configuration",
+			"id": "EFTSOLUTIONS",
 			"type": "Operations",
 			"items": [
 				{
 					"order": 1,
 					"name": "EFTSOLUTIONS_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"basic": true
 				},
 				{
 					"order": 2,
@@ -2809,13 +2830,15 @@
 		{
 			"order": 52,
 			"name": "OCEANPAYMENT configuration",
+			"id": "OCEANPAYMENT",
 			"type": "Operations",
 			"items": [
 				{
 					"order": 1,
 					"name": "OCEANPAYMENT_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"basic": true
 				},
 				{
 					"order": 2,
@@ -2934,13 +2957,15 @@
 		{
 			"order": 53,
 			"name": "UPLAN configuration",
+			"id": "UPLAN",
 			"type": "Operations",
 			"items": [
 				{
 					"order": 1,
 					"name": "UPLAN_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"basic": true
 				},
 				{
 					"order": 2,
@@ -3027,13 +3052,15 @@
 		{
 			"order": 54,
 			"name": "SWIFTPASS configuration",
+			"id": "SWIFTPASS",
 			"type": "Operations",
 			"items": [
 				{
 					"order": 1,
 					"name": "SWIFTPASS_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"basic": true
 				},
 				{
 					"order": 2,
@@ -3133,13 +3160,15 @@
 		{
 			"order": 55,
 			"name": "MACAUPASS configuration",
+			"id": "MACAUPASS",
 			"type": "Operations",
 			"items": [
 				{
 					"order": 1,
 					"name": "MACAUPASS_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"basic": true
 				},
 				{
 					"order": 2,
@@ -3197,13 +3226,15 @@
 		{
 			"order": 56,
 			"name": "OCEANPAYMENT_CLIENT configuration",
+			"id": "OCEANPAYMENT_CLIENT",
 			"type": "Operations",
 			"items": [
 				{
 					"order": 1,
 					"name": "OCEANPAYMENT_CLIENT_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"basic": true
 				},
 				{
 					"order": 2,
@@ -3261,13 +3292,15 @@
 		{
 			"order": 57,
 			"name": "FISERV configuration",
+			"id": "FISERV",
 			"type": "Operations",
 			"items": [
 				{
 					"order": 1,
 					"name": "FISERV_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"basic": true
 				},
 				{
 					"order": 2,
@@ -3325,58 +3358,60 @@
 		{
 			"order": 57,
 			"name": "PSP Terminal Socket configuration",
+			"id": "PSP_TERMINAL",
 			"type": "Operations",
 			"items": [
 				{
-					"order": 1,
+					"order": 2,
 					"name": "PSP_TERMINAL_IP",
 					"type": "text",
 					"value": "localhost"
 				},
 				{
-					"order": 2,
+					"order": 3,
 					"name": "PSP_TERMINAL_PORT",
 					"type": "number",
 					"value": 8081
 				},
 				{
-					"order": 3,
+					"order": 4,
 					"name": "PSP_TERMINAL_RETRY_COUNT",
 					"type": "number",
 					"value": 5
 				},
 				{
-					"order": 4,
+					"order": 5,
 					"name": "PSP_TERMINAL_PROCESS_TIMEOUT",
 					"type": "number",
 					"value": 180,
 					"description": "In seconds"
 				},
 				{
-					"order": 5,
+					"order": 6,
 					"name": "PSP_TERMINAL_ON_DEMAND_TIMEOUT",
 					"type": "number",
 					"value": 1,
 					"description": "In seconds"
 				},
 				{
-					"order": 6,
+					"order": 7,
 					"name": "PSP_TERMINAL_REQUEST_TOKEN",
 					"type": "boolean",
 					"value": true
 				},
 				{
-					"order": 7,
+					"order": 8,
 					"name": "PSP_TERMINAL_ON_DEMAND_AVAILABILITY_FLAG",
 					"type": "boolean",
 					"value": false,
 					"description": "True to check connection before sending request; else False"
 				},
 				{
-					"order": 8,
+					"order": 1,
 					"name": "PSP_TERMINAL_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"basic": true
 				}
 			]
 		},

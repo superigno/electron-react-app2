@@ -14,7 +14,7 @@ export type ItemType = {
     type: string,
     description?: string,
     size?: number,
-    value: string | number | boolean | string[],
+    value?: string | number | boolean | string[],
     options?: string[],
     basic?: boolean
 }

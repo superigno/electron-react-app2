@@ -2,29 +2,104 @@ import React from 'react';
 import { Footer } from '../Footer';
 import { MultiSelectItem } from '../MultiSelectItem';
 import { SelectItem } from '../SelectItem';
-import { ItemGroup } from './ItemGroup';
-import ingenico_move5000 from '../../../resources/ingenico_move5000.json';
-import dpaposa8 from '../../../resources/dpaposa8.json';
+import { ItemGroup, ItemGroupType } from './ItemGroup';
+import schema from '../../../resources/schema.json';
 import { Icon, Switch, Tooltip } from '@blueprintjs/core';
 
-const terminalList = ["FISERV", "SWIFTPASS", "MACAUPASS", "PSP_TERMINAL", "INGENICO_MOVE5000", "DPAPOSA8"];
+const terminalList = ["FISERV", "SWIFTPASS", "MACAUPASS", "PSP_TERMINAL", "INGENICO_MOVE5000", "DPAPOSA8", "REGISTER", "INGENICO_ICT250", "TYROTTA", "EPAY", 
+                      "EFTSOLUTIONS", "OCEANPAYMENT", "UPLAN", "OCEANPAYMENT_CLIENT", "PAX_S60", "PAX_A920"];
 const paymentTypeList = ["CREDITCARD", "VISA", "MASTERCARD", "ALIPAY", "WECHAT", "MPAY", "UQ", "BOCPAY"];
+
+type t = {
+    schema: ItemGroupType,
+    hidden: boolean
+}
+
+
+type TerminalSchemaType = {
+    INGENICO_MOVE5000: ItemGroupType,
+    FISERV: ItemGroupType,
+    SWIFTPASS: ItemGroupType,
+    MACAUPASS: ItemGroupType,
+    PSP_TERMINAL: ItemGroupType,
+    PAX_S60: ItemGroupType,
+    PAX_A920: ItemGroupType,
+    REGISTER: ItemGroupType,
+    INGENICO_ICT250: ItemGroupType,
+    TYROTTA: ItemGroupType,
+    EPAY: ItemGroupType,
+    EFTSOLUTIONS: ItemGroupType,
+    OCEANPAYMENT: ItemGroupType,
+    UPLAN: ItemGroupType,
+    OCEANPAYMENT_CLIENT: ItemGroupType,
+    DPAPOSA8: ItemGroupType
+}
+
+type TerminalHiddenType = {
+    INGENICO_MOVE5000: boolean,
+    FISERV: boolean,
+    SWIFTPASS: boolean,
+    MACAUPASS: boolean,
+    PSP_TERMINAL: boolean,
+    PAX_S60: boolean,
+    PAX_A920: boolean,
+    REGISTER: boolean,
+    INGENICO_ICT250: boolean,
+    TYROTTA: boolean,
+    EPAY: boolean,
+    EFTSOLUTIONS: boolean,
+    OCEANPAYMENT: boolean,
+    UPLAN: boolean,
+    OCEANPAYMENT_CLIENT: boolean,
+    DPAPOSA8: boolean
+}
+
+const getTerminalSchema = (terminal: string) => {
+    const s = schema.groups.filter((group) => {
+        return group.id == terminal;
+    });
+    if (s && s.length > 0) {
+        return s[0];
+    } else {
+        return {} as ItemGroupType;
+    }
+}
+
+const isTerminalHidden = (terminal: string, activeTerminals: string[]) => {
+    return activeTerminals.indexOf(terminal) == -1;
+}
 
 export const Configuration = () => {
 
     const [terminals, setTerminals] = React.useState(["FISERV", "SWIFTPASS"]);
     const [paymentTypes, setPaymentTypes] = React.useState(["CREDITCARD", "VISA", "MASTERCARD", "ALIPAY"]);
     const [paymentTypeTerminalMapping, setPaymentTypeTerminalMapping] = React.useState([{ paymentType: "", terminal: "" }]);
-
-    const [hideIngenico, setHideIngenico] = React.useState(true);
-    const [hideDpaposa8, setHideDpaposa8] = React.useState(true);
     const [isBasic, setIsBasic] = React.useState(true);
 
-    /** Hide respective sections when terminals change */
+    const [terminalSchema, setTerminalSchema] = React.useState({} as TerminalSchemaType);
+    const [terminalHidden, setTerminalHidden] = React.useState({} as TerminalHiddenType);
+
+    /** Load terminal schemas */
     React.useEffect(() => {
-        setHideIngenico(terminals.indexOf("INGENICO_MOVE5000") == -1);
-        setHideDpaposa8(terminals.indexOf("DPAPOSA8") == -1);
+        setTerminalSchema(current => {
+            terminalList.map((terminal: keyof TerminalSchemaType) => {
+                current[terminal] = getTerminalSchema(terminal);
+            })
+            return {...current};
+        })
+    }, []);
+
+
+    /** Hide respective terminals when selected terminals change */
+    React.useEffect(() => {
+        setTerminalHidden(current => {
+            terminalList.map((terminal: keyof TerminalHiddenType) => {
+                current[terminal] = isTerminalHidden(terminal, terminals);
+            })
+            return {...current};
+        })
     }, [terminals]);
+
 
     /** If selected terminals or payment types changes, update the mapping */
     React.useEffect(() => {
@@ -84,7 +159,7 @@ export const Configuration = () => {
 
                 <div className="basic">
                     <div style={{ display: 'inline-block' }}>
-                        <Tooltip content={"Toggle to view basic configuration"} minimal={true} >
+                        <Tooltip content={"Toggle to only view basic terminal configurations"} minimal={true} >
                             <Icon icon="issue" iconSize={13} style={{ verticalAlign: 'top' }} />
                         </Tooltip>
                         &nbsp;Toggle Basic Mode&nbsp;
@@ -98,7 +173,7 @@ export const Configuration = () => {
                 <div className="item-group">
 
                     <div>
-                        <h6 className="bp3-heading group-name">Select Terminals and Map to Payment Types</h6>
+                        <h6 className="bp3-heading group-name">Select Terminals and Assign to Payment Types</h6>
                     </div>
 
                     <div>
@@ -142,9 +217,11 @@ export const Configuration = () => {
 
                 </div>
 
-
-                <ItemGroup hidden={hideIngenico} basic={isBasic} group={ingenico_move5000} onChange={handleGenericOnChange} />
-                <ItemGroup hidden={hideDpaposa8} basic={isBasic} group={dpaposa8} onChange={handleGenericOnChange} />
+                {
+                    terminalList.map((terminal: keyof TerminalSchemaType) => {
+                        return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} basic={isBasic} group={terminalSchema[terminal]} onChange={handleGenericOnChange} />
+                    })
+                }
 
 
             </div>

@@ -11,21 +11,22 @@ type ItemGroupProps = {
 export type ItemGroupType = {
     order: number,
     name: string,
+    id?: string,
     type: string,
     items: ItemType[]
 }
 
 export const ItemGroup = (props: ItemGroupProps) => {
 
-    console.log('Props:', props);
-
-    let items = props.group.items;
+    let items = props.group ? props.group.items : [];
 
     //Sort by order number
-    items.sort((a: any, b: any) => (a.order > b.order) ? 1 : -1)
+    if (items) {
+        items.sort((a: any, b: any) => (a.order > b.order) ? 1 : -1)
+    }
 
     return <>
-        {!props.hidden &&
+        {!props.hidden && props.group &&
             <div className="item-group">
 
                 <div>
