@@ -7,6 +7,7 @@ import { Icon, Switch, TextArea, Tooltip } from '@blueprintjs/core';
 import TerminalFactory from './TerminalFactory';
 import operations_schema from '../../../resources/schemas/operations_schema.json';
 import AppConstants from '../constants/AppConstants';
+import df from 'd-forest';
 
 const TERMINAL_LIST = Object.values(AppConstants.TERMINALS);
 const PAYMENT_TYPE_LIST = Object.values(AppConstants.PAYMENT_TYPES);
@@ -15,16 +16,59 @@ const isTerminalHidden = (terminal: string, activeTerminals: string[]) => {
     return activeTerminals.indexOf(terminal) == -1;
 }
 
+//Custom hook to run 'func' if 'key' changes, but not on initial render
+const useEffectCustom = (func: any, key: any) => {
+    const initialized = React.useRef(false);
+    React.useEffect(() => {
+        if (initialized.current) {
+            func();
+        } else {
+            initialized.current = true;
+        }
+    }, key);
+}
+
 export const Configuration = () => {
 
-    const [terminals, setTerminals] = React.useState(["FISERV", "SWIFTPASS"]);
-    const [paymentTypes, setPaymentTypes] = React.useState(["CREDITCARD", "VISA", "MASTERCARD", "ALIPAY"]);
-
+    const [terminals, setTerminals] = React.useState([]);
+    const [paymentTypes, setPaymentTypes] = React.useState([]);
+    const [cardSchemes, setCardSchemes] = React.useState("")
     const [paymentTypeTerminalMapping, setPaymentTypeTerminalMapping] = React.useState([{ paymentType: "", terminal: "" }]);
     const [isBasic, setIsBasic] = React.useState(true);
 
     const [terminalSchema, setTerminalSchema] = React.useState({} as any);
     const [terminalHidden, setTerminalHidden] = React.useState({} as any);
+
+
+    /** Init terminal section values from schema */
+    React.useEffect(() => {
+
+        const terminal = df(operations_schema).findLeaf((leaf: any) => leaf.name === 'TERMINAL_NAME');
+        setTerminals(terminal.value);
+
+        const cardSchemes = df(operations_schema).findLeaf((leaf: any) => leaf.name === 'TERMINAL_CARD_SCHEME');
+        setCardSchemes(cardSchemes.value);
+
+        const paymentScheme = df(operations_schema).findLeaf((leaf: any) => leaf.name === 'TERMINAL_PAYMENT_SCHEME');
+        const mappingArr: string[] = paymentScheme.value.split(",");
+        const paymentTypeTerminalMapping = mappingArr.map(m => {
+            const paymentTypeTerminalArr = m.split(":");
+            return {
+                paymentType: paymentTypeTerminalArr[0],
+                terminal: paymentTypeTerminalArr[1]
+            };
+        });
+
+        const paymentTypes = paymentTypeTerminalMapping.map(pt => {
+            return pt.paymentType;
+        })
+
+        setPaymentTypeTerminalMapping(paymentTypeTerminalMapping);
+        setPaymentTypes(paymentTypes);
+
+    }, []);
+
+
 
     /** Load terminal schemas */
     React.useEffect(() => {
@@ -32,7 +76,7 @@ export const Configuration = () => {
             TERMINAL_LIST.map((terminal) => {
                 current[terminal] = TerminalFactory.getSchema(terminal);
             })
-            return {...current};
+            return { ...current };
         })
     }, []);
 
@@ -43,18 +87,20 @@ export const Configuration = () => {
             TERMINAL_LIST.map((terminal) => {
                 current[terminal] = isTerminalHidden(terminal, terminals);
             })
-            return {...current};
+            return { ...current };
         })
     }, [terminals]);
 
 
-    /** If selected terminals or payment types changes, update the mapping */
-    React.useEffect(() => {
+    /** If selected terminals or payment types changes, update the mapping; used custom hook since it also runs on initial render when setTerminals is run */
+    useEffectCustom(() => {
+
         setPaymentTypeTerminalMapping(current => {
             return paymentTypes.map(pt => {
                 const curr = current.filter(curr => {
                     return curr.paymentType == pt;
                 });
+
                 if (curr && curr.length > 0) {
                     return { ...curr[0], terminal: (terminals.indexOf(curr[0].terminal) > -1 ? curr[0].terminal : "") };
                 } else {
@@ -62,6 +108,7 @@ export const Configuration = () => {
                 }
             });
         });
+
     }, [terminals, paymentTypes]);
 
     const handlePaymentTypeChange = (items: string[]) => {
@@ -151,29 +198,29 @@ export const Configuration = () => {
                             </div>
                         </div>
 
-                        { !isBasic &&
-                        <div className="contentRow">
-                            <div className="label">
-                                Terminal Card Scheme
+                        {!isBasic &&
+                            <div className="contentRow">
+                                <div className="label">
+                                    Terminal Card Scheme
                             </div>
 
-                            <div className="item2">
-                                <TextArea growVertically={true} cols={50} onChange={(e) => handleGenericOnChange(null, e.target.value)} />
+                                <div className="item2">
+                                    <TextArea value={cardSchemes} growVertically={true} cols={80} onChange={(e) => handleGenericOnChange(null, e.target.value)} />
+                                </div>
                             </div>
-                        </div>
                         }
 
                         {
                             paymentTypeTerminalMapping.map((m: { paymentType: string, terminal: string }) => {
 
                                 return <div className="contentRow" key={m.paymentType}>
-                                            <div className="label">
-                                                {m.paymentType}
-                                            </div>
-                                            <div className="item2">
-                                                <SelectItem onSelect={(id, val) => handlePaymentTerminalChange(m.paymentType, val)} value={m.terminal}
-                                                options={terminals.map((value, index) => ({ value, id: index + 1 }))} />
-                                            </div>
+                                    <div className="label">
+                                        {m.paymentType}
+                                    </div>
+                                    <div className="item2">
+                                        <SelectItem onSelect={(id, val) => handlePaymentTerminalChange(m.paymentType, val)} value={m.terminal}
+                                            options={terminals.map((value, index) => ({ value, id: index + 1 }))} />
+                                    </div>
                                 </div>
 
                             })

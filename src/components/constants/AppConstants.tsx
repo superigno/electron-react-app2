@@ -14,8 +14,8 @@ export default class AppConstants {
         EPAY: 'EPAY',
         EFTSOLUTIONS: 'EFTSOLUTIONS',
         OCEANPAYMENT: 'OCEANPAYMENT',
-        UPLAN: 'UPLAN',
         OCEANPAYMENT_CLIENT: 'OCEANPAYMENT_CLIENT',
+        UPLAN: 'UPLAN',        
         DPAPOSA8: 'DPAPOSA8'
     }
 
@@ -23,11 +23,18 @@ export default class AppConstants {
         CREDITCARD: 'CREDITCARD',
         VISA: 'VISA',
         MASTERCARD: 'MASTERCARD',
+        AMEX: 'AMEX',
+        DINERS: 'DINERS',
+        JCB: 'JCB',
+        DISCOVER: 'DISCOVER',
+        CUP: 'CUP',
+        UPLAN: 'UPLAN',
         ALIPAY: 'ALIPAY',
         WECHAT: 'WECHAT',
         MPAY: 'MPAY',
         UQ: 'UQ',
-        BOCPAY: 'BOCPAY'
+        BOCPAY: 'BOCPAY',
+        OTHER: 'OTHER'
     }
 
 }
