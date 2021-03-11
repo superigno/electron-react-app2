@@ -3,9 +3,7 @@ import { Footer } from '../Footer';
 import { MultiSelectItem } from '../MultiSelectItem';
 import { SelectItem } from '../SelectItem';
 import { ItemGroup, ItemGroupType } from './ItemGroup';
-import schema from '../../../resources/schemas/schema.json';
 import { Icon, Switch, Tooltip } from '@blueprintjs/core';
-import FileSaver from 'file-saver';
 import TerminalFactory from './TerminalFactory';
 import operations_schema from '../../../resources/schemas/operations_schema.json';
 
@@ -13,17 +11,6 @@ const terminalList = ["FISERV", "SWIFTPASS", "MACAUPASS", "PSP_TERMINAL", "INGEN
                       "EFTSOLUTIONS", "OCEANPAYMENT", "UPLAN", "OCEANPAYMENT_CLIENT", "PAX_S60", "PAX_A920"];
 
 const paymentTypeList = ["CREDITCARD", "VISA", "MASTERCARD", "ALIPAY", "WECHAT", "MPAY", "UQ", "BOCPAY"];
-
-const getTerminalSchema = (terminal: string) => {
-    const s = schema.groups.filter((group) => {
-        return group.id == terminal;
-    });
-    if (s && s.length > 0) {
-        return s[0];
-    } else {
-        return {} as ItemGroupType;
-    }
-}
 
 const isTerminalHidden = (terminal: string, activeTerminals: string[]) => {
     return activeTerminals.indexOf(terminal) == -1;
@@ -131,6 +118,14 @@ export const Configuration = () => {
                 </div>
 
 
+                {
+                    operations_schema.groups.filter(group => {
+                        return group.name.toUpperCase() == 'VERSION' || group.name.toUpperCase() == 'MODES'; //Filtering just to display these two sections at the very top
+                    }).map(group => {
+                        return <ItemGroup key={group.name} group={group} onChange={handleGenericOnChange} />
+                    })
+                }
+
                 <div className="item-group">
 
                     <div>
@@ -185,7 +180,9 @@ export const Configuration = () => {
                 }
 
                 {
-                    operations_schema.groups.map(group => {
+                    operations_schema.groups.filter(group => {
+                        return group.name.toUpperCase() != 'VERSION' && group.name.toUpperCase() != 'MODES' && group.name.toUpperCase() != 'TERMINALS'; //Filtering since these are already displayed at the top
+                    }).map(group => {
                         return <ItemGroup key={group.name} group={group} onChange={handleGenericOnChange} />
                     })
                 }

@@ -1,7 +1,6 @@
 {
     "order": 24,
     "name": "PAX A920 Terminal Serial Comm Port settings",
-    "id": "PAX_A920",
     "type": "Operations",
     "items": [
         {

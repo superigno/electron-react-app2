@@ -996,7 +996,6 @@
 		},
 		{
 			"order": 21,
-			"id": "INGENICO_MOVE5000",
 			"name": "Ingenico Terminal Serial Comm Port settings",
 			"type": "Operations",
 			"items": [
@@ -1076,7 +1075,6 @@
 		{
 			"order": 22,
 			"name": "DPAPOSA8 Terminal Serial Comm Port settings",
-			"id": "DPAPOSA8",
 			"type": "Operations",
 			"items": [
 				{
@@ -1171,7 +1169,6 @@
 		{
 			"order": 23,
 			"name": "PAX S60 Terminal Serial Comm Port settings",
-			"id": "PAX_S60",
 			"type": "Operations",
 			"items": [
 				{
@@ -1250,7 +1247,6 @@
 		{
 			"order": 24,
 			"name": "PAX A920 Terminal Serial Comm Port settings",
-			"id": "PAX_A920",
 			"type": "Operations",
 			"items": [
 				{
@@ -1328,7 +1324,6 @@
 		{
 			"order": 25,
 			"name": "Register Terminal Serial Comm Port settings",
-			"id": "REGISTER",
 			"type": "Operations",
 			"items": [
 				{
@@ -1400,7 +1395,6 @@
 		{
 			"order": 26,
 			"name": "Ingenico ICT250 Terminal Serial Comm Port settings",
-			"id": "INGENICO_ICT250",
 			"type": "Operations",
 			"items": [
 				{
@@ -1512,7 +1506,6 @@
 		{
 			"order": 27,
 			"name": "Tyro Settings",
-			"id": "TYROTTA",
 			"type": "Operations",
 			"items": [
 				{
@@ -2479,7 +2472,6 @@
 		{
 			"order": 43,
 			"name": "EPAY related configurations",
-			"id": "EPAY",
 			"type": "Operations",
 			"items": [
 				{
@@ -2703,7 +2695,6 @@
 		{
 			"order": 51,
 			"name": "EFTSOLUTIONS configuration",
-			"id": "EFTSOLUTIONS",
 			"type": "Operations",
 			"items": [
 				{
@@ -2802,7 +2793,6 @@
 		{
 			"order": 52,
 			"name": "OCEANPAYMENT configuration",
-			"id": "OCEANPAYMENT",
 			"type": "Operations",
 			"items": [
 				{
@@ -2929,7 +2919,6 @@
 		{
 			"order": 53,
 			"name": "UPLAN configuration",
-			"id": "UPLAN",
 			"type": "Operations",
 			"items": [
 				{
@@ -3024,7 +3013,6 @@
 		{
 			"order": 54,
 			"name": "SWIFTPASS configuration",
-			"id": "SWIFTPASS",
 			"type": "Operations",
 			"items": [
 				{
@@ -3132,7 +3120,6 @@
 		{
 			"order": 55,
 			"name": "MACAUPASS configuration",
-			"id": "MACAUPASS",
 			"type": "Operations",
 			"items": [
 				{
@@ -3198,7 +3185,6 @@
 		{
 			"order": 56,
 			"name": "OCEANPAYMENT_CLIENT configuration",
-			"id": "OCEANPAYMENT_CLIENT",
 			"type": "Operations",
 			"items": [
 				{
@@ -3264,7 +3250,6 @@
 		{
 			"order": 57,
 			"name": "FISERV configuration",
-			"id": "FISERV",
 			"type": "Operations",
 			"items": [
 				{
@@ -3330,7 +3315,6 @@
 		{
 			"order": 57,
 			"name": "PSP Terminal Socket configuration",
-			"id": "PSP_TERMINAL",
 			"type": "Operations",
 			"items": [
 				{

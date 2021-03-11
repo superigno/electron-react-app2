@@ -1,7 +1,6 @@
 {
     "order": 23,
     "name": "PAX S60 Terminal Serial Comm Port settings",
-    "id": "PAX_S60",
     "type": "Operations",
     "items": [
         {

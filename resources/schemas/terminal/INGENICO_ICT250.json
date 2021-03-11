@@ -1,7 +1,6 @@
 {
     "order": 26,
     "name": "Ingenico ICT250 Terminal Serial Comm Port settings",
-    "id": "INGENICO_ICT250",
     "type": "Operations",
     "items": [
         {

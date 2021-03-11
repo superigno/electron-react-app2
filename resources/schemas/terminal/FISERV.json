@@ -1,7 +1,6 @@
 {
     "order": 57,
     "name": "FISERV configuration",
-    "id": "FISERV",
     "type": "Operations",
     "items": [
         {

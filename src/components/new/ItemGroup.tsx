@@ -11,7 +11,6 @@ type ItemGroupProps = {
 export type ItemGroupType = {
     order: number,
     name: string,
-    id?: string,
     type: string,
     items: ItemType[]
 }

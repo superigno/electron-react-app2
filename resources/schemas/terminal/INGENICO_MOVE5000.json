@@ -1,6 +1,5 @@
 {
     "order": 21,
-    "id": "INGENICO_MOVE5000",
     "name": "Ingenico Terminal Serial Comm Port settings",
     "type": "Operations",
     "items": [

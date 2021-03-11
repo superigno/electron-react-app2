@@ -1,7 +1,6 @@
 {
     "order": 57,
     "name": "PSP Terminal Socket configuration",
-    "id": "PSP_TERMINAL",
     "type": "Operations",
     "items": [
         {
