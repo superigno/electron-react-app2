@@ -1,4 +1,4 @@
-import AppConstants from '../constants/AppConstants';
+import AppConstants from './constant/AppConstants';
 import { ItemGroupType } from './ItemGroup';
 import INGENICO_MOVE5000 from '../../../resources/schemas/terminal/INGENICO_MOVE5000.json';
 import DPAPOSA8 from '../../../resources/schemas/terminal/DPAPOSA8.json';
@@ -15,10 +15,11 @@ import MACAUPASS from '../../../resources/schemas/terminal/MACAUPASS.json';
 import OCEANPAYMENT_CLIENT from '../../../resources/schemas/terminal/OCEANPAYMENT_CLIENT.json'; 
 import FISERV from '../../../resources/schemas/terminal/FISERV.json'; 
 import PSP_TERMINAL from '../../../resources/schemas/terminal/PSP_TERMINAL.json'; 
+import OPERATIONS from '../../../resources/schemas/operations_schema.json';
 
-export default class TerminalFactory {
+export default class SchemaFactory {
 
-    static getSchema = (terminal: string): ItemGroupType => {
+    static getTerminalSchema = (terminal: string): ItemGroupType => {
         if (terminal == AppConstants.TERMINALS.INGENICO_MOVE5000) {
             return INGENICO_MOVE5000;
         } else if (terminal == AppConstants.TERMINALS.DPAPOSA8) {
@@ -52,6 +53,10 @@ export default class TerminalFactory {
         } else {
             return {} as ItemGroupType;
         }
+    }
+
+    static getOperationsSchema = (): {groups: ItemGroupType[]} => {
+        return OPERATIONS;
     }
   
   }

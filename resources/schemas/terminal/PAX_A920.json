@@ -8,64 +8,71 @@
             "name": "PAX_A920_COM_PORT",
             "type": "text",
             "description": "Serial COMM PORT name",
-            "value": "COM38",
-            "basic": true
+            "value": "COM38"
         },
         {
             "order": 3,
             "name": "PAX_A920_BAUD_RATE",
             "type": "number",
             "description": "19200/9600...",
-            "value": 115200
+            "value": 115200,
+            "advanced": true
         },
         {
             "order": 4,
             "name": "PAX_A920_DATA_BIT",
             "type": "number",
             "description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
-            "value": 8
+            "value": 8,
+            "advanced": true
         },
         {
             "order": 5,
             "name": "PAX_A920_STOP_BIT",
             "type": "number",
             "description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
-            "value": 1
+            "value": 1,
+            "advanced": true
         },
         {
             "order": 6,
             "name": "PAX_A920_PARITY_BIT",
             "type": "number",
             "description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
-            "value": 0
+            "value": 0,
+            "advanced": true
         },
         {
             "order": 7,
             "name": "PAX_A920_ACK_TIMEOUT",
             "type": "number",
             "description": "In seconds, the timeout setting between PC & terminal",
-            "value": 3
+            "value": 3,
+            "advanced": true
         },
         {
             "order": 8,
             "name": "PAX_A920_TXN_TIMEOUT",
             "type": "number",
             "description": "In seconds, the timeout setting between PC & terminal",
-            "value": 3
+            "value": 3,
+            "advanced": true
         },
         {
             "order": 9,
             "name": "PAX_A920_PROCESS_TIMEOUT",
             "type": "number",
             "description": "In seconds, how long a process can be done with the terminal",
-            "value": 100
+            "value": 100,
+            "advanced": true
         },
         {
             "order": 10,
             "name": "PAX_A920_ON_DEMAND_TIMEOUT",
             "type": "number",
             "description": "In seconds, how long an on-demand form can be done with the terminal",
-            "value": 3
+            "value": 3,
+            "advanced": true
         },
         {
             "order": 2,

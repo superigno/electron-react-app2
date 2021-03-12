@@ -16,7 +16,7 @@ export type ItemType = {
     size?: number,
     value?: string | number | boolean | string[],
     options?: string[],
-    basic?: boolean
+    advanced?: boolean
 }
 
 export const Item = (props: ItemProps) => {
@@ -28,7 +28,7 @@ export const Item = (props: ItemProps) => {
         props.onChange(value);
     }
 
-    let inputElement = <InputGroup key={props.item.name} defaultValue={props.item.value as string} size={props.item.size ? props.item.size : props.item.value ? props.item.value.toLocaleString().length + 2 : 10} onChange={(e) => handleOnChange(e.target.value)} />;
+    let inputElement = <InputGroup key={props.item.name} defaultValue={props.item.value as string} size={props.item.size ? props.item.size : props.item.value ? props.item.value.toLocaleString().length + 3 : 10} onChange={(e) => handleOnChange(e.target.value)} />;
 
     if (typeLower === 'number') {
 

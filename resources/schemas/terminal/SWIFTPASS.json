@@ -12,108 +12,121 @@
                 "TEST",
                 "LIVE"
             ],
-            "value": "TEST",
-            "basic": true
+            "value": "TEST"
         },
         {
             "order": 1,
             "name": "SWIFTPASS_SIMULATOR_MODE",
             "type": "boolean",
-            "value": false,
-            "basic": true
+            "value": false
         },
         {
             "order": 2,
             "name": "SWIFTPASS_VERSION",
             "type": "text",
-            "value": "2.0"
+            "value": "2.0",
+            "advanced": true
         },
         {
             "order": 3,
             "name": "SWIFTPASS_READ_TIMEOUT",
             "type": "number",
             "value": 60,
-            "description": "In seconds"
+            "description": "In seconds",
+            "advanced": true
         },
         {
             "order": 4,
             "name": "SWIFTPASS_CONN_TIMEOUT",
             "type": "number",
             "value": 10,
-            "description": "In seconds"
+            "description": "In seconds",
+            "advanced": true
         },
         {
             "order": 5,
             "name": "SWIFTPASS_PRIMARY_URL",
             "type": "text",
-            "value": "https://hkm1.pure-commerce.com/agent/swift"
+            "value": "https://hkm1.pure-commerce.com/agent/swift",
+            "advanced": true
         },
         {
             "order": 6,
             "name": "SWIFTPASS_SECONDARY_URL",
             "type": "text",
-            "value": "https://hkm2.pure-commerce.com/agent/swift"
+            "value": "https://hkm2.pure-commerce.com/agent/swift",
+            "advanced": true
         },
         {
             "order": 7,
             "name": "SWIFTPASS_URL_TEST",
             "type": "text",
-            "value": "https://dev2.pure-commerce.com/agent/swift"
+            "value": "https://dev2.pure-commerce.com/agent/swift",
+            "advanced": true
         },
         {
             "order": 8,
             "name": "SWIFTPASS_MERCHANT_SIGNATURE_KEY",
             "type": "text",
-            "value": "SIGNATUREKEY"
+            "value": "SIGNATUREKEY",
+            "advanced": true
         },
         {
             "order": 9,
             "name": "SWIFTPASS_MERCHANT_ID",
             "type": "text",
-            "value": "127530000126"
+            "value": "127530000126",
+            "advanced": true
         },
         {
             "order": 10,
             "name": "SWIFTPASS_TERMINAL_ID",
             "type": "text",
-            "value": "20002210"
+            "value": "20002210",
+            "advanced": true
         },
         {
             "order": 11,
             "name": "SWIFTPASS_MERCHANT_ID_TEST",
             "type": "text",
-            "value": "127530000126"
+            "value": "127530000126",
+            "advanced": true
         },
         {
             "order": 12,
             "name": "SWIFTPASS_TERMINAL_ID_TEST",
             "type": "text",
-            "value": "20002210"
+            "value": "20002210",
+            "advanced": true
         },
         {
             "order": 13,
             "name": "SWIFTPASS_MERCHANT_GOODS_DESCRIPTION",
             "type": "text",
-            "value": "Testing0720"
+            "value": "Testing0720",
+            "advanced": true
         },
         {
             "order": 14,
             "name": "SWIFTPASS_NONCE_STRING",
             "type": "text",
-            "value": "1010101010"
+            "value": "1010101010",
+            "advanced": true
         },
         {
             "order": 15,
             "name": "SWIFTPASS_QUERY_TIMES",
             "type": "number",
-            "value": 6
+            "value": 6,
+            "advanced": true
         },
         {
             "order": 16,
             "name": "SWIFTPASS_QUERY_TIME_INTERVAL",
             "type": "number",
             "value": 20,
-            "description": "In seconds"
+            "description": "In seconds",
+            "advanced": true
         }
     ]
 }

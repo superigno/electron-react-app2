@@ -8,7 +8,6 @@ export default class AppConstants {
         PSP_TERMINAL: 'PSP_TERMINAL',
         PAX_S60: 'PAX_S60',
         PAX_A920: 'PAX_A920',
-        REGISTER: 'REGISTER',
         INGENICO_ICT250: 'INGENICO_ICT250',
         TYROTTA: 'TYROTTA',
         EPAY: 'EPAY',

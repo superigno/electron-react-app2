@@ -242,8 +242,7 @@
 					"name": "REGISTER_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM98",
-					"basic": true
+					"value": "COM98"
 				},
 				{
 					"order": 3,
@@ -251,56 +250,64 @@
 					"type": "number",
 					"description": "19200/9600...",
 					"value": 115200,
-					"size": 4
+					"size": 4,
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "REGISTER_DATA_BIT",
 					"type": "number",
 					"description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
-					"value": 8
+					"value": 8,
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "REGISTER_STOP_BIT",
 					"type": "number",
 					"description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
-					"value": 1
+					"value": 1,
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "REGISTER_PARITY_BIT",
 					"type": "number",
 					"description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
-					"value": 0
+					"value": 0,
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "REGISTER_ACK_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 5
+					"value": 5,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "REGISTER_ANSWER_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long it expects to receive the ANSWER frame and sending the question",
-					"value": 250
+					"value": 250,
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "REGISTER_RESEND_TIMES",
 					"type": "number",
 					"description": "Times fxChoice try to send frame2 to register",
-					"value": 5
+					"value": 5,
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "REGISTER_RECEIPT_WIDTH",
 					"type": "number",
 					"description": "How many character in a line of the receipt",
-					"value": 40
+					"value": 40,
+					"advanced": true
 				}
 			]
 		},
@@ -388,6 +395,7 @@
 			"order": 49,
 			"name": "Get Workstation ID from Merchant Ref (for Alipay, Wechat, UQ)",
 			"type": "Operations",
+			"advanced": true,
 			"items": [
 				{
 					"order": 1,
@@ -407,6 +415,7 @@
 			"order": 50,
 			"name": "MPOS Configuration",
 			"type": "Operations",
+			"advanced": true,
 			"items": [
 				{
 					"order": 1,
@@ -443,6 +452,7 @@
 			"order": 58,
 			"name": "MCP DCC HOST",
 			"type": "Operations",
+			"advanced": true,
 			"items": [
 				{
 					"order": 1,

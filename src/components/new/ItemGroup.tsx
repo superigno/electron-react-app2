@@ -5,37 +5,38 @@ type ItemGroupProps = {
     group: ItemGroupType,
     onChange: (id: string, value: string | string[]) => void,
     hidden?: boolean,
-    basic?: boolean
+    advanced?: boolean
 }
 
 export type ItemGroupType = {
     order: number,
     name: string,
     type: string,
+    advanced?: boolean,
     items: ItemType[]
 }
 
 export const ItemGroup = (props: ItemGroupProps) => {
 
-    let items = props.group ? props.group.items : [];
+    const group: ItemGroupType = props.group ? props.group : {} as ItemGroupType;
+    const items = group.items ? group.items : [];
+    const showAdvanced = props.advanced ? true : !group.advanced;
 
     //Sort by order number
-    if (items) {
-        items.sort((a: any, b: any) => (a.order > b.order) ? 1 : -1)
-    }
-
+    items.sort((a: any, b: any) => (a.order > b.order) ? 1 : -1)
+    
     return <>
-        {!props.hidden && props.group && items &&
+        {!props.hidden && items && showAdvanced &&
             <div className="item-group">
 
                 <div>
-                    <h6 className="bp3-heading group-name">{props.group.name}</h6>
+                    <h6 className="bp3-heading group-name">{group.name}</h6>
                 </div>
 
                 <div>
                     {
                         items.filter(item => {
-                            return props.basic ? item.basic == true : true;
+                            return props.advanced ? true : !item.advanced;
                         }).map((i: any) =>
                             <Item key={i.name}
                                 item={i}

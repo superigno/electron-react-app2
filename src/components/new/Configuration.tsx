@@ -3,11 +3,11 @@ import { Footer } from '../Footer';
 import { MultiSelectItem } from '../MultiSelectItem';
 import { SelectItem } from '../SelectItem';
 import { ItemGroup, ItemGroupType } from './ItemGroup';
-import { Icon, Switch, TextArea, Tooltip } from '@blueprintjs/core';
-import TerminalFactory from './TerminalFactory';
-import operations_schema from '../../../resources/schemas/operations_schema.json';
-import AppConstants from '../constants/AppConstants';
+import { Button, Icon, Intent, Switch, TextArea, Tooltip } from '@blueprintjs/core';
+import SchemaFactory from './SchemaFactory';
+import AppConstants from './constant/AppConstants';
 import df from 'd-forest';
+import Utils from './util/Utils';
 
 const TERMINAL_LIST = Object.values(AppConstants.TERMINALS);
 const PAYMENT_TYPE_LIST = Object.values(AppConstants.PAYMENT_TYPES);
@@ -30,26 +30,23 @@ const useEffectCustom = (func: any, key: any) => {
 
 export const Configuration = () => {
 
-    const [terminals, setTerminals] = React.useState([]);
+    const OPERATIONS_SCHEMA = SchemaFactory.getOperationsSchema();
+
+    const [terminals, setTerminals] = React.useState(df(OPERATIONS_SCHEMA).findLeaf((leaf: any) => leaf.name === 'TERMINAL_NAME').value);
+    const [cardSchemes, setCardSchemes] = React.useState(df(OPERATIONS_SCHEMA).findLeaf((leaf: any) => leaf.name === 'TERMINAL_CARD_SCHEME').value);
     const [paymentTypes, setPaymentTypes] = React.useState([]);
-    const [cardSchemes, setCardSchemes] = React.useState("")
     const [paymentTypeTerminalMapping, setPaymentTypeTerminalMapping] = React.useState([{ paymentType: "", terminal: "" }]);
-    const [isBasic, setIsBasic] = React.useState(true);
+    const [isAdvanced, setIsAdvanced] = React.useState(false);
 
     const [terminalSchema, setTerminalSchema] = React.useState({} as any);
     const [terminalHidden, setTerminalHidden] = React.useState({} as any);
 
+    const [formVars, setFormVars] = React.useState({} as any);
 
     /** Init terminal section values from schema */
     React.useEffect(() => {
 
-        const terminal = df(operations_schema).findLeaf((leaf: any) => leaf.name === 'TERMINAL_NAME');
-        setTerminals(terminal.value);
-
-        const cardSchemes = df(operations_schema).findLeaf((leaf: any) => leaf.name === 'TERMINAL_CARD_SCHEME');
-        setCardSchemes(cardSchemes.value);
-
-        const paymentScheme = df(operations_schema).findLeaf((leaf: any) => leaf.name === 'TERMINAL_PAYMENT_SCHEME');
+        const paymentScheme = df(OPERATIONS_SCHEMA).findLeaf((leaf: any) => leaf.name === 'TERMINAL_PAYMENT_SCHEME');
         const mappingArr: string[] = paymentScheme.value.split(",");
         const paymentTypeTerminalMapping = mappingArr.map(m => {
             const paymentTypeTerminalArr = m.split(":");
@@ -74,7 +71,7 @@ export const Configuration = () => {
     React.useEffect(() => {
         setTerminalSchema((current: any) => {
             TERMINAL_LIST.map((terminal) => {
-                current[terminal] = TerminalFactory.getSchema(terminal);
+                current[terminal] = SchemaFactory.getTerminalSchema(terminal);
             })
             return { ...current };
         })
@@ -91,10 +88,8 @@ export const Configuration = () => {
         })
     }, [terminals]);
 
-
-    /** If selected terminals or payment types changes, update the mapping; used custom hook since it also runs on initial render when setTerminals is run */
+    /** If selected terminals or payment types changes, update the mapping; used custom hook since it also runs on initial render when setPaymentTypes is run */
     useEffectCustom(() => {
-
         setPaymentTypeTerminalMapping(current => {
             return paymentTypes.map(pt => {
                 const curr = current.filter(curr => {
@@ -111,12 +106,27 @@ export const Configuration = () => {
 
     }, [terminals, paymentTypes]);
 
+
+    /** Hande on change of payment type / terminal mapping */
+    React.useEffect(() => {
+        console.log('Hereye');
+        const ptArr: string[] = [];
+        paymentTypeTerminalMapping.map(pt => {
+            if (pt.terminal) {
+                ptArr.push(`${pt.paymentType}:${pt.terminal}`);
+            }
+        })
+        handleOnChange("TERMINAL_PAYMENT_SCHEME", ptArr);
+    }, [paymentTypeTerminalMapping]);
+    
+
     const handlePaymentTypeChange = (items: string[]) => {
         setPaymentTypes(items);
     }
 
     const handleTerminalChange = (items: string[]) => {
         setTerminals(items);
+        handleOnChange("TERMINAL_NAME", items);
     }
 
     const handlePaymentTerminalChange = ((paymentType: string, terminal: string) => {
@@ -131,12 +141,32 @@ export const Configuration = () => {
         });
     });
 
-    const handleGenericOnChange = (id: string, val: string) => {
-        console.log('Val:', val);
+
+    const handleOnChange = (itemName: string, itemValue: string | string[]) => {
+        formVars[itemName] = itemValue;
     }
 
-    const handleToggleBasic = (e: any) => {
-        setIsBasic(e.target.checked);
+
+    const handleToggleAdvanced = (e: any) => {
+        setIsAdvanced(e.target.checked);
+    }
+
+    const handleOnSubmit = () => {
+
+        const schemaGroups: any[] = [];
+
+        OPERATIONS_SCHEMA.groups.map(group => {
+            schemaGroups.push(group);
+        });
+
+        terminals.map((terminal: string) => {
+            schemaGroups.push(SchemaFactory.getTerminalSchema(terminal));
+        });
+
+        console.log('Combined Schemas:', schemaGroups);
+
+        Utils.generateConfigurationFile(schemaGroups, formVars);
+
     }
 
     return <>
@@ -151,23 +181,23 @@ export const Configuration = () => {
 
             <div className="content">
 
-                <div className="basic">
+                <div className="advanced">
                     <div style={{ display: 'inline-block' }}>
-                        <Tooltip content={"Toggle to only view basic terminal configurations"} minimal={true} >
+                        <Tooltip content={"Toggle to view advanced configurations"} minimal={true} >
                             <Icon icon="issue" iconSize={13} style={{ verticalAlign: 'top' }} />
                         </Tooltip>
-                        &nbsp;Toggle Basic Mode&nbsp;
+                        &nbsp;Toggle Advanced Mode&nbsp;
                     </div>
                     <div style={{ display: 'inline-block' }}>
-                        <Switch checked={isBasic} onChange={handleToggleBasic} innerLabelChecked="On" innerLabel="Off" />
+                        <Switch checked={isAdvanced} onChange={handleToggleAdvanced} innerLabelChecked="On" innerLabel="Off" />
                     </div>
                 </div>
 
                 {
-                    operations_schema.groups.filter(group => {
+                    OPERATIONS_SCHEMA.groups.filter(group => {
                         return group.name.toUpperCase() == 'VERSION' || group.name.toUpperCase() == 'MODES'; //Filtering just to display these two sections at the very top
                     }).map(group => {
-                        return <ItemGroup key={group.name} group={group} onChange={handleGenericOnChange} />
+                        return <ItemGroup key={group.name} group={group} onChange={handleOnChange} />
                     })
                 }
 
@@ -198,14 +228,14 @@ export const Configuration = () => {
                             </div>
                         </div>
 
-                        {!isBasic &&
+                        {isAdvanced &&
                             <div className="contentRow">
                                 <div className="label">
                                     Terminal Card Scheme
                             </div>
 
                                 <div className="item2">
-                                    <TextArea value={cardSchemes} growVertically={true} cols={80} onChange={(e) => handleGenericOnChange(null, e.target.value)} />
+                                    <TextArea value={cardSchemes} growVertically={true} cols={80} onChange={(e) => handleOnChange(null, e.target.value)} />
                                 </div>
                             </div>
                         }
@@ -219,7 +249,7 @@ export const Configuration = () => {
                                     </div>
                                     <div className="item2">
                                         <SelectItem onSelect={(id, val) => handlePaymentTerminalChange(m.paymentType, val)} value={m.terminal}
-                                            options={terminals.map((value, index) => ({ value, id: index + 1 }))} />
+                                            options={terminals.map((value: any, index: any) => ({ value, id: index + 1 }))} />
                                     </div>
                                 </div>
 
@@ -232,15 +262,15 @@ export const Configuration = () => {
 
                 {
                     TERMINAL_LIST.map((terminal: string) => {
-                        return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} basic={isBasic} group={terminalSchema[terminal]} onChange={handleGenericOnChange} />
+                        return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} advanced={isAdvanced} group={terminalSchema[terminal]} onChange={handleOnChange} />
                     })
                 }
 
                 {
-                    operations_schema.groups.filter(group => {
+                    OPERATIONS_SCHEMA.groups.filter(group => {
                         return group.name.toUpperCase() != 'VERSION' && group.name.toUpperCase() != 'MODES' && group.name.toUpperCase() != 'TERMINALS'; //Filtering since these are already displayed at the top
                     }).map(group => {
-                        return <ItemGroup key={group.name} group={group} onChange={handleGenericOnChange} />
+                        return <ItemGroup key={group.name} group={group} advanced={isAdvanced} onChange={handleOnChange} />
                     })
                 }
 
@@ -249,7 +279,7 @@ export const Configuration = () => {
 
 
             <div className="button">
-
+                <Button intent={Intent.PRIMARY} onClick={handleOnSubmit} text="Generate" icon={"export"} large={true} />;
             </div>
 
         </div>

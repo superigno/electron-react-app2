@@ -1010,71 +1010,77 @@
 					"name": "INGENICO_MOVE5000_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM13",
-					"basic": true
+					"value": "COM13"
 				},
 				{
 					"order": 2,
 					"name": "INGENICO_MOVE5000_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": true,
-					"basic": true
+					"value": true
 				},
 				{
 					"order": 3,
 					"name": "INGENICO_MOVE5000_BAUD_RATE",
 					"type": "number",
 					"description": "19200/9600...",
-					"value": 115200
+					"value": 115200,
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "INGENICO_MOVE5000_DATA_BIT",
 					"type": "number",
 					"description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
-					"value": 8
+					"value": 8,
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "INGENICO_MOVE5000_STOP_BIT",
 					"type": "number",
 					"description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
-					"value": 1
+					"value": 1,
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "INGENICO_MOVE5000_PARITY_BIT",
 					"type": "number",
 					"description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
-					"value": 0
+					"value": 0,
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "INGENICO_MOVE5000_ACK_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "INGENICO_MOVE5000_TXN_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "INGENICO_MOVE5000_PROCESS_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long a process can be done with the terminal",
-					"value": 100
+					"value": 100,
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "INGENICO_MOVE5000_ON_DEMAND_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long an on-demand form can be done with the terminal",
-					"value": 60
+					"value": 60,
+					"advanced": true
 				}
 			]
 		},
@@ -1088,64 +1094,71 @@
 					"name": "DPAPOSA8_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM30",
-					"basic": true
+					"value": "COM30"
 				},
 				{
 					"order": 3,
 					"name": "DPAPOSA8_BAUD_RATE",
 					"type": "number",
 					"description": "19200/9600...",
-					"value": 9600
+					"value": 9600,
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "DPAPOSA8_DATA_BIT",
 					"type": "number",
 					"description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
-					"value": 8
+					"value": 8,
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "DPAPOSA8_STOP_BIT",
 					"type": "number",
 					"description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
-					"value": 1
+					"value": 1,
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "DPAPOSA8_PARITY_BIT",
 					"type": "number",
 					"description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
-					"value": 0
+					"value": 0,
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "DPAPOSA8_ACK_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "DPAPOSA8_TXN_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "DPAPOSA8_PROCESS_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long a process can be done with the terminal",
-					"value": 100
+					"value": 100,
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "DPAPOSA8_ON_DEMAND_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long an on-demand form can be done with the terminal",
-					"value": 60
+					"value": 60,
+					"advanced": true
 				},
 				{
 					"order": 11,
@@ -1153,7 +1166,8 @@
 					"type": "select",
 					"description": "TRUE:REFUND - Enabled Refund w Refund Func, TRUE:VOID, Enabled Refund w VOID Func, Else FALSE, Disabled Refund",
 					"options": ["TRUE:REFUND", "TRUE:VOID", "FALSE"],
-					"value": "TRUE:REFUND"
+					"value": "TRUE:REFUND",
+					"advanced": true
 				},
 				{
 					"order": 12,
@@ -1161,14 +1175,14 @@
 					"type": "select",
 					"description": "TRUE:VOID - Enabled Void w Void Func, TRUE:REFUND, Enabled Void w Refund Func, Else FALSE, Disabled Void",
 					"options": ["TRUE:VOID", "TRUE:REFUND", "FALSE"],
-					"value": "TRUE:REFUND"
+					"value": "TRUE:REFUND",
+					"advanced": true
 				},
 				{
 					"order": 2,
 					"name": "DPAPOSA8_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false,
-					"basic": true
+					"value": false
 				}
 			]
 		},
@@ -1182,71 +1196,78 @@
 					"name": "PAX_S60_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM10",
-					"basic": true
+					"value": "COM10"
 				},
 				{
 					"order": 3,
 					"name": "PAX_S60_BAUD_RATE",
 					"type": "number",
 					"description": "19200/9600...",
-					"value": 115200
+					"value": 115200,
+					"size": 3,
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "PAX_S60_DATA_BIT",
 					"type": "number",
 					"description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
-					"value": 8
+					"value": 8,
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "PAX_S60_STOP_BIT",
 					"type": "number",
 					"description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
-					"value": 1
+					"value": 1,
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "PAX_S60_PARITY_BIT",
 					"type": "number",
 					"description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
-					"value": 0
+					"value": 0,
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "PAX_S60_ACK_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "PAX_S60_TXN_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "PAX_S60_PROCESS_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long a process can be done with the terminal",
-					"value": 100
+					"value": 100,
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "PAX_S60_ON_DEMAND_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long an on-demand form can be done with the terminal",
-					"value": 60
+					"value": 60,
+					"advanced": true
 				},
 				{
 					"order": 2,
 					"name": "PAX_S60_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false,
-					"basic": true
+					"value": false
 				}
 			]
 		},
@@ -1260,64 +1281,71 @@
 					"name": "PAX_A920_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM38",
-					"basic": true
+					"value": "COM38"
 				},
 				{
 					"order": 3,
 					"name": "PAX_A920_BAUD_RATE",
 					"type": "number",
 					"description": "19200/9600...",
-					"value": 115200
+					"value": 115200,
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "PAX_A920_DATA_BIT",
 					"type": "number",
 					"description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
-					"value": 8
+					"value": 8,
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "PAX_A920_STOP_BIT",
 					"type": "number",
 					"description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
-					"value": 1
+					"value": 1,
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "PAX_A920_PARITY_BIT",
 					"type": "number",
 					"description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
-					"value": 0
+					"value": 0,
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "PAX_A920_ACK_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "PAX_A920_TXN_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "PAX_A920_PROCESS_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long a process can be done with the terminal",
-					"value": 100
+					"value": 100,
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "PAX_A920_ON_DEMAND_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long an on-demand form can be done with the terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 2,
@@ -1337,8 +1365,7 @@
 					"name": "REGISTER_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM98",
-					"basic": true
+					"value": "COM98"
 				},
 				{
 					"order": 3,
@@ -1346,56 +1373,64 @@
 					"type": "number",
 					"description": "19200/9600...",
 					"value": 115200,
-					"size": 4
+					"size": 4,
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "REGISTER_DATA_BIT",
 					"type": "number",
 					"description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
-					"value": 8
+					"value": 8,
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "REGISTER_STOP_BIT",
 					"type": "number",
 					"description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
-					"value": 1
+					"value": 1,
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "REGISTER_PARITY_BIT",
 					"type": "number",
 					"description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
-					"value": 0
+					"value": 0,
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "REGISTER_ACK_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 5
+					"value": 5,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "REGISTER_ANSWER_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long it expects to receive the ANSWER frame and sending the question",
-					"value": 250
+					"value": 250,
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "REGISTER_RESEND_TIMES",
 					"type": "number",
 					"description": "Times fxChoice try to send frame2 to register",
-					"value": 5
+					"value": 5,
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "REGISTER_RECEIPT_WIDTH",
 					"type": "number",
 					"description": "How many character in a line of the receipt",
-					"value": 40
+					"value": 40,
+					"advanced": true
 				}
 			]
 		},
@@ -1409,104 +1444,115 @@
 					"name": "INGENICO_ICT250_COM_PORT",
 					"type": "text",
 					"description": "Serial COMM PORT name",
-					"value": "COM34",
-					"basic": true
+					"value": "COM34"
 				},
 				{
 					"order": 3,
 					"name": "INGENICO_ICT250_BAUD_RATE",
 					"type": "number",
 					"description": "19200/9600...",
-					"value": 115200
+					"value": 115200,
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "INGENICO_ICT250_DATA_BIT",
 					"type": "number",
 					"description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
-					"value": 8
+					"value": 8,
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "INGENICO_ICT250_STOP_BIT",
 					"type": "number",
 					"description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
-					"value": 1
+					"value": 1,
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "INGENICO_ICT250_PARITY_BIT",
 					"type": "number",
 					"description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
-					"value": 0
+					"value": 0,
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "INGENICO_ICT250_ACK_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "INGENICO_ICT250_TXN_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, the timeout setting between PC & terminal",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "INGENICO_ICT250_PROCESS_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long a process can be done with the terminal",
-					"value": 100
+					"value": 100,
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "INGENICO_ICT250_ON_DEMAND_TIMEOUT",
 					"type": "number",
 					"description": "In seconds, how long an on-demand form can be done with the terminal",
-					"value": 5
+					"value": 5,
+					"advanced": true
 				},
 				{
 					"order": 11,
 					"name": "INGENICO_ICT250_TOKEN_BYPASS_APPROVAL",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"advanced": true
 				},
 				{
 					"order": 12,
 					"name": "INGENICO_ICT250_DEFAULT_CURRENCY",
 					"type": "text",
 					"value": "EUR",
-					"description": "Currency Code, depends on the terminal configuration"
+					"description": "Currency Code, depends on the terminal configuration",
+					"advanced": true
 				},
 				{
 					"order": 13,
 					"name": "INGENICO_ICT250_DEFAULT_BASEAMOUNT",
 					"type": "number",
 					"value": 1.00,
-					"description": "Default base amount, depends on the terminal configuration"
+					"description": "Default base amount, depends on the terminal configuration",
+					"advanced": true
 				},
 				{
 					"order": 2,
 					"name": "INGENICO_ICT250_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": true,
-					"basic": true
+					"value": true
 				},
 				{
 					"order": 15,
 					"name": "INGENICO_ICT250_AUTOVOID_ENABLED",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"advanced": true
 				},
 				{
 					"order": 16,
 					"name": "INGENICO_ICT250_CARDVERIFY_ENABLED",
 					"type": "boolean",
 					"value": true,
-					"description": "TRUE for CardVerification function else FALSE for PreAuth Sale, if TRUE minimum Amount should allow Zero 0"
+					"description": "TRUE for CardVerification function else FALSE for PreAuth Sale, if TRUE minimum Amount should allow Zero 0",
+					"advanced": true
 				}
 			]
 		},
@@ -1520,65 +1566,73 @@
 					"name": "TYROTTA_HEADLESS_MODE",
 					"type": "boolean",
 					"description": "True for TTA headless, False for TTA UI based",
-					"value": false
+					"value": false,
+					"advanced": true
 				},
 				{
 					"order": 3,
 					"name": "TYROTTA_PROCESS_TIMEOUT",
 					"type": "number",
 					"description": "Seconds, timeout value(seconds) in communication with TTA",
-					"value": 147
+					"value": 147,
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "TYROTTA_ON_DEMAND_TIMEOUT",
 					"type": "number",
 					"description": "Seconds, timeout value(seconds) in communication with TTA Headless first response",
-					"value": 30
+					"value": 30,
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "TYROTTA_SURCHARGE_ENABLED",
 					"type": "boolean",
 					"description": "True to enable TTA Surcharge, else False",
-					"value": false
+					"value": false,
+					"advanced": true
 				},
 				{
 					"order": 2,
 					"name": "TYROTTA_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false,
-					"basic": true
+					"value": false
 				},
 				{
 					"order": 7,
 					"name": "TYRO_APPROVED_RESULT_VALUE",
 					"type": "text",
-					"value": "Success"
+					"value": "Success",
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "TYRO_DECLINED_RESULT_VALUE",
 					"type": "text",
-					"value": "Failure"
+					"value": "Failure",
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "TYRO_CANCELLED_RESULT_VALUE",
 					"type": "text",
-					"value": "Aborted"
+					"value": "Aborted",
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "TYRO_TIMEOUT_ERROR_RESULT_VALUE",
 					"type": "text",
-					"value": "TimedOut"
+					"value": "TimedOut",
+					"advanced": true
 				},
 				{
 					"order": 11,
 					"name": "TYRO_TRANSACTION_NOT_AVAILABLE_RESPONSE_CODE",
 					"type": "text",
-					"value": "DeviceUnavailable"
+					"value": "DeviceUnavailable",
+					"advanced": true
 				}
 			]
 		},
@@ -2652,6 +2706,7 @@
 			"order": 49,
 			"name": "Get Workstation ID from Merchant Ref (for Alipay, Wechat, UQ)",
 			"type": "Operations",
+			"advanced": true,
 			"items": [
 				{
 					"order": 1,
@@ -2671,6 +2726,7 @@
 			"order": 50,
 			"name": "MPOS Configuration",
 			"type": "Operations",
+			"advanced": true,
 			"items": [
 				{
 					"order": 1,
@@ -2709,92 +2765,104 @@
 					"order": 1,
 					"name": "EFTSOLUTIONS_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false,
-					"basic": true
+					"value": false
 				},
 				{
 					"order": 2,
 					"name": "EFTSOLUTIONS_PRIMARY_URL",
 					"type": "text",
-					"value": "http://testpri.eftsolutions.com:9966"
+					"value": "http://testpri.eftsolutions.com:9966",
+					"advanced": true
 				},
 				{
 					"order": 3,
 					"name": "EFTSOLUTIONS_SECONDARY_URL",
 					"type": "text",
-					"value": "http://testsec.eftsolutions.com:9966"
+					"value": "http://testsec.eftsolutions.com:9966",
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "EFTSOLUTIONS_MID",
 					"type": "text",
-					"value": "344888800000001"
+					"value": "344888800000001",
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "EFTSOLUTIONS_TID",
 					"type": "text",
-					"value": "28000069"
+					"value": "28000069",
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "EFTSOLUTIONS_SETTLEMENT_TIME",
 					"type": "text",
 					"value": "23:00",
-					"description": "24-hour format"
+					"description": "24-hour format",
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "EFTSOLUTIONS_READ_TIMEOUT",
 					"type": "number",
 					"value": 90000,
-					"description": "In milliseconds"
+					"description": "In milliseconds",
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "EFTSOLUTIONS_CONN_TIMEOUT",
 					"type": "number",
 					"value": 10000,
-					"description": "In milliseconds"
+					"description": "In milliseconds",
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "EFTSOLUTIONS_FAILOVER_ENABLED",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "EFTSOLUTIONS_SETTLEMENT_RETRY",
 					"type": "number",
 					"value": 3,
-					"description": "EFT Solutions settlement attempts"
+					"description": "EFT Solutions settlement attempts",
+					"advanced": true
 				},
 				{
 					"order": 11,
 					"name": "EFTSOLUTIONS_SETTLEMENT_ENABLED",
 					"type": "boolean",
 					"value": false,
-					"description": "Flag to perform EFT Solutions settlement"
+					"description": "Flag to perform EFT Solutions settlement",
+					"advanced": true
 				},
 				{
 					"order": 12,
 					"name": "EFTSOLUTIONS_REVERSAL_RETRY_TIMES",
 					"type": "number",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 13,
 					"name": "EFTSOLUTIONS_REVERSAL_RETRY_TIME_INTERVAL",
 					"type": "number",
 					"value": 10,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 14,
 					"name": "EFTSOLUTIONS_ENABLE_REVERSAL",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"advanced": true
 				}
 			]
 		},
@@ -2807,20 +2875,21 @@
 					"order": 1,
 					"name": "OCEANPAYMENT_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false,
-					"basic": true
+					"value": false
 				},
 				{
 					"order": 2,
 					"name": "OCEANPAYMENT_AUTO_QUERY",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"advanced": true
 				},
 				{
 					"order": 3,
 					"name": "OCEANPAYMENT_AUTO_QUERY_TRY_TIMES",
 					"type": "number",
-					"value": 3
+					"value": 3,
+					"advanced": true
 				},
 				{
 					"order": 4,
@@ -2828,99 +2897,115 @@
 					"type": "select",
 					"options": ["1", "2"],
 					"value": "1",
-					"description": "1:FULL 2:PARTIAL"
+					"description": "1:FULL 2:PARTIAL",
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "OCEANPAYMENT_SALE_URL",
 					"type": "text",
-					"value": "https://secure.oceanpayment.com/gateway/directservice/test"
+					"value": "https://secure.oceanpayment.com/gateway/directservice/test",
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "OCEANPAYMENT_VOID_URL",
 					"type": "text",
-					"value": "https://secure.oceanpayment.com/gateway/service/auth"
+					"value": "https://secure.oceanpayment.com/gateway/service/auth",
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "OCEANPAYMENT_QUERY_URL",
 					"type": "text",
-					"value": "https://query.oceanpayment.com/service/check/test"
+					"value": "https://query.oceanpayment.com/service/check/test",
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "OCEANPAYMENT_REFUND_URL",
 					"type": "text",
-					"value": "https://query.oceanpayment.com/service/applyRefund"
+					"value": "https://query.oceanpayment.com/service/applyRefund",
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "OCEANPAYMENT_REFUND_CHECK_URL",
 					"type": "text",
-					"value": "https://query.oceanpayment.com/service/queryRefund"
+					"value": "https://query.oceanpayment.com/service/queryRefund",
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "OCEANPAYMENT_READ_TIMEOUT",
 					"type": "number",
 					"value": 60000,
-					"description": "In milliseconds"
+					"description": "In milliseconds",
+					"advanced": true
 				},
 				{
 					"order": 11,
 					"name": "OCEANPAYMENT_CONN_TIMEOUT",
 					"type": "number",
 					"value": 10000,
-					"description": "In milliseconds"
+					"description": "In milliseconds",
+					"advanced": true
 				},
 				{
 					"order": 12,
 					"name": "OCEANPAYMENT_FAILOVER_ENABLED",
 					"type": "boolean",
-					"value": false
+					"value": false,
+					"advanced": true
 				},
 				{
 					"order": 13,
 					"name": "BILLING_IP",
 					"type": "text",
-					"value": "172.16.21.151"
+					"value": "172.16.21.151",
+					"advanced": true
 				},
 				{
 					"order": 14,
 					"name": "OCEANPAYMENT_MID",
 					"type": "text",
-					"value": "140105"
+					"value": "140105",
+					"advanced": true
 				},
 				{
 					"order": 15,
 					"name": "OCEANPAYMENT_TID",
 					"type": "text",
-					"value": "14010508"
+					"value": "14010508",
+					"advanced": true
 				},
 				{
 					"order": 16,
 					"name": "OCEANPAYMENT_SECURE_CODE",
 					"type": "text",
-					"value": "9Gi42d7OyXNAKqHE4qLmFw=="
+					"value": "9Gi42d7OyXNAKqHE4qLmFw==",
+					"advanced": true
 				},
 				{
 					"order": 17,
 					"name": "OCEANPAYMENT_WECHAT_METHOD",
 					"type": "text",
-					"value": "WeChatPay"
+					"value": "WeChatPay",
+					"advanced": true
 				},
 				{
 					"order": 18,
 					"name": "OCEANPAYMENT_WECHAT_METHOD_ADDITIONAL",
 					"type": "text",
-					"value": "HK_WX"
+					"value": "HK_WX",
+					"advanced": true
 				},
 				{
 					"order": 19,
 					"name": "OCEANPAYMENT_ALIPAY_METHOD",
 					"type": "text",
-					"value": "Alipay"
+					"value": "Alipay",
+					"advanced": true
 				}
 			]
 		},
@@ -2933,88 +3018,100 @@
 					"order": 1,
 					"name": "UPLAN_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false,
-					"basic": true
+					"value": false
 				},
 				{
 					"order": 2,
 					"name": "UPLAN_ACQUIRER_CODE",
 					"type": "text",
-					"value": "ACQCODE"
+					"value": "ACQCODE",
+					"advanced": true
 				},
 				{
 					"order": 3,
 					"name": "UPLAN_MERCHANT_CODE",
 					"type": "text",
-					"value": "MERCHCODE"
+					"value": "MERCHCODE",
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "UPLAN_TERMINAL_ID",
 					"type": "text",
-					"value": "TERMINALID"
+					"value": "TERMINALID",
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "UPLAN_ACQUIRER_CODE_TEST",
 					"type": "text",
-					"value": "ACQCODE"
+					"value": "ACQCODE",
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "UPLAN_MERCHANT_CODE_TEST",
 					"type": "text",
-					"value": "MERCHCODE"
+					"value": "MERCHCODE",
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "UPLAN_TERMINAL_ID_TEST",
 					"type": "text",
-					"value": "TERMINALID"
+					"value": "TERMINALID",
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "UPLAN_READ_TIMEOUT",
 					"type": "number",
 					"value": 60,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "UPLAN_CONN_TIMEOUT",
 					"type": "number",
 					"value": 10,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "UPLAN_PRIMARY_URL",
 					"type": "text",
-					"value": "https://hkm1.pure-commerce.com/agent/uplan"
+					"value": "https://hkm1.pure-commerce.com/agent/uplan",
+					"advanced": true
 				},
 				{
 					"order": 11,
 					"name": "UPLAN_SECONDARY_URL",
 					"type": "text",
-					"value": "https://hkm2.pure-commerce.com/agent/uplan"
+					"value": "https://hkm2.pure-commerce.com/agent/uplan",
+					"advanced": true
 				},
 				{
 					"order": 12,
 					"name": "UPLAN_URL_TEST",
 					"type": "text",
-					"value": "https://dev2.pure-commerce.com/agent/uplan"
+					"value": "https://dev2.pure-commerce.com/agent/uplan",
+					"advanced": true
 				},
 				{
 					"order": 13,
 					"name": "UPLAN_SERVICE_ENTRY_MODE",
 					"type": "text",
-					"value": "SERVICE ENTRY MODE"
+					"value": "SERVICE ENTRY MODE",
+					"advanced": true
 				},
 				{
 					"order": 14,
 					"name": "UPLAN_TERMINAL_PARTNER",
 					"type": "text",
-					"value": "INGENICO_MOVE5000"
+					"value": "INGENICO_MOVE5000",
+					"advanced": true
 				}
 			]
 		},
@@ -3027,101 +3124,115 @@
 					"order": 1,
 					"name": "SWIFTPASS_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false,
-					"basic": true
+					"value": false
 				},
 				{
 					"order": 2,
 					"name": "SWIFTPASS_VERSION",
 					"type": "text",
-					"value": "2.0"
+					"value": "2.0",
+					"advanced": true
 				},
 				{
 					"order": 3,
 					"name": "SWIFTPASS_READ_TIMEOUT",
 					"type": "number",
 					"value": 60,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "SWIFTPASS_CONN_TIMEOUT",
 					"type": "number",
 					"value": 10,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "SWIFTPASS_PRIMARY_URL",
 					"type": "text",
-					"value": "https://hkm1.pure-commerce.com/agent/swift"
+					"value": "https://hkm1.pure-commerce.com/agent/swift",
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "SWIFTPASS_SECONDARY_URL",
 					"type": "text",
-					"value": "https://hkm2.pure-commerce.com/agent/swift"
+					"value": "https://hkm2.pure-commerce.com/agent/swift",
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "SWIFTPASS_URL_TEST",
 					"type": "text",
-					"value": "https://dev2.pure-commerce.com/agent/swift"
+					"value": "https://dev2.pure-commerce.com/agent/swift",
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "SWIFTPASS_MERCHANT_SIGNATURE_KEY",
 					"type": "text",
-					"value": "SIGNATUREKEY"
+					"value": "SIGNATUREKEY",
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "SWIFTPASS_MERCHANT_ID",
 					"type": "text",
-					"value": "127530000126"
+					"value": "127530000126",
+					"advanced": true
 				},
 				{
 					"order": 10,
 					"name": "SWIFTPASS_TERMINAL_ID",
 					"type": "text",
-					"value": "20002210"
+					"value": "20002210",
+					"advanced": true
 				},
 				{
 					"order": 11,
 					"name": "SWIFTPASS_MERCHANT_ID_TEST",
 					"type": "text",
-					"value": "127530000126"
+					"value": "127530000126",
+					"advanced": true
 				},
 				{
 					"order": 12,
 					"name": "SWIFTPASS_TERMINAL_ID_TEST",
 					"type": "text",
-					"value": "20002210"
+					"value": "20002210",
+					"advanced": true
 				},
 				{
 					"order": 13,
 					"name": "SWIFTPASS_MERCHANT_GOODS_DESCRIPTION",
 					"type": "text",
-					"value": "Testing0720"
+					"value": "Testing0720",
+					"advanced": true
 				},
 				{
 					"order": 14,
 					"name": "SWIFTPASS_NONCE_STRING",
 					"type": "text",
-					"value": "1010101010"
+					"value": "1010101010",
+					"advanced": true
 				},
 				{
 					"order": 15,
 					"name": "SWIFTPASS_QUERY_TIMES",
 					"type": "number",
-					"value": 6
+					"value": 6,
+					"advanced": true
 				},
 				{
 					"order": 16,
 					"name": "SWIFTPASS_QUERY_TIME_INTERVAL",
 					"type": "number",
 					"value": 20,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				}
 			]
 		},
@@ -3134,59 +3245,66 @@
 					"order": 1,
 					"name": "MACAUPASS_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false,
-					"basic": true
+					"value": false
 				},
 				{
 					"order": 2,
 					"name": "MACAUPASS_READ_TIMEOUT",
 					"type": "number",
 					"value": 180,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 3,
 					"name": "MACAUPASS_CONN_TIMEOUT",
 					"type": "number",
 					"value": 10,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "MACAUPASS_PRIMARY_URL",
 					"type": "text",
-					"value": "https://hkm1.pure-commerce.com/agent/mpay"
+					"value": "https://hkm1.pure-commerce.com/agent/mpay",
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "MACAUPASS_SECONDARY_URL",
 					"type": "text",
-					"value": "https://hkm2.pure-commerce.com/agent/mpay"
+					"value": "https://hkm2.pure-commerce.com/agent/mpay",
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "MACAUPASS_URL_TEST",
 					"type": "text",
-					"value": "https://dev2.pure-commerce.com/agent/mpay"
+					"value": "https://dev2.pure-commerce.com/agent/mpay",
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "MACAUPASS_RETRY_TIMES",
 					"type": "number",
-					"value": 20
+					"value": 20,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "MACAUPASS_RETRY_TIME_INTERVAL",
 					"type": "number",
 					"value": 5,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "MACAUPASS_RECEIPT_FLAG",
 					"type": "text",
-					"value": "1"
+					"value": "1",
+					"advanced": true
 				}
 			]
 		},
@@ -3199,59 +3317,66 @@
 					"order": 1,
 					"name": "OCEANPAYMENT_CLIENT_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": true,
-					"basic": true
+					"value": true
 				},
 				{
 					"order": 2,
 					"name": "OCEANPAYMENT_CLIENT_READ_TIMEOUT",
 					"type": "number",
 					"value": 180,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 3,
 					"name": "OCEANPAYMENT_CLIENT_CONN_TIMEOUT",
 					"type": "number",
 					"value": 10,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "OCEANPAYMENT_CLIENT_PRIMARY_URL",
 					"type": "text",
-					"value": "https://hkm1.pure-commerce.com/agent/oceanpay"
+					"value": "https://hkm1.pure-commerce.com/agent/oceanpay",
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "OCEANPAYMENT_CLIENT_SECONDARY_URL",
 					"type": "text",
-					"value": "https://hkm2.pure-commerce.com/agent/oceanpay"
+					"value": "https://hkm2.pure-commerce.com/agent/oceanpay",
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "OCEANPAYMENT_CLIENT_URL_TEST",
 					"type": "text",
-					"value": "https://dev2.pure-commerce.com/agent/ocean"
+					"value": "https://dev2.pure-commerce.com/agent/ocean",
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "OCEANPAYMENT_CLIENT_RETRY_TIMES",
 					"type": "number",
-					"value": 20
+					"value": 20,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "OCEANPAYMENT_CLIENT_RETRY_TIME_INTERVAL",
 					"type": "number",
 					"value": 5,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "OCEANPAYMENT_CLIENT_RECEIPT_FLAG",
 					"type": "text",
-					"value": "1"
+					"value": "1",
+					"advanced": true
 				}
 			]
 		},
@@ -3264,59 +3389,66 @@
 					"order": 1,
 					"name": "FISERV_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": true,
-					"basic": true
+					"value": true
 				},
 				{
 					"order": 2,
 					"name": "FISERV_READ_TIMEOUT",
 					"type": "number",
 					"value": 180,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 3,
 					"name": "FISERV_CONN_TIMEOUT",
 					"type": "number",
 					"value": 10,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "FISERV_PRIMARY_URL",
 					"type": "text",
-					"value": "https://hkm1.pure-commerce.com/agent/cupqr"
+					"value": "https://hkm1.pure-commerce.com/agent/cupqr",
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "FISERV_SECONDARY_URL",
 					"type": "text",
-					"value": "https://hkm2.pure-commerce.com/agent/cupqr"
+					"value": "https://hkm2.pure-commerce.com/agent/cupqr",
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "FISERV_URL_TEST",
 					"type": "text",
-					"value": "https://dev2.pure-commerce.com/agent/cupqr"
+					"value": "https://dev2.pure-commerce.com/agent/cupqr",
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "FISERV_RETRY_TIMES",
 					"type": "number",
-					"value": 20
+					"value": 20,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "FISERV_RETRY_TIME_INTERVAL",
 					"type": "number",
 					"value": 5,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 9,
 					"name": "FISERV_RECEIPT_FLAG",
 					"type": "text",
-					"value": "1"
+					"value": "1",
+					"advanced": true
 				}
 			]
 		},
@@ -3329,53 +3461,59 @@
 					"order": 2,
 					"name": "PSP_TERMINAL_IP",
 					"type": "text",
-					"value": "localhost"
+					"value": "localhost",
+					"advanced": true
 				},
 				{
 					"order": 3,
 					"name": "PSP_TERMINAL_PORT",
 					"type": "number",
-					"value": 8081
+					"value": 8081,
+					"advanced": true
 				},
 				{
 					"order": 4,
 					"name": "PSP_TERMINAL_RETRY_COUNT",
 					"type": "number",
-					"value": 5
+					"value": 5,
+					"advanced": true
 				},
 				{
 					"order": 5,
 					"name": "PSP_TERMINAL_PROCESS_TIMEOUT",
 					"type": "number",
 					"value": 180,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 6,
 					"name": "PSP_TERMINAL_ON_DEMAND_TIMEOUT",
 					"type": "number",
 					"value": 1,
-					"description": "In seconds"
+					"description": "In seconds",
+					"advanced": true
 				},
 				{
 					"order": 7,
 					"name": "PSP_TERMINAL_REQUEST_TOKEN",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"advanced": true
 				},
 				{
 					"order": 8,
 					"name": "PSP_TERMINAL_ON_DEMAND_AVAILABILITY_FLAG",
 					"type": "boolean",
 					"value": false,
-					"description": "True to check connection before sending request; else False"
+					"description": "True to check connection before sending request; else False",
+					"advanced": true
 				},
 				{
 					"order": 1,
 					"name": "PSP_TERMINAL_SIMULATOR_MODE",
 					"type": "boolean",
-					"value": false,
-					"basic": true
+					"value": false
 				}
 			]
 		},
@@ -3383,6 +3521,7 @@
 			"order": 58,
 			"name": "MCP DCC HOST",
 			"type": "Operations",
+			"advanced": true,
 			"items": [
 				{
 					"order": 1,
