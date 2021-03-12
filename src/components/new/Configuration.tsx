@@ -8,6 +8,7 @@ import SchemaFactory from './SchemaFactory';
 import AppConstants from './constant/AppConstants';
 import df from 'd-forest';
 import Utils from './util/Utils';
+import { NavigationBar } from './NavigationBar';
 
 const TERMINAL_LIST = Object.values(AppConstants.TERMINALS);
 const PAYMENT_TYPE_LIST = Object.values(AppConstants.PAYMENT_TYPES);
@@ -65,8 +66,6 @@ export const Configuration = () => {
 
     }, []);
 
-
-
     /** Load terminal schemas */
     React.useEffect(() => {
         setTerminalSchema((current: any) => {
@@ -76,7 +75,6 @@ export const Configuration = () => {
             return { ...current };
         })
     }, []);
-
 
     /** Hide respective terminals when selected terminals change */
     React.useEffect(() => {
@@ -171,27 +169,21 @@ export const Configuration = () => {
 
     return <>
 
+        <NavigationBar onCreateNew={()=>console.log('TODO')} onImport={()=>console.log('TODO')} isAdvancedMode={isAdvanced} onToggleAdvancedMode={handleToggleAdvanced} />
+
         <div className="wrapper">
 
-            <h3 className="bp3-heading">Global FxChoice Configuration Manager</h3>
+            <div className="header">
+                <div className="headerLabel">
+                    <h3 className="bp3-heading">Global FxChoice Configuration Manager</h3>
+                </div>
 
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <div className="toggleAdvanced">
+                                        
+                </div>
             </div>
 
-            <div className="content">
-
-                <div className="advanced">
-                    <div style={{ display: 'inline-block' }}>
-                        <Tooltip content={"Toggle to view advanced configurations"} minimal={true} >
-                            <Icon icon="issue" iconSize={13} style={{ verticalAlign: 'top' }} />
-                        </Tooltip>
-                        &nbsp;Toggle Advanced Mode&nbsp;
-                    </div>
-                    <div style={{ display: 'inline-block' }}>
-                        <Switch checked={isAdvanced} onChange={handleToggleAdvanced} innerLabelChecked="On" innerLabel="Off" />
-                    </div>
-                </div>
+            <div className="content">                
 
                 {
                     OPERATIONS_SCHEMA.groups.filter(group => {
@@ -279,7 +271,7 @@ export const Configuration = () => {
 
 
             <div className="button">
-                <Button intent={Intent.PRIMARY} onClick={handleOnSubmit} text="Generate" icon={"export"} large={true} />;
+                <Button intent={Intent.PRIMARY} onClick={handleOnSubmit} text="Generate" icon={"export"} large={true} />
             </div>
 
         </div>

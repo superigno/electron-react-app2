@@ -46,7 +46,7 @@
 
 .footer {
   font-size: smaller;
-  position: fixed;
+  /*position: fixed;*/
   left: 0;
   bottom: 0;
   width: 100%;
@@ -71,8 +71,7 @@
   padding-top: 25px;
 }
 
-
-
+/** For new */
 
 .contentRow {
   padding-top: 10px;
@@ -88,52 +87,25 @@
 
 .item2 {
   display: inline-block;
-  max-width: 500px;
+  max-width: 350px;
   /*vertical-align: middle; has issues with Switch element*/
 }
 
-.advanced {
-  text-align: right;
+.header{
+  width: 100%;
+  margin-top: 50px;
 }
 
-
-
-.logo {
-  margin: 40px 0px 20px 0px;
+.headerLabel {
+  display: inline-block; 
+  width: 50%;
 }
 
- 
-
-.center-container {
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
-  text-align: center;
-}
-
-.spacer {
+.toggleAdvanced {
   margin-top: 10px;
+  /*text-align: right;
+  display: inline-block; 
+  width: 50%;*/
 }
-
-
-
-
-
-
-
-/*
-ul:after {
-  content: '';
-  width: 0;
-  height: 100%;
-  position: absolute;
-  border: 1px solid black;
-  top: 0;
-  left: 100px;
-}
-*/
-
-
-
 
 
