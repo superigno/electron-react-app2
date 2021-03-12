@@ -39,11 +39,11 @@ export const NavigationBar = (props: NavBarProps) => {
             </NavbarGroup>
             <NavbarGroup align={Alignment.RIGHT} >
 
-                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE, width: '110px' }} onClick={handleAlertOpen}>
+                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE}} onClick={handleAlertOpen}>
                     <Icon color={Colors.WHITE} icon="document" style={{ paddingRight: '15px' }} />Create New
                 </Button>
                 <NavbarDivider />
-                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE, width: '150px' }} onClick={() => inputFile.current.click()} >
+                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE}} onClick={() => inputFile.current.click()} >
                     <Icon color={Colors.WHITE} icon="folder-open" style={{ paddingRight: '15px' }} />Import Existing
                     <input type='file' id='file' ref={inputFile} style={{ display: 'none' }} onChange={handleOnFileImport} />
                 </Button>

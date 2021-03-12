@@ -19,7 +19,7 @@ export const ToggleAdvancedMode = (props: ToggleProps) => {
             <Tooltip content={"Toggle to view advanced configurations"} minimal={true} >
                 <Icon icon="issue" iconSize={13} style={{ verticalAlign: 'top' }} />
             </Tooltip>
-                        &nbsp;Toggle Advanced Mode&nbsp;
+                        &nbsp;Advanced Mode&nbsp;
                     </div>
         <div style={{ display: 'inline-block' }}>
             <Switch checked={checked} onChange={props.onChange} innerLabelChecked="On" innerLabel="Off" />
