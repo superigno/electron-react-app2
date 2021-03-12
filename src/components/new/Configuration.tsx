@@ -178,8 +178,8 @@ export const Configuration = () => {
                     <h3 className="bp3-heading">Global FxChoice Configuration Manager</h3>
                 </div>
 
-                <div className="toggleAdvanced">
-                                        
+                <div className="headerLabel">
+                    This tool is used to generate basic configuration settings for Global FxChoice. Toggle advanced mode above for additional settings.
                 </div>
             </div>
 
