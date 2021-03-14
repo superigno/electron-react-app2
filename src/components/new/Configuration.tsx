@@ -3,7 +3,7 @@ import { Footer } from '../Footer';
 import { MultiSelectItem } from '../MultiSelectItem';
 import { SelectItem } from '../SelectItem';
 import { ItemGroup, ItemGroupType } from './ItemGroup';
-import { Button, Icon, Intent, Switch, TextArea, Tooltip } from '@blueprintjs/core';
+import { Button, Icon, Intent, Spinner, Switch, TextArea, Tooltip } from '@blueprintjs/core';
 import SchemaFactory from './SchemaFactory';
 import AppConstants from './constant/AppConstants';
 import df from 'd-forest';
@@ -33,8 +33,8 @@ export const Configuration = () => {
 
     const OPERATIONS_SCHEMA = SchemaFactory.getOperationsSchema();
 
-    const [terminals, setTerminals] = React.useState(df(OPERATIONS_SCHEMA).findLeaf((leaf: any) => leaf.name === 'TERMINAL_NAME').value);
-    const [cardSchemes, setCardSchemes] = React.useState(df(OPERATIONS_SCHEMA).findLeaf((leaf: any) => leaf.name === 'TERMINAL_CARD_SCHEME').value);
+    const [terminals, setTerminals] = React.useState([]);
+    const [cardSchemes, setCardSchemes] = React.useState();
     const [paymentTypes, setPaymentTypes] = React.useState([]);
     const [paymentTypeTerminalMapping, setPaymentTypeTerminalMapping] = React.useState([{ paymentType: "", terminal: "" }]);
     const [isAdvanced, setIsAdvanced] = React.useState(false);
@@ -44,9 +44,19 @@ export const Configuration = () => {
 
     const [formVars, setFormVars] = React.useState({} as any);
 
-    /** Init terminal section values from schema */
-    React.useEffect(() => {
+    const [isLoading, setIsLoading] = React.useState(false);
 
+
+
+    const initTerminalsList = () => {
+        setTerminals(df(OPERATIONS_SCHEMA).findLeaf((leaf: any) => leaf.name === 'TERMINAL_NAME').value);
+    }
+
+    const initCardSchemesList = () => {
+        setCardSchemes(df(OPERATIONS_SCHEMA).findLeaf((leaf: any) => leaf.name === 'TERMINAL_CARD_SCHEME').value);
+    }
+
+    const initPaymentTypesAndTerminalMapping = () => {
         const paymentScheme = df(OPERATIONS_SCHEMA).findLeaf((leaf: any) => leaf.name === 'TERMINAL_PAYMENT_SCHEME');
         const mappingArr: string[] = paymentScheme.value.split(",");
         const paymentTypeTerminalMapping = mappingArr.map(m => {
@@ -63,18 +73,26 @@ export const Configuration = () => {
 
         setPaymentTypeTerminalMapping(paymentTypeTerminalMapping);
         setPaymentTypes(paymentTypes);
+    }
 
-    }, []);
-
-    /** Load terminal schemas */
-    React.useEffect(() => {
+    const initTerminalSchemas = () => {
         setTerminalSchema((current: any) => {
             TERMINAL_LIST.map((terminal) => {
                 current[terminal] = SchemaFactory.getTerminalSchema(terminal);
             })
             return { ...current };
         })
-    }, []);
+    }
+
+
+    /** Initialize states on initial load or 'Create New' */
+    React.useEffect(() => {
+        initTerminalsList();
+        initCardSchemesList();
+        initPaymentTypesAndTerminalMapping();
+        initTerminalSchemas();
+    }, [isLoading]);
+
 
     /** Hide respective terminals when selected terminals change */
     React.useEffect(() => {
@@ -88,6 +106,9 @@ export const Configuration = () => {
 
     /** If selected terminals or payment types changes, update the mapping; used custom hook since it also runs on initial render when setPaymentTypes is run */
     useEffectCustom(() => {
+
+        console.log('HERE3');
+
         setPaymentTypeTerminalMapping(current => {
             return paymentTypes.map(pt => {
                 const curr = current.filter(curr => {
@@ -105,9 +126,8 @@ export const Configuration = () => {
     }, [terminals, paymentTypes]);
 
 
-    /** Hande on change of payment type / terminal mapping */
+    /** Fill 'TERMINAL_PAYMENT_SCHEME' form value on init or payment type/terminal mapping change */
     React.useEffect(() => {
-        console.log('Hereye');
         const ptArr: string[] = [];
         paymentTypeTerminalMapping.map(pt => {
             if (pt.terminal) {
@@ -167,9 +187,17 @@ export const Configuration = () => {
 
     }
 
+    const handleOnCreateNew = () => {
+        setIsLoading(true);
+        //Force rerender components
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 3000);
+    }
+
     return <>
 
-        <NavigationBar onCreateNew={()=>console.log('TODO')} onImport={()=>console.log('TODO')} isAdvancedMode={isAdvanced} onToggleAdvancedMode={handleToggleAdvanced} />
+        <NavigationBar onCreateNew={handleOnCreateNew} onImport={()=>console.log('TODO')} isAdvancedMode={isAdvanced} onToggleAdvancedMode={handleToggleAdvanced} />
 
         <div className="wrapper">
 
@@ -183,91 +211,102 @@ export const Configuration = () => {
                 </div>
             </div>
 
-            <div className="content">                
 
-                {
-                    OPERATIONS_SCHEMA.groups.filter(group => {
-                        return group.name.toUpperCase() == 'VERSION' || group.name.toUpperCase() == 'MODES'; //Filtering just to display these two sections at the very top
-                    }).map(group => {
-                        return <ItemGroup key={group.name} group={group} onChange={handleOnChange} />
-                    })
-                }
+            {isLoading && 
+                <div className="content">
+                    <Spinner />
+                </div>
+            }
 
-                <div className="item-group">
+            {!isLoading && 
 
-                    <div>
-                        <h6 className="bp3-heading group-name">Select Terminals and Assign to Payment Types</h6>
-                    </div>
+                <div className="content">        
 
-                    <div>
-                        <div className="contentRow">
-                            <div className="label">
-                                Select Terminal/s
-                            </div>
+                    {
+                        OPERATIONS_SCHEMA.groups.filter(group => {
+                            return group.name.toUpperCase() == 'VERSION' || group.name.toUpperCase() == 'MODES'; //Filtering just to display these two sections at the very top
+                        }).map(group => {
+                            return <ItemGroup key={group.name} group={group} onChange={handleOnChange} />
+                        })
+                    }
 
-                            <div className="item2">
-                                <MultiSelectItem values={terminals} options={TERMINAL_LIST} onSelect={handleTerminalChange} />
-                            </div>
+                    <div className="item-group">
+
+                        <div>
+                            <h6 className="bp3-heading group-name">Select Terminals and Assign to Payment Types</h6>
                         </div>
 
-                        <div className="contentRow">
-                            <div className="label">
-                                Select Payment Type/s
-                            </div>
-
-                            <div className="item2">
-                                <MultiSelectItem values={paymentTypes} options={PAYMENT_TYPE_LIST} onSelect={handlePaymentTypeChange} />
-                            </div>
-                        </div>
-
-                        {isAdvanced &&
+                        <div>
                             <div className="contentRow">
                                 <div className="label">
-                                    Terminal Card Scheme
-                            </div>
+                                    Select Terminal/s
+                                </div>
 
                                 <div className="item2">
-                                    <TextArea value={cardSchemes} growVertically={true} cols={80} onChange={(e) => handleOnChange(null, e.target.value)} />
+                                    <MultiSelectItem values={terminals} options={TERMINAL_LIST} onSelect={handleTerminalChange} />
                                 </div>
                             </div>
-                        }
 
-                        {
-                            paymentTypeTerminalMapping.map((m: { paymentType: string, terminal: string }) => {
-
-                                return <div className="contentRow" key={m.paymentType}>
-                                    <div className="label">
-                                        {m.paymentType}
-                                    </div>
-                                    <div className="item2">
-                                        <SelectItem onSelect={(id, val) => handlePaymentTerminalChange(m.paymentType, val)} value={m.terminal}
-                                            options={terminals.map((value: any, index: any) => ({ value, id: index + 1 }))} />
-                                    </div>
+                            <div className="contentRow">
+                                <div className="label">
+                                    Select Payment Type/s
                                 </div>
 
-                            })
+                                <div className="item2">
+                                    <MultiSelectItem values={paymentTypes} options={PAYMENT_TYPE_LIST} onSelect={handlePaymentTypeChange} />
+                                </div>
+                            </div>
 
-                        }
+                            {isAdvanced &&
+                                <div className="contentRow">
+                                    <div className="label">
+                                        Terminal Card Scheme
+                                </div>
+
+                                    <div className="item2">
+                                        <TextArea value={cardSchemes} growVertically={true} cols={80} onChange={(e) => handleOnChange(null, e.target.value)} />
+                                    </div>
+                                </div>
+                            }
+
+                            {
+                                paymentTypeTerminalMapping.map((m: { paymentType: string, terminal: string }) => {
+
+                                    return <div className="contentRow" key={m.paymentType}>
+                                        <div className="label">
+                                            {m.paymentType}
+                                        </div>
+                                        <div className="item2">
+                                            <SelectItem onSelect={(id, val) => handlePaymentTerminalChange(m.paymentType, val)} value={m.terminal}
+                                                options={terminals.map((value: any, index: any) => ({ value, id: index + 1 }))} />
+                                        </div>
+                                    </div>
+
+                                })
+
+                            }
+                        </div>
+
                     </div>
+
+                    {
+                        TERMINAL_LIST.map((terminal: string) => {
+                            return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} advanced={isAdvanced} group={terminalSchema[terminal]} onChange={handleOnChange} />
+                        })
+                    }
+
+                    {
+                        OPERATIONS_SCHEMA.groups.filter(group => {
+                            return group.name.toUpperCase() != 'VERSION' && group.name.toUpperCase() != 'MODES' && group.name.toUpperCase() != 'TERMINALS'; //Filtering since these are already displayed at the top
+                        }).map(group => {
+                            return <ItemGroup key={group.name} group={group} advanced={isAdvanced} onChange={handleOnChange} />
+                        })
+                    }
+
 
                 </div>
 
-                {
-                    TERMINAL_LIST.map((terminal: string) => {
-                        return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} advanced={isAdvanced} group={terminalSchema[terminal]} onChange={handleOnChange} />
-                    })
-                }
-
-                {
-                    OPERATIONS_SCHEMA.groups.filter(group => {
-                        return group.name.toUpperCase() != 'VERSION' && group.name.toUpperCase() != 'MODES' && group.name.toUpperCase() != 'TERMINALS'; //Filtering since these are already displayed at the top
-                    }).map(group => {
-                        return <ItemGroup key={group.name} group={group} advanced={isAdvanced} onChange={handleOnChange} />
-                    })
-                }
-
-
-            </div>
+            }
 
 
             <div className="button">

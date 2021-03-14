@@ -3,7 +3,7 @@ import { Navbar, NavbarGroup, NavbarHeading, NavbarDivider, Button, Classes, Ali
 import { ToggleAdvancedMode } from './ToggleAdvancedMode';
 
 type NavBarProps = {
-    onCreateNew: (configType: string) => void,
+    onCreateNew: () => void,
     onImport: (filePath: string) => void
     isAdvancedMode: boolean,
     onToggleAdvancedMode: (e:any) => void
@@ -30,6 +30,7 @@ export const NavigationBar = (props: NavBarProps) => {
 
     const handleOnCreateNew = () => {
         setAlertOpen(false);
+        props.onCreateNew();
     }
 
     return <Navbar style={{ background: Colors.BLUE2, position: 'fixed', top: '0' }}>
