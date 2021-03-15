@@ -1,12 +1,26 @@
 import React from 'react';
 import { Navbar, NavbarGroup, NavbarHeading, NavbarDivider, Button, Classes, Alignment, Intent, Colors, Icon, Alert, Overlay, Tooltip, Switch } from '@blueprintjs/core';
 import { ToggleAdvancedMode } from './ToggleAdvancedMode';
+import fs from 'fs';
+import Path from 'path';
+import xml2js from 'xml2js';
 
 type NavBarProps = {
     onCreateNew: () => void,
-    onImport: (filePath: string) => void
+    onImport: (configObjects: any [], error: string) => void
     isAdvancedMode: boolean,
     onToggleAdvancedMode: (e:any) => void
+}
+
+type ImportConfigType = {
+    configuration: {
+        item: {
+            $: {
+                name: string,
+                value: string
+            }
+        }[]
+    }
 }
 
 export const NavigationBar = (props: NavBarProps) => {
@@ -23,9 +37,30 @@ export const NavigationBar = (props: NavBarProps) => {
     };
 
     const handleOnFileImport = (e: any) => {
-        console.log('File:', e.target.files[0].path);
         const filePath = e.target.files[0].path;
-        props.onImport(filePath);
+        e.target.value = ''; //Reset to allow importing the same file
+        const filetype = Path.extname(filePath).toLowerCase();
+
+        if (filetype != '.xml') {
+            props.onImport([], 'File type is invalid: '+filetype);
+            return;
+        }
+
+        const parser = new xml2js.Parser();
+        fs.readFile(filePath, function (err, data) {
+            parser.parseStringPromise(data)
+                .then((result: ImportConfigType) => {
+                    
+                    const configObject = result.configuration.item.map(item => {
+                        return {itemName: item.$.name, itemValue: item.$.value};
+                    })
+                    props.onImport(configObject, '');
+
+                }).catch(function (err) {
+                    props.onImport([], 'Error parsing file: '+filePath);                    
+                });
+        });
+        
     }
 
     const handleOnCreateNew = () => {

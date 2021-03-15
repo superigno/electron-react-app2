@@ -32,11 +32,11 @@ export const Item = (props: ItemProps) => {
 
     if (typeLower === 'number') {
 
-        inputElement = <NumericInput key={props.item.name} defaultValue={props.item.value as string} large={false} size={props.item.size ? props.item.size : 1} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
+        inputElement = <NumericInput key={props.item.name} defaultValue={props.item.value as number} large={false} size={props.item.size ? props.item.size : 1} onValueChange={(valueAsNum, valueAsString) => handleOnChange(valueAsString)} />;
 
     } else if (typeLower === 'boolean') {
 
-        const isChecked = props.item.value && (props.item.value as string) == 'true' ? true : false;
+        const isChecked = props.item.value ? true : false;
 
         inputElement = <Switch key={props.item.name} defaultChecked={isChecked} onChange={(e) => handleOnChange(e.currentTarget.checked ? "true" : "false")} innerLabelChecked="On" innerLabel="Off" />;
 

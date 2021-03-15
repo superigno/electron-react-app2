@@ -56,7 +56,17 @@ export default class SchemaFactory {
     }
 
     static getOperationsSchema = (): {groups: ItemGroupType[]} => {
-        return OPERATIONS;
+        //return new object as deep copy
+        return JSON.parse(JSON.stringify(OPERATIONS));
+    }
+
+    static getAllTerminalSchemas = (): any => {
+        const terminalSchemas: any = {};
+        Object.values(AppConstants.TERMINALS).map((terminal: any) => {
+            terminalSchemas[terminal] = SchemaFactory.getTerminalSchema(terminal);
+        })
+        //return new object as deep copy
+        return JSON.parse(JSON.stringify(terminalSchemas));
     }
   
   }
