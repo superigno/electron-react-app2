@@ -341,7 +341,7 @@
 					"name": "DEFAULT_CURRENCY",
 					"type": "select",
 					"description": "Default currency for request from Wincor",
-					"options": ["HKD", "USD", "AUD", "SGD", "TODO:"],
+					"options": ["HKD", "USD", "AUD", "SGD", "EUR"],
 					"value": "HKD"
 				},
 				{
