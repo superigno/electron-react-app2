@@ -1,7 +1,7 @@
 import React from 'react';
 import { Footer } from '../Footer';
-import { ItemGroup, ItemGroupType } from './ItemGroup';
-import { Button, Icon, Intent, Spinner, Switch, TextArea, Tooltip } from '@blueprintjs/core';
+import { ItemGroup } from './ItemGroup';
+import { Button, Intent, Spinner } from '@blueprintjs/core';
 import SchemaFactory from './SchemaFactory';
 import df from 'd-forest';
 import Utils from './util/Utils';
