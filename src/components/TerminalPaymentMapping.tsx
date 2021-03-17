@@ -12,7 +12,7 @@ const PAYMENT_TYPE_LIST = Object.values(AppConstants.PAYMENT_TYPES);
 type TerminalPaymentMappingProps = {
     operationsSchema: any,
     terminalSchemas: any,
-    isAdvanced: boolean,
+    isAdvancedMode: boolean,
     toggleReload: boolean,
     onChange: (name: string, value: string | string[]) => void
     onActiveTerminalsChange: (activeTerminals: string[]) => void
@@ -170,7 +170,7 @@ export const TerminalPaymentMapping = (props: TerminalPaymentMappingProps) => {
                 </div>
             </div>
 
-            {props.isAdvanced &&
+            {props.isAdvancedMode &&
                 <div className="contentRow">
                     <div className="label">
                         Terminal Card Scheme
@@ -204,7 +204,7 @@ export const TerminalPaymentMapping = (props: TerminalPaymentMappingProps) => {
 
         {
             TERMINAL_LIST.map((terminal: string) => {
-                return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} advanced={props.isAdvanced} group={props.terminalSchemas[terminal]} onChange={props.onChange} />
+                return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} advanced={props.isAdvancedMode} group={props.terminalSchemas[terminal]} onChange={props.onChange} />
             })
         }
 

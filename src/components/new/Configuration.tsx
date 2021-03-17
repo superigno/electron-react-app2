@@ -53,7 +53,7 @@ export const Configuration = () => {
         if (error) {
             alert(error);
             console.error(error);
-        } else {            
+        } else {
             const groupsArray = operationsSchema.groups.map(group => {
                 const items = group.items.filter((item) => {
                     const match = df(configObj).findLeaf((leaf: any) => leaf.itemName === item.name);
@@ -84,7 +84,6 @@ export const Configuration = () => {
 
             reload();
         }
-
     }
 
     const handleOnSubmit = () => {
@@ -116,8 +115,9 @@ export const Configuration = () => {
             </div>
 
             {isLoading &&
-                <div className="content">
-                    <Spinner />
+                <div className="content" style={{textAlign: 'center'}}>
+                    <Spinner /><br/>
+                    Loading...
                 </div>
             }
 
@@ -133,8 +133,8 @@ export const Configuration = () => {
                         })
                     }
 
-                    <TerminalPaymentMapping operationsSchema={operationsSchema} terminalSchemas={terminalSchemas} isAdvanced={isAdvancedMode} toggleReload={toggleReload}
-                        onChange={handleOnChange} onActiveTerminalsChange={handleActiveTerminalsChange} />
+                    <TerminalPaymentMapping operationsSchema={operationsSchema} terminalSchemas={terminalSchemas} isAdvancedMode={isAdvancedMode}
+                        toggleReload={toggleReload} onChange={handleOnChange} onActiveTerminalsChange={handleActiveTerminalsChange} />
 
                     {
                         //Filtering since these are already displayed at the top
