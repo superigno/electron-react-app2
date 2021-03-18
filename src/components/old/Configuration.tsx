@@ -8,7 +8,7 @@ import { NavigationBar } from './NavigationBar';
 import fs from 'fs';
 import Path from 'path';
 import xml2js from 'xml2js';
-import { Footer } from './Footer';
+import { Footer } from '../Footer';
 import { Content } from './Content';
 
 export type ConfigType = {

@@ -139,7 +139,7 @@ export const Configuration = () => {
             }
 
             <div className="button">
-                <Button intent={Intent.PRIMARY} onClick={handleOnSubmit} text="Generate" icon={"export"} large={true} />
+                <Button intent={Intent.PRIMARY} onClick={handleOnSubmit} text="Generate" icon={"export"} large={true} disabled={isLoading} />
             </div>
 
         </div>
@@ -166,6 +166,8 @@ const updateSchemaFromImportObject = (schema: SchemaType, configObj: ImportConfi
             return { ...item, value: getActualValue(item.type, match.itemValue) };
         });
         return { ...group, items: items };
+    }).filter((group: ItemGroupType) => {
+        return group.items.length > 0; //do not display group section when items are empty
     });
     return { groups: groupsArr };
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Configuration, ConfigType, ConfigTypes } from './Configuration';
 import { NavigationBar } from './NavigationBar';
-import { Footer } from './Footer';
+import { Footer } from '../Footer';
 import fs from 'fs';
 import Path from 'path';
 import xml2js from 'xml2js';

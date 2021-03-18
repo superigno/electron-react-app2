@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Classes, InputGroup, Label, Tooltip, Icon, NumericInput, Switch, TextArea } from '@blueprintjs/core';
-import { SelectItem, OptionType } from './SelectItem';
-import { MultiSelectItem } from './MultiSelectItem';
+import { SelectItem, OptionType } from '../SelectItem';
+import { MultiSelectItem } from '../MultiSelectItem';
 
 type ItemProps = {
     item: ItemType,
