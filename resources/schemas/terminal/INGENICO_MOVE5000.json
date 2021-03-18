@@ -2,7 +2,7 @@
     "groups": [
         {
             "order": 21,
-            "name": "Ingenico Terminal Serial Comm Port settings",
+            "name": "Ingenico Move5000 Configuration",
             "type": "Operations",
             "items": [
                 {

@@ -2,7 +2,7 @@
     "groups": [
         {
             "order": 43,
-            "name": "EPAY related configurations",
+            "name": "EPAY Configuration",
             "type": "Operations",
             "items": [
                 {

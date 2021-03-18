@@ -1002,7 +1002,7 @@
 		},
 		{
 			"order": 21,
-			"name": "Ingenico Terminal Serial Comm Port settings",
+			"name": "Ingenico Move5000 Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -1086,7 +1086,7 @@
 		},
 		{
 			"order": 22,
-			"name": "DPAPOSA8 Terminal Serial Comm Port settings",
+			"name": "DPAPOSA8 Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -1188,7 +1188,7 @@
 		},
 		{
 			"order": 23,
-			"name": "PAX_S60 Configuration",
+			"name": "PAX S60 Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -1273,7 +1273,7 @@
 		},
 		{
 			"order": 24,
-			"name": "PAX A920 Terminal Serial Comm Port settings",
+			"name": "PAX A920 Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -1436,7 +1436,7 @@
 		},
 		{
 			"order": 26,
-			"name": "Ingenico ICT250 Terminal Serial Comm Port settings",
+			"name": "Ingenico ICT250 Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -1558,7 +1558,7 @@
 		},
 		{
 			"order": 27,
-			"name": "Tyro Settings",
+			"name": "Tyro Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -2533,7 +2533,7 @@
 		},
 		{
 			"order": 43,
-			"name": "EPAY related configurations",
+			"name": "EPAY Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -2758,7 +2758,7 @@
 		},
 		{
 			"order": 51,
-			"name": "EFTSOLUTIONS configuration",
+			"name": "EFTSOLUTIONS Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -2868,7 +2868,7 @@
 		},
 		{
 			"order": 52,
-			"name": "OCEANPAYMENT configuration",
+			"name": "OCEANPAYMENT Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -3011,7 +3011,7 @@
 		},
 		{
 			"order": 53,
-			"name": "UPLAN configuration",
+			"name": "UPLAN Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -3117,7 +3117,7 @@
 		},
 		{
 			"order": 54,
-			"name": "SWIFTPASS configuration",
+			"name": "SWIFTPASS Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -3238,7 +3238,7 @@
 		},
 		{
 			"order": 55,
-			"name": "MACAUPASS configuration",
+			"name": "MACAUPASS Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -3310,7 +3310,7 @@
 		},
 		{
 			"order": 56,
-			"name": "OCEANPAYMENT_CLIENT configuration",
+			"name": "OCEANPAYMENT_CLIENT Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -3382,7 +3382,7 @@
 		},
 		{
 			"order": 57,
-			"name": "FISERV configuration",
+			"name": "FISERV Configuration",
 			"type": "Operations",
 			"items": [
 				{
@@ -3454,7 +3454,7 @@
 		},
 		{
 			"order": 57,
-			"name": "PSP Terminal Socket configuration",
+			"name": "PSP Terminal Configuration",
 			"type": "Operations",
 			"items": [
 				{

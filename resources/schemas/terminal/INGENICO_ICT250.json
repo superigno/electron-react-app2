@@ -2,7 +2,7 @@
     "groups": [
         {
             "order": 26,
-            "name": "Ingenico ICT250 Terminal Serial Comm Port settings",
+            "name": "Ingenico ICT250 Configuration",
             "type": "Operations",
             "items": [
                 {

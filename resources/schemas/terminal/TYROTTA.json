@@ -2,7 +2,7 @@
     "groups": [
         {
             "order": 27,
-            "name": "Tyro Settings",
+            "name": "Tyro Configuration",
             "type": "Operations",
             "items": [
                 {

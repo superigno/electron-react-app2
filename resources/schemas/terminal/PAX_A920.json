@@ -2,7 +2,7 @@
     "groups": [
         {
             "order": 24,
-            "name": "PAX A920 Terminal Serial Comm Port settings",
+            "name": "PAX A920 Configuration",
             "type": "Operations",
             "items": [
                 {
