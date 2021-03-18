@@ -4,13 +4,13 @@ body {
 
 .wrapper {
   padding: 40px 30px 20px 30px;
- /* flex: 1 100%;*/
 }
 
 .content {
   padding: 20px 30px 20px 30px;
   border: 1px solid;
   border-color: lightgray;
+  border-style: dotted;
   margin-top: 30px;
 }
 
