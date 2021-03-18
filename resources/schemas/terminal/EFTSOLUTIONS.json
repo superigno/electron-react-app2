@@ -1,110 +1,114 @@
 {
-    "order": 51,
-    "name": "EFTSOLUTIONS configuration",
-    "type": "Operations",
-    "items": [
+    "groups": [
         {
-            "order": 1,
-            "name": "EFTSOLUTIONS_SIMULATOR_MODE",
-            "type": "boolean",
-            "value": false
-        },
-        {
-            "order": 2,
-            "name": "EFTSOLUTIONS_PRIMARY_URL",
-            "type": "text",
-            "value": "http://testpri.eftsolutions.com:9966",
-            "advanced": true
-        },
-        {
-            "order": 3,
-            "name": "EFTSOLUTIONS_SECONDARY_URL",
-            "type": "text",
-            "value": "http://testsec.eftsolutions.com:9966",
-            "advanced": true
-        },
-        {
-            "order": 4,
-            "name": "EFTSOLUTIONS_MID",
-            "type": "text",
-            "value": "344888800000001",
-            "advanced": true
-        },
-        {
-            "order": 5,
-            "name": "EFTSOLUTIONS_TID",
-            "type": "text",
-            "value": "28000069",
-            "advanced": true
-        },
-        {
-            "order": 6,
-            "name": "EFTSOLUTIONS_SETTLEMENT_TIME",
-            "type": "text",
-            "value": "23:00",
-            "description": "24-hour format",
-            "advanced": true
-        },
-        {
-            "order": 7,
-            "name": "EFTSOLUTIONS_READ_TIMEOUT",
-            "type": "number",
-            "value": 90000,
-            "description": "In milliseconds",
-            "advanced": true
-        },
-        {
-            "order": 8,
-            "name": "EFTSOLUTIONS_CONN_TIMEOUT",
-            "type": "number",
-            "value": 10000,
-            "description": "In milliseconds",
-            "advanced": true
-        },
-        {
-            "order": 9,
-            "name": "EFTSOLUTIONS_FAILOVER_ENABLED",
-            "type": "boolean",
-            "value": true,
-            "advanced": true
-        },
-        {
-            "order": 10,
-            "name": "EFTSOLUTIONS_SETTLEMENT_RETRY",
-            "type": "number",
-            "value": 3,
-            "description": "EFT Solutions settlement attempts",
-            "advanced": true
-        },
-        {
-            "order": 11,
-            "name": "EFTSOLUTIONS_SETTLEMENT_ENABLED",
-            "type": "boolean",
-            "value": false,
-            "description": "Flag to perform EFT Solutions settlement",
-            "advanced": true
-        },
-        {
-            "order": 12,
-            "name": "EFTSOLUTIONS_REVERSAL_RETRY_TIMES",
-            "type": "number",
-            "value": 3,
-            "advanced": true
-        },
-        {
-            "order": 13,
-            "name": "EFTSOLUTIONS_REVERSAL_RETRY_TIME_INTERVAL",
-            "type": "number",
-            "value": 10,
-            "description": "In seconds",
-            "advanced": true
-        },
-        {
-            "order": 14,
-            "name": "EFTSOLUTIONS_ENABLE_REVERSAL",
-            "type": "boolean",
-            "value": true,
-            "advanced": true
+            "order": 51,
+            "name": "EFTSOLUTIONS configuration",
+            "type": "Operations",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "EFTSOLUTIONS_SIMULATOR_MODE",
+                    "type": "boolean",
+                    "value": false
+                },
+                {
+                    "order": 2,
+                    "name": "EFTSOLUTIONS_PRIMARY_URL",
+                    "type": "text",
+                    "value": "http://testpri.eftsolutions.com:9966",
+                    "advanced": true
+                },
+                {
+                    "order": 3,
+                    "name": "EFTSOLUTIONS_SECONDARY_URL",
+                    "type": "text",
+                    "value": "http://testsec.eftsolutions.com:9966",
+                    "advanced": true
+                },
+                {
+                    "order": 4,
+                    "name": "EFTSOLUTIONS_MID",
+                    "type": "text",
+                    "value": "344888800000001",
+                    "advanced": true
+                },
+                {
+                    "order": 5,
+                    "name": "EFTSOLUTIONS_TID",
+                    "type": "text",
+                    "value": "28000069",
+                    "advanced": true
+                },
+                {
+                    "order": 6,
+                    "name": "EFTSOLUTIONS_SETTLEMENT_TIME",
+                    "type": "text",
+                    "value": "23:00",
+                    "description": "24-hour format",
+                    "advanced": true
+                },
+                {
+                    "order": 7,
+                    "name": "EFTSOLUTIONS_READ_TIMEOUT",
+                    "type": "number",
+                    "value": 90000,
+                    "description": "In milliseconds",
+                    "advanced": true
+                },
+                {
+                    "order": 8,
+                    "name": "EFTSOLUTIONS_CONN_TIMEOUT",
+                    "type": "number",
+                    "value": 10000,
+                    "description": "In milliseconds",
+                    "advanced": true
+                },
+                {
+                    "order": 9,
+                    "name": "EFTSOLUTIONS_FAILOVER_ENABLED",
+                    "type": "boolean",
+                    "value": true,
+                    "advanced": true
+                },
+                {
+                    "order": 10,
+                    "name": "EFTSOLUTIONS_SETTLEMENT_RETRY",
+                    "type": "number",
+                    "value": 3,
+                    "description": "EFT Solutions settlement attempts",
+                    "advanced": true
+                },
+                {
+                    "order": 11,
+                    "name": "EFTSOLUTIONS_SETTLEMENT_ENABLED",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "Flag to perform EFT Solutions settlement",
+                    "advanced": true
+                },
+                {
+                    "order": 12,
+                    "name": "EFTSOLUTIONS_REVERSAL_RETRY_TIMES",
+                    "type": "number",
+                    "value": 3,
+                    "advanced": true
+                },
+                {
+                    "order": 13,
+                    "name": "EFTSOLUTIONS_REVERSAL_RETRY_TIME_INTERVAL",
+                    "type": "number",
+                    "value": 10,
+                    "description": "In seconds",
+                    "advanced": true
+                },
+                {
+                    "order": 14,
+                    "name": "EFTSOLUTIONS_ENABLE_REVERSAL",
+                    "type": "boolean",
+                    "value": true,
+                    "advanced": true
+                }
+            ]
         }
     ]
 }

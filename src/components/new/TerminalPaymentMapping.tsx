@@ -1,17 +1,18 @@
 import { TextArea } from '@blueprintjs/core';
 import React from 'react';
-import { MultiSelectItem } from './MultiSelectItem';
-import AppConstants from './new/constant/AppConstants';
-import { SelectItem } from './SelectItem';
+import { MultiSelectItem } from '../MultiSelectItem';
+import AppConstants from './constant/AppConstants';
+import { SelectItem } from '../SelectItem';
 import df from 'd-forest';
-import { ItemGroup } from './new/ItemGroup';
+import { ItemGroup } from './ItemGroup';
+import { SchemaType } from './Configuration';
 
 const TERMINAL_LIST = Object.values(AppConstants.TERMINALS);
 const PAYMENT_TYPE_LIST = Object.values(AppConstants.PAYMENT_TYPES);
 
 type TerminalPaymentMappingProps = {
-    operationsSchema: any,
-    terminalSchemas: any,
+    operationsSchema: SchemaType,
+    terminalSchemas: {[key:string]: SchemaType},
     isAdvancedMode: boolean,
     toggleReload: boolean,
     onChange: (name: string, value: string | string[]) => void
@@ -72,7 +73,6 @@ export const TerminalPaymentMapping = (props: TerminalPaymentMappingProps) => {
 
     /** Initialize states on initial load or 'Create New' */
     React.useEffect(() => {
-        console.log('Init states');
         initActiveTerminalsList();
         initCardSchemesList();
         initPaymentTypesAndTerminalMapping();
@@ -204,7 +204,8 @@ export const TerminalPaymentMapping = (props: TerminalPaymentMappingProps) => {
 
         {
             TERMINAL_LIST.map((terminal: string) => {
-                return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} advanced={props.isAdvancedMode} group={props.terminalSchemas[terminal]} onChange={props.onChange} />
+                return <ItemGroup key={terminal} hidden={terminalHidden[terminal]} advanced={props.isAdvancedMode} group={props.terminalSchemas[terminal].groups[0]} onChange={props.onChange} />
+        
             })
         }
 

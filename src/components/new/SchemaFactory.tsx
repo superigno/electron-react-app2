@@ -6,67 +6,77 @@ import PAX_S60 from '../../../resources/schemas/terminal/PAX_S60.json';
 import PAX_A920 from '../../../resources/schemas/terminal/PAX_A920.json';
 import INGENICO_ICT250 from '../../../resources/schemas/terminal/INGENICO_ICT250.json';
 import TYROTTA from '../../../resources/schemas/terminal/TYROTTA.json';
-import EPAY from '../../../resources/schemas/terminal/EPAY.json'; 
-import EFTSOLUTIONS from '../../../resources/schemas/terminal/EFTSOLUTIONS.json'; 
-import OCEANPAYMENT from '../../../resources/schemas/terminal/OCEANPAYMENT.json'; 
-import UPLAN from '../../../resources/schemas/terminal/UPLAN.json'; 
-import SWIFTPASS from '../../../resources/schemas/terminal/SWIFTPASS.json'; 
-import MACAUPASS from '../../../resources/schemas/terminal/MACAUPASS.json'; 
-import OCEANPAYMENT_CLIENT from '../../../resources/schemas/terminal/OCEANPAYMENT_CLIENT.json'; 
-import FISERV from '../../../resources/schemas/terminal/FISERV.json'; 
-import PSP_TERMINAL from '../../../resources/schemas/terminal/PSP_TERMINAL.json'; 
+import EPAY from '../../../resources/schemas/terminal/EPAY.json';
+import EFTSOLUTIONS from '../../../resources/schemas/terminal/EFTSOLUTIONS.json';
+import OCEANPAYMENT from '../../../resources/schemas/terminal/OCEANPAYMENT.json';
+import UPLAN from '../../../resources/schemas/terminal/UPLAN.json';
+import SWIFTPASS from '../../../resources/schemas/terminal/SWIFTPASS.json';
+import MACAUPASS from '../../../resources/schemas/terminal/MACAUPASS.json';
+import OCEANPAYMENT_CLIENT from '../../../resources/schemas/terminal/OCEANPAYMENT_CLIENT.json';
+import FISERV from '../../../resources/schemas/terminal/FISERV.json';
+import PSP_TERMINAL from '../../../resources/schemas/terminal/PSP_TERMINAL.json';
 import OPERATIONS from '../../../resources/schemas/operations_schema.json';
+import { SchemaType } from './Configuration';
 
 export default class SchemaFactory {
-
-    static getTerminalSchema = (terminal: string): ItemGroupType => {
+    
+    static getTerminalSchema = (terminal: string): SchemaType => {
+        let terminalSchema = {} as SchemaType;
         if (terminal == AppConstants.TERMINALS.INGENICO_MOVE5000) {
-            return INGENICO_MOVE5000;
+            terminalSchema = INGENICO_MOVE5000;
         } else if (terminal == AppConstants.TERMINALS.DPAPOSA8) {
-            return DPAPOSA8;
+            terminalSchema = DPAPOSA8;
         } else if (terminal == AppConstants.TERMINALS.PAX_S60) {
-            return PAX_S60;
+            terminalSchema = PAX_S60;
         } else if (terminal == AppConstants.TERMINALS.PAX_A920) {
-            return PAX_A920;
+            terminalSchema = PAX_A920;
         } else if (terminal == AppConstants.TERMINALS.INGENICO_ICT250) {
-            return INGENICO_ICT250;
+            terminalSchema = INGENICO_ICT250;
         } else if (terminal == AppConstants.TERMINALS.TYROTTA) {
-            return TYROTTA;
+            terminalSchema = TYROTTA;
         } else if (terminal == AppConstants.TERMINALS.EPAY) {
-            return EPAY;
+            terminalSchema = EPAY;
         } else if (terminal == AppConstants.TERMINALS.EFTSOLUTIONS) {
-            return EFTSOLUTIONS;
+            terminalSchema = EFTSOLUTIONS;
         } else if (terminal == AppConstants.TERMINALS.OCEANPAYMENT) {
-            return OCEANPAYMENT;
+            terminalSchema = OCEANPAYMENT;
         } else if (terminal == AppConstants.TERMINALS.UPLAN) {
-            return UPLAN;
+            terminalSchema = UPLAN;
         } else if (terminal == AppConstants.TERMINALS.SWIFTPASS) {
-            return SWIFTPASS;
+            terminalSchema = SWIFTPASS;
         } else if (terminal == AppConstants.TERMINALS.MACAUPASS) {
-            return MACAUPASS;
+            terminalSchema = MACAUPASS;
         } else if (terminal == AppConstants.TERMINALS.OCEANPAYMENT_CLIENT) {
-            return OCEANPAYMENT_CLIENT;
+            terminalSchema = OCEANPAYMENT_CLIENT;
         } else if (terminal == AppConstants.TERMINALS.FISERV) {
-            return FISERV;
+            terminalSchema = FISERV;
         } else if (terminal == AppConstants.TERMINALS.PSP_TERMINAL) {
-            return PSP_TERMINAL;
-        } else {
-            return {} as ItemGroupType;
-        }
+            terminalSchema = PSP_TERMINAL;
+        }     
+        return SchemaFactory.makeImmutable(terminalSchema);
     }
 
-    static getOperationsSchema = (): {groups: ItemGroupType[]} => {
-        //return new object as deep copy
-        return JSON.parse(JSON.stringify(OPERATIONS));
+    static getOperationsSchema = (): SchemaType => {
+        return SchemaFactory.makeImmutable(OPERATIONS);
     }
 
-    static getAllTerminalSchemas = (): any => {
+    //Return immutable object
+    static getAllTerminalSchemas = (): {} => {
         const terminalSchemas: any = {};
-        Object.values(AppConstants.TERMINALS).map((terminal: any) => {
+        Object.values(AppConstants.TERMINALS).map((terminal: string) => {
             terminalSchemas[terminal] = SchemaFactory.getTerminalSchema(terminal);
-        })
-        //return new object as deep copy
-        return JSON.parse(JSON.stringify(terminalSchemas));
+        });        
+        return Object.freeze(terminalSchemas);
     }
-  
-  }
+
+    private static makeImmutable = (schema: SchemaType) => {
+        const groupsArr = schema.groups.map((group: ItemGroupType) => {
+            const itemsArr = group.items.map(item => {
+                return Object.freeze(item);
+            });
+            return Object.freeze({ ...group, items: itemsArr });
+        });
+        return Object.freeze({ groups: groupsArr });
+    }
+
+}

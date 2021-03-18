@@ -1188,7 +1188,7 @@
 		},
 		{
 			"order": 23,
-			"name": "PAX S60 Terminal Serial Comm Port settings",
+			"name": "PAX_S60 Configuration",
 			"type": "Operations",
 			"items": [
 				{

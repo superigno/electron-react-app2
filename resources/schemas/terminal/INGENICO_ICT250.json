@@ -1,122 +1,126 @@
 {
-    "order": 26,
-    "name": "Ingenico ICT250 Terminal Serial Comm Port settings",
-    "type": "Operations",
-    "items": [
+    "groups": [
         {
-            "order": 1,
-            "name": "INGENICO_ICT250_COM_PORT",
-            "type": "text",
-            "description": "Serial COMM PORT name",
-            "value": "COM34"
-        },
-        {
-            "order": 3,
-            "name": "INGENICO_ICT250_BAUD_RATE",
-            "type": "number",
-            "description": "19200/9600...",
-            "value": 115200,
-            "advanced": true
-        },
-        {
-            "order": 4,
-            "name": "INGENICO_ICT250_DATA_BIT",
-            "type": "number",
-            "description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
-            "value": 8,
-            "advanced": true
-        },
-        {
-            "order": 5,
-            "name": "INGENICO_ICT250_STOP_BIT",
-            "type": "number",
-            "description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
-            "value": 1,
-            "advanced": true
-        },
-        {
-            "order": 6,
-            "name": "INGENICO_ICT250_PARITY_BIT",
-            "type": "number",
-            "description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
-            "value": 0,
-            "advanced": true
-        },
-        {
-            "order": 7,
-            "name": "INGENICO_ICT250_ACK_TIMEOUT",
-            "type": "number",
-            "description": "In seconds, the timeout setting between PC & terminal",
-            "value": 3,
-            "advanced": true
-        },
-        {
-            "order": 8,
-            "name": "INGENICO_ICT250_TXN_TIMEOUT",
-            "type": "number",
-            "description": "In seconds, the timeout setting between PC & terminal",
-            "value": 3,
-            "advanced": true
-        },
-        {
-            "order": 9,
-            "name": "INGENICO_ICT250_PROCESS_TIMEOUT",
-            "type": "number",
-            "description": "In seconds, how long a process can be done with the terminal",
-            "value": 100,
-            "advanced": true
-        },
-        {
-            "order": 10,
-            "name": "INGENICO_ICT250_ON_DEMAND_TIMEOUT",
-            "type": "number",
-            "description": "In seconds, how long an on-demand form can be done with the terminal",
-            "value": 5,
-            "advanced": true
-        },
-        {
-            "order": 11,
-            "name": "INGENICO_ICT250_TOKEN_BYPASS_APPROVAL",
-            "type": "boolean",
-            "value": false,
-            "advanced": true
-        },
-        {
-            "order": 12,
-            "name": "INGENICO_ICT250_DEFAULT_CURRENCY",
-            "type": "text",
-            "value": "EUR",
-            "description": "Currency Code, depends on the terminal configuration",
-            "advanced": true
-        },
-        {
-            "order": 13,
-            "name": "INGENICO_ICT250_DEFAULT_BASEAMOUNT",
-            "type": "number",
-            "value": 1,
-            "description": "Default base amount, depends on the terminal configuration",
-            "advanced": true
-        },
-        {
-            "order": 2,
-            "name": "INGENICO_ICT250_SIMULATOR_MODE",
-            "type": "boolean",
-            "value": true
-        },
-        {
-            "order": 15,
-            "name": "INGENICO_ICT250_AUTOVOID_ENABLED",
-            "type": "boolean",
-            "value": true,
-            "advanced": true
-        },
-        {
-            "order": 16,
-            "name": "INGENICO_ICT250_CARDVERIFY_ENABLED",
-            "type": "boolean",
-            "value": true,
-            "description": "TRUE for CardVerification function else FALSE for PreAuth Sale, if TRUE minimum Amount should allow Zero 0",
-            "advanced": true
+            "order": 26,
+            "name": "Ingenico ICT250 Terminal Serial Comm Port settings",
+            "type": "Operations",
+            "items": [
+                {
+                    "order": 1,
+                    "name": "INGENICO_ICT250_COM_PORT",
+                    "type": "text",
+                    "description": "Serial COMM PORT name",
+                    "value": "COM34"
+                },
+                {
+                    "order": 3,
+                    "name": "INGENICO_ICT250_BAUD_RATE",
+                    "type": "number",
+                    "description": "19200/9600...",
+                    "value": 115200,
+                    "advanced": true
+                },
+                {
+                    "order": 4,
+                    "name": "INGENICO_ICT250_DATA_BIT",
+                    "type": "number",
+                    "description": "DATABITS_5 = 5; DATABITS_6 = 6; DATABITS_7 = 7; DATABITS_8 = 8;",
+                    "value": 8,
+                    "advanced": true
+                },
+                {
+                    "order": 5,
+                    "name": "INGENICO_ICT250_STOP_BIT",
+                    "type": "number",
+                    "description": "STOPBITS_1 = 1; STOPBITS_2 = 2; STOPBITS_1_5 = 3;",
+                    "value": 1,
+                    "advanced": true
+                },
+                {
+                    "order": 6,
+                    "name": "INGENICO_ICT250_PARITY_BIT",
+                    "type": "number",
+                    "description": "PARITY_NONE = 0; PARITY_ODD = 1; PARITY_EVEN = 2; PARITY_MARK = 3; PARITY_SPACE = 4;",
+                    "value": 0,
+                    "advanced": true
+                },
+                {
+                    "order": 7,
+                    "name": "INGENICO_ICT250_ACK_TIMEOUT",
+                    "type": "number",
+                    "description": "In seconds, the timeout setting between PC & terminal",
+                    "value": 3,
+                    "advanced": true
+                },
+                {
+                    "order": 8,
+                    "name": "INGENICO_ICT250_TXN_TIMEOUT",
+                    "type": "number",
+                    "description": "In seconds, the timeout setting between PC & terminal",
+                    "value": 3,
+                    "advanced": true
+                },
+                {
+                    "order": 9,
+                    "name": "INGENICO_ICT250_PROCESS_TIMEOUT",
+                    "type": "number",
+                    "description": "In seconds, how long a process can be done with the terminal",
+                    "value": 100,
+                    "advanced": true
+                },
+                {
+                    "order": 10,
+                    "name": "INGENICO_ICT250_ON_DEMAND_TIMEOUT",
+                    "type": "number",
+                    "description": "In seconds, how long an on-demand form can be done with the terminal",
+                    "value": 5,
+                    "advanced": true
+                },
+                {
+                    "order": 11,
+                    "name": "INGENICO_ICT250_TOKEN_BYPASS_APPROVAL",
+                    "type": "boolean",
+                    "value": false,
+                    "advanced": true
+                },
+                {
+                    "order": 12,
+                    "name": "INGENICO_ICT250_DEFAULT_CURRENCY",
+                    "type": "text",
+                    "value": "EUR",
+                    "description": "Currency Code, depends on the terminal configuration",
+                    "advanced": true
+                },
+                {
+                    "order": 13,
+                    "name": "INGENICO_ICT250_DEFAULT_BASEAMOUNT",
+                    "type": "number",
+                    "value": 1,
+                    "description": "Default base amount, depends on the terminal configuration",
+                    "advanced": true
+                },
+                {
+                    "order": 2,
+                    "name": "INGENICO_ICT250_SIMULATOR_MODE",
+                    "type": "boolean",
+                    "value": true
+                },
+                {
+                    "order": 15,
+                    "name": "INGENICO_ICT250_AUTOVOID_ENABLED",
+                    "type": "boolean",
+                    "value": true,
+                    "advanced": true
+                },
+                {
+                    "order": 16,
+                    "name": "INGENICO_ICT250_CARDVERIFY_ENABLED",
+                    "type": "boolean",
+                    "value": true,
+                    "description": "TRUE for CardVerification function else FALSE for PreAuth Sale, if TRUE minimum Amount should allow Zero 0",
+                    "advanced": true
+                }
+            ]
         }
     ]
 }

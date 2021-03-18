@@ -1,65 +1,69 @@
 {
-    "order": 57,
-    "name": "PSP Terminal Socket configuration",
-    "type": "Operations",
-    "items": [
+    "groups": [
         {
-            "order": 2,
-            "name": "PSP_TERMINAL_IP",
-            "type": "text",
-            "value": "localhost",
-            "advanced": true
-        },
-        {
-            "order": 3,
-            "name": "PSP_TERMINAL_PORT",
-            "type": "number",
-            "value": 8081,
-            "advanced": true
-        },
-        {
-            "order": 4,
-            "name": "PSP_TERMINAL_RETRY_COUNT",
-            "type": "number",
-            "value": 5,
-            "advanced": true
-        },
-        {
-            "order": 5,
-            "name": "PSP_TERMINAL_PROCESS_TIMEOUT",
-            "type": "number",
-            "value": 180,
-            "description": "In seconds",
-            "advanced": true
-        },
-        {
-            "order": 6,
-            "name": "PSP_TERMINAL_ON_DEMAND_TIMEOUT",
-            "type": "number",
-            "value": 1,
-            "description": "In seconds",
-            "advanced": true
-        },
-        {
-            "order": 7,
-            "name": "PSP_TERMINAL_REQUEST_TOKEN",
-            "type": "boolean",
-            "value": true,
-            "advanced": true
-        },
-        {
-            "order": 8,
-            "name": "PSP_TERMINAL_ON_DEMAND_AVAILABILITY_FLAG",
-            "type": "boolean",
-            "value": false,
-            "description": "True to check connection before sending request; else False",
-            "advanced": true
-        },
-        {
-            "order": 1,
-            "name": "PSP_TERMINAL_SIMULATOR_MODE",
-            "type": "boolean",
-            "value": false
+            "order": 57,
+            "name": "PSP Terminal Socket configuration",
+            "type": "Operations",
+            "items": [
+                {
+                    "order": 2,
+                    "name": "PSP_TERMINAL_IP",
+                    "type": "text",
+                    "value": "localhost",
+                    "advanced": true
+                },
+                {
+                    "order": 3,
+                    "name": "PSP_TERMINAL_PORT",
+                    "type": "number",
+                    "value": 8081,
+                    "advanced": true
+                },
+                {
+                    "order": 4,
+                    "name": "PSP_TERMINAL_RETRY_COUNT",
+                    "type": "number",
+                    "value": 5,
+                    "advanced": true
+                },
+                {
+                    "order": 5,
+                    "name": "PSP_TERMINAL_PROCESS_TIMEOUT",
+                    "type": "number",
+                    "value": 180,
+                    "description": "In seconds",
+                    "advanced": true
+                },
+                {
+                    "order": 6,
+                    "name": "PSP_TERMINAL_ON_DEMAND_TIMEOUT",
+                    "type": "number",
+                    "value": 1,
+                    "description": "In seconds",
+                    "advanced": true
+                },
+                {
+                    "order": 7,
+                    "name": "PSP_TERMINAL_REQUEST_TOKEN",
+                    "type": "boolean",
+                    "value": true,
+                    "advanced": true
+                },
+                {
+                    "order": 8,
+                    "name": "PSP_TERMINAL_ON_DEMAND_AVAILABILITY_FLAG",
+                    "type": "boolean",
+                    "value": false,
+                    "description": "True to check connection before sending request; else False",
+                    "advanced": true
+                },
+                {
+                    "order": 1,
+                    "name": "PSP_TERMINAL_SIMULATOR_MODE",
+                    "type": "boolean",
+                    "value": false
+                }
+            ]
         }
     ]
 }

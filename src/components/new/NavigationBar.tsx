@@ -7,7 +7,7 @@ import xml2js from 'xml2js';
 
 type NavBarProps = {
     onCreateNew: () => void,
-    onImport: (configObjects: any [], error: string) => void
+    onImport: (configObjects: ImportConfigObjectType[], error: string) => void
     isAdvancedMode: boolean,
     onToggleAdvancedMode: (e:any) => void
 }
@@ -21,6 +21,11 @@ type ImportConfigType = {
             }
         }[]
     }
+}
+
+export type ImportConfigObjectType = {
+    itemName: string,
+    itemValue: string
 }
 
 export const NavigationBar = (props: NavBarProps) => {
@@ -51,13 +56,13 @@ export const NavigationBar = (props: NavBarProps) => {
             parser.parseStringPromise(data)
                 .then((result: ImportConfigType) => {
                     
-                    const configObject = result.configuration.item.map(item => {
+                    const configObject: ImportConfigObjectType[] = result.configuration.item.map(item => {
                         return {itemName: item.$.name, itemValue: item.$.value};
                     })
                     props.onImport(configObject, '');
 
                 }).catch(function (err) {
-                    props.onImport([], 'Error parsing file: '+filePath);                    
+                    props.onImport([], 'Error parsing file: '+filePath+' '+err);                    
                 });
         });
         

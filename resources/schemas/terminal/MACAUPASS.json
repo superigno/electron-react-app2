@@ -1,83 +1,87 @@
 {
-    "order": 55,
-    "name": "MACAUPASS configuration",
-    "type": "Operations",
-    "items": [
+    "groups": [
         {
-            "order": 0,
-            "name": "MACAUPASS_MODE",
-            "type": "select",
-            "description": "TEST or LIVE, connect to live/test MACAUPASS Host",
-            "options": [
-                "TEST",
-                "LIVE"
-            ],
-            "value": "TEST"
-        },
-        {
-            "order": 1,
-            "name": "MACAUPASS_SIMULATOR_MODE",
-            "type": "boolean",
-            "value": false
-        },
-        {
-            "order": 2,
-            "name": "MACAUPASS_READ_TIMEOUT",
-            "type": "number",
-            "value": 180,
-            "description": "In seconds",
-            "advanced": true
-        },
-        {
-            "order": 3,
-            "name": "MACAUPASS_CONN_TIMEOUT",
-            "type": "number",
-            "value": 10,
-            "description": "In seconds",
-            "advanced": true
-        },
-        {
-            "order": 4,
-            "name": "MACAUPASS_PRIMARY_URL",
-            "type": "text",
-            "value": "https://hkm1.pure-commerce.com/agent/mpay",
-            "advanced": true
-        },
-        {
-            "order": 5,
-            "name": "MACAUPASS_SECONDARY_URL",
-            "type": "text",
-            "value": "https://hkm2.pure-commerce.com/agent/mpay",
-            "advanced": true
-        },
-        {
-            "order": 6,
-            "name": "MACAUPASS_URL_TEST",
-            "type": "text",
-            "value": "https://dev2.pure-commerce.com/agent/mpay",
-            "advanced": true
-        },
-        {
-            "order": 7,
-            "name": "MACAUPASS_RETRY_TIMES",
-            "type": "number",
-            "value": 20,
-            "advanced": true
-        },
-        {
-            "order": 8,
-            "name": "MACAUPASS_RETRY_TIME_INTERVAL",
-            "type": "number",
-            "value": 5,
-            "description": "In seconds",
-            "advanced": true
-        },
-        {
-            "order": 9,
-            "name": "MACAUPASS_RECEIPT_FLAG",
-            "type": "text",
-            "value": "1",
-            "advanced": true
+            "order": 55,
+            "name": "MACAUPASS configuration",
+            "type": "Operations",
+            "items": [
+                {
+                    "order": 0,
+                    "name": "MACAUPASS_MODE",
+                    "type": "select",
+                    "description": "TEST or LIVE, connect to live/test MACAUPASS Host",
+                    "options": [
+                        "TEST",
+                        "LIVE"
+                    ],
+                    "value": "TEST"
+                },
+                {
+                    "order": 1,
+                    "name": "MACAUPASS_SIMULATOR_MODE",
+                    "type": "boolean",
+                    "value": false
+                },
+                {
+                    "order": 2,
+                    "name": "MACAUPASS_READ_TIMEOUT",
+                    "type": "number",
+                    "value": 180,
+                    "description": "In seconds",
+                    "advanced": true
+                },
+                {
+                    "order": 3,
+                    "name": "MACAUPASS_CONN_TIMEOUT",
+                    "type": "number",
+                    "value": 10,
+                    "description": "In seconds",
+                    "advanced": true
+                },
+                {
+                    "order": 4,
+                    "name": "MACAUPASS_PRIMARY_URL",
+                    "type": "text",
+                    "value": "https://hkm1.pure-commerce.com/agent/mpay",
+                    "advanced": true
+                },
+                {
+                    "order": 5,
+                    "name": "MACAUPASS_SECONDARY_URL",
+                    "type": "text",
+                    "value": "https://hkm2.pure-commerce.com/agent/mpay",
+                    "advanced": true
+                },
+                {
+                    "order": 6,
+                    "name": "MACAUPASS_URL_TEST",
+                    "type": "text",
+                    "value": "https://dev2.pure-commerce.com/agent/mpay",
+                    "advanced": true
+                },
+                {
+                    "order": 7,
+                    "name": "MACAUPASS_RETRY_TIMES",
+                    "type": "number",
+                    "value": 20,
+                    "advanced": true
+                },
+                {
+                    "order": 8,
+                    "name": "MACAUPASS_RETRY_TIME_INTERVAL",
+                    "type": "number",
+                    "value": 5,
+                    "description": "In seconds",
+                    "advanced": true
+                },
+                {
+                    "order": 9,
+                    "name": "MACAUPASS_RECEIPT_FLAG",
+                    "type": "text",
+                    "value": "1",
+                    "advanced": true
+                }
+            ]
         }
     ]
 }

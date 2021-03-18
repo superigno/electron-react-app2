@@ -1,18 +1,21 @@
 import React from 'react';
 import { Footer } from '../Footer';
-import { ItemGroup } from './ItemGroup';
+import { ItemGroup, ItemGroupType } from './ItemGroup';
 import { Button, Intent, Spinner } from '@blueprintjs/core';
 import SchemaFactory from './SchemaFactory';
 import df from 'd-forest';
 import Utils from './util/Utils';
-import { NavigationBar } from './NavigationBar';
-import { TerminalPaymentMapping } from '../TerminalPaymentMapping';
+import { ImportConfigObjectType, NavigationBar } from './NavigationBar';
+import { TerminalPaymentMapping } from './TerminalPaymentMapping';
 
+export type SchemaType = {
+    groups: ItemGroupType[]
+}
 
 export const Configuration = () => {
 
-    const [operationsSchema, setOperationsSchema] = React.useState(SchemaFactory.getOperationsSchema())
-    const [terminalSchemas, setTerminalSchemas] = React.useState(SchemaFactory.getAllTerminalSchemas());
+    const [operationsSchema, setOperationsSchema] = React.useState(SchemaFactory.getOperationsSchema());
+    const [terminalSchemas, setTerminalSchemas] = React.useState(SchemaFactory.getAllTerminalSchemas()) as any;
     const [activeTerminals, setActiveTerminals] = React.useState([]);
     const [isAdvancedMode, setIsAdvancedMode] = React.useState(false);
     const [isLoading, setIsLoading] = React.useState(false);
@@ -48,53 +51,35 @@ export const Configuration = () => {
         reload();
     }
 
-    const handleOnFileImport = (configObj: [], error: string) => {
-
+    const handleOnFileImport = (configObj: ImportConfigObjectType[], error: string) => {
         if (error) {
             alert(error);
             console.error(error);
         } else {
-            const groupsArray = operationsSchema.groups.map(group => {
-                const items = group.items.filter((item) => {
-                    const match = df(configObj).findLeaf((leaf: any) => leaf.itemName === item.name);
-                    if (match) {
-                        item.value = getActualValue(item.type, match.itemValue);
-                        return true
-                    } else {
-                        return false;
-                    }
-                });
-                return { ...group, items: items };
-            });
-            setOperationsSchema({ groups: groupsArray });
-
-            const activeTerminalsFromImport: string[] = df(groupsArray).findLeaf((leaf: any) => leaf.name === 'TERMINAL_NAME').value;
+            const updatedSchema = updateSchemaFromImportObject(operationsSchema, configObj);
+            setOperationsSchema(updatedSchema);
+            const activeTerminalsFromImport: string[] = df(configObj).findLeaf((leaf: ImportConfigObjectType) => leaf.itemName === 'TERMINAL_NAME').itemValue.split(",");
             activeTerminalsFromImport.map(terminal => {
-                terminalSchemas[terminal].items.map((item: any) => {
-                    const match = df(configObj).findLeaf((leaf: any) => leaf.itemName === item.name);
-                    if (match) {
-                        item.value = getActualValue(item.type, match.itemValue);
-                    }
-                    return { ...item };
-                });
+                const updatedTerminalSchema = updateSchemaFromImportObject(terminalSchemas[terminal], configObj);
                 setTerminalSchemas((current: any) => {
-                    return { ...current, [terminal]: { ...terminalSchemas[terminal] } }
+                    return { ...current, [terminal]: updatedTerminalSchema }
                 });
             });
-
             reload();
         }
     }
 
     const handleOnSubmit = () => {
-        const schemaGroups: any[] = [];
-        operationsSchema.groups.map(group => {
+        const schemaGroups: ItemGroupType[] = [];
+        operationsSchema.groups.map((group: ItemGroupType) => {
             schemaGroups.push(group);
         });
         activeTerminals.map((terminal: string) => {
-            schemaGroups.push(terminalSchemas[terminal]);
+            terminalSchemas[terminal].groups.map((group: ItemGroupType) => {
+                schemaGroups.push(group);
+            })            
         });
-        console.log('Combined Schemas:', schemaGroups);
+        console.log('Combined Schemas:', schemaGroups);        
         Utils.generateConfigurationFile(schemaGroups, formVars.current);
     }
 
@@ -115,8 +100,8 @@ export const Configuration = () => {
             </div>
 
             {isLoading &&
-                <div className="content" style={{textAlign: 'center'}}>
-                    <Spinner /><br/>
+                <div className="content" style={{ textAlign: 'center' }}>
+                    <Spinner /><br />
                     Loading...
                 </div>
             }
@@ -160,6 +145,18 @@ export const Configuration = () => {
 
 };
 
+const updateSchemaFromImportObject = (schema: SchemaType, configObj: ImportConfigObjectType[]) => {
+    const groupsArr = schema.groups.map(group => {
+        const items = group.items.filter((item) => {
+            return df(configObj).findLeaf((leaf: any) => leaf.itemName === item.name);
+        }).map(item => {
+            const match = df(configObj).findLeaf((leaf: any) => leaf.itemName === item.name);
+            return { ...item, value: getActualValue(item.type, match.itemValue) };
+        });
+        return { ...group, items: items };
+    });
+    return { groups: groupsArr };
+}
 
 const getActualValue = (type: string, value: string) => {
     if (type == "multiselect") {
