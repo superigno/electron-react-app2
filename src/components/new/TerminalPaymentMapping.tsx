@@ -146,7 +146,7 @@ export const TerminalPaymentMapping = (props: TerminalPaymentMappingProps) => {
     return <><div className="item-group">
 
         <div>
-            <h6 className="bp3-heading group-name">Select Terminals and Assign to Payment Types</h6>
+            <h5 className="bp3-heading group-name">Select Terminals and Assign to Payment Types</h5>
         </div>
 
         <div>

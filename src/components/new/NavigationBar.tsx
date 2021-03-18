@@ -9,7 +9,7 @@ type NavBarProps = {
     onCreateNew: () => void,
     onImport: (configObjects: ImportConfigObjectType[], error: string) => void
     isAdvancedMode: boolean,
-    onToggleAdvancedMode: (e:any) => void
+    onToggleAdvancedMode: (e: any) => void
 }
 
 type ImportConfigType = {
@@ -32,7 +32,7 @@ export const NavigationBar = (props: NavBarProps) => {
 
     const inputFile = React.useRef(null)
     const [isAlertOpen, setAlertOpen] = React.useState(false);
-       
+
     const handleAlertOpen = () => {
         setAlertOpen(true);
     };
@@ -47,7 +47,7 @@ export const NavigationBar = (props: NavBarProps) => {
         const filetype = Path.extname(filePath).toLowerCase();
 
         if (filetype != '.xml') {
-            props.onImport([], 'File type is invalid: '+filetype);
+            props.onImport([], 'File type is invalid: ' + filetype);
             return;
         }
 
@@ -55,17 +55,17 @@ export const NavigationBar = (props: NavBarProps) => {
         fs.readFile(filePath, function (err, data) {
             parser.parseStringPromise(data)
                 .then((result: ImportConfigType) => {
-                    
+
                     const configObject: ImportConfigObjectType[] = result.configuration.item.map(item => {
-                        return {itemName: item.$.name, itemValue: item.$.value};
+                        return { itemName: item.$.name, itemValue: item.$.value };
                     })
                     props.onImport(configObject, '');
 
                 }).catch(function (err) {
-                    props.onImport([], 'Error parsing file: '+filePath+' '+err);                    
+                    props.onImport([], 'Error parsing file: ' + filePath + ' ' + err);
                 });
         });
-        
+
     }
 
     const handleOnCreateNew = () => {
@@ -76,24 +76,21 @@ export const NavigationBar = (props: NavBarProps) => {
     return <Navbar style={{ background: Colors.BLUE2, position: 'fixed', top: '0' }}>
         <div style={{ color: Colors.WHITE }}>
             <NavbarGroup align={Alignment.LEFT}>
-                <NavbarHeading>Pure Commerce</NavbarHeading>
-            </NavbarGroup>
-            <NavbarGroup align={Alignment.RIGHT} >
-
-                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE}} onClick={handleAlertOpen}>
+                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE }} onClick={handleAlertOpen}>
                     <Icon color={Colors.WHITE} icon="document" style={{ paddingRight: '15px' }} />Create New
                 </Button>
                 <NavbarDivider />
-                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE}} onClick={() => inputFile.current.click()} >
+                <Button className={Classes.MINIMAL} style={{ color: Colors.WHITE }} onClick={() => inputFile.current.click()} >
                     <Icon color={Colors.WHITE} icon="folder-open" style={{ paddingRight: '15px' }} />Import Existing
                     <input type='file' id='file' ref={inputFile} style={{ display: 'none' }} onChange={handleOnFileImport} />
                 </Button>
-                <NavbarDivider />
+            </NavbarGroup>
+            <NavbarGroup align={Alignment.RIGHT} >
                 <div className="toggleAdvanced">
-                    <ToggleAdvancedMode checked={props.isAdvancedMode} onChange={props.onToggleAdvancedMode}/>
+                    <ToggleAdvancedMode checked={props.isAdvancedMode} onChange={props.onToggleAdvancedMode} />
                 </div>
 
-            </NavbarGroup>            
+            </NavbarGroup>
 
             <Alert
                 cancelButtonText="Cancel"
