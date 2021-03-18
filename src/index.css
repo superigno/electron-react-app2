@@ -1,18 +1,6 @@
-/*body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+body {
+  background-color: whitesmoke;
 }
-*/
-
-/*.wrapper {
-    display: flex;  
-    flex-flow: row wrap;
-    font-weight: bold;
-    text-align: center;
-  }
- */ 
 
 .wrapper {
   padding: 40px 30px 20px 30px;
@@ -20,12 +8,16 @@
 }
 
 .content {
-  padding: 40px 30px 20px 30px;
+  padding: 20px 30px 20px 30px;
+  border: 1px solid;
+  border-color: lightgray;
+  margin-top: 30px;
 }
 
 .item-group {
-  padding: 10px 0px 10px 0px;
-  border-bottom: 1px solid #BFCCD6
+  padding: 10px 0px 40px 0px;
+  border-bottom: 1px solid lightgray;
+  border-bottom-style: dotted;
 }
 
 .group-name {
@@ -62,6 +54,16 @@
   padding: 30px 30px 30px 30px;
   text-align: center;
   margin: 10% auto;
+}
+
+.progressBar {
+  width: 50%;
+  margin: auto;
+  top: 50%;
+  left: 25%;
+  position: fixed;
+  text-align: center;
+  color: whitesmoke;
 }
 
 .config-type {

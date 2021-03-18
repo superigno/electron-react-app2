@@ -1,7 +1,7 @@
 import React from 'react';
 import { Footer } from '../Footer';
 import { ItemGroup, ItemGroupType } from './ItemGroup';
-import { Button, Intent, Spinner } from '@blueprintjs/core';
+import { Alert, Button, Intent, Overlay, ProgressBar, Spinner } from '@blueprintjs/core';
 import SchemaFactory from './SchemaFactory';
 import df from 'd-forest';
 import Utils from './util/Utils';
@@ -20,6 +20,7 @@ export const Configuration = () => {
     const [isAdvancedMode, setIsAdvancedMode] = React.useState(false);
     const [isLoading, setIsLoading] = React.useState(false);
     const [toggleReload, setToggleReload] = React.useState(false);
+    const [isGeneratingFile, setIsGeneratingFile] = React.useState(false);
 
     const formVars = React.useRef({} as any);
 
@@ -70,17 +71,21 @@ export const Configuration = () => {
     }
 
     const handleOnSubmit = () => {
-        const schemaGroups: ItemGroupType[] = [];
-        operationsSchema.groups.map((group: ItemGroupType) => {
-            schemaGroups.push(group);
-        });
-        activeTerminals.map((terminal: string) => {
-            terminalSchemas[terminal].groups.map((group: ItemGroupType) => {
+        setIsGeneratingFile(true);
+        setTimeout(() => {
+            const schemaGroups: ItemGroupType[] = [];
+            operationsSchema.groups.map((group: ItemGroupType) => {
                 schemaGroups.push(group);
-            })            
-        });
-        console.log('Combined Schemas:', schemaGroups);        
-        Utils.generateConfigurationFile(schemaGroups, formVars.current);
+            });
+            activeTerminals.map((terminal: string) => {
+                terminalSchemas[terminal].groups.map((group: ItemGroupType) => {
+                    schemaGroups.push(group);
+                })
+            });
+            console.log('Combined Schemas:', schemaGroups);
+            Utils.generateConfigurationFile(schemaGroups, formVars.current);
+            setIsGeneratingFile(false);
+        }, 3000);
     }
 
     return <>
@@ -138,6 +143,13 @@ export const Configuration = () => {
             </div>
 
         </div>
+
+        <Overlay isOpen={isGeneratingFile} >
+            <div className="progressBar">
+                <ProgressBar intent={Intent.NONE} />
+                Generating file...
+            </div>
+        </Overlay>
 
         <Footer />
 
