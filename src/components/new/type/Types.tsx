@@ -1,3 +1,28 @@
+export type SchemaType = {
+    groups: ItemGroupType[]
+}
+
+export type ItemGroupType = {
+    order: number,
+    name: string,
+    type: string,
+    advanced?: boolean,
+    items: ItemType[],
+    hidden?: boolean
+}
+
+export type ItemType = {
+    order: number,
+    name: string,
+    type: string,
+    description?: string,
+    size?: number,
+    value?: string | number | boolean | string[],
+    options?: string[],
+    advanced?: boolean,
+    hidden?: boolean
+}
+
 export type ImportConfigFileType = {
     configuration: {
         item: {
@@ -14,25 +39,11 @@ export type ImportConfigObjectType = {
     itemValue: string
 }
 
-export type SchemaType = {
-    groups: ItemGroupType[]
-}
-
-export type ItemGroupType = {
-    order: number,
-    name: string,
-    type: string,
-    advanced?: boolean,
-    items: ItemType[]
-}
-
-export type ItemType = {
-    order: number,
-    name: string,
-    type: string,
-    description?: string,
-    size?: number,
-    value?: string | number | boolean | string[],
-    options?: string[],
-    advanced?: boolean
+export type ImportCurrencyObjectType = {
+    CountryName: string,
+    CurrencyCode: string,
+    CurrencyMnrUnts: string,
+    CurrencyName: string,
+    CurrencyNbr: string,
+    CurrencySign: string
 }

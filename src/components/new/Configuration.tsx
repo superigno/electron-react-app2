@@ -8,7 +8,7 @@ import ConfigUtils from './util/ConfigUtils';
 import { NavigationBar } from './NavigationBar';
 import { TerminalPaymentMapping } from './TerminalPaymentMapping';
 import AppConstants from './constant/AppConstants';
-import { ImportConfigObjectType, ItemGroupType, SchemaType } from './type/Types';
+import { ImportConfigObjectType, ImportCurrencyObjectType, ItemGroupType, SchemaType } from './type/Types';
 
 export const Configuration = () => {
 
@@ -28,11 +28,27 @@ export const Configuration = () => {
     };
 
     const handleOnChange = (itemName: string, itemValue: string | string[]) => {
-        formVars.current[itemName] = itemValue;
+        if (itemName === 'DEFAULT_CURRENCY') {
+            handleCurrencyChange(itemValue as string);
+        } else {
+            formVars.current[itemName] = itemValue;
+        }        
     }
 
     const handleToggleAdvanced = (e: any) => {
         setIsAdvancedMode(e.target.checked);
+    }
+
+    const handleCurrencyChange = (value: string) => {
+        ConfigUtils.getCurrencyFileObject()
+        .then((result: ImportCurrencyObjectType[]) => {
+            const currency: ImportCurrencyObjectType = df(result).findLeaf((leaf: ImportCurrencyObjectType) => leaf.CurrencyCode === value);
+            formVars.current['DEFAULT_CURRENCY'] = currency.CurrencyCode;
+            formVars.current['DEFAULT_CURRENCY_NUMBER'] = currency.CurrencyNbr;
+            formVars.current['DEFAULT_MINOR_UNIT'] = currency.CurrencyMnrUnts;
+        }).catch(err => {
+            alert('Error updating DEFAULT_CURRENCY:'+ err);
+        });        
     }
 
     const reload = () => {
@@ -127,7 +143,7 @@ export const Configuration = () => {
                     {
                         //Filtering since these are already displayed at the top
                         operationsSchema.groups.filter((group: ItemGroupType) => {
-                            return group.name.toUpperCase() != 'VERSION' && group.name.toUpperCase() != 'MODES' && group.name.toUpperCase() != 'TERMINALS';
+                            return group.name.toUpperCase() != 'VERSION' && group.name.toUpperCase() != 'MODES';
                         }).map((group: ItemGroupType) => {
                             return <ItemGroup key={group.name} group={group} advanced={isAdvancedMode} onChange={handleOnChange} />
                         })

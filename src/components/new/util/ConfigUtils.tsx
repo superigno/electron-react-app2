@@ -2,7 +2,8 @@ import XMLBuilder from 'xmlbuilder';
 import FileSaver from 'file-saver';
 import fs from 'fs';
 import xml2js from 'xml2js';
-import { ImportConfigFileType, ImportConfigObjectType, ItemGroupType, ItemType } from '../type/Types';
+import Path from 'path';
+import { ImportConfigFileType, ImportConfigObjectType, ImportCurrencyObjectType, ItemGroupType, ItemType } from '../type/Types';
 
 export default class ConfigUtils {
 
@@ -41,6 +42,31 @@ export default class ConfigUtils {
                             return { itemName: item.$.name, itemValue: item.$.value };
                         });
                         resolve(configObject);
+                    }).catch(function (err) {
+                        reject('Error parsing file: ' + filePath + ' ' + err);
+                    });
+            });
+        });
+    }
+
+    static getCurrencyFileObject = () => {
+        const filePath = Path.join(__dirname, '../../../../../../resources/Currency.xml');
+        return new Promise((resolve, reject) => {
+            const parser = new xml2js.Parser();
+            fs.readFile(filePath, function (err, data) {
+                parser.parseStringPromise(data)
+                    .then((result) => {
+                        const currencyObject: ImportCurrencyObjectType[] = result.CurrencyTable.Currency.map((currency: ImportCurrencyObjectType) => {
+                            return {
+                                CountryName: currency.CountryName ? currency.CountryName[0] : "",
+                                CurrencyCode: currency.CurrencyCode ? currency.CurrencyCode[0] : "",
+                                CurrencyMnrUnts: currency.CurrencyMnrUnts ? currency.CurrencyMnrUnts[0] : "",
+                                CurrencyName: currency.CurrencyName ? currency.CurrencyName[0] : "",
+                                CurrencyNbr: currency.CurrencyNbr ? currency.CurrencyNbr[0] : "",
+                                CurrencySign: currency.CurrencySign ? currency.CurrencySign[0] : ""
+                            };
+                        });
+                        resolve(currencyObject);
                     }).catch(function (err) {
                         reject('Error parsing file: ' + filePath + ' ' + err);
                     });

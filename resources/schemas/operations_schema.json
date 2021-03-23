@@ -85,6 +85,7 @@
 			"order": 7,
 			"name": "Terminals",
 			"type": "Operations",
+			"hidden": true,
 			"items": [
 				{
 					"order": 1,
@@ -144,14 +145,16 @@
 					"type": "number",
 					"description": "Default currency number for request from Wincor",
 					"size": 1,
-					"value": 344
+					"value": 344,
+					"hidden": true
 				},
 				{
 					"order": 3,
 					"name": "DEFAULT_MINOR_UNIT",
 					"type": "number",
 					"size": 1,
-					"value": 2
+					"value": 2,
+					"hidden": true
 				},
 				{
 					"order": 4,

@@ -1,0 +1,2215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CurrencyTable>
+	<Currency>
+		<CountryName>AFGHANISTAN</CountryName>
+		<CurrencyName>Afghani</CurrencyName>
+		<CurrencyCode>AFN</CurrencyCode>
+		<CurrencyNbr>971</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>؋</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ÅLAND ISLANDS</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ALBANIA</CountryName>
+		<CurrencyName>Lek</CurrencyName>
+		<CurrencyCode>ALL</CurrencyCode>
+		<CurrencyNbr>008</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Lek</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ALGERIA</CountryName>
+		<CurrencyName>Algerian Dinar</CurrencyName>
+		<CurrencyCode>DZD</CurrencyCode>
+		<CurrencyNbr>012</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>د.ج</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>AMERICAN SAMOA</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ANDORRA</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ANGOLA</CountryName>
+		<CurrencyName>Kwanza</CurrencyName>
+		<CurrencyCode>AOA</CurrencyCode>
+		<CurrencyNbr>973</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Kz</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ANGUILLA</CountryName>
+		<CurrencyName>East Caribbean Dollar</CurrencyName>
+		<CurrencyCode>XCD</CurrencyCode>
+		<CurrencyNbr>951</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ANTARCTICA</CountryName>
+		<CurrencyName>No universal currency</CurrencyName>
+	</Currency>
+	<Currency>
+		<CountryName>ANTIGUA AND BARBUDA</CountryName>
+		<CurrencyName>East Caribbean Dollar</CurrencyName>
+		<CurrencyCode>XCD</CurrencyCode>
+		<CurrencyNbr>951</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ARGENTINA</CountryName>
+		<CurrencyName>Argentine Peso</CurrencyName>
+		<CurrencyCode>ARS</CurrencyCode>
+		<CurrencyNbr>032</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ARMENIA</CountryName>
+		<CurrencyName>Armenian Dram</CurrencyName>
+		<CurrencyCode>AMD</CurrencyCode>
+		<CurrencyNbr>051</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Դ</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ARUBA</CountryName>
+		<CurrencyName>Aruban Florin</CurrencyName>
+		<CurrencyCode>AWG</CurrencyCode>
+		<CurrencyNbr>533</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>ƒ</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>AUSTRALIA</CountryName>
+		<CurrencyName>Australian Dollar</CurrencyName>
+		<CurrencyCode>AUD</CurrencyCode>
+		<CurrencyNbr>036</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>AUSTRIA</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>AZERBAIJAN</CountryName>
+		<CurrencyName>Azerbaijanian Manat</CurrencyName>
+		<CurrencyCode>AZN</CurrencyCode>
+		<CurrencyNbr>944</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₼</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BAHAMAS (THE)</CountryName>
+		<CurrencyName>Bahamian Dollar</CurrencyName>
+		<CurrencyCode>BSD</CurrencyCode>
+		<CurrencyNbr>044</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BAHRAIN</CountryName>
+		<CurrencyName>Bahraini Dinar</CurrencyName>
+		<CurrencyCode>BHD</CurrencyCode>
+		<CurrencyNbr>048</CurrencyNbr>
+		<CurrencyMnrUnts>3</CurrencyMnrUnts>
+		<CurrencySign>د.ب</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BANGLADESH</CountryName>
+		<CurrencyName>Taka</CurrencyName>
+		<CurrencyCode>BDT</CurrencyCode>
+		<CurrencyNbr>050</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>৳‎</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BARBADOS</CountryName>
+		<CurrencyName>Barbados Dollar</CurrencyName>
+		<CurrencyCode>BBD</CurrencyCode>
+		<CurrencyNbr>052</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BELARUS</CountryName>
+		<CurrencyName>Belarusian Ruble</CurrencyName>
+		<CurrencyCode>BYN</CurrencyCode>
+		<CurrencyNbr>933</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Br</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BELGIUM</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BELIZE</CountryName>
+		<CurrencyName>Belize Dollar</CurrencyName>
+		<CurrencyCode>BZD</CurrencyCode>
+		<CurrencyNbr>084</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>BZ$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BENIN</CountryName>
+		<CurrencyName>CFA Franc BCEAO</CurrencyName>
+		<CurrencyCode>XOF</CurrencyCode>
+		<CurrencyNbr>952</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>CFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BERMUDA</CountryName>
+		<CurrencyName>Bermudian Dollar</CurrencyName>
+		<CurrencyCode>BMD</CurrencyCode>
+		<CurrencyNbr>060</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BHUTAN</CountryName>
+		<CurrencyName>Indian Rupee</CurrencyName>
+		<CurrencyCode>INR</CurrencyCode>
+		<CurrencyNbr>356</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₹</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BHUTAN</CountryName>
+		<CurrencyName>Ngultrum</CurrencyName>
+		<CurrencyCode>BTN</CurrencyCode>
+		<CurrencyNbr>064</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Nu</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BOLIVIA (PLURINATIONAL STATE OF)</CountryName>
+		<CurrencyName>Boliviano</CurrencyName>
+		<CurrencyCode>BOB</CurrencyCode>
+		<CurrencyNbr>068</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$b</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BOLIVIA (PLURINATIONAL STATE OF)</CountryName>
+		<CurrencyName IsFund="true">Mvdol</CurrencyName>
+		<CurrencyCode>BOV</CurrencyCode>
+		<CurrencyNbr>984</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign></CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BONAIRE, SINT EUSTATIUS AND SABA</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BOSNIA AND HERZEGOVINA</CountryName>
+		<CurrencyName>Convertible Mark</CurrencyName>
+		<CurrencyCode>BAM</CurrencyCode>
+		<CurrencyNbr>977</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>KM</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BOTSWANA</CountryName>
+		<CurrencyName>Pula</CurrencyName>
+		<CurrencyCode>BWP</CurrencyCode>
+		<CurrencyNbr>072</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>P</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BOUVET ISLAND</CountryName>
+		<CurrencyName>Norwegian Krone</CurrencyName>
+		<CurrencyCode>NOK</CurrencyCode>
+		<CurrencyNbr>578</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>kr</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BRAZIL</CountryName>
+		<CurrencyName>Brazilian Real</CurrencyName>
+		<CurrencyCode>BRL</CurrencyCode>
+		<CurrencyNbr>986</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>R$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BRITISH INDIAN OCEAN TERRITORY (THE)</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BRUNEI DARUSSALAM</CountryName>
+		<CurrencyName>Brunei Dollar</CurrencyName>
+		<CurrencyCode>BND</CurrencyCode>
+		<CurrencyNbr>096</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>B$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BULGARIA</CountryName>
+		<CurrencyName>Bulgarian Lev</CurrencyName>
+		<CurrencyCode>BGN</CurrencyCode>
+		<CurrencyNbr>975</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>лв</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BURKINA FASO</CountryName>
+		<CurrencyName>CFA Franc BCEAO</CurrencyName>
+		<CurrencyCode>XOF</CurrencyCode>
+		<CurrencyNbr>952</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>CFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>BURUNDI</CountryName>
+		<CurrencyName>Burundi Franc</CurrencyName>
+		<CurrencyCode>BIF</CurrencyCode>
+		<CurrencyNbr>108</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>FBu</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CABO VERDE</CountryName>
+		<CurrencyName>Cabo Verde Escudo</CurrencyName>
+		<CurrencyCode>CVE</CurrencyCode>
+		<CurrencyNbr>132</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CAMBODIA</CountryName>
+		<CurrencyName>Riel</CurrencyName>
+		<CurrencyCode>KHR</CurrencyCode>
+		<CurrencyNbr>116</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>‎៛</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CAMEROON</CountryName>
+		<CurrencyName>CFA Franc BEAC</CurrencyName>
+		<CurrencyCode>XAF</CurrencyCode>
+		<CurrencyNbr>950</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>FCFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CANADA</CountryName>
+		<CurrencyName>Canadian Dollar</CurrencyName>
+		<CurrencyCode>CAD</CurrencyCode>
+		<CurrencyNbr>124</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CAYMAN ISLANDS (THE)</CountryName>
+		<CurrencyName>Cayman Islands Dollar</CurrencyName>
+		<CurrencyCode>KYD</CurrencyCode>
+		<CurrencyNbr>136</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CENTRAL AFRICAN REPUBLIC (THE)</CountryName>
+		<CurrencyName>CFA Franc BEAC</CurrencyName>
+		<CurrencyCode>XAF</CurrencyCode>
+		<CurrencyNbr>950</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>FCFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CHAD</CountryName>
+		<CurrencyName>CFA Franc BEAC</CurrencyName>
+		<CurrencyCode>XAF</CurrencyCode>
+		<CurrencyNbr>950</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>FCFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CHILE</CountryName>
+		<CurrencyName>Chilean Peso</CurrencyName>
+		<CurrencyCode>CLP</CurrencyCode>
+		<CurrencyNbr>152</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CHILE</CountryName>
+		<CurrencyName IsFund="true">Unidad de Fomento</CurrencyName>
+		<CurrencyCode>CLF</CurrencyCode>
+		<CurrencyNbr>990</CurrencyNbr>
+		<CurrencyMnrUnts>4</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CHINA</CountryName>
+		<CurrencyName>Yuan Renminbi</CurrencyName>
+		<CurrencyCode>CNY</CurrencyCode>
+		<CurrencyNbr>156</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>¥</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CHRISTMAS ISLAND</CountryName>
+		<CurrencyName>Australian Dollar</CurrencyName>
+		<CurrencyCode>AUD</CurrencyCode>
+		<CurrencyNbr>036</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>COCOS (KEELING) ISLANDS (THE)</CountryName>
+		<CurrencyName>Australian Dollar</CurrencyName>
+		<CurrencyCode>AUD</CurrencyCode>
+		<CurrencyNbr>036</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>COLOMBIA</CountryName>
+		<CurrencyName>Colombian Peso</CurrencyName>
+		<CurrencyCode>COP</CurrencyCode>
+		<CurrencyNbr>170</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>COLOMBIA</CountryName>
+		<CurrencyName IsFund="true">Unidad de Valor Real</CurrencyName>
+		<CurrencyCode>COU</CurrencyCode>
+		<CurrencyNbr>970</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign></CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>COMOROS (THE)</CountryName>
+		<CurrencyName>Comoro Franc</CurrencyName>
+		<CurrencyCode>KMF</CurrencyCode>
+		<CurrencyNbr>174</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>CF</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CONGO (THE DEMOCRATIC REPUBLIC OF THE)</CountryName>
+		<CurrencyName>Congolese Franc</CurrencyName>
+		<CurrencyCode>CDF</CurrencyCode>
+		<CurrencyNbr>976</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>FC</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CONGO (THE)</CountryName>
+		<CurrencyName>CFA Franc BEAC</CurrencyName>
+		<CurrencyCode>XAF</CurrencyCode>
+		<CurrencyNbr>950</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>FCFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>COOK ISLANDS (THE)</CountryName>
+		<CurrencyName>New Zealand Dollar</CurrencyName>
+		<CurrencyCode>NZD</CurrencyCode>
+		<CurrencyNbr>554</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>COSTA RICA</CountryName>
+		<CurrencyName>Costa Rican Colon</CurrencyName>
+		<CurrencyCode>CRC</CurrencyCode>
+		<CurrencyNbr>188</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₡</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CÔTE D'IVOIRE</CountryName>
+		<CurrencyName>CFA Franc BCEAO</CurrencyName>
+		<CurrencyCode>XOF</CurrencyCode>
+		<CurrencyNbr>952</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>CFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CROATIA</CountryName>
+		<CurrencyName>Kuna</CurrencyName>
+		<CurrencyCode>HRK</CurrencyCode>
+		<CurrencyNbr>191</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>kn</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CUBA</CountryName>
+		<CurrencyName>Cuban Peso</CurrencyName>
+		<CurrencyCode>CUP</CurrencyCode>
+		<CurrencyNbr>192</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₱</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CUBA</CountryName>
+		<CurrencyName>Peso Convertible</CurrencyName>
+		<CurrencyCode>CUC</CurrencyCode>
+		<CurrencyNbr>931</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>CUC$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CURAÇAO</CountryName>
+		<CurrencyName>Netherlands Antillean Guilder</CurrencyName>
+		<CurrencyCode>ANG</CurrencyCode>
+		<CurrencyNbr>532</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>ƒ</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CYPRUS</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>CZECH REPUBLIC (THE)</CountryName>
+		<CurrencyName>Czech Koruna</CurrencyName>
+		<CurrencyCode>CZK</CurrencyCode>
+		<CurrencyNbr>203</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Kč</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>DENMARK</CountryName>
+		<CurrencyName>Danish Krone</CurrencyName>
+		<CurrencyCode>DKK</CurrencyCode>
+		<CurrencyNbr>208</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>kr</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>DJIBOUTI</CountryName>
+		<CurrencyName>Djibouti Franc</CurrencyName>
+		<CurrencyCode>DJF</CurrencyCode>
+		<CurrencyNbr>262</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>Fdj</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>DOMINICA</CountryName>
+		<CurrencyName>East Caribbean Dollar</CurrencyName>
+		<CurrencyCode>XCD</CurrencyCode>
+		<CurrencyNbr>951</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>DOMINICAN REPUBLIC (THE)</CountryName>
+		<CurrencyName>Dominican Peso</CurrencyName>
+		<CurrencyCode>DOP</CurrencyCode>
+		<CurrencyNbr>214</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>RD$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ECUADOR</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>EGYPT</CountryName>
+		<CurrencyName>Egyptian Pound</CurrencyName>
+		<CurrencyCode>EGP</CurrencyCode>
+		<CurrencyNbr>818</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>EL SALVADOR</CountryName>
+		<CurrencyName>El Salvador Colon</CurrencyName>
+		<CurrencyCode>SVC</CurrencyCode>
+		<CurrencyNbr>222</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₡</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>EL SALVADOR</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>EQUATORIAL GUINEA</CountryName>
+		<CurrencyName>CFA Franc BEAC</CurrencyName>
+		<CurrencyCode>XAF</CurrencyCode>
+		<CurrencyNbr>950</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>FCFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ERITREA</CountryName>
+		<CurrencyName>Nakfa</CurrencyName>
+		<CurrencyCode>ERN</CurrencyCode>
+		<CurrencyNbr>232</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Nfk</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ESTONIA</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ETHIOPIA</CountryName>
+		<CurrencyName>Ethiopian Birr</CurrencyName>
+		<CurrencyCode>ETB</CurrencyCode>
+		<CurrencyNbr>230</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Br</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>EUROPEAN UNION</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>FALKLAND ISLANDS (THE) [MALVINAS]</CountryName>
+		<CurrencyName>Falkland Islands Pound</CurrencyName>
+		<CurrencyCode>FKP</CurrencyCode>
+		<CurrencyNbr>238</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>FAROE ISLANDS (THE)</CountryName>
+		<CurrencyName>Danish Krone</CurrencyName>
+		<CurrencyCode>DKK</CurrencyCode>
+		<CurrencyNbr>208</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>kr</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>FIJI</CountryName>
+		<CurrencyName>Fiji Dollar</CurrencyName>
+		<CurrencyCode>FJD</CurrencyCode>
+		<CurrencyNbr>242</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>FINLAND</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>FRANCE</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>FRENCH GUIANA</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>FRENCH POLYNESIA</CountryName>
+		<CurrencyName>CFP Franc</CurrencyName>
+		<CurrencyCode>XPF</CurrencyCode>
+		<CurrencyNbr>953</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>F</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>FRENCH SOUTHERN TERRITORIES (THE)</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GABON</CountryName>
+		<CurrencyName>CFA Franc BEAC</CurrencyName>
+		<CurrencyCode>XAF</CurrencyCode>
+		<CurrencyNbr>950</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>FCFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GAMBIA (THE)</CountryName>
+		<CurrencyName>Dalasi</CurrencyName>
+		<CurrencyCode>GMD</CurrencyCode>
+		<CurrencyNbr>270</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>D</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GEORGIA</CountryName>
+		<CurrencyName>Lari</CurrencyName>
+		<CurrencyCode>GEL</CurrencyCode>
+		<CurrencyNbr>981</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₾</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GERMANY</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GHANA</CountryName>
+		<CurrencyName>Ghana Cedi</CurrencyName>
+		<CurrencyCode>GHS</CurrencyCode>
+		<CurrencyNbr>936</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>GH₵</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GIBRALTAR</CountryName>
+		<CurrencyName>Gibraltar Pound</CurrencyName>
+		<CurrencyCode>GIP</CurrencyCode>
+		<CurrencyNbr>292</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GREECE</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GREENLAND</CountryName>
+		<CurrencyName>Danish Krone</CurrencyName>
+		<CurrencyCode>DKK</CurrencyCode>
+		<CurrencyNbr>208</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>kr</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GRENADA</CountryName>
+		<CurrencyName>East Caribbean Dollar</CurrencyName>
+		<CurrencyCode>XCD</CurrencyCode>
+		<CurrencyNbr>951</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GUADELOUPE</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GUAM</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GUATEMALA</CountryName>
+		<CurrencyName>Quetzal</CurrencyName>
+		<CurrencyCode>GTQ</CurrencyCode>
+		<CurrencyNbr>320</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Q</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GUERNSEY</CountryName>
+		<CurrencyName>Pound Sterling</CurrencyName>
+		<CurrencyCode>GBP</CurrencyCode>
+		<CurrencyNbr>826</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GUINEA</CountryName>
+		<CurrencyName>Guinea Franc</CurrencyName>
+		<CurrencyCode>GNF</CurrencyCode>
+		<CurrencyNbr>324</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>FG</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GUINEA-BISSAU</CountryName>
+		<CurrencyName>CFA Franc BCEAO</CurrencyName>
+		<CurrencyCode>XOF</CurrencyCode>
+		<CurrencyNbr>952</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>CFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>GUYANA</CountryName>
+		<CurrencyName>Guyana Dollar</CurrencyName>
+		<CurrencyCode>GYD</CurrencyCode>
+		<CurrencyNbr>328</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>HAITI</CountryName>
+		<CurrencyName>Gourde</CurrencyName>
+		<CurrencyCode>HTG</CurrencyCode>
+		<CurrencyNbr>332</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>G</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>HAITI</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>HEARD ISLAND AND McDONALD ISLANDS</CountryName>
+		<CurrencyName>Australian Dollar</CurrencyName>
+		<CurrencyCode>AUD</CurrencyCode>
+		<CurrencyNbr>036</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>HOLY SEE (THE)</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>HONDURAS</CountryName>
+		<CurrencyName>Lempira</CurrencyName>
+		<CurrencyCode>HNL</CurrencyCode>
+		<CurrencyNbr>340</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>L</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>HONG KONG</CountryName>
+		<CurrencyName>Hong Kong Dollar</CurrencyName>
+		<CurrencyCode>HKD</CurrencyCode>
+		<CurrencyNbr>344</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>HUNGARY</CountryName>
+		<CurrencyName>Forint</CurrencyName>
+		<CurrencyCode>HUF</CurrencyCode>
+		<CurrencyNbr>348</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Ft</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ICELAND</CountryName>
+		<CurrencyName>Iceland Krona</CurrencyName>
+		<CurrencyCode>ISK</CurrencyCode>
+		<CurrencyNbr>352</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>kr</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>INDIA</CountryName>
+		<CurrencyName>Indian Rupee</CurrencyName>
+		<CurrencyCode>INR</CurrencyCode>
+		<CurrencyNbr>356</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₹</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>INDONESIA</CountryName>
+		<CurrencyName>Rupiah</CurrencyName>
+		<CurrencyCode>IDR</CurrencyCode>
+		<CurrencyNbr>360</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Rp</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>INTERNATIONAL MONETARY FUND (IMF) </CountryName>
+		<CurrencyName>SDR (Special Drawing Right)</CurrencyName>
+		<CurrencyCode>XDR</CurrencyCode>
+		<CurrencyNbr>960</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>SDR</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>IRAN (ISLAMIC REPUBLIC OF)</CountryName>
+		<CurrencyName>Iranian Rial</CurrencyName>
+		<CurrencyCode>IRR</CurrencyCode>
+		<CurrencyNbr>364</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>﷼</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>IRAQ</CountryName>
+		<CurrencyName>Iraqi Dinar</CurrencyName>
+		<CurrencyCode>IQD</CurrencyCode>
+		<CurrencyNbr>368</CurrencyNbr>
+		<CurrencyMnrUnts>3</CurrencyMnrUnts>
+		<CurrencySign>ع.د</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>IRELAND</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ISLE OF MAN</CountryName>
+		<CurrencyName>Pound Sterling</CurrencyName>
+		<CurrencyCode>GBP</CurrencyCode>
+		<CurrencyNbr>826</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ISRAEL</CountryName>
+		<CurrencyName>New Israeli Sheqel</CurrencyName>
+		<CurrencyCode>ILS</CurrencyCode>
+		<CurrencyNbr>376</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₪</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ITALY</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>JAMAICA</CountryName>
+		<CurrencyName>Jamaican Dollar</CurrencyName>
+		<CurrencyCode>JMD</CurrencyCode>
+		<CurrencyNbr>388</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>J$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>JAPAN</CountryName>
+		<CurrencyName>Yen</CurrencyName>
+		<CurrencyCode>JPY</CurrencyCode>
+		<CurrencyNbr>392</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>¥</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>JERSEY</CountryName>
+		<CurrencyName>Pound Sterling</CurrencyName>
+		<CurrencyCode>GBP</CurrencyCode>
+		<CurrencyNbr>826</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>JORDAN</CountryName>
+		<CurrencyName>Jordanian Dinar</CurrencyName>
+		<CurrencyCode>JOD</CurrencyCode>
+		<CurrencyNbr>400</CurrencyNbr>
+		<CurrencyMnrUnts>3</CurrencyMnrUnts>
+		<CurrencySign>دينار</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>KAZAKHSTAN</CountryName>
+		<CurrencyName>Tenge</CurrencyName>
+		<CurrencyCode>KZT</CurrencyCode>
+		<CurrencyNbr>398</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₸</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>KENYA</CountryName>
+		<CurrencyName>Kenyan Shilling</CurrencyName>
+		<CurrencyCode>KES</CurrencyCode>
+		<CurrencyNbr>404</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>KSh</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>KIRIBATI</CountryName>
+		<CurrencyName>Australian Dollar</CurrencyName>
+		<CurrencyCode>AUD</CurrencyCode>
+		<CurrencyNbr>036</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>KOREA (THE DEMOCRATIC PEOPLE’S REPUBLIC OF)</CountryName>
+		<CurrencyName>North Korean Won</CurrencyName>
+		<CurrencyCode>KPW</CurrencyCode>
+		<CurrencyNbr>408</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>‎₩</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>KOREA (THE REPUBLIC OF)</CountryName>
+		<CurrencyName>Won</CurrencyName>
+		<CurrencyCode>KRW</CurrencyCode>
+		<CurrencyNbr>410</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>‎₩</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>KUWAIT</CountryName>
+		<CurrencyName>Kuwaiti Dinar</CurrencyName>
+		<CurrencyCode>KWD</CurrencyCode>
+		<CurrencyNbr>414</CurrencyNbr>
+		<CurrencyMnrUnts>3</CurrencyMnrUnts>
+		<CurrencySign>‎د.ك</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>KYRGYZSTAN</CountryName>
+		<CurrencyName>Som</CurrencyName>
+		<CurrencyCode>KGS</CurrencyCode>
+		<CurrencyNbr>417</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>лв</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LAO PEOPLE’S DEMOCRATIC REPUBLIC (THE)</CountryName>
+		<CurrencyName>Kip</CurrencyName>
+		<CurrencyCode>LAK</CurrencyCode>
+		<CurrencyNbr>418</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₭</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LATVIA</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LEBANON</CountryName>
+		<CurrencyName>Lebanese Pound</CurrencyName>
+		<CurrencyCode>LBP</CurrencyCode>
+		<CurrencyNbr>422</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LESOTHO</CountryName>
+		<CurrencyName>Loti</CurrencyName>
+		<CurrencyCode>LSL</CurrencyCode>
+		<CurrencyNbr>426</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>L</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LESOTHO</CountryName>
+		<CurrencyName>Rand</CurrencyName>
+		<CurrencyCode>ZAR</CurrencyCode>
+		<CurrencyNbr>710</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>R</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LIBERIA</CountryName>
+		<CurrencyName>Liberian Dollar</CurrencyName>
+		<CurrencyCode>LRD</CurrencyCode>
+		<CurrencyNbr>430</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LIBYA</CountryName>
+		<CurrencyName>Libyan Dinar</CurrencyName>
+		<CurrencyCode>LYD</CurrencyCode>
+		<CurrencyNbr>434</CurrencyNbr>
+		<CurrencyMnrUnts>3</CurrencyMnrUnts>
+		<CurrencySign>LD</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LIECHTENSTEIN</CountryName>
+		<CurrencyName>Swiss Franc</CurrencyName>
+		<CurrencyCode>CHF</CurrencyCode>
+		<CurrencyNbr>756</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>CHF</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LITHUANIA</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>LUXEMBOURG</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MACAO</CountryName>
+		<CurrencyName>Pataca</CurrencyName>
+		<CurrencyCode>MOP</CurrencyCode>
+		<CurrencyNbr>446</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>MOP$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MACEDONIA (THE FORMER YUGOSLAV REPUBLIC OF)</CountryName>
+		<CurrencyName>Denar</CurrencyName>
+		<CurrencyCode>MKD</CurrencyCode>
+		<CurrencyNbr>807</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>ден</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MADAGASCAR</CountryName>
+		<CurrencyName>Malagasy Ariary</CurrencyName>
+		<CurrencyCode>MGA</CurrencyCode>
+		<CurrencyNbr>969</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>MGA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MALAWI</CountryName>
+		<CurrencyName>Malawi Kwacha</CurrencyName>
+		<CurrencyCode>MWK</CurrencyCode>
+		<CurrencyNbr>454</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>MK</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MALAYSIA</CountryName>
+		<CurrencyName>Malaysian Ringgit</CurrencyName>
+		<CurrencyCode>MYR</CurrencyCode>
+		<CurrencyNbr>458</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>RM</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MALDIVES</CountryName>
+		<CurrencyName>Rufiyaa</CurrencyName>
+		<CurrencyCode>MVR</CurrencyCode>
+		<CurrencyNbr>462</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Rf</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MALI</CountryName>
+		<CurrencyName>CFA Franc BCEAO</CurrencyName>
+		<CurrencyCode>XOF</CurrencyCode>
+		<CurrencyNbr>952</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>CFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MALTA</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MARSHALL ISLANDS (THE)</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MARTINIQUE</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MAURITANIA</CountryName>
+		<CurrencyName>Ouguiya</CurrencyName>
+		<CurrencyCode>MRO</CurrencyCode>
+		<CurrencyNbr>478</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>UM</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MAURITIUS</CountryName>
+		<CurrencyName>Mauritius Rupee</CurrencyName>
+		<CurrencyCode>MUR</CurrencyCode>
+		<CurrencyNbr>480</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₨</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MAYOTTE</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MEMBER COUNTRIES OF THE AFRICAN DEVELOPMENT BANK GROUP</CountryName>
+		<CurrencyName>ADB Unit of Account</CurrencyName>
+		<CurrencyCode>XUA</CurrencyCode>
+		<CurrencyNbr>965</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XUA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MEXICO</CountryName>
+		<CurrencyName>Mexican Peso</CurrencyName>
+		<CurrencyCode>MXN</CurrencyCode>
+		<CurrencyNbr>484</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MEXICO</CountryName>
+		<CurrencyName IsFund="true">Mexican Unidad de Inversion (UDI)</CurrencyName>
+		<CurrencyCode>MXV</CurrencyCode>
+		<CurrencyNbr>979</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>MXV</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MICRONESIA (FEDERATED STATES OF)</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MOLDOVA (THE REPUBLIC OF)</CountryName>
+		<CurrencyName>Moldovan Leu</CurrencyName>
+		<CurrencyCode>MDL</CurrencyCode>
+		<CurrencyNbr>498</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>MDL</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MONACO</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MONGOLIA</CountryName>
+		<CurrencyName>Tugrik</CurrencyName>
+		<CurrencyCode>MNT</CurrencyCode>
+		<CurrencyNbr>496</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₮</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MONTENEGRO</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MONTSERRAT</CountryName>
+		<CurrencyName>East Caribbean Dollar</CurrencyName>
+		<CurrencyCode>XCD</CurrencyCode>
+		<CurrencyNbr>951</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MOROCCO</CountryName>
+		<CurrencyName>Moroccan Dirham</CurrencyName>
+		<CurrencyCode>MAD</CurrencyCode>
+		<CurrencyNbr>504</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>MAD</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MOZAMBIQUE</CountryName>
+		<CurrencyName>Mozambique Metical</CurrencyName>
+		<CurrencyCode>MZN</CurrencyCode>
+		<CurrencyNbr>943</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>MT</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>MYANMAR</CountryName>
+		<CurrencyName>Kyat</CurrencyName>
+		<CurrencyCode>MMK</CurrencyCode>
+		<CurrencyNbr>104</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>K</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NAMIBIA</CountryName>
+		<CurrencyName>Namibia Dollar</CurrencyName>
+		<CurrencyCode>NAD</CurrencyCode>
+		<CurrencyNbr>516</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NAMIBIA</CountryName>
+		<CurrencyName>Rand</CurrencyName>
+		<CurrencyCode>ZAR</CurrencyCode>
+		<CurrencyNbr>710</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>R</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NAURU</CountryName>
+		<CurrencyName>Australian Dollar</CurrencyName>
+		<CurrencyCode>AUD</CurrencyCode>
+		<CurrencyNbr>036</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NEPAL</CountryName>
+		<CurrencyName>Nepalese Rupee</CurrencyName>
+		<CurrencyCode>NPR</CurrencyCode>
+		<CurrencyNbr>524</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>रु</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NETHERLANDS (THE)</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NEW CALEDONIA</CountryName>
+		<CurrencyName>CFP Franc</CurrencyName>
+		<CurrencyCode>XPF</CurrencyCode>
+		<CurrencyNbr>953</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>F</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NEW ZEALAND</CountryName>
+		<CurrencyName>New Zealand Dollar</CurrencyName>
+		<CurrencyCode>NZD</CurrencyCode>
+		<CurrencyNbr>554</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NICARAGUA</CountryName>
+		<CurrencyName>Cordoba Oro</CurrencyName>
+		<CurrencyCode>NIO</CurrencyCode>
+		<CurrencyNbr>558</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>C$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NIGER (THE)</CountryName>
+		<CurrencyName>CFA Franc BCEAO</CurrencyName>
+		<CurrencyCode>XOF</CurrencyCode>
+		<CurrencyNbr>952</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>CFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NIGERIA</CountryName>
+		<CurrencyName>Naira</CurrencyName>
+		<CurrencyCode>NGN</CurrencyCode>
+		<CurrencyNbr>566</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₦</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NIUE</CountryName>
+		<CurrencyName>New Zealand Dollar</CurrencyName>
+		<CurrencyCode>NZD</CurrencyCode>
+		<CurrencyNbr>554</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NORFOLK ISLAND</CountryName>
+		<CurrencyName>Australian Dollar</CurrencyName>
+		<CurrencyCode>AUD</CurrencyCode>
+		<CurrencyNbr>036</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NORTHERN MARIANA ISLANDS (THE)</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>NORWAY</CountryName>
+		<CurrencyName>Norwegian Krone</CurrencyName>
+		<CurrencyCode>NOK</CurrencyCode>
+		<CurrencyNbr>578</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>kr</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>OMAN</CountryName>
+		<CurrencyName>Rial Omani</CurrencyName>
+		<CurrencyCode>OMR</CurrencyCode>
+		<CurrencyNbr>512</CurrencyNbr>
+		<CurrencyMnrUnts>3</CurrencyMnrUnts>
+		<CurrencySign>﷼</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PAKISTAN</CountryName>
+		<CurrencyName>Pakistan Rupee</CurrencyName>
+		<CurrencyCode>PKR</CurrencyCode>
+		<CurrencyNbr>586</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Rs</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PALAU</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PALESTINE, STATE OF</CountryName>
+		<CurrencyName>No universal currency</CurrencyName>
+	</Currency>
+	<Currency>
+		<CountryName>PANAMA</CountryName>
+		<CurrencyName>Balboa</CurrencyName>
+		<CurrencyCode>PAB</CurrencyCode>
+		<CurrencyNbr>590</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>B/.</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PANAMA</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PAPUA NEW GUINEA</CountryName>
+		<CurrencyName>Kina</CurrencyName>
+		<CurrencyCode>PGK</CurrencyCode>
+		<CurrencyNbr>598</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>K</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PARAGUAY</CountryName>
+		<CurrencyName>Guarani</CurrencyName>
+		<CurrencyCode>PYG</CurrencyCode>
+		<CurrencyNbr>600</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>₲</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PERU</CountryName>
+		<CurrencyName>Sol</CurrencyName>
+		<CurrencyCode>PEN</CurrencyCode>
+		<CurrencyNbr>604</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>S/.</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PHILIPPINES (THE)</CountryName>
+		<CurrencyName>Philippine Peso</CurrencyName>
+		<CurrencyCode>PHP</CurrencyCode>
+		<CurrencyNbr>608</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Php</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PITCAIRN</CountryName>
+		<CurrencyName>New Zealand Dollar</CurrencyName>
+		<CurrencyCode>NZD</CurrencyCode>
+		<CurrencyNbr>554</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>POLAND</CountryName>
+		<CurrencyName>Zloty</CurrencyName>
+		<CurrencyCode>PLN</CurrencyCode>
+		<CurrencyNbr>985</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>zł</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PORTUGAL</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>PUERTO RICO</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>QATAR</CountryName>
+		<CurrencyName>Qatari Rial</CurrencyName>
+		<CurrencyCode>QAR</CurrencyCode>
+		<CurrencyNbr>634</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>QR</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>RÉUNION</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ROMANIA</CountryName>
+		<CurrencyName>Romanian Leu</CurrencyName>
+		<CurrencyCode>RON</CurrencyCode>
+		<CurrencyNbr>946</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>lei</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>RUSSIAN FEDERATION (THE)</CountryName>
+		<CurrencyName>Russian Ruble</CurrencyName>
+		<CurrencyCode>RUB</CurrencyCode>
+		<CurrencyNbr>643</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₽</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>RWANDA</CountryName>
+		<CurrencyName>Rwanda Franc</CurrencyName>
+		<CurrencyCode>RWF</CurrencyCode>
+		<CurrencyNbr>646</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>RF</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAINT BARTHÉLEMY</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</CountryName>
+		<CurrencyName>Saint Helena Pound</CurrencyName>
+		<CurrencyCode>SHP</CurrencyCode>
+		<CurrencyNbr>654</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAINT KITTS AND NEVIS</CountryName>
+		<CurrencyName>East Caribbean Dollar</CurrencyName>
+		<CurrencyCode>XCD</CurrencyCode>
+		<CurrencyNbr>951</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAINT LUCIA</CountryName>
+		<CurrencyName>East Caribbean Dollar</CurrencyName>
+		<CurrencyCode>XCD</CurrencyCode>
+		<CurrencyNbr>951</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAINT MARTIN (FRENCH PART)</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAINT PIERRE AND MIQUELON</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAINT VINCENT AND THE GRENADINES</CountryName>
+		<CurrencyName>East Caribbean Dollar</CurrencyName>
+		<CurrencyCode>XCD</CurrencyCode>
+		<CurrencyNbr>951</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAMOA</CountryName>
+		<CurrencyName>Tala</CurrencyName>
+		<CurrencyCode>WST</CurrencyCode>
+		<CurrencyNbr>882</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>WS$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAN MARINO</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAO TOME AND PRINCIPE</CountryName>
+		<CurrencyName>Dobra</CurrencyName>
+		<CurrencyCode>STD</CurrencyCode>
+		<CurrencyNbr>678</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Db</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SAUDI ARABIA</CountryName>
+		<CurrencyName>Saudi Riyal</CurrencyName>
+		<CurrencyCode>SAR</CurrencyCode>
+		<CurrencyNbr>682</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Db</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SENEGAL</CountryName>
+		<CurrencyName>CFA Franc BCEAO</CurrencyName>
+		<CurrencyCode>XOF</CurrencyCode>
+		<CurrencyNbr>952</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>CFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SERBIA</CountryName>
+		<CurrencyName>Serbian Dinar</CurrencyName>
+		<CurrencyCode>RSD</CurrencyCode>
+		<CurrencyNbr>941</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>дин</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SEYCHELLES</CountryName>
+		<CurrencyName>Seychelles Rupee</CurrencyName>
+		<CurrencyCode>SCR</CurrencyCode>
+		<CurrencyNbr>690</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>SR</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SIERRA LEONE</CountryName>
+		<CurrencyName>Leone</CurrencyName>
+		<CurrencyCode>SLL</CurrencyCode>
+		<CurrencyNbr>694</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Le</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SINGAPORE</CountryName>
+		<CurrencyName>Singapore Dollar</CurrencyName>
+		<CurrencyCode>SGD</CurrencyCode>
+		<CurrencyNbr>702</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SINT MAARTEN (DUTCH PART)</CountryName>
+		<CurrencyName>Netherlands Antillean Guilder</CurrencyName>
+		<CurrencyCode>ANG</CurrencyCode>
+		<CurrencyNbr>532</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>ƒ</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS "SUCRE"</CountryName>
+		<CurrencyName>Sucre</CurrencyName>
+		<CurrencyCode>XSU</CurrencyCode>
+		<CurrencyNbr>994</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XSU</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SLOVAKIA</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SLOVENIA</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SOLOMON ISLANDS</CountryName>
+		<CurrencyName>Solomon Islands Dollar</CurrencyName>
+		<CurrencyCode>SBD</CurrencyCode>
+		<CurrencyNbr>090</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SOMALIA</CountryName>
+		<CurrencyName>Somali Shilling</CurrencyName>
+		<CurrencyCode>SOS</CurrencyCode>
+		<CurrencyNbr>706</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Sh.So</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SOUTH AFRICA</CountryName>
+		<CurrencyName>Rand</CurrencyName>
+		<CurrencyCode>ZAR</CurrencyCode>
+		<CurrencyNbr>710</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>R</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</CountryName>
+		<CurrencyName>No universal currency</CurrencyName>
+	</Currency>
+	<Currency>
+		<CountryName>SOUTH SUDAN</CountryName>
+		<CurrencyName>South Sudanese Pound</CurrencyName>
+		<CurrencyCode>SSP</CurrencyCode>
+		<CurrencyNbr>728</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>SSP</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SPAIN</CountryName>
+		<CurrencyName>Euro</CurrencyName>
+		<CurrencyCode>EUR</CurrencyCode>
+		<CurrencyNbr>978</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>€</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SRI LANKA</CountryName>
+		<CurrencyName>Sri Lanka Rupee</CurrencyName>
+		<CurrencyCode>LKR</CurrencyCode>
+		<CurrencyNbr>144</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₨</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SUDAN (THE)</CountryName>
+		<CurrencyName>Sudanese Pound</CurrencyName>
+		<CurrencyCode>SDG</CurrencyCode>
+		<CurrencyNbr>938</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>SD</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SURINAME</CountryName>
+		<CurrencyName>Surinam Dollar</CurrencyName>
+		<CurrencyCode>SRD</CurrencyCode>
+		<CurrencyNbr>968</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SVALBARD AND JAN MAYEN</CountryName>
+		<CurrencyName>Norwegian Krone</CurrencyName>
+		<CurrencyCode>NOK</CurrencyCode>
+		<CurrencyNbr>578</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>kr</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SWAZILAND</CountryName>
+		<CurrencyName>Lilangeni</CurrencyName>
+		<CurrencyCode>SZL</CurrencyCode>
+		<CurrencyNbr>748</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>L</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SWEDEN</CountryName>
+		<CurrencyName>Swedish Krona</CurrencyName>
+		<CurrencyCode>SEK</CurrencyCode>
+		<CurrencyNbr>752</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>kr</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SWITZERLAND</CountryName>
+		<CurrencyName>Swiss Franc</CurrencyName>
+		<CurrencyCode>CHF</CurrencyCode>
+		<CurrencyNbr>756</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>CHF</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SWITZERLAND</CountryName>
+		<CurrencyName IsFund="true">WIR Euro</CurrencyName>
+		<CurrencyCode>CHE</CurrencyCode>
+		<CurrencyNbr>947</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>CHE</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SWITZERLAND</CountryName>
+		<CurrencyName IsFund="true">WIR Franc</CurrencyName>
+		<CurrencyCode>CHW</CurrencyCode>
+		<CurrencyNbr>948</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>CHW</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>SYRIAN ARAB REPUBLIC</CountryName>
+		<CurrencyName>Syrian Pound</CurrencyName>
+		<CurrencyCode>SYP</CurrencyCode>
+		<CurrencyNbr>760</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TAIWAN (PROVINCE OF CHINA)</CountryName>
+		<CurrencyName>New Taiwan Dollar</CurrencyName>
+		<CurrencyCode>TWD</CurrencyCode>
+		<CurrencyNbr>901</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>NT$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TAJIKISTAN</CountryName>
+		<CurrencyName>Somoni</CurrencyName>
+		<CurrencyCode>TJS</CurrencyCode>
+		<CurrencyNbr>972</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>TJS</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TANZANIA, UNITED REPUBLIC OF</CountryName>
+		<CurrencyName>Tanzanian Shilling</CurrencyName>
+		<CurrencyCode>TZS</CurrencyCode>
+		<CurrencyNbr>834</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>TSh</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>THAILAND</CountryName>
+		<CurrencyName>Baht</CurrencyName>
+		<CurrencyCode>THB</CurrencyCode>
+		<CurrencyNbr>764</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>฿</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TIMOR-LESTE</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TOGO</CountryName>
+		<CurrencyName>CFA Franc BCEAO</CurrencyName>
+		<CurrencyCode>XOF</CurrencyCode>
+		<CurrencyNbr>952</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>CFA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TOKELAU</CountryName>
+		<CurrencyName>New Zealand Dollar</CurrencyName>
+		<CurrencyCode>NZD</CurrencyCode>
+		<CurrencyNbr>554</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TONGA</CountryName>
+		<CurrencyName>Pa’anga</CurrencyName>
+		<CurrencyCode>TOP</CurrencyCode>
+		<CurrencyNbr>776</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>T$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TRINIDAD AND TOBAGO</CountryName>
+		<CurrencyName>Trinidad and Tobago Dollar</CurrencyName>
+		<CurrencyCode>TTD</CurrencyCode>
+		<CurrencyNbr>780</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>TT$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TUNISIA</CountryName>
+		<CurrencyName>Tunisian Dinar</CurrencyName>
+		<CurrencyCode>TND</CurrencyCode>
+		<CurrencyNbr>788</CurrencyNbr>
+		<CurrencyMnrUnts>3</CurrencyMnrUnts>
+		<CurrencySign>د.ت</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TURKEY</CountryName>
+		<CurrencyName>Turkish Lira</CurrencyName>
+		<CurrencyCode>TRY</CurrencyCode>
+		<CurrencyNbr>949</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₺</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TURKMENISTAN</CountryName>
+		<CurrencyName>Turkmenistan New Manat</CurrencyName>
+		<CurrencyCode>TMT</CurrencyCode>
+		<CurrencyNbr>934</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>T</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TURKS AND CAICOS ISLANDS (THE)</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>TUVALU</CountryName>
+		<CurrencyName>Australian Dollar</CurrencyName>
+		<CurrencyCode>AUD</CurrencyCode>
+		<CurrencyNbr>036</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>UGANDA</CountryName>
+		<CurrencyName>Uganda Shilling</CurrencyName>
+		<CurrencyCode>UGX</CurrencyCode>
+		<CurrencyNbr>800</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>USh</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>UKRAINE</CountryName>
+		<CurrencyName>Hryvnia</CurrencyName>
+		<CurrencyCode>UAH</CurrencyCode>
+		<CurrencyNbr>980</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>₴</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>UNITED ARAB EMIRATES (THE)</CountryName>
+		<CurrencyName>UAE Dirham</CurrencyName>
+		<CurrencyCode>AED</CurrencyCode>
+		<CurrencyNbr>784</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>د.إ</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)</CountryName>
+		<CurrencyName>Pound Sterling</CurrencyName>
+		<CurrencyCode>GBP</CurrencyCode>
+		<CurrencyNbr>826</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>£</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>UNITED STATES MINOR OUTLYING ISLANDS (THE)</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>UNITED STATES OF AMERICA (THE)</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>UNITED STATES OF AMERICA (THE)</CountryName>
+		<CurrencyName IsFund="true">US Dollar (Next day)</CurrencyName>
+		<CurrencyCode>USN</CurrencyCode>
+		<CurrencyNbr>997</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>USN</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>URUGUAY</CountryName>
+		<CurrencyName>Peso Uruguayo</CurrencyName>
+		<CurrencyCode>UYU</CurrencyCode>
+		<CurrencyNbr>858</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$U</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>URUGUAY</CountryName>
+		<CurrencyName IsFund="true">Uruguay Peso en Unidades Indexadas (URUIURUI)</CurrencyName>
+		<CurrencyCode>UYI</CurrencyCode>
+		<CurrencyNbr>940</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>UYI</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>UZBEKISTAN</CountryName>
+		<CurrencyName>Uzbekistan Sum</CurrencyName>
+		<CurrencyCode>UZS</CurrencyCode>
+		<CurrencyNbr>860</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>лв</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>VANUATU</CountryName>
+		<CurrencyName>Vatu</CurrencyName>
+		<CurrencyCode>VUV</CurrencyCode>
+		<CurrencyNbr>548</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>Vt</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>VENEZUELA (BOLIVARIAN REPUBLIC OF)</CountryName>
+		<CurrencyName>Bolívar</CurrencyName>
+		<CurrencyCode>VEF</CurrencyCode>
+		<CurrencyNbr>937</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>Bs</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>VIET NAM</CountryName>
+		<CurrencyName>Dong</CurrencyName>
+		<CurrencyCode>VND</CurrencyCode>
+		<CurrencyNbr>704</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>₫</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>VIRGIN ISLANDS (BRITISH)</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>VIRGIN ISLANDS (U.S.)</CountryName>
+		<CurrencyName>US Dollar</CurrencyName>
+		<CurrencyCode>USD</CurrencyCode>
+		<CurrencyNbr>840</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>WALLIS AND FUTUNA</CountryName>
+		<CurrencyName>CFP Franc</CurrencyName>
+		<CurrencyCode>XPF</CurrencyCode>
+		<CurrencyNbr>953</CurrencyNbr>
+		<CurrencyMnrUnts>0</CurrencyMnrUnts>
+		<CurrencySign>F</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>WESTERN SAHARA</CountryName>
+		<CurrencyName>Moroccan Dirham</CurrencyName>
+		<CurrencyCode>MAD</CurrencyCode>
+		<CurrencyNbr>504</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>MAD</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>YEMEN</CountryName>
+		<CurrencyName>Yemeni Rial</CurrencyName>
+		<CurrencyCode>YER</CurrencyCode>
+		<CurrencyNbr>886</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>﷼</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZAMBIA</CountryName>
+		<CurrencyName>Zambian Kwacha</CurrencyName>
+		<CurrencyCode>ZMW</CurrencyCode>
+		<CurrencyNbr>967</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>ZK</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZIMBABWE</CountryName>
+		<CurrencyName>Zimbabwe Dollar</CurrencyName>
+		<CurrencyCode>ZWL</CurrencyCode>
+		<CurrencyNbr>932</CurrencyNbr>
+		<CurrencyMnrUnts>2</CurrencyMnrUnts>
+		<CurrencySign>$</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ01_Bond Markets Unit European_EURCO</CountryName>
+		<CurrencyName>Bond Markets Unit European Composite Unit (EURCO)</CurrencyName>
+		<CurrencyCode>XBA</CurrencyCode>
+		<CurrencyNbr>955</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XBA</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ02_Bond Markets Unit European_EMU-6</CountryName>
+		<CurrencyName>Bond Markets Unit European Monetary Unit (E.M.U.-6)</CurrencyName>
+		<CurrencyCode>XBB</CurrencyCode>
+		<CurrencyNbr>956</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XBB</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ03_Bond Markets Unit European_EUA-9</CountryName>
+		<CurrencyName>Bond Markets Unit European Unit of Account 9 (E.U.A.-9)</CurrencyName>
+		<CurrencyCode>XBC</CurrencyCode>
+		<CurrencyNbr>957</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XBC</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ04_Bond Markets Unit European_EUA-17</CountryName>
+		<CurrencyName>Bond Markets Unit European Unit of Account 17 (E.U.A.-17)</CurrencyName>
+		<CurrencyCode>XBD</CurrencyCode>
+		<CurrencyNbr>958</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XBD</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ06_Testing_Code</CountryName>
+		<CurrencyName>Codes specifically reserved for testing purposes</CurrencyName>
+		<CurrencyCode>XTS</CurrencyCode>
+		<CurrencyNbr>963</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XTS</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ07_No_Currency</CountryName>
+		<CurrencyName>The codes assigned for transactions where no currency is involved</CurrencyName>
+		<CurrencyCode>XXX</CurrencyCode>
+		<CurrencyNbr>999</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XXX</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ08_Gold</CountryName>
+		<CurrencyName>Gold</CurrencyName>
+		<CurrencyCode>XAU</CurrencyCode>
+		<CurrencyNbr>959</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XAU</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ09_Palladium</CountryName>
+		<CurrencyName>Palladium</CurrencyName>
+		<CurrencyCode>XPD</CurrencyCode>
+		<CurrencyNbr>964</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XPD</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ10_Platinum</CountryName>
+		<CurrencyName>Platinum</CurrencyName>
+		<CurrencyCode>XPT</CurrencyCode>
+		<CurrencyNbr>962</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XPT</CurrencySign>
+	</Currency>
+	<Currency>
+		<CountryName>ZZ11_Silver</CountryName>
+		<CurrencyName>Silver</CurrencyName>
+		<CurrencyCode>XAG</CurrencyCode>
+		<CurrencyNbr>961</CurrencyNbr>
+		<CurrencyMnrUnts>N.A.</CurrencyMnrUnts>
+		<CurrencySign>XAG</CurrencySign>
+	</Currency>
+</CurrencyTable>

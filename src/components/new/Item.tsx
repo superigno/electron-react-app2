@@ -16,6 +16,7 @@ export const Item = (props: ItemProps) => {
     const tooltipContent = props.item.description ? <span>{props.item.description}</span> : "";
     const typeUpper: string = props.item.type ? props.item.type.toUpperCase() : AppConstants.ITEM_TYPES.TEXT;
     const showAdvanced = props.advanced ? true : !props.item.advanced; //if advanced mode is toggled, show all basically, else show only those advanced == false
+    const isHidden = props.item.hidden ? props.item.hidden : false;
 
     const handleOnChange = (value: string | string[]) => {
         props.onChange(value);
@@ -51,7 +52,7 @@ export const Item = (props: ItemProps) => {
     }
 
     return <>
-    { showAdvanced &&
+    { showAdvanced && !isHidden &&
         <div className="contentRow">
 
             <div className="label">
