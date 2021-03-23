@@ -6,6 +6,7 @@ import { SelectItem } from '../SelectItem';
 import df from 'd-forest';
 import { ItemGroup } from './ItemGroup';
 import { SchemaType } from './Configuration';
+import { Item } from './Item';
 
 const TERMINAL_LIST = Object.values(AppConstants.TERMINALS);
 const PAYMENT_TYPE_LIST = Object.values(AppConstants.PAYMENT_TYPES);
@@ -116,8 +117,8 @@ export const TerminalPaymentMapping = (props: TerminalPaymentMappingProps) => {
         props.onChange("TERMINAL_NAME", items);
     }
 
-    const handleCardSchemeChange = (e: any) => {
-        props.onChange('TERMINAL_CARD_SCHEME', e.target.value);
+    const handleCardSchemeChange = (val: string) => {
+        props.onChange('TERMINAL_CARD_SCHEME', val);
     }
 
     /** Fill 'TERMINAL_PAYMENT_SCHEME' form value on init or payment type/terminal mapping change */
@@ -150,54 +151,23 @@ export const TerminalPaymentMapping = (props: TerminalPaymentMappingProps) => {
         </div>
 
         <div>
-            <div className="contentRow">
-                <div className="label">
-                    Select Terminal/s
-            </div>
 
-                <div className="item2">
-                    <MultiSelectItem values={activeTerminals} options={TERMINAL_LIST} onSelect={handleTerminalChange} />
-                </div>
-            </div>
+            <Item item={{order: 1, name: 'Select Terminal/s', type: AppConstants.ITEM_TYPES.MULTISELECT, value: activeTerminals, options: TERMINAL_LIST}} 
+                onChange={handleTerminalChange} />
 
-            <div className="contentRow">
-                <div className="label">
-                    Select Payment Type/s
-            </div>
+            <Item item={{order: 2, name: 'Select Payment Type/s', type: AppConstants.ITEM_TYPES.MULTISELECT, value: paymentTypes, options: PAYMENT_TYPE_LIST}} 
+                onChange={handlePaymentTypeChange} />
 
-                <div className="item2">
-                    <MultiSelectItem values={paymentTypes} options={PAYMENT_TYPE_LIST} onSelect={handlePaymentTypeChange} />
-                </div>
-            </div>
-
-            {props.isAdvancedMode &&
-                <div className="contentRow">
-                    <div className="label">
-                        Terminal Card Scheme
-            </div>
-
-                    <div className="item2">
-                        <TextArea defaultValue={cardSchemes} growVertically={true} cols={80} onChange={handleCardSchemeChange} />
-                    </div>
-                </div>
-            }
+            <Item item={{order: 3, name: 'Terminal Card Scheme', type: AppConstants.ITEM_TYPES.LARGETEXT, value: cardSchemes, size: 80, advanced: true}}
+                onChange={handleCardSchemeChange} advanced={props.isAdvancedMode} />    
 
             {
-                paymentTypeTerminalMapping.map((m: { paymentType: string, terminal: string }) => {
-
-                    return <div className="contentRow" key={m.paymentType}>
-                        <div className="label">
-                            {m.paymentType}
-                        </div>
-                        <div className="item2">
-                            <SelectItem onSelect={(id, val) => handlePaymentTerminalChange(m.paymentType, val)} value={m.terminal}
-                                options={activeTerminals.map((value: any, index: any) => ({ value, id: index + 1 }))} />
-                        </div>
-                    </div>
-
+                paymentTypeTerminalMapping.map((m: { paymentType: string, terminal: string }, index) => {
+                    return <Item item={{order: index, name: m.paymentType, type: AppConstants.ITEM_TYPES.SELECT, value: m.terminal, options: activeTerminals}} 
+                            key={m.paymentType} onChange={(val: string) => handlePaymentTerminalChange(m.paymentType, val)} /> 
                 })
-
             }
+            
         </div>
 
     </div>

@@ -20,7 +20,7 @@ export const ItemGroup = (props: ItemGroupProps) => {
 
     const group: ItemGroupType = props.group ? props.group : {} as ItemGroupType;
     const items = group.items ? group.items : [];
-    const showAdvanced = props.advanced ? true : !group.advanced;
+    const showAdvanced = props.advanced ? true : !group.advanced; //if advanced mode is toggled, show all basically, else show only those advanced == false
 
     //Sort by order number
     items.sort((a: any, b: any) => (a.order > b.order) ? 1 : -1)
@@ -35,12 +35,10 @@ export const ItemGroup = (props: ItemGroupProps) => {
 
                 <div>
                     {
-                        items.filter(item => {
-                            return props.advanced ? true : !item.advanced;
-                        }).map((i: any) =>
+                        items.map((i: any) =>
                             <Item key={i.name}
                                 item={i}
-                                onChange={(val) => props.onChange(i.name, val)}
+                                onChange={(val) => props.onChange(i.name, val)} advanced={props.advanced}
                             />
                         )
                     }

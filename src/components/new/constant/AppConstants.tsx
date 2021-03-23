@@ -36,4 +36,13 @@ export default class AppConstants {
         OTHER: 'OTHER'
     }
 
+    static ITEM_TYPES = {
+        TEXT: 'TEXT',
+        NUMBER: 'NUMBER',
+        BOOLEAN: 'BOOLEAN',
+        LARGETEXT: 'LARGETEXT',
+        SELECT: 'SELECT',
+        MULTISELECT: 'MULTISELECT'
+    }
+
 }

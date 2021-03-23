@@ -7,6 +7,7 @@ import df from 'd-forest';
 import Utils from './util/Utils';
 import { ImportConfigObjectType, NavigationBar } from './NavigationBar';
 import { TerminalPaymentMapping } from './TerminalPaymentMapping';
+import AppConstants from './constant/AppConstants';
 
 export type SchemaType = {
     groups: ItemGroupType[]
@@ -173,11 +174,12 @@ const updateSchemaFromImportObject = (schema: SchemaType, configObj: ImportConfi
 }
 
 const getActualValue = (type: string, value: string) => {
-    if (type == "multiselect") {
+    const typeUpper = type.toUpperCase();
+    if (typeUpper === AppConstants.ITEM_TYPES.MULTISELECT) {
         return value.split(",");
-    } else if (type == "number") {
+    } else if (typeUpper === AppConstants.ITEM_TYPES.NUMBER) {
         return Number(value);
-    } else if (type == "boolean") {
+    } else if (typeUpper === AppConstants.ITEM_TYPES.BOOLEAN) {
         return value.toUpperCase() === 'TRUE';
     } else {
         return value;
