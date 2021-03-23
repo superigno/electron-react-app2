@@ -3,21 +3,11 @@ import { InputGroup, Tooltip, Icon, NumericInput, Switch, TextArea } from '@blue
 import { SelectItem, OptionType } from '../SelectItem';
 import { MultiSelectItem } from '../MultiSelectItem';
 import AppConstants from './constant/AppConstants';
+import { ItemType } from './type/Types';
 
 type ItemProps = {
     item: ItemType,
     onChange: (value: string | string[]) => void,
-    advanced?: boolean
-}
-
-export type ItemType = {
-    order: number,
-    name: string,
-    type: string,
-    description?: string,
-    size?: number,
-    value?: string | number | boolean | string[],
-    options?: string[],
     advanced?: boolean
 }
 

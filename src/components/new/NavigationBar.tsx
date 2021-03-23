@@ -1,31 +1,15 @@
 import React from 'react';
-import { Navbar, NavbarGroup, NavbarHeading, NavbarDivider, Button, Classes, Alignment, Intent, Colors, Icon, Alert, Overlay, Tooltip, Switch } from '@blueprintjs/core';
+import { Navbar, NavbarGroup, NavbarDivider, Button, Classes, Alignment, Intent, Colors, Icon, Alert } from '@blueprintjs/core';
 import { ToggleAdvancedMode } from './ToggleAdvancedMode';
-import fs from 'fs';
 import Path from 'path';
-import xml2js from 'xml2js';
+import ConfigUtils from './util/ConfigUtils';
+import { ImportConfigObjectType } from './type/Types';
 
 type NavBarProps = {
     onCreateNew: () => void,
     onImport: (configObjects: ImportConfigObjectType[], error: string) => void
     isAdvancedMode: boolean,
     onToggleAdvancedMode: (e: any) => void
-}
-
-type ImportConfigType = {
-    configuration: {
-        item: {
-            $: {
-                name: string,
-                value: string
-            }
-        }[]
-    }
-}
-
-export type ImportConfigObjectType = {
-    itemName: string,
-    itemValue: string
 }
 
 export const NavigationBar = (props: NavBarProps) => {
@@ -51,21 +35,11 @@ export const NavigationBar = (props: NavBarProps) => {
             return;
         }
 
-        const parser = new xml2js.Parser();
-        fs.readFile(filePath, function (err, data) {
-            parser.parseStringPromise(data)
-                .then((result: ImportConfigType) => {
-
-                    const configObject: ImportConfigObjectType[] = result.configuration.item.map(item => {
-                        return { itemName: item.$.name, itemValue: item.$.value };
-                    })
-                    props.onImport(configObject, '');
-
-                }).catch(function (err) {
-                    props.onImport([], 'Error parsing file: ' + filePath + ' ' + err);
-                });
-        });
-
+        ConfigUtils.convertConfigFileToObject(filePath).then((result: ImportConfigObjectType[]) => {
+            props.onImport(result, '');
+        }).catch((err: string) => {
+            props.onImport([], err);
+        });        
     }
 
     const handleOnCreateNew = () => {

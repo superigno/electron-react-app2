@@ -1,5 +1,4 @@
 import AppConstants from './constant/AppConstants';
-import { ItemGroupType } from './ItemGroup';
 import INGENICO_MOVE5000 from '../../../resources/schemas/terminal/INGENICO_MOVE5000.json';
 import DPAPOSA8 from '../../../resources/schemas/terminal/DPAPOSA8.json';
 import PAX_S60 from '../../../resources/schemas/terminal/PAX_S60.json';
@@ -16,7 +15,7 @@ import OCEANPAYMENT_CLIENT from '../../../resources/schemas/terminal/OCEANPAYMEN
 import FISERV from '../../../resources/schemas/terminal/FISERV.json';
 import PSP_TERMINAL from '../../../resources/schemas/terminal/PSP_TERMINAL.json';
 import OPERATIONS from '../../../resources/schemas/operations_schema.json';
-import { SchemaType } from './Configuration';
+import { ItemGroupType, ItemType, SchemaType } from './type/Types';
 
 export default class SchemaFactory {
     
@@ -71,7 +70,7 @@ export default class SchemaFactory {
 
     private static makeImmutable = (schema: SchemaType) => {
         const groupsArr = schema.groups.map((group: ItemGroupType) => {
-            const itemsArr = group.items.map(item => {
+            const itemsArr = group.items.map((item: ItemType) => {
                 return Object.freeze(item);
             });
             return Object.freeze({ ...group, items: itemsArr });

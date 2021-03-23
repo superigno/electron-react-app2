@@ -1,17 +1,14 @@
 import React from 'react';
 import { Footer } from '../Footer';
-import { ItemGroup, ItemGroupType } from './ItemGroup';
-import { Alert, Button, Intent, Overlay, ProgressBar, Spinner } from '@blueprintjs/core';
+import { ItemGroup } from './ItemGroup';
+import { Button, Intent, Overlay, ProgressBar, Spinner } from '@blueprintjs/core';
 import SchemaFactory from './SchemaFactory';
 import df from 'd-forest';
-import Utils from './util/Utils';
-import { ImportConfigObjectType, NavigationBar } from './NavigationBar';
+import ConfigUtils from './util/ConfigUtils';
+import { NavigationBar } from './NavigationBar';
 import { TerminalPaymentMapping } from './TerminalPaymentMapping';
 import AppConstants from './constant/AppConstants';
-
-export type SchemaType = {
-    groups: ItemGroupType[]
-}
+import { ImportConfigObjectType, ItemGroupType, SchemaType } from './type/Types';
 
 export const Configuration = () => {
 
@@ -84,7 +81,7 @@ export const Configuration = () => {
                 })
             });
             console.log('Combined Schemas:', schemaGroups);
-            Utils.generateConfigurationFile(schemaGroups, formVars.current);
+            ConfigUtils.generateConfigurationFile(schemaGroups, formVars.current);
             setIsGeneratingFile(false);
         }, 3000);
     }
@@ -117,9 +114,9 @@ export const Configuration = () => {
                 <div className="content">
                     {
                         //Filtering just to display these two sections at the very top
-                        operationsSchema.groups.filter(group => {
+                        operationsSchema.groups.filter((group: ItemGroupType) => {
                             return group.name.toUpperCase() == 'VERSION' || group.name.toUpperCase() == 'MODES';
-                        }).map(group => {
+                        }).map((group: ItemGroupType) => {
                             return <ItemGroup key={group.name} group={group} onChange={handleOnChange} />
                         })
                     }
@@ -129,9 +126,9 @@ export const Configuration = () => {
 
                     {
                         //Filtering since these are already displayed at the top
-                        operationsSchema.groups.filter(group => {
+                        operationsSchema.groups.filter((group: ItemGroupType) => {
                             return group.name.toUpperCase() != 'VERSION' && group.name.toUpperCase() != 'MODES' && group.name.toUpperCase() != 'TERMINALS';
-                        }).map(group => {
+                        }).map((group: ItemGroupType) => {
                             return <ItemGroup key={group.name} group={group} advanced={isAdvancedMode} onChange={handleOnChange} />
                         })
                     }

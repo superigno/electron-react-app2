@@ -1,12 +1,9 @@
-import { TextArea } from '@blueprintjs/core';
 import React from 'react';
-import { MultiSelectItem } from '../MultiSelectItem';
 import AppConstants from './constant/AppConstants';
-import { SelectItem } from '../SelectItem';
 import df from 'd-forest';
 import { ItemGroup } from './ItemGroup';
-import { SchemaType } from './Configuration';
 import { Item } from './Item';
+import { SchemaType } from './type/Types';
 
 const TERMINAL_LIST = Object.values(AppConstants.TERMINALS);
 const PAYMENT_TYPE_LIST = Object.values(AppConstants.PAYMENT_TYPES);

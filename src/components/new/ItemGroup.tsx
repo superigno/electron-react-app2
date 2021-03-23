@@ -1,19 +1,12 @@
 import * as React from 'react';
-import { Item, ItemType } from './Item';
+import { Item } from './Item';
+import { ItemGroupType, ItemType } from './type/Types';
 
 type ItemGroupProps = {
     group: ItemGroupType,
     onChange: (id: string, value: string | string[]) => void,
     hidden?: boolean,
     advanced?: boolean
-}
-
-export type ItemGroupType = {
-    order: number,
-    name: string,
-    type: string,
-    advanced?: boolean,
-    items: ItemType[]
 }
 
 export const ItemGroup = (props: ItemGroupProps) => {
