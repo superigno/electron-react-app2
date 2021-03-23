@@ -50,7 +50,7 @@ export default class ConfigUtils {
     }
 
     static getCurrencyFileObject = () => {
-        const filePath = Path.join(__dirname, '../../../../../../resources/Currency.xml');
+        const filePath = Path.join('resources/Currency.xml');
         return new Promise((resolve, reject) => {
             const parser = new xml2js.Parser();
             fs.readFile(filePath, function (err, data) {

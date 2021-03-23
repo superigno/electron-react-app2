@@ -21,7 +21,8 @@
     "forge": {
       "packagerConfig": {
         "name": "GlobalFxChoiceConfigManager",
-        "icon": "assets/icons/pc.ico"
+        "icon": "assets/icons/pc.ico",
+        "extraResource": "resources/Currency.xml"
       },
       "makers": [
         {
